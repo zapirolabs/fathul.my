@@ -1,18 +1,18 @@
-import { unref, mergeProps, withCtx, renderSlot, useSSRContext, createVNode, createTextVNode, resolveDynamicComponent, createBlock, openBlock, Fragment, toDisplayString, ref, computed, renderList, createCommentVNode, createSSRApp, h as h$1 } from "vue";
-import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderClass, ssrInterpolate, ssrRenderVNode, ssrRenderList, ssrRenderAttr } from "vue/server-renderer";
+import { unref, mergeProps, withCtx, renderSlot, useSSRContext, createVNode, createTextVNode, resolveDynamicComponent, createBlock, openBlock, Fragment, toDisplayString, ref, computed, renderList, createCommentVNode, onMounted, onUnmounted, createSSRApp, h as h$1 } from "vue";
+import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderClass, ssrGetDynamicModelProps, ssrInterpolate, ssrRenderVNode, ssrRenderList, ssrRenderAttr } from "vue/server-renderer";
 import { Link, router, usePage, Head, createInertiaApp } from "@inertiajs/vue3";
 import { cva } from "class-variance-authority";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { useForwardPropsEmits, DialogRoot, DialogOverlay, DialogPortal, DialogContent, DialogClose, DialogDescription, DialogTitle, DialogTrigger, createContext, TooltipRoot, TooltipPortal, TooltipContent, TooltipArrow, TooltipProvider, TooltipTrigger, Primitive, AvatarRoot, AvatarFallback, AvatarImage, DropdownMenuRoot, DropdownMenuPortal, DropdownMenuContent, DropdownMenuGroup, useForwardProps, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, NavigationMenuViewport, NavigationMenuRoot, NavigationMenuItem, NavigationMenuList } from "reka-ui";
-import { reactiveOmit, useMediaQuery, useVModel, useEventListener } from "@vueuse/core";
-import { X, ChevronRight, Settings, LogOut, LayoutGrid, HandHeart, Landmark, Wallet, User, Folder, BookOpen, Menu, Search } from "lucide-vue-next";
+import { reactiveOmit, useVModel, useMediaQuery, useEventListener } from "@vueuse/core";
+import { X, ChevronRight, Settings, LogOut, LayoutGrid, HandHeart, Landmark, Wallet, User, Folder, BookOpen, Menu, Search, Rocket, Mail, CheckCircle, Clock } from "lucide-vue-next";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
-const _sfc_main$N = {
+const _sfc_main$P = {
   __name: "Sheet",
   __ssrInlineRender: true,
   props: {
@@ -41,13 +41,13 @@ const _sfc_main$N = {
     };
   }
 };
-const _sfc_setup$N = _sfc_main$N.setup;
-_sfc_main$N.setup = (props, ctx) => {
+const _sfc_setup$P = _sfc_main$P.setup;
+_sfc_main$P.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sheet/Sheet.vue");
-  return _sfc_setup$N ? _sfc_setup$N(props, ctx) : void 0;
+  return _sfc_setup$P ? _sfc_setup$P(props, ctx) : void 0;
 };
-const _sfc_main$M = {
+const _sfc_main$O = {
   __name: "SheetOverlay",
   __ssrInlineRender: true,
   props: {
@@ -81,13 +81,13 @@ const _sfc_main$M = {
     };
   }
 };
-const _sfc_setup$M = _sfc_main$M.setup;
-_sfc_main$M.setup = (props, ctx) => {
+const _sfc_setup$O = _sfc_main$O.setup;
+_sfc_main$O.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sheet/SheetOverlay.vue");
-  return _sfc_setup$M ? _sfc_setup$M(props, ctx) : void 0;
+  return _sfc_setup$O ? _sfc_setup$O(props, ctx) : void 0;
 };
-const _sfc_main$L = /* @__PURE__ */ Object.assign({
+const _sfc_main$N = /* @__PURE__ */ Object.assign({
   inheritAttrs: false
 }, {
   __name: "SheetContent",
@@ -118,7 +118,7 @@ const _sfc_main$L = /* @__PURE__ */ Object.assign({
       _push(ssrRenderComponent(unref(DialogPortal), _attrs, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(_sfc_main$M, null, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$O, null, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(unref(DialogContent), mergeProps({
               "data-slot": "sheet-content",
               class: unref(cn)(
@@ -164,7 +164,7 @@ const _sfc_main$L = /* @__PURE__ */ Object.assign({
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(_sfc_main$M),
+              createVNode(_sfc_main$O),
               createVNode(unref(DialogContent), mergeProps({
                 "data-slot": "sheet-content",
                 class: unref(cn)(
@@ -196,13 +196,13 @@ const _sfc_main$L = /* @__PURE__ */ Object.assign({
     };
   }
 });
-const _sfc_setup$L = _sfc_main$L.setup;
-_sfc_main$L.setup = (props, ctx) => {
+const _sfc_setup$N = _sfc_main$N.setup;
+_sfc_main$N.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sheet/SheetContent.vue");
-  return _sfc_setup$L ? _sfc_setup$L(props, ctx) : void 0;
+  return _sfc_setup$N ? _sfc_setup$N(props, ctx) : void 0;
 };
-const _sfc_main$K = {
+const _sfc_main$M = {
   __name: "SheetDescription",
   __ssrInlineRender: true,
   props: {
@@ -232,13 +232,13 @@ const _sfc_main$K = {
     };
   }
 };
-const _sfc_setup$K = _sfc_main$K.setup;
-_sfc_main$K.setup = (props, ctx) => {
+const _sfc_setup$M = _sfc_main$M.setup;
+_sfc_main$M.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sheet/SheetDescription.vue");
-  return _sfc_setup$K ? _sfc_setup$K(props, ctx) : void 0;
+  return _sfc_setup$M ? _sfc_setup$M(props, ctx) : void 0;
 };
-const _sfc_main$J = {
+const _sfc_main$L = {
   __name: "SheetHeader",
   __ssrInlineRender: true,
   props: {
@@ -256,13 +256,13 @@ const _sfc_main$J = {
     };
   }
 };
-const _sfc_setup$J = _sfc_main$J.setup;
-_sfc_main$J.setup = (props, ctx) => {
+const _sfc_setup$L = _sfc_main$L.setup;
+_sfc_main$L.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sheet/SheetHeader.vue");
-  return _sfc_setup$J ? _sfc_setup$J(props, ctx) : void 0;
+  return _sfc_setup$L ? _sfc_setup$L(props, ctx) : void 0;
 };
-const _sfc_main$I = {
+const _sfc_main$K = {
   __name: "SheetTitle",
   __ssrInlineRender: true,
   props: {
@@ -292,13 +292,13 @@ const _sfc_main$I = {
     };
   }
 };
-const _sfc_setup$I = _sfc_main$I.setup;
-_sfc_main$I.setup = (props, ctx) => {
+const _sfc_setup$K = _sfc_main$K.setup;
+_sfc_main$K.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sheet/SheetTitle.vue");
-  return _sfc_setup$I ? _sfc_setup$I(props, ctx) : void 0;
+  return _sfc_setup$K ? _sfc_setup$K(props, ctx) : void 0;
 };
-const _sfc_main$H = {
+const _sfc_main$J = {
   __name: "SheetTrigger",
   __ssrInlineRender: true,
   props: {
@@ -323,11 +323,11 @@ const _sfc_main$H = {
     };
   }
 };
-const _sfc_setup$H = _sfc_main$H.setup;
-_sfc_main$H.setup = (props, ctx) => {
+const _sfc_setup$J = _sfc_main$J.setup;
+_sfc_main$J.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sheet/SheetTrigger.vue");
-  return _sfc_setup$H ? _sfc_setup$H(props, ctx) : void 0;
+  return _sfc_setup$J ? _sfc_setup$J(props, ctx) : void 0;
 };
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -336,7 +336,7 @@ const SIDEBAR_WIDTH_MOBILE = "18rem";
 const SIDEBAR_WIDTH_ICON = "3rem";
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 const [useSidebar, provideSidebarContext] = createContext("Sidebar");
-const _sfc_main$G = /* @__PURE__ */ Object.assign({
+const _sfc_main$I = /* @__PURE__ */ Object.assign({
   inheritAttrs: false
 }, {
   __name: "Sidebar",
@@ -362,10 +362,10 @@ const _sfc_main$G = /* @__PURE__ */ Object.assign({
         ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
         _push(`</div>`);
       } else if (unref(isMobile)) {
-        _push(ssrRenderComponent(unref(_sfc_main$N), mergeProps({ open: unref(openMobile) }, _ctx.$attrs, { "onUpdate:open": unref(setOpenMobile) }, _attrs), {
+        _push(ssrRenderComponent(unref(_sfc_main$P), mergeProps({ open: unref(openMobile) }, _ctx.$attrs, { "onUpdate:open": unref(setOpenMobile) }, _attrs), {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(ssrRenderComponent(unref(_sfc_main$L), {
+              _push2(ssrRenderComponent(unref(_sfc_main$N), {
                 "data-sidebar": "sidebar",
                 "data-slot": "sidebar",
                 "data-mobile": "true",
@@ -377,10 +377,10 @@ const _sfc_main$G = /* @__PURE__ */ Object.assign({
               }, {
                 default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(ssrRenderComponent(_sfc_main$J, { class: "sr-only" }, {
+                    _push3(ssrRenderComponent(_sfc_main$L, { class: "sr-only" }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(ssrRenderComponent(_sfc_main$I, null, {
+                          _push4(ssrRenderComponent(_sfc_main$K, null, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
                                 _push5(`Sidebar`);
@@ -392,7 +392,7 @@ const _sfc_main$G = /* @__PURE__ */ Object.assign({
                             }),
                             _: 1
                           }, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(_sfc_main$K, null, {
+                          _push4(ssrRenderComponent(_sfc_main$M, null, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
                                 _push5(`Displays the mobile sidebar.`);
@@ -406,13 +406,13 @@ const _sfc_main$G = /* @__PURE__ */ Object.assign({
                           }, _parent4, _scopeId3));
                         } else {
                           return [
-                            createVNode(_sfc_main$I, null, {
+                            createVNode(_sfc_main$K, null, {
                               default: withCtx(() => [
                                 createTextVNode("Sidebar")
                               ]),
                               _: 1
                             }),
-                            createVNode(_sfc_main$K, null, {
+                            createVNode(_sfc_main$M, null, {
                               default: withCtx(() => [
                                 createTextVNode("Displays the mobile sidebar.")
                               ]),
@@ -428,15 +428,15 @@ const _sfc_main$G = /* @__PURE__ */ Object.assign({
                     _push3(`</div>`);
                   } else {
                     return [
-                      createVNode(_sfc_main$J, { class: "sr-only" }, {
+                      createVNode(_sfc_main$L, { class: "sr-only" }, {
                         default: withCtx(() => [
-                          createVNode(_sfc_main$I, null, {
+                          createVNode(_sfc_main$K, null, {
                             default: withCtx(() => [
                               createTextVNode("Sidebar")
                             ]),
                             _: 1
                           }),
-                          createVNode(_sfc_main$K, null, {
+                          createVNode(_sfc_main$M, null, {
                             default: withCtx(() => [
                               createTextVNode("Displays the mobile sidebar.")
                             ]),
@@ -455,7 +455,7 @@ const _sfc_main$G = /* @__PURE__ */ Object.assign({
               }, _parent2, _scopeId));
             } else {
               return [
-                createVNode(unref(_sfc_main$L), {
+                createVNode(unref(_sfc_main$N), {
                   "data-sidebar": "sidebar",
                   "data-slot": "sidebar",
                   "data-mobile": "true",
@@ -466,15 +466,15 @@ const _sfc_main$G = /* @__PURE__ */ Object.assign({
                   }
                 }, {
                   default: withCtx(() => [
-                    createVNode(_sfc_main$J, { class: "sr-only" }, {
+                    createVNode(_sfc_main$L, { class: "sr-only" }, {
                       default: withCtx(() => [
-                        createVNode(_sfc_main$I, null, {
+                        createVNode(_sfc_main$K, null, {
                           default: withCtx(() => [
                             createTextVNode("Sidebar")
                           ]),
                           _: 1
                         }),
-                        createVNode(_sfc_main$K, null, {
+                        createVNode(_sfc_main$M, null, {
                           default: withCtx(() => [
                             createTextVNode("Displays the mobile sidebar.")
                           ]),
@@ -524,13 +524,49 @@ const _sfc_main$G = /* @__PURE__ */ Object.assign({
     };
   }
 });
-const _sfc_setup$G = _sfc_main$G.setup;
-_sfc_main$G.setup = (props, ctx) => {
+const _sfc_setup$I = _sfc_main$I.setup;
+_sfc_main$I.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sidebar/Sidebar.vue");
-  return _sfc_setup$G ? _sfc_setup$G(props, ctx) : void 0;
+  return _sfc_setup$I ? _sfc_setup$I(props, ctx) : void 0;
 };
-const _sfc_main$F = {
+const _sfc_main$H = {
+  __name: "Input",
+  __ssrInlineRender: true,
+  props: {
+    defaultValue: { type: [String, Number], required: false },
+    modelValue: { type: [String, Number], required: false },
+    class: { type: null, required: false }
+  },
+  emits: ["update:modelValue"],
+  setup(__props, { emit: __emit }) {
+    const props = __props;
+    const emits = __emit;
+    const modelValue = useVModel(props, "modelValue", emits, {
+      passive: true,
+      defaultValue: props.defaultValue
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      let _temp0;
+      _push(`<input${ssrRenderAttrs((_temp0 = mergeProps({
+        "data-slot": "input",
+        class: unref(cn)(
+          "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+          "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+          props.class
+        )
+      }, _attrs), mergeProps(_temp0, ssrGetDynamicModelProps(_temp0, unref(modelValue)))))}>`);
+    };
+  }
+};
+const _sfc_setup$H = _sfc_main$H.setup;
+_sfc_main$H.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/input/Input.vue");
+  return _sfc_setup$H ? _sfc_setup$H(props, ctx) : void 0;
+};
+const _sfc_main$G = {
   __name: "SidebarInset",
   __ssrInlineRender: true,
   props: {
@@ -552,13 +588,13 @@ const _sfc_main$F = {
     };
   }
 };
-const _sfc_setup$F = _sfc_main$F.setup;
-_sfc_main$F.setup = (props, ctx) => {
+const _sfc_setup$G = _sfc_main$G.setup;
+_sfc_main$G.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sidebar/SidebarInset.vue");
-  return _sfc_setup$F ? _sfc_setup$F(props, ctx) : void 0;
+  return _sfc_setup$G ? _sfc_setup$G(props, ctx) : void 0;
 };
-const _sfc_main$E = {
+const _sfc_main$F = {
   __name: "Tooltip",
   __ssrInlineRender: true,
   props: {
@@ -591,13 +627,13 @@ const _sfc_main$E = {
     };
   }
 };
-const _sfc_setup$E = _sfc_main$E.setup;
-_sfc_main$E.setup = (props, ctx) => {
+const _sfc_setup$F = _sfc_main$F.setup;
+_sfc_main$F.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/tooltip/Tooltip.vue");
-  return _sfc_setup$E ? _sfc_setup$E(props, ctx) : void 0;
+  return _sfc_setup$F ? _sfc_setup$F(props, ctx) : void 0;
 };
-const _sfc_main$D = /* @__PURE__ */ Object.assign({
+const _sfc_main$E = /* @__PURE__ */ Object.assign({
   inheritAttrs: false
 }, {
   __name: "TooltipContent",
@@ -672,13 +708,13 @@ const _sfc_main$D = /* @__PURE__ */ Object.assign({
     };
   }
 });
-const _sfc_setup$D = _sfc_main$D.setup;
-_sfc_main$D.setup = (props, ctx) => {
+const _sfc_setup$E = _sfc_main$E.setup;
+_sfc_main$E.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/tooltip/TooltipContent.vue");
-  return _sfc_setup$D ? _sfc_setup$D(props, ctx) : void 0;
+  return _sfc_setup$E ? _sfc_setup$E(props, ctx) : void 0;
 };
-const _sfc_main$C = {
+const _sfc_main$D = {
   __name: "TooltipProvider",
   __ssrInlineRender: true,
   props: {
@@ -707,13 +743,13 @@ const _sfc_main$C = {
     };
   }
 };
-const _sfc_setup$C = _sfc_main$C.setup;
-_sfc_main$C.setup = (props, ctx) => {
+const _sfc_setup$D = _sfc_main$D.setup;
+_sfc_main$D.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/tooltip/TooltipProvider.vue");
-  return _sfc_setup$C ? _sfc_setup$C(props, ctx) : void 0;
+  return _sfc_setup$D ? _sfc_setup$D(props, ctx) : void 0;
 };
-const _sfc_main$B = {
+const _sfc_main$C = {
   __name: "TooltipTrigger",
   __ssrInlineRender: true,
   props: {
@@ -739,13 +775,13 @@ const _sfc_main$B = {
     };
   }
 };
-const _sfc_setup$B = _sfc_main$B.setup;
-_sfc_main$B.setup = (props, ctx) => {
+const _sfc_setup$C = _sfc_main$C.setup;
+_sfc_main$C.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/tooltip/TooltipTrigger.vue");
-  return _sfc_setup$B ? _sfc_setup$B(props, ctx) : void 0;
+  return _sfc_setup$C ? _sfc_setup$C(props, ctx) : void 0;
 };
-const _sfc_main$A = {
+const _sfc_main$B = {
   __name: "SidebarMenuButtonChild",
   __ssrInlineRender: true,
   props: {
@@ -782,13 +818,13 @@ const _sfc_main$A = {
     };
   }
 };
-const _sfc_setup$A = _sfc_main$A.setup;
-_sfc_main$A.setup = (props, ctx) => {
+const _sfc_setup$B = _sfc_main$B.setup;
+_sfc_main$B.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sidebar/SidebarMenuButtonChild.vue");
-  return _sfc_setup$A ? _sfc_setup$A(props, ctx) : void 0;
+  return _sfc_setup$B ? _sfc_setup$B(props, ctx) : void 0;
 };
-const _sfc_main$z = /* @__PURE__ */ Object.assign({
+const _sfc_main$A = /* @__PURE__ */ Object.assign({
   inheritAttrs: false
 }, {
   __name: "SidebarMenuButton",
@@ -808,7 +844,7 @@ const _sfc_main$z = /* @__PURE__ */ Object.assign({
     const delegatedProps = reactiveOmit(props, "tooltip");
     return (_ctx, _push, _parent, _attrs) => {
       if (!__props.tooltip) {
-        _push(ssrRenderComponent(_sfc_main$A, mergeProps({ ...unref(delegatedProps), ..._ctx.$attrs }, _attrs), {
+        _push(ssrRenderComponent(_sfc_main$B, mergeProps({ ...unref(delegatedProps), ..._ctx.$attrs }, _attrs), {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               ssrRenderSlot(_ctx.$slots, "default", {}, null, _push2, _parent2, _scopeId);
@@ -821,13 +857,13 @@ const _sfc_main$z = /* @__PURE__ */ Object.assign({
           _: 3
         }, _parent));
       } else {
-        _push(ssrRenderComponent(unref(_sfc_main$E), _attrs, {
+        _push(ssrRenderComponent(unref(_sfc_main$F), _attrs, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(ssrRenderComponent(unref(_sfc_main$B), { "as-child": "" }, {
+              _push2(ssrRenderComponent(unref(_sfc_main$C), { "as-child": "" }, {
                 default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(ssrRenderComponent(_sfc_main$A, { ...unref(delegatedProps), ..._ctx.$attrs }, {
+                    _push3(ssrRenderComponent(_sfc_main$B, { ...unref(delegatedProps), ..._ctx.$attrs }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           ssrRenderSlot(_ctx.$slots, "default", {}, null, _push4, _parent4, _scopeId3);
@@ -841,7 +877,7 @@ const _sfc_main$z = /* @__PURE__ */ Object.assign({
                     }, _parent3, _scopeId2));
                   } else {
                     return [
-                      createVNode(_sfc_main$A, { ...unref(delegatedProps), ..._ctx.$attrs }, {
+                      createVNode(_sfc_main$B, { ...unref(delegatedProps), ..._ctx.$attrs }, {
                         default: withCtx(() => [
                           renderSlot(_ctx.$slots, "default")
                         ]),
@@ -852,7 +888,7 @@ const _sfc_main$z = /* @__PURE__ */ Object.assign({
                 }),
                 _: 3
               }, _parent2, _scopeId));
-              _push2(ssrRenderComponent(unref(_sfc_main$D), {
+              _push2(ssrRenderComponent(unref(_sfc_main$E), {
                 side: "right",
                 align: "center",
                 hidden: unref(state) !== "collapsed" || unref(isMobile)
@@ -876,9 +912,9 @@ const _sfc_main$z = /* @__PURE__ */ Object.assign({
               }, _parent2, _scopeId));
             } else {
               return [
-                createVNode(unref(_sfc_main$B), { "as-child": "" }, {
+                createVNode(unref(_sfc_main$C), { "as-child": "" }, {
                   default: withCtx(() => [
-                    createVNode(_sfc_main$A, { ...unref(delegatedProps), ..._ctx.$attrs }, {
+                    createVNode(_sfc_main$B, { ...unref(delegatedProps), ..._ctx.$attrs }, {
                       default: withCtx(() => [
                         renderSlot(_ctx.$slots, "default")
                       ]),
@@ -887,7 +923,7 @@ const _sfc_main$z = /* @__PURE__ */ Object.assign({
                   ]),
                   _: 3
                 }),
-                createVNode(unref(_sfc_main$D), {
+                createVNode(unref(_sfc_main$E), {
                   side: "right",
                   align: "center",
                   hidden: unref(state) !== "collapsed" || unref(isMobile)
@@ -908,13 +944,13 @@ const _sfc_main$z = /* @__PURE__ */ Object.assign({
     };
   }
 });
-const _sfc_setup$z = _sfc_main$z.setup;
-_sfc_main$z.setup = (props, ctx) => {
+const _sfc_setup$A = _sfc_main$A.setup;
+_sfc_main$A.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sidebar/SidebarMenuButton.vue");
-  return _sfc_setup$z ? _sfc_setup$z(props, ctx) : void 0;
+  return _sfc_setup$A ? _sfc_setup$A(props, ctx) : void 0;
 };
-const _sfc_main$y = {
+const _sfc_main$z = {
   __name: "SidebarProvider",
   __ssrInlineRender: true,
   props: {
@@ -998,13 +1034,13 @@ const _sfc_main$y = {
     };
   }
 };
-const _sfc_setup$y = _sfc_main$y.setup;
-_sfc_main$y.setup = (props, ctx) => {
+const _sfc_setup$z = _sfc_main$z.setup;
+_sfc_main$z.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/sidebar/SidebarProvider.vue");
-  return _sfc_setup$y ? _sfc_setup$y(props, ctx) : void 0;
+  return _sfc_setup$z ? _sfc_setup$z(props, ctx) : void 0;
 };
-const _sfc_main$x = {
+const _sfc_main$y = {
   __name: "Button",
   __ssrInlineRender: true,
   props: {
@@ -1037,11 +1073,11 @@ const _sfc_main$x = {
     };
   }
 };
-const _sfc_setup$x = _sfc_main$x.setup;
-_sfc_main$x.setup = (props, ctx) => {
+const _sfc_setup$y = _sfc_main$y.setup;
+_sfc_main$y.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/button/Button.vue");
-  return _sfc_setup$x ? _sfc_setup$x(props, ctx) : void 0;
+  return _sfc_setup$y ? _sfc_setup$y(props, ctx) : void 0;
 };
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
@@ -1088,7 +1124,7 @@ const sidebarMenuButtonVariants = cva(
     }
   }
 );
-const _sfc_main$w = {
+const _sfc_main$x = {
   __name: "AppContent",
   __ssrInlineRender: true,
   props: {
@@ -1106,7 +1142,7 @@ const _sfc_main$w = {
     const className = computed(() => props.class);
     return (_ctx, _push, _parent, _attrs) => {
       if (props.variant === "sidebar") {
-        _push(ssrRenderComponent(unref(_sfc_main$F), mergeProps({ class: className.value }, _attrs), {
+        _push(ssrRenderComponent(unref(_sfc_main$G), mergeProps({ class: className.value }, _attrs), {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               ssrRenderSlot(_ctx.$slots, "default", {}, null, _push2, _parent2, _scopeId);
@@ -1128,13 +1164,13 @@ const _sfc_main$w = {
     };
   }
 };
-const _sfc_setup$w = _sfc_main$w.setup;
-_sfc_main$w.setup = (props, ctx) => {
+const _sfc_setup$x = _sfc_main$x.setup;
+_sfc_main$x.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/AppContent.vue");
-  return _sfc_setup$w ? _sfc_setup$w(props, ctx) : void 0;
+  return _sfc_setup$x ? _sfc_setup$x(props, ctx) : void 0;
 };
-const _sfc_main$v = /* @__PURE__ */ Object.assign({
+const _sfc_main$w = /* @__PURE__ */ Object.assign({
   inheritAttrs: false
 }, {
   __name: "AppLogoIcon",
@@ -1155,30 +1191,30 @@ const _sfc_main$v = /* @__PURE__ */ Object.assign({
     };
   }
 });
-const _sfc_setup$v = _sfc_main$v.setup;
-_sfc_main$v.setup = (props, ctx) => {
+const _sfc_setup$w = _sfc_main$w.setup;
+_sfc_main$w.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/AppLogoIcon.vue");
-  return _sfc_setup$v ? _sfc_setup$v(props, ctx) : void 0;
+  return _sfc_setup$w ? _sfc_setup$w(props, ctx) : void 0;
 };
-const _sfc_main$u = {
+const _sfc_main$v = {
   __name: "AppLogo",
   __ssrInlineRender: true,
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><div class="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground">`);
-      _push(ssrRenderComponent(_sfc_main$v, { class: "size-5 fill-current text-white dark:text-black" }, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$w, { class: "size-5 fill-current text-white dark:text-black" }, null, _parent));
       _push(`</div><div class="ml-1 grid flex-1 text-left text-sm"><span class="mb-0.5 truncate font-semibold leading-none">Laravel Starter Kit</span></div><!--]-->`);
     };
   }
 };
-const _sfc_setup$u = _sfc_main$u.setup;
-_sfc_main$u.setup = (props, ctx) => {
+const _sfc_setup$v = _sfc_main$v.setup;
+_sfc_main$v.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/AppLogo.vue");
-  return _sfc_setup$u ? _sfc_setup$u(props, ctx) : void 0;
+  return _sfc_setup$v ? _sfc_setup$v(props, ctx) : void 0;
 };
-const _sfc_main$t = {
+const _sfc_main$u = {
   __name: "Breadcrumb",
   __ssrInlineRender: true,
   props: {
@@ -1197,13 +1233,13 @@ const _sfc_main$t = {
     };
   }
 };
-const _sfc_setup$t = _sfc_main$t.setup;
-_sfc_main$t.setup = (props, ctx) => {
+const _sfc_setup$u = _sfc_main$u.setup;
+_sfc_main$u.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/breadcrumb/Breadcrumb.vue");
-  return _sfc_setup$t ? _sfc_setup$t(props, ctx) : void 0;
+  return _sfc_setup$u ? _sfc_setup$u(props, ctx) : void 0;
 };
-const _sfc_main$s = {
+const _sfc_main$t = {
   __name: "BreadcrumbItem",
   __ssrInlineRender: true,
   props: {
@@ -1221,13 +1257,13 @@ const _sfc_main$s = {
     };
   }
 };
-const _sfc_setup$s = _sfc_main$s.setup;
-_sfc_main$s.setup = (props, ctx) => {
+const _sfc_setup$t = _sfc_main$t.setup;
+_sfc_main$t.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/breadcrumb/BreadcrumbItem.vue");
-  return _sfc_setup$s ? _sfc_setup$s(props, ctx) : void 0;
+  return _sfc_setup$t ? _sfc_setup$t(props, ctx) : void 0;
 };
-const _sfc_main$r = {
+const _sfc_main$s = {
   __name: "BreadcrumbLink",
   __ssrInlineRender: true,
   props: {
@@ -1258,13 +1294,13 @@ const _sfc_main$r = {
     };
   }
 };
-const _sfc_setup$r = _sfc_main$r.setup;
-_sfc_main$r.setup = (props, ctx) => {
+const _sfc_setup$s = _sfc_main$s.setup;
+_sfc_main$s.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/breadcrumb/BreadcrumbLink.vue");
-  return _sfc_setup$r ? _sfc_setup$r(props, ctx) : void 0;
+  return _sfc_setup$s ? _sfc_setup$s(props, ctx) : void 0;
 };
-const _sfc_main$q = {
+const _sfc_main$r = {
   __name: "BreadcrumbList",
   __ssrInlineRender: true,
   props: {
@@ -1285,13 +1321,13 @@ const _sfc_main$q = {
     };
   }
 };
-const _sfc_setup$q = _sfc_main$q.setup;
-_sfc_main$q.setup = (props, ctx) => {
+const _sfc_setup$r = _sfc_main$r.setup;
+_sfc_main$r.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/breadcrumb/BreadcrumbList.vue");
-  return _sfc_setup$q ? _sfc_setup$q(props, ctx) : void 0;
+  return _sfc_setup$r ? _sfc_setup$r(props, ctx) : void 0;
 };
-const _sfc_main$p = {
+const _sfc_main$q = {
   __name: "BreadcrumbPage",
   __ssrInlineRender: true,
   props: {
@@ -1312,13 +1348,13 @@ const _sfc_main$p = {
     };
   }
 };
-const _sfc_setup$p = _sfc_main$p.setup;
-_sfc_main$p.setup = (props, ctx) => {
+const _sfc_setup$q = _sfc_main$q.setup;
+_sfc_main$q.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/breadcrumb/BreadcrumbPage.vue");
-  return _sfc_setup$p ? _sfc_setup$p(props, ctx) : void 0;
+  return _sfc_setup$q ? _sfc_setup$q(props, ctx) : void 0;
 };
-const _sfc_main$o = {
+const _sfc_main$p = {
   __name: "BreadcrumbSeparator",
   __ssrInlineRender: true,
   props: {
@@ -1340,13 +1376,13 @@ const _sfc_main$o = {
     };
   }
 };
-const _sfc_setup$o = _sfc_main$o.setup;
-_sfc_main$o.setup = (props, ctx) => {
+const _sfc_setup$p = _sfc_main$p.setup;
+_sfc_main$p.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/breadcrumb/BreadcrumbSeparator.vue");
-  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
+  return _sfc_setup$p ? _sfc_setup$p(props, ctx) : void 0;
 };
-const _sfc_main$n = {
+const _sfc_main$o = {
   __name: "Breadcrumbs",
   __ssrInlineRender: true,
   props: {
@@ -1357,20 +1393,20 @@ const _sfc_main$n = {
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(ssrRenderComponent(unref(_sfc_main$t), _attrs, {
+      _push(ssrRenderComponent(unref(_sfc_main$u), _attrs, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$q), null, {
+            _push2(ssrRenderComponent(unref(_sfc_main$r), null, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<!--[-->`);
                   ssrRenderList(__props.breadcrumbs, (item, index) => {
                     _push3(`<!--[-->`);
-                    _push3(ssrRenderComponent(unref(_sfc_main$s), null, {
+                    _push3(ssrRenderComponent(unref(_sfc_main$t), null, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           if (index === __props.breadcrumbs.length - 1) {
-                            _push4(ssrRenderComponent(unref(_sfc_main$p), null, {
+                            _push4(ssrRenderComponent(unref(_sfc_main$q), null, {
                               default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                                 if (_push5) {
                                   _push5(`${ssrInterpolate(item.title)}`);
@@ -1383,7 +1419,7 @@ const _sfc_main$n = {
                               _: 2
                             }, _parent4, _scopeId3));
                           } else {
-                            _push4(ssrRenderComponent(unref(_sfc_main$r), { "as-child": "" }, {
+                            _push4(ssrRenderComponent(unref(_sfc_main$s), { "as-child": "" }, {
                               default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                                 if (_push5) {
                                   _push5(ssrRenderComponent(unref(Link), {
@@ -1418,12 +1454,12 @@ const _sfc_main$n = {
                           }
                         } else {
                           return [
-                            index === __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$p), { key: 0 }, {
+                            index === __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$q), { key: 0 }, {
                               default: withCtx(() => [
                                 createTextVNode(toDisplayString(item.title), 1)
                               ]),
                               _: 2
-                            }, 1024)) : (openBlock(), createBlock(unref(_sfc_main$r), {
+                            }, 1024)) : (openBlock(), createBlock(unref(_sfc_main$s), {
                               key: 1,
                               "as-child": ""
                             }, {
@@ -1445,7 +1481,7 @@ const _sfc_main$n = {
                       _: 2
                     }, _parent3, _scopeId2));
                     if (index !== __props.breadcrumbs.length - 1) {
-                      _push3(ssrRenderComponent(unref(_sfc_main$o), null, null, _parent3, _scopeId2));
+                      _push3(ssrRenderComponent(unref(_sfc_main$p), null, null, _parent3, _scopeId2));
                     } else {
                       _push3(`<!---->`);
                     }
@@ -1456,14 +1492,14 @@ const _sfc_main$n = {
                   return [
                     (openBlock(true), createBlock(Fragment, null, renderList(__props.breadcrumbs, (item, index) => {
                       return openBlock(), createBlock(Fragment, { key: index }, [
-                        createVNode(unref(_sfc_main$s), null, {
+                        createVNode(unref(_sfc_main$t), null, {
                           default: withCtx(() => [
-                            index === __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$p), { key: 0 }, {
+                            index === __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$q), { key: 0 }, {
                               default: withCtx(() => [
                                 createTextVNode(toDisplayString(item.title), 1)
                               ]),
                               _: 2
-                            }, 1024)) : (openBlock(), createBlock(unref(_sfc_main$r), {
+                            }, 1024)) : (openBlock(), createBlock(unref(_sfc_main$s), {
                               key: 1,
                               "as-child": ""
                             }, {
@@ -1482,7 +1518,7 @@ const _sfc_main$n = {
                           ]),
                           _: 2
                         }, 1024),
-                        index !== __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$o), { key: 0 })) : createCommentVNode("", true)
+                        index !== __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$p), { key: 0 })) : createCommentVNode("", true)
                       ], 64);
                     }), 128))
                   ];
@@ -1492,18 +1528,18 @@ const _sfc_main$n = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$q), null, {
+              createVNode(unref(_sfc_main$r), null, {
                 default: withCtx(() => [
                   (openBlock(true), createBlock(Fragment, null, renderList(__props.breadcrumbs, (item, index) => {
                     return openBlock(), createBlock(Fragment, { key: index }, [
-                      createVNode(unref(_sfc_main$s), null, {
+                      createVNode(unref(_sfc_main$t), null, {
                         default: withCtx(() => [
-                          index === __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$p), { key: 0 }, {
+                          index === __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$q), { key: 0 }, {
                             default: withCtx(() => [
                               createTextVNode(toDisplayString(item.title), 1)
                             ]),
                             _: 2
-                          }, 1024)) : (openBlock(), createBlock(unref(_sfc_main$r), {
+                          }, 1024)) : (openBlock(), createBlock(unref(_sfc_main$s), {
                             key: 1,
                             "as-child": ""
                           }, {
@@ -1522,7 +1558,7 @@ const _sfc_main$n = {
                         ]),
                         _: 2
                       }, 1024),
-                      index !== __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$o), { key: 0 })) : createCommentVNode("", true)
+                      index !== __props.breadcrumbs.length - 1 ? (openBlock(), createBlock(unref(_sfc_main$p), { key: 0 })) : createCommentVNode("", true)
                     ], 64);
                   }), 128))
                 ]),
@@ -1536,11 +1572,11 @@ const _sfc_main$n = {
     };
   }
 };
-const _sfc_setup$n = _sfc_main$n.setup;
-_sfc_main$n.setup = (props, ctx) => {
+const _sfc_setup$o = _sfc_main$o.setup;
+_sfc_main$o.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Breadcrumbs.vue");
-  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
+  return _sfc_setup$o ? _sfc_setup$o(props, ctx) : void 0;
 };
 function getInitials(fullName) {
   if (!fullName) return "";
@@ -1552,7 +1588,7 @@ function getInitials(fullName) {
 function useInitials() {
   return { getInitials };
 }
-const _sfc_main$m = {
+const _sfc_main$n = {
   __name: "Avatar",
   __ssrInlineRender: true,
   props: {
@@ -1582,13 +1618,13 @@ const _sfc_main$m = {
     };
   }
 };
-const _sfc_setup$m = _sfc_main$m.setup;
-_sfc_main$m.setup = (props, ctx) => {
+const _sfc_setup$n = _sfc_main$n.setup;
+_sfc_main$n.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/avatar/Avatar.vue");
-  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
+  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
 };
-const _sfc_main$l = {
+const _sfc_main$m = {
   __name: "AvatarFallback",
   __ssrInlineRender: true,
   props: {
@@ -1621,13 +1657,13 @@ const _sfc_main$l = {
     };
   }
 };
-const _sfc_setup$l = _sfc_main$l.setup;
-_sfc_main$l.setup = (props, ctx) => {
+const _sfc_setup$m = _sfc_main$m.setup;
+_sfc_main$m.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/avatar/AvatarFallback.vue");
-  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
+  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
 };
-const _sfc_main$k = {
+const _sfc_main$l = {
   __name: "AvatarImage",
   __ssrInlineRender: true,
   props: {
@@ -1655,13 +1691,13 @@ const _sfc_main$k = {
     };
   }
 };
-const _sfc_setup$k = _sfc_main$k.setup;
-_sfc_main$k.setup = (props, ctx) => {
+const _sfc_setup$l = _sfc_main$l.setup;
+_sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/avatar/AvatarImage.vue");
-  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const _sfc_main$j = {
+const _sfc_main$k = {
   __name: "UserInfo",
   __ssrInlineRender: true,
   props: {
@@ -1687,18 +1723,18 @@ const _sfc_main$j = {
     const showAvatar = computed(() => user.value.avatar && user.value.avatar !== "");
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[-->`);
-      _push(ssrRenderComponent(unref(_sfc_main$m), { class: "h-8 w-8 overflow-hidden rounded-lg" }, {
+      _push(ssrRenderComponent(unref(_sfc_main$n), { class: "h-8 w-8 overflow-hidden rounded-lg" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             if (showAvatar.value) {
-              _push2(ssrRenderComponent(unref(_sfc_main$k), {
+              _push2(ssrRenderComponent(unref(_sfc_main$l), {
                 src: user.value.avatar,
                 alt: user.value.name
               }, null, _parent2, _scopeId));
             } else {
               _push2(`<!---->`);
             }
-            _push2(ssrRenderComponent(unref(_sfc_main$l), { class: "rounded-lg text-black dark:text-white" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$m), { class: "rounded-lg text-black dark:text-white" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`${ssrInterpolate(unref(getInitials2)(user.value.name))}`);
@@ -1712,12 +1748,12 @@ const _sfc_main$j = {
             }, _parent2, _scopeId));
           } else {
             return [
-              showAvatar.value ? (openBlock(), createBlock(unref(_sfc_main$k), {
+              showAvatar.value ? (openBlock(), createBlock(unref(_sfc_main$l), {
                 key: 0,
                 src: user.value.avatar,
                 alt: user.value.name
               }, null, 8, ["src", "alt"])) : createCommentVNode("", true),
-              createVNode(unref(_sfc_main$l), { class: "rounded-lg text-black dark:text-white" }, {
+              createVNode(unref(_sfc_main$m), { class: "rounded-lg text-black dark:text-white" }, {
                 default: withCtx(() => [
                   createTextVNode(toDisplayString(unref(getInitials2)(user.value.name)), 1)
                 ]),
@@ -1738,13 +1774,13 @@ const _sfc_main$j = {
     };
   }
 };
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/UserInfo.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
-const _sfc_main$i = {
+const _sfc_main$j = {
   __name: "DropdownMenu",
   __ssrInlineRender: true,
   props: {
@@ -1774,13 +1810,13 @@ const _sfc_main$i = {
     };
   }
 };
-const _sfc_setup$i = _sfc_main$i.setup;
-_sfc_main$i.setup = (props, ctx) => {
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/dropdown-menu/DropdownMenu.vue");
-  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
-const _sfc_main$h = {
+const _sfc_main$i = {
   __name: "DropdownMenuContent",
   __ssrInlineRender: true,
   props: {
@@ -1859,13 +1895,13 @@ const _sfc_main$h = {
     };
   }
 };
-const _sfc_setup$h = _sfc_main$h.setup;
-_sfc_main$h.setup = (props, ctx) => {
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/dropdown-menu/DropdownMenuContent.vue");
-  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
-const _sfc_main$g = {
+const _sfc_main$h = {
   __name: "DropdownMenuGroup",
   __ssrInlineRender: true,
   props: {
@@ -1890,13 +1926,13 @@ const _sfc_main$g = {
     };
   }
 };
-const _sfc_setup$g = _sfc_main$g.setup;
-_sfc_main$g.setup = (props, ctx) => {
+const _sfc_setup$h = _sfc_main$h.setup;
+_sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/dropdown-menu/DropdownMenuGroup.vue");
-  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
+  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
-const _sfc_main$f = {
+const _sfc_main$g = {
   __name: "DropdownMenuItem",
   __ssrInlineRender: true,
   props: {
@@ -1937,13 +1973,13 @@ const _sfc_main$f = {
     };
   }
 };
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/dropdown-menu/DropdownMenuItem.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
-const _sfc_main$e = {
+const _sfc_main$f = {
   __name: "DropdownMenuLabel",
   __ssrInlineRender: true,
   props: {
@@ -1977,13 +2013,13 @@ const _sfc_main$e = {
     };
   }
 };
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/dropdown-menu/DropdownMenuLabel.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
-const _sfc_main$d = {
+const _sfc_main$e = {
   __name: "DropdownMenuSeparator",
   __ssrInlineRender: true,
   props: {
@@ -2001,13 +2037,13 @@ const _sfc_main$d = {
     };
   }
 };
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/dropdown-menu/DropdownMenuSeparator.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-const _sfc_main$c = {
+const _sfc_main$d = {
   __name: "DropdownMenuTrigger",
   __ssrInlineRender: true,
   props: {
@@ -2034,13 +2070,13 @@ const _sfc_main$c = {
     };
   }
 };
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/dropdown-menu/DropdownMenuTrigger.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const _sfc_main$b = {
+const _sfc_main$c = {
   __name: "UserMenuContent",
   __ssrInlineRender: true,
   props: {
@@ -2063,11 +2099,11 @@ const _sfc_main$b = {
     };
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[-->`);
-      _push(ssrRenderComponent(unref(_sfc_main$e), { class: "p-0 font-normal" }, {
+      _push(ssrRenderComponent(unref(_sfc_main$f), { class: "p-0 font-normal" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<div class="flex items-center gap-2 px-1 py-1.5 text-left text-sm"${_scopeId}>`);
-            _push2(ssrRenderComponent(_sfc_main$j, {
+            _push2(ssrRenderComponent(_sfc_main$k, {
               user: unref(user),
               "show-email": true
             }, null, _parent2, _scopeId));
@@ -2075,7 +2111,7 @@ const _sfc_main$b = {
           } else {
             return [
               createVNode("div", { class: "flex items-center gap-2 px-1 py-1.5 text-left text-sm" }, [
-                createVNode(_sfc_main$j, {
+                createVNode(_sfc_main$k, {
                   user: unref(user),
                   "show-email": true
                 }, null, 8, ["user"])
@@ -2085,11 +2121,11 @@ const _sfc_main$b = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$d), null, null, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$g), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$e), null, null, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$h), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$f), { "as-child": true }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$g), { "as-child": true }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(ssrRenderComponent(unref(Link), {
@@ -2132,7 +2168,7 @@ const _sfc_main$b = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$f), { "as-child": true }, {
+              createVNode(unref(_sfc_main$g), { "as-child": true }, {
                 default: withCtx(() => [
                   createVNode(unref(Link), {
                     class: "block w-full",
@@ -2154,8 +2190,8 @@ const _sfc_main$b = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$d), null, null, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$f), { "as-child": true }, {
+      _push(ssrRenderComponent(unref(_sfc_main$e), null, null, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$g), { "as-child": true }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(unref(Link), {
@@ -2202,11 +2238,11 @@ const _sfc_main$b = {
     };
   }
 };
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/UserMenuContent.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
 function useMainNavItems() {
   return [
@@ -2251,7 +2287,7 @@ function useExternalNavItems() {
     }
   ];
 }
-const _sfc_main$a = {
+const _sfc_main$b = {
   __name: "NavigationMenuViewport",
   __ssrInlineRender: true,
   props: {
@@ -2277,13 +2313,13 @@ const _sfc_main$a = {
     };
   }
 };
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/navigation-menu/NavigationMenuViewport.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const _sfc_main$9 = {
+const _sfc_main$a = {
   __name: "NavigationMenu",
   __ssrInlineRender: true,
   props: {
@@ -2322,14 +2358,14 @@ const _sfc_main$9 = {
           if (_push2) {
             ssrRenderSlot(_ctx.$slots, "default", {}, null, _push2, _parent2, _scopeId);
             if (__props.viewport) {
-              _push2(ssrRenderComponent(_sfc_main$a, null, null, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_sfc_main$b, null, null, _parent2, _scopeId));
             } else {
               _push2(`<!---->`);
             }
           } else {
             return [
               renderSlot(_ctx.$slots, "default"),
-              __props.viewport ? (openBlock(), createBlock(_sfc_main$a, { key: 0 })) : createCommentVNode("", true)
+              __props.viewport ? (openBlock(), createBlock(_sfc_main$b, { key: 0 })) : createCommentVNode("", true)
             ];
           }
         }),
@@ -2338,13 +2374,13 @@ const _sfc_main$9 = {
     };
   }
 };
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/navigation-menu/NavigationMenu.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const _sfc_main$8 = {
+const _sfc_main$9 = {
   __name: "NavigationMenuItem",
   __ssrInlineRender: true,
   props: {
@@ -2374,13 +2410,13 @@ const _sfc_main$8 = {
     };
   }
 };
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/navigation-menu/NavigationMenuItem.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-const _sfc_main$7 = {
+const _sfc_main$8 = {
   __name: "NavigationMenuList",
   __ssrInlineRender: true,
   props: {
@@ -2413,16 +2449,16 @@ const _sfc_main$7 = {
     };
   }
 };
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/navigation-menu/NavigationMenuList.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
 const navigationMenuTriggerStyle = cva(
   "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground disabled:pointer-events-none disabled:opacity-50 data-[state=open]:hover:bg-accent data-[state=open]:text-accent-foreground data-[state=open]:focus:bg-accent data-[state=open]:bg-accent/50 focus-visible:ring-ring/50 outline-none transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1"
 );
-const _sfc_main$6 = {
+const _sfc_main$7 = {
   __name: "AppHeader",
   __ssrInlineRender: true,
   props: {
@@ -2451,13 +2487,13 @@ const _sfc_main$6 = {
     const rightNavItems = useExternalNavItems();
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(_attrs)}><div class="border-b border-sidebar-border/80"><div class="mx-auto flex h-16 items-center px-4 md:max-w-7xl"><div class="lg:hidden">`);
-      _push(ssrRenderComponent(unref(_sfc_main$N), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$P), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$H), { "as-child": true }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$J), { "as-child": true }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(ssrRenderComponent(unref(_sfc_main$x), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$y), {
                     variant: "ghost",
                     size: "icon",
                     class: "mr-2 h-9 w-9"
@@ -2475,7 +2511,7 @@ const _sfc_main$6 = {
                   }, _parent3, _scopeId2));
                 } else {
                   return [
-                    createVNode(unref(_sfc_main$x), {
+                    createVNode(unref(_sfc_main$y), {
                       variant: "ghost",
                       size: "icon",
                       class: "mr-2 h-9 w-9"
@@ -2490,13 +2526,13 @@ const _sfc_main$6 = {
               }),
               _: 1
             }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$L), {
+            _push2(ssrRenderComponent(unref(_sfc_main$N), {
               side: "left",
               class: "w-[300px] p-6"
             }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(ssrRenderComponent(unref(_sfc_main$I), { class: "sr-only" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$K), { class: "sr-only" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(`Navigation Menu`);
@@ -2508,13 +2544,13 @@ const _sfc_main$6 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$J), { class: "flex justify-start text-left" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$L), { class: "flex justify-start text-left" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(ssrRenderComponent(_sfc_main$v, { class: "size-6 fill-current text-black dark:text-white" }, null, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(_sfc_main$w, { class: "size-6 fill-current text-black dark:text-white" }, null, _parent4, _scopeId3));
                       } else {
                         return [
-                          createVNode(_sfc_main$v, { class: "size-6 fill-current text-black dark:text-white" })
+                          createVNode(_sfc_main$w, { class: "size-6 fill-current text-black dark:text-white" })
                         ];
                       }
                     }),
@@ -2561,15 +2597,15 @@ const _sfc_main$6 = {
                   _push3(`<!--]--></div></div>`);
                 } else {
                   return [
-                    createVNode(unref(_sfc_main$I), { class: "sr-only" }, {
+                    createVNode(unref(_sfc_main$K), { class: "sr-only" }, {
                       default: withCtx(() => [
                         createTextVNode("Navigation Menu")
                       ]),
                       _: 1
                     }),
-                    createVNode(unref(_sfc_main$J), { class: "flex justify-start text-left" }, {
+                    createVNode(unref(_sfc_main$L), { class: "flex justify-start text-left" }, {
                       default: withCtx(() => [
-                        createVNode(_sfc_main$v, { class: "size-6 fill-current text-black dark:text-white" })
+                        createVNode(_sfc_main$w, { class: "size-6 fill-current text-black dark:text-white" })
                       ]),
                       _: 1
                     }),
@@ -2617,9 +2653,9 @@ const _sfc_main$6 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$H), { "as-child": true }, {
+              createVNode(unref(_sfc_main$J), { "as-child": true }, {
                 default: withCtx(() => [
-                  createVNode(unref(_sfc_main$x), {
+                  createVNode(unref(_sfc_main$y), {
                     variant: "ghost",
                     size: "icon",
                     class: "mr-2 h-9 w-9"
@@ -2632,20 +2668,20 @@ const _sfc_main$6 = {
                 ]),
                 _: 1
               }),
-              createVNode(unref(_sfc_main$L), {
+              createVNode(unref(_sfc_main$N), {
                 side: "left",
                 class: "w-[300px] p-6"
               }, {
                 default: withCtx(() => [
-                  createVNode(unref(_sfc_main$I), { class: "sr-only" }, {
+                  createVNode(unref(_sfc_main$K), { class: "sr-only" }, {
                     default: withCtx(() => [
                       createTextVNode("Navigation Menu")
                     ]),
                     _: 1
                   }),
-                  createVNode(unref(_sfc_main$J), { class: "flex justify-start text-left" }, {
+                  createVNode(unref(_sfc_main$L), { class: "flex justify-start text-left" }, {
                     default: withCtx(() => [
-                      createVNode(_sfc_main$v, { class: "size-6 fill-current text-black dark:text-white" })
+                      createVNode(_sfc_main$w, { class: "size-6 fill-current text-black dark:text-white" })
                     ]),
                     _: 1
                   }),
@@ -2701,25 +2737,25 @@ const _sfc_main$6 = {
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(_sfc_main$u, null, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$v, null, null, _parent2, _scopeId));
           } else {
             return [
-              createVNode(_sfc_main$u)
+              createVNode(_sfc_main$v)
             ];
           }
         }),
         _: 1
       }, _parent));
       _push(`<div class="hidden h-full lg:flex lg:flex-1">`);
-      _push(ssrRenderComponent(unref(_sfc_main$9), { class: "ml-10 flex h-full items-stretch" }, {
+      _push(ssrRenderComponent(unref(_sfc_main$a), { class: "ml-10 flex h-full items-stretch" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$7), { class: "flex h-full items-stretch space-x-2" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$8), { class: "flex h-full items-stretch space-x-2" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<!--[-->`);
                   ssrRenderList(unref(mainNavItems), (item, index) => {
-                    _push3(ssrRenderComponent(unref(_sfc_main$8), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$9), {
                       key: index,
                       class: "relative flex h-full items-center"
                     }, {
@@ -2783,7 +2819,7 @@ const _sfc_main$6 = {
                 } else {
                   return [
                     (openBlock(true), createBlock(Fragment, null, renderList(unref(mainNavItems), (item, index) => {
-                      return openBlock(), createBlock(unref(_sfc_main$8), {
+                      return openBlock(), createBlock(unref(_sfc_main$9), {
                         key: index,
                         class: "relative flex h-full items-center"
                       }, {
@@ -2816,10 +2852,10 @@ const _sfc_main$6 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$7), { class: "flex h-full items-stretch space-x-2" }, {
+              createVNode(unref(_sfc_main$8), { class: "flex h-full items-stretch space-x-2" }, {
                 default: withCtx(() => [
                   (openBlock(true), createBlock(Fragment, null, renderList(unref(mainNavItems), (item, index) => {
-                    return openBlock(), createBlock(unref(_sfc_main$8), {
+                    return openBlock(), createBlock(unref(_sfc_main$9), {
                       key: index,
                       class: "relative flex h-full items-center"
                     }, {
@@ -2854,7 +2890,7 @@ const _sfc_main$6 = {
         _: 1
       }, _parent));
       _push(`</div><div class="ml-auto flex items-center space-x-2"><div class="relative flex items-center space-x-1">`);
-      _push(ssrRenderComponent(unref(_sfc_main$x), {
+      _push(ssrRenderComponent(unref(_sfc_main$y), {
         variant: "ghost",
         size: "icon",
         class: "group h-9 w-9 cursor-pointer"
@@ -2872,16 +2908,16 @@ const _sfc_main$6 = {
       }, _parent));
       _push(`<div class="hidden space-x-1 lg:flex"><!--[-->`);
       ssrRenderList(unref(rightNavItems), (item) => {
-        _push(ssrRenderComponent(unref(_sfc_main$C), { "delay-duration": 0 }, {
+        _push(ssrRenderComponent(unref(_sfc_main$D), { "delay-duration": 0 }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(ssrRenderComponent(unref(_sfc_main$E), null, {
+              _push2(ssrRenderComponent(unref(_sfc_main$F), null, {
                 default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(ssrRenderComponent(unref(_sfc_main$B), null, {
+                    _push3(ssrRenderComponent(unref(_sfc_main$C), null, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(ssrRenderComponent(unref(_sfc_main$x), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$y), {
                             variant: "ghost",
                             size: "icon",
                             "as-child": "",
@@ -2909,7 +2945,7 @@ const _sfc_main$6 = {
                           }, _parent4, _scopeId3));
                         } else {
                           return [
-                            createVNode(unref(_sfc_main$x), {
+                            createVNode(unref(_sfc_main$y), {
                               variant: "ghost",
                               size: "icon",
                               "as-child": "",
@@ -2932,7 +2968,7 @@ const _sfc_main$6 = {
                       }),
                       _: 2
                     }, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$D), null, {
+                    _push3(ssrRenderComponent(unref(_sfc_main$E), null, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           _push4(`<p${_scopeId3}>${ssrInterpolate(item.title)}</p>`);
@@ -2946,9 +2982,9 @@ const _sfc_main$6 = {
                     }, _parent3, _scopeId2));
                   } else {
                     return [
-                      createVNode(unref(_sfc_main$B), null, {
+                      createVNode(unref(_sfc_main$C), null, {
                         default: withCtx(() => [
-                          createVNode(unref(_sfc_main$x), {
+                          createVNode(unref(_sfc_main$y), {
                             variant: "ghost",
                             size: "icon",
                             "as-child": "",
@@ -2969,7 +3005,7 @@ const _sfc_main$6 = {
                         ]),
                         _: 2
                       }, 1024),
-                      createVNode(unref(_sfc_main$D), null, {
+                      createVNode(unref(_sfc_main$E), null, {
                         default: withCtx(() => [
                           createVNode("p", null, toDisplayString(item.title), 1)
                         ]),
@@ -2982,11 +3018,11 @@ const _sfc_main$6 = {
               }, _parent2, _scopeId));
             } else {
               return [
-                createVNode(unref(_sfc_main$E), null, {
+                createVNode(unref(_sfc_main$F), null, {
                   default: withCtx(() => [
-                    createVNode(unref(_sfc_main$B), null, {
+                    createVNode(unref(_sfc_main$C), null, {
                       default: withCtx(() => [
-                        createVNode(unref(_sfc_main$x), {
+                        createVNode(unref(_sfc_main$y), {
                           variant: "ghost",
                           size: "icon",
                           "as-child": "",
@@ -3007,7 +3043,7 @@ const _sfc_main$6 = {
                       ]),
                       _: 2
                     }, 1024),
-                    createVNode(unref(_sfc_main$D), null, {
+                    createVNode(unref(_sfc_main$E), null, {
                       default: withCtx(() => [
                         createVNode("p", null, toDisplayString(item.title), 1)
                       ]),
@@ -3023,31 +3059,31 @@ const _sfc_main$6 = {
         }, _parent));
       });
       _push(`<!--]--></div></div>`);
-      _push(ssrRenderComponent(unref(_sfc_main$i), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$j), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$c), { "as-child": true }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$d), { "as-child": true }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(ssrRenderComponent(unref(_sfc_main$x), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$y), {
                     variant: "ghost",
                     size: "icon",
                     class: "relative size-10 w-auto rounded-full p-1 focus-within:ring-2 focus-within:ring-primary"
                   }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(ssrRenderComponent(unref(_sfc_main$m), { class: "size-8 overflow-hidden rounded-full" }, {
+                        _push4(ssrRenderComponent(unref(_sfc_main$n), { class: "size-8 overflow-hidden rounded-full" }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
                               if (user.value.avatar) {
-                                _push5(ssrRenderComponent(unref(_sfc_main$k), {
+                                _push5(ssrRenderComponent(unref(_sfc_main$l), {
                                   src: user.value.avatar,
                                   alt: user.value.name
                                 }, null, _parent5, _scopeId4));
                               } else {
                                 _push5(`<!---->`);
                               }
-                              _push5(ssrRenderComponent(unref(_sfc_main$l), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
+                              _push5(ssrRenderComponent(unref(_sfc_main$m), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
                                 default: withCtx((_5, _push6, _parent6, _scopeId5) => {
                                   if (_push6) {
                                     _push6(`${ssrInterpolate(unref(getInitials)(user.value.name))}`);
@@ -3061,12 +3097,12 @@ const _sfc_main$6 = {
                               }, _parent5, _scopeId4));
                             } else {
                               return [
-                                user.value.avatar ? (openBlock(), createBlock(unref(_sfc_main$k), {
+                                user.value.avatar ? (openBlock(), createBlock(unref(_sfc_main$l), {
                                   key: 0,
                                   src: user.value.avatar,
                                   alt: user.value.name
                                 }, null, 8, ["src", "alt"])) : createCommentVNode("", true),
-                                createVNode(unref(_sfc_main$l), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
+                                createVNode(unref(_sfc_main$m), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
                                   default: withCtx(() => [
                                     createTextVNode(toDisplayString(unref(getInitials)(user.value.name)), 1)
                                   ]),
@@ -3079,14 +3115,14 @@ const _sfc_main$6 = {
                         }, _parent4, _scopeId3));
                       } else {
                         return [
-                          createVNode(unref(_sfc_main$m), { class: "size-8 overflow-hidden rounded-full" }, {
+                          createVNode(unref(_sfc_main$n), { class: "size-8 overflow-hidden rounded-full" }, {
                             default: withCtx(() => [
-                              user.value.avatar ? (openBlock(), createBlock(unref(_sfc_main$k), {
+                              user.value.avatar ? (openBlock(), createBlock(unref(_sfc_main$l), {
                                 key: 0,
                                 src: user.value.avatar,
                                 alt: user.value.name
                               }, null, 8, ["src", "alt"])) : createCommentVNode("", true),
-                              createVNode(unref(_sfc_main$l), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
+                              createVNode(unref(_sfc_main$m), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
                                 default: withCtx(() => [
                                   createTextVNode(toDisplayString(unref(getInitials)(user.value.name)), 1)
                                 ]),
@@ -3102,20 +3138,20 @@ const _sfc_main$6 = {
                   }, _parent3, _scopeId2));
                 } else {
                   return [
-                    createVNode(unref(_sfc_main$x), {
+                    createVNode(unref(_sfc_main$y), {
                       variant: "ghost",
                       size: "icon",
                       class: "relative size-10 w-auto rounded-full p-1 focus-within:ring-2 focus-within:ring-primary"
                     }, {
                       default: withCtx(() => [
-                        createVNode(unref(_sfc_main$m), { class: "size-8 overflow-hidden rounded-full" }, {
+                        createVNode(unref(_sfc_main$n), { class: "size-8 overflow-hidden rounded-full" }, {
                           default: withCtx(() => [
-                            user.value.avatar ? (openBlock(), createBlock(unref(_sfc_main$k), {
+                            user.value.avatar ? (openBlock(), createBlock(unref(_sfc_main$l), {
                               key: 0,
                               src: user.value.avatar,
                               alt: user.value.name
                             }, null, 8, ["src", "alt"])) : createCommentVNode("", true),
-                            createVNode(unref(_sfc_main$l), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
+                            createVNode(unref(_sfc_main$m), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
                               default: withCtx(() => [
                                 createTextVNode(toDisplayString(unref(getInitials)(user.value.name)), 1)
                               ]),
@@ -3132,16 +3168,16 @@ const _sfc_main$6 = {
               }),
               _: 1
             }, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$h), {
+            _push2(ssrRenderComponent(unref(_sfc_main$i), {
               align: "end",
               class: "w-56"
             }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(ssrRenderComponent(_sfc_main$b, { user: user.value }, null, _parent3, _scopeId2));
+                  _push3(ssrRenderComponent(_sfc_main$c, { user: user.value }, null, _parent3, _scopeId2));
                 } else {
                   return [
-                    createVNode(_sfc_main$b, { user: user.value }, null, 8, ["user"])
+                    createVNode(_sfc_main$c, { user: user.value }, null, 8, ["user"])
                   ];
                 }
               }),
@@ -3149,22 +3185,22 @@ const _sfc_main$6 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$c), { "as-child": true }, {
+              createVNode(unref(_sfc_main$d), { "as-child": true }, {
                 default: withCtx(() => [
-                  createVNode(unref(_sfc_main$x), {
+                  createVNode(unref(_sfc_main$y), {
                     variant: "ghost",
                     size: "icon",
                     class: "relative size-10 w-auto rounded-full p-1 focus-within:ring-2 focus-within:ring-primary"
                   }, {
                     default: withCtx(() => [
-                      createVNode(unref(_sfc_main$m), { class: "size-8 overflow-hidden rounded-full" }, {
+                      createVNode(unref(_sfc_main$n), { class: "size-8 overflow-hidden rounded-full" }, {
                         default: withCtx(() => [
-                          user.value.avatar ? (openBlock(), createBlock(unref(_sfc_main$k), {
+                          user.value.avatar ? (openBlock(), createBlock(unref(_sfc_main$l), {
                             key: 0,
                             src: user.value.avatar,
                             alt: user.value.name
                           }, null, 8, ["src", "alt"])) : createCommentVNode("", true),
-                          createVNode(unref(_sfc_main$l), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
+                          createVNode(unref(_sfc_main$m), { class: "rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white" }, {
                             default: withCtx(() => [
                               createTextVNode(toDisplayString(unref(getInitials)(user.value.name)), 1)
                             ]),
@@ -3179,12 +3215,12 @@ const _sfc_main$6 = {
                 ]),
                 _: 1
               }),
-              createVNode(unref(_sfc_main$h), {
+              createVNode(unref(_sfc_main$i), {
                 align: "end",
                 class: "w-56"
               }, {
                 default: withCtx(() => [
-                  createVNode(_sfc_main$b, { user: user.value }, null, 8, ["user"])
+                  createVNode(_sfc_main$c, { user: user.value }, null, 8, ["user"])
                 ]),
                 _: 1
               })
@@ -3196,7 +3232,7 @@ const _sfc_main$6 = {
       _push(`</div></div></div>`);
       if (props.breadcrumbs.length > 1) {
         _push(`<div class="flex w-full border-b border-sidebar-border/70"><div class="mx-auto flex h-12 w-full items-center justify-start px-4 text-neutral-500 md:max-w-7xl">`);
-        _push(ssrRenderComponent(_sfc_main$n, { breadcrumbs: __props.breadcrumbs }, null, _parent));
+        _push(ssrRenderComponent(_sfc_main$o, { breadcrumbs: __props.breadcrumbs }, null, _parent));
         _push(`</div></div>`);
       } else {
         _push(`<!---->`);
@@ -3205,13 +3241,13 @@ const _sfc_main$6 = {
     };
   }
 };
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/AppHeader.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const _sfc_main$5 = {
+const _sfc_main$6 = {
   __name: "AppShell",
   __ssrInlineRender: true,
   props: {
@@ -3228,7 +3264,7 @@ const _sfc_main$5 = {
         ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
         _push(`</div>`);
       } else {
-        _push(ssrRenderComponent(unref(_sfc_main$y), mergeProps({ "default-open": unref(isOpen) }, _attrs), {
+        _push(ssrRenderComponent(unref(_sfc_main$z), mergeProps({ "default-open": unref(isOpen) }, _attrs), {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               ssrRenderSlot(_ctx.$slots, "default", {}, null, _push2, _parent2, _scopeId);
@@ -3244,13 +3280,13 @@ const _sfc_main$5 = {
     };
   }
 };
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/AppShell.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const _sfc_main$4 = {
+const _sfc_main$5 = {
   __name: "AppHeaderLayout",
   __ssrInlineRender: true,
   props: {
@@ -3261,11 +3297,11 @@ const _sfc_main$4 = {
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(ssrRenderComponent(_sfc_main$5, mergeProps({ class: "flex-col" }, _attrs), {
+      _push(ssrRenderComponent(_sfc_main$6, mergeProps({ class: "flex-col" }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(_sfc_main$6, { breadcrumbs: __props.breadcrumbs }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(_sfc_main$w, null, {
+            _push2(ssrRenderComponent(_sfc_main$7, { breadcrumbs: __props.breadcrumbs }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(_sfc_main$x, null, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push3, _parent3, _scopeId2);
@@ -3279,8 +3315,8 @@ const _sfc_main$4 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(_sfc_main$6, { breadcrumbs: __props.breadcrumbs }, null, 8, ["breadcrumbs"]),
-              createVNode(_sfc_main$w, null, {
+              createVNode(_sfc_main$7, { breadcrumbs: __props.breadcrumbs }, null, 8, ["breadcrumbs"]),
+              createVNode(_sfc_main$x, null, {
                 default: withCtx(() => [
                   renderSlot(_ctx.$slots, "default")
                 ]),
@@ -3294,13 +3330,13 @@ const _sfc_main$4 = {
     };
   }
 };
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/layouts/app/AppHeaderLayout.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const _sfc_main$3 = {
+const _sfc_main$4 = {
   __name: "AppLayout",
   __ssrInlineRender: true,
   props: {
@@ -3311,7 +3347,7 @@ const _sfc_main$3 = {
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(ssrRenderComponent(_sfc_main$4, mergeProps({ breadcrumbs: __props.breadcrumbs }, _attrs), {
+      _push(ssrRenderComponent(_sfc_main$5, mergeProps({ breadcrumbs: __props.breadcrumbs }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             ssrRenderSlot(_ctx.$slots, "default", {}, null, _push2, _parent2, _scopeId);
@@ -3326,11 +3362,11 @@ const _sfc_main$3 = {
     };
   }
 };
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/layouts/AppLayout.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
 function t() {
   return t = Object.assign ? Object.assign.bind() : function(t4) {
@@ -3682,7 +3718,7 @@ function useBreadcrumbs(page, data = {}) {
     }
   });
 }
-const _sfc_main$2 = {
+const _sfc_main$3 = {
   __name: "Dashboard",
   __ssrInlineRender: true,
   setup(__props) {
@@ -3690,20 +3726,20 @@ const _sfc_main$2 = {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[-->`);
       _push(ssrRenderComponent(unref(Head), { title: "Dashboard - Zakat2U" }, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$3, { breadcrumbs: unref(breadcrumbs) }, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$4, { breadcrumbs: unref(breadcrumbs) }, null, _parent));
       _push(`<!--]-->`);
     };
   }
 };
-const _sfc_setup$2 = _sfc_main$2.setup;
-_sfc_main$2.setup = (props, ctx) => {
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Dashboard.vue");
-  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$2
+  default: _sfc_main$3
 }, Symbol.toStringTag, { value: "Module" }));
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -3712,20 +3748,135 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$1 = {};
+const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   _push(`<div${ssrRenderAttrs(mergeProps({
     class: "flex h-10 w-full items-center justify-center gap-2 md:gap-4 bg-black/90 text-white font-sans animate-gradient-move",
     style: { "background": "linear-gradient(90deg, #2e3191 0%, #00a551 25%, #2e3191 50%, #00a551 75%, #2e3191 100%), url('https://cdn.fathul.my/assets/images/header-noise.png')", "background-blend-mode": "overlay", "background-repeat": "repeat", "background-size": "200% 100%, 24px 24px" }
   }, _attrs))}><p class="font-extrabold text-base leading-[1.4] tracking-[0.01em] flex items-center gap-1">Program Jaminan Kerjaya<span class="opacity-60 font-extrabold ml-1">2025</span></p><a href="/" class="inline-flex items-center justify-center rounded-full bg-white text-black font-extrabold px-3 text-[0.85rem] leading-[1.1] h-6">Daftar</a></div>`);
 }
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Banner.vue");
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+};
+const Banner = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender]]);
+const _sfc_main$1 = {
+  __name: "UnderDevelopment",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const email = ref("");
+    const isSubscribed = ref(false);
+    const isSubmitting = ref(false);
+    const emailError = ref("");
+    const targetDate = /* @__PURE__ */ new Date("2025-03-01T00:00:00");
+    const currentTime = ref(/* @__PURE__ */ new Date());
+    let timer = null;
+    const timeRemaining = computed(() => {
+      const diff = targetDate - currentTime.value;
+      if (diff <= 0) {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      }
+      return {
+        days: Math.floor(diff / (1e3 * 60 * 60 * 24)),
+        hours: Math.floor(diff % (1e3 * 60 * 60 * 24) / (1e3 * 60 * 60)),
+        minutes: Math.floor(diff % (1e3 * 60 * 60) / (1e3 * 60)),
+        seconds: Math.floor(diff % (1e3 * 60) / 1e3)
+      };
+    });
+    const validateEmail = (email2) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email2);
+    };
+    const handleSubscribe = async () => {
+      emailError.value = "";
+      if (!email.value) {
+        emailError.value = "Please enter your email address";
+        return;
+      }
+      if (!validateEmail(email.value)) {
+        emailError.value = "Please enter a valid email address";
+        return;
+      }
+      isSubmitting.value = true;
+      setTimeout(() => {
+        isSubscribed.value = true;
+        isSubmitting.value = false;
+        email.value = "";
+      }, 1500);
+    };
+    onMounted(() => {
+      timer = setInterval(() => {
+        currentTime.value = /* @__PURE__ */ new Date();
+      }, 1e3);
+    });
+    onUnmounted(() => {
+      if (timer) {
+        clearInterval(timer);
+      }
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-neutral-950 dark:to-neutral-900 flex items-center justify-center px-4 py-12" }, _attrs))}><div class="max-w-4xl w-full mx-auto"><div class="text-center space-y-8"><div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-4">`);
+      _push(ssrRenderComponent(unref(Rocket), { class: "w-10 h-10 text-primary" }, null, _parent));
+      _push(`</div><div class="space-y-4"><h1 class="text-4xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50"> Something Amazing is Coming </h1><p class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto"> We&#39;re working hard to bring you an exceptional experience. Our new website is currently under development and will be launching soon. </p></div><div class="flex justify-center gap-4 md:gap-8 py-8"><!--[-->`);
+      ssrRenderList(timeRemaining.value, (value, key) => {
+        _push(`<div class="text-center"><div class="bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-4 md:p-6 min-w-[80px] md:min-w-[120px]"><div class="text-2xl md:text-4xl font-bold text-primary">${ssrInterpolate(value.toString().padStart(2, "0"))}</div><div class="text-xs md:text-sm text-neutral-500 dark:text-neutral-400 mt-1 capitalize">${ssrInterpolate(key)}</div></div></div>`);
+      });
+      _push(`<!--]--></div><div class="max-w-md mx-auto space-y-4"><div class="flex items-center gap-2 justify-center text-neutral-600 dark:text-neutral-400">`);
+      _push(ssrRenderComponent(unref(Mail), { class: "w-5 h-5" }, null, _parent));
+      _push(`<h2 class="text-lg font-semibold">Get Notified When We Launch</h2></div>`);
+      if (!isSubscribed.value) {
+        _push(`<div class="space-y-3"><div class="flex flex-col sm:flex-row gap-3">`);
+        _push(ssrRenderComponent(unref(_sfc_main$H), {
+          modelValue: email.value,
+          "onUpdate:modelValue": ($event) => email.value = $event,
+          type: "email",
+          placeholder: "Enter your email address",
+          class: "flex-1",
+          disabled: isSubmitting.value,
+          onKeyup: handleSubscribe
+        }, null, _parent));
+        _push(ssrRenderComponent(unref(_sfc_main$y), {
+          onClick: handleSubscribe,
+          disabled: isSubmitting.value,
+          class: "w-full sm:w-auto"
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`${ssrInterpolate(isSubmitting.value ? "Subscribing..." : "Notify Me")}`);
+            } else {
+              return [
+                createTextVNode(toDisplayString(isSubmitting.value ? "Subscribing..." : "Notify Me"), 1)
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+        _push(`</div>`);
+        if (emailError.value) {
+          _push(`<p class="text-sm text-red-500">${ssrInterpolate(emailError.value)}</p>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`<p class="text-xs text-neutral-500 dark:text-neutral-400"> We&#39;ll only send you one email when we launch. No spam, we promise! </p></div>`);
+      } else {
+        _push(`<div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4"><div class="flex items-center gap-3">`);
+        _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-green-600 dark:text-green-400" }, null, _parent));
+        _push(`<div class="text-left"><h3 class="font-semibold text-green-800 dark:text-green-300"> You&#39;re on the list! </h3><p class="text-sm text-green-700 dark:text-green-400"> We&#39;ll notify you as soon as we launch. </p></div></div></div>`);
+      }
+      _push(`</div><div class="pt-8 space-y-4"><div class="flex items-center justify-center gap-2 text-neutral-500 dark:text-neutral-400">`);
+      _push(ssrRenderComponent(unref(Clock), { class: "w-4 h-4" }, null, _parent));
+      _push(`<p class="text-sm"> Expected Launch: March 2025 </p></div><div class="flex items-center justify-center gap-4"><a href="#" class="text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"><span class="sr-only">Twitter</span><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a><a href="#" class="text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"><span class="sr-only">GitHub</span><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg></a></div></div></div></div></div>`);
+    };
+  }
+};
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Banner.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/UnderDevelopment.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const Banner = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender]]);
 const _sfc_main = {
   __name: "Home",
   __ssrInlineRender: true,
@@ -3734,6 +3885,7 @@ const _sfc_main = {
       _push(`<!--[-->`);
       _push(ssrRenderComponent(unref(Head), { title: "Fathul Amin" }, null, _parent));
       _push(ssrRenderComponent(Banner, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$1, null, null, _parent));
       _push(`<!--]-->`);
     };
   }
