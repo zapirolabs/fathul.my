@@ -30,7 +30,6 @@
   "resources/js/components/ui/dropdown-menu/DropdownMenuLabel.vue": [],
   "resources/js/components/ui/dropdown-menu/DropdownMenuSeparator.vue": [],
   "resources/js/components/ui/dropdown-menu/DropdownMenuTrigger.vue": [],
-  "resources/js/components/ui/input/Input.vue": [],
   "resources/js/components/ui/navigation-menu/NavigationMenu.vue": [],
   "resources/js/components/ui/navigation-menu/NavigationMenuItem.vue": [],
   "resources/js/components/ui/navigation-menu/NavigationMenuList.vue": [],
