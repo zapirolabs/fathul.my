@@ -4,6 +4,6 @@ import { Head } from '@inertiajs/vue3'
 </script>
 
 <template>
-  <Head title="Zakat2U v5" />
+  <Head title="Fathul Amin" />
   <Banner />
 </template>
