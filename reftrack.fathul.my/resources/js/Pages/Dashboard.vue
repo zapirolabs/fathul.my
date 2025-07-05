@@ -8,7 +8,7 @@ const breadcrumbs = useBreadcrumbs('dashboard')
 </script>
 
 <template>
-  <Head title="Dashboard - Zakat2U"></Head>
+  <Head title="RefTrack - fathul.my"></Head>
   <AppLayout :breadcrumbs="breadcrumbs">
   </AppLayout>
 </template>

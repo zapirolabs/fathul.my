@@ -1,0 +1,32 @@
+reftrack.fathul.my {
+    root * /home/server/webapps/fathul.my/reftrack.fathul.my/public
+
+    encode zstd br gzip
+
+    php_server {
+        resolve_root_symlink false
+        worker frankenphp-worker.php 4  
+        try_files {path} index.php
+        file_server off
+    }
+
+    @static {
+        path /build/* /storage/* /favicon.ico /robots.txt
+    }
+    file_server @static
+
+    header @static Cache-Control "public, max-age=31536000, immutable"
+
+    header {
+        Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+        X-Frame-Options "DENY"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "same-origin"
+        Permissions-Policy "geolocation=(), microphone=()"
+    }
+
+    @forbidden {
+        path /.env* /.git* /storage/logs/* /storage/framework/*
+    }
+    respond @forbidden 403
+}
