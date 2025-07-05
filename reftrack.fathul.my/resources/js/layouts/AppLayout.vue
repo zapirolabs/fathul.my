@@ -1,5 +1,5 @@
 <script setup lang="js">
-import AppLayout from '@/resources/js/layouts/app/AppHeaderLayout.vue';
+import AppLayout from '@/resources/js/layouts/app/AppSidebarLayout.vue';
 
 const props = defineProps({
   breadcrumbs: {
