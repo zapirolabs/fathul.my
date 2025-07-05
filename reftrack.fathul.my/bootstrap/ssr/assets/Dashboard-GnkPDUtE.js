@@ -6,7 +6,7 @@ import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { useForwardPropsEmits, DialogRoot, DialogOverlay, DialogPortal, DialogContent, DialogClose, DialogDescription, DialogTitle, DialogTrigger, createContext, TooltipRoot, TooltipPortal, TooltipContent, TooltipArrow, TooltipProvider, TooltipTrigger, Primitive, AvatarRoot, AvatarFallback, AvatarImage, DropdownMenuRoot, DropdownMenuPortal, DropdownMenuContent, DropdownMenuGroup, useForwardProps, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, NavigationMenuViewport, NavigationMenuRoot, NavigationMenuItem, NavigationMenuList } from "reka-ui";
 import { reactiveOmit, useMediaQuery, useVModel, useEventListener } from "@vueuse/core";
-import { X, ChevronRight, Settings, LogOut, LayoutGrid, HandHeart, Landmark, Wallet, User, Folder, BookOpen, Menu, Search } from "lucide-vue-next";
+import { X, ChevronRight, Settings, LogOut, LayoutGrid, Folder, BookOpen, Menu, Search } from "lucide-vue-next";
 import { T } from "../ssr.js";
 import "@inertiajs/vue3/server";
 import "@vue/server-renderer";
@@ -2215,26 +2215,6 @@ function useMainNavItems() {
       title: "Dashboard",
       href: "/dashboard",
       icon: LayoutGrid
-    },
-    {
-      title: "Maklumat Zakat",
-      href: "/maklumat-zakat",
-      icon: HandHeart
-    },
-    {
-      title: "Maklumat Wakaf",
-      href: "/maklumat-wakaf",
-      icon: Landmark
-    },
-    {
-      title: "Potongan Gaji",
-      href: "/potongan-gaji",
-      icon: Wallet
-    },
-    {
-      title: "Akaun Anda",
-      href: "/akaun-anda",
-      icon: User
     }
   ];
 }
@@ -3338,15 +3318,8 @@ function useBreadcrumbs(page, data = {}) {
     switch (page) {
       case "dashboard":
         return [
-          { title: "Halaman Utama", href: T("home") },
           { title: "Dashboard", href: T("dashboard") }
         ];
-      // case 'user.show':
-      //   return [
-      //     { title: 'Home', href: route('home') },
-      //     { title: 'Users', href: route('users.index') },
-      //     { title: data.user.name, href: route('users.show', { id: data.user.id }) }
-      //   ]
       default:
         return [];
     }

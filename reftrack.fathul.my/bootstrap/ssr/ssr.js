@@ -341,7 +341,7 @@ createServer(
       title: (title) => title,
       resolve: (name) => {
         const eagerPages = /* @__PURE__ */ Object.assign({});
-        const lazyPages = /* @__PURE__ */ Object.assign({ "./Pages/Dashboard.vue": () => import("./assets/Dashboard-FvVt3GB3.js") });
+        const lazyPages = /* @__PURE__ */ Object.assign({ "./Pages/Dashboard.vue": () => import("./assets/Dashboard-GnkPDUtE.js") });
         const pagePath = `./Pages/${name}.vue`;
         if (eagerPages[pagePath]) {
           return eagerPages[pagePath];
