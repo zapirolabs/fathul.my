@@ -3732,7 +3732,7 @@ const _sfc_main = {
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[-->`);
-      _push(ssrRenderComponent(unref(Head), { title: "Zakat2U v5" }, null, _parent));
+      _push(ssrRenderComponent(unref(Head), { title: "The Hub - fathul.my" }, null, _parent));
       _push(ssrRenderComponent(Banner, null, null, _parent));
       _push(`<!--]-->`);
     };
