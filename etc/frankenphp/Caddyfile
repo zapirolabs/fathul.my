@@ -1,1 +1,9 @@
+{
+    frankenphp {
+        num_threads 16       # match vCPU count
+        max_threads 24      # allow light autoscaling burst
+        max_wait_time 5s    # avoid long queues
+    }
+}
+
 import /etc/frankenphp/sites/*.caddy

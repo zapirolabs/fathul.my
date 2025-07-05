@@ -1,11 +1,11 @@
-fathul.my, www.fathul.my {
-    root * /home/server/webapps/fathul.my/landing.fathul.my/public
+hub.fathul.my {
+    root * /home/server/webapps/fathul.my/hub.fathul.my/public
 
     encode zstd br gzip
 
     php_server {
         resolve_root_symlink false
-        worker frankenphp-worker.php 4
+        worker frankenphp-worker.php 4  
         try_files {path} index.php
         file_server off
     }
