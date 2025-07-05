@@ -1,5 +1,4 @@
 {
-  "\u0000plugin-vue:export-helper": [],
   "resources/js/Pages/Dashboard.vue": [],
   "resources/js/Pages/Home.vue": [],
   "resources/js/components/AppContent.vue": [],
@@ -7,8 +6,8 @@
   "resources/js/components/AppLogo.vue": [],
   "resources/js/components/AppLogoIcon.vue": [],
   "resources/js/components/AppShell.vue": [],
-  "resources/js/components/Banner.vue": [],
   "resources/js/components/Breadcrumbs.vue": [],
+  "resources/js/components/LoginForm.vue": [],
   "resources/js/components/UserInfo.vue": [],
   "resources/js/components/UserMenuContent.vue": [],
   "resources/js/components/ui/avatar/Avatar.vue": [],
@@ -29,6 +28,8 @@
   "resources/js/components/ui/dropdown-menu/DropdownMenuLabel.vue": [],
   "resources/js/components/ui/dropdown-menu/DropdownMenuSeparator.vue": [],
   "resources/js/components/ui/dropdown-menu/DropdownMenuTrigger.vue": [],
+  "resources/js/components/ui/input/Input.vue": [],
+  "resources/js/components/ui/label/Label.vue": [],
   "resources/js/components/ui/navigation-menu/NavigationMenu.vue": [],
   "resources/js/components/ui/navigation-menu/NavigationMenuItem.vue": [],
   "resources/js/components/ui/navigation-menu/NavigationMenuList.vue": [],
@@ -58,6 +59,7 @@
   "resources/js/composables/useMainNavItems.js": [],
   "resources/js/layouts/AppLayout.vue": [],
   "resources/js/layouts/app/AppHeaderLayout.vue": [],
+  "resources/js/layouts/auth/Layout.vue": [],
   "resources/js/lib/utils.js": [],
   "resources/js/ssr.js": [],
   "vendor/tightenco/ziggy/dist/index.js": []
