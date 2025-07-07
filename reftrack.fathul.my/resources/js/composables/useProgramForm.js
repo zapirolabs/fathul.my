@@ -8,7 +8,12 @@ export function useProgramForm() {
   })
 
   const submit = () => {
-    form.post(route('program.store'))
+    form.post(route('program.store'), {
+      preserveScroll: true,
+      onSuccess: () => {
+        // Form will automatically redirect to success page
+      }
+    })
   }
 
   return {

@@ -338,7 +338,11 @@ function useProgramForm() {
     pahangConnectionOther: ""
   });
   const submit = () => {
-    form.post(route("program.store"));
+    form.post(route("program.store"), {
+      preserveScroll: true,
+      onSuccess: () => {
+      }
+    });
   };
   return {
     form,
