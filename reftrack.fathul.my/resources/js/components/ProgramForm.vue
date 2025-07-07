@@ -20,34 +20,35 @@
 
         <form @submit.prevent="submit" class="space-y-6">
           <div class="space-y-3">
-            <FormLabel class="text-lg font-semibold text-card-foreground">
-              Apakah kaitan anda dengan negeri Pahang? <span class="text-destructive">*</span>
-            </FormLabel>
+            <Label class="text-base font-medium text-card-foreground">
+              Apakah kaitan anda dengan negeri Pahang? 
+              <span class="text-destructive">*</span>
+            </Label>
             <RadioGroup 
               :default-value="form.pahangConnection" 
-              @update:model-value="form.pahangConnection = $event"
+              @update:model-value="(value) => form.pahangConnection = value"
               class="space-y-2"
             >
               <div class="flex items-center space-x-2">
-                <RadioGroupItem id="born" value="born" />
-                <FormLabel for="born">Saya dilahirkan di Pahang</FormLabel>
+                <RadioGroupItem id="born-pahang" value="born-pahang" />
+                <Label for="born-pahang">Saya dilahirkan di Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
-                <RadioGroupItem id="residing" value="residing" />
-                <FormLabel for="residing">Saya sedang menetap di Pahang</FormLabel>
+                <RadioGroupItem id="living-pahang" value="living-pahang" />
+                <Label for="living-pahang">Saya sedang menetap di Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
-                <RadioGroupItem id="parents" value="parents" />
-                <FormLabel for="parents">Kedua-dua ibu bapa saya berasal dari Pahang</FormLabel>
+                <RadioGroupItem id="parents-pahang" value="parents-pahang" />
+                <Label for="parents-pahang">Kedua-dua ibu bapa saya berasal dari Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
-                <RadioGroupItem id="other" value="other" />
-                <FormLabel for="other">Lain-lain</FormLabel>
+                <RadioGroupItem id="other-pahang" value="other-pahang" />
+                <Label for="other-pahang">Lain-lain kaitan dengan Pahang</Label>
               </div>
             </RadioGroup>
-            <div v-if="errors.pahangConnection" class="text-destructive text-sm">
+            <p v-if="errors.pahangConnection" class="text-sm text-destructive">
               {{ errors.pahangConnection }}
-            </div>
+            </p>
           </div>
         </form>
       </div>
@@ -62,7 +63,7 @@ import ApaYangAndaPerolehi from './ApaYangAndaPerolehi.vue'
 import ProgramYangDitawarkan from './ProgramYangDitawarkan.vue'
 import SiapaPatutMemohon from './SiapaPatutMemohon.vue'
 import { RadioGroup, RadioGroupItem } from '@/resources/js/components/ui/radio-group'
-import { FormLabel } from '@/resources/js/components/ui/form'
+import { Label } from '@/resources/js/components/ui/label'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 
 const { form, errors, processing, submit } = useProgramForm()
