@@ -30,7 +30,7 @@ class FormController extends Controller
         // Insert data specifically in column H (8th column)
         // We need to provide empty values for columns A-G, then our value for H
         $rowData = ['', '', '', '', '', '', '', $finalValue];
-
+        dd(config('google.service'));
         // Append to Google Sheets
         Sheets::spreadsheet(env('GOOGLE_SPREADSHEET_ID'))
             ->sheet('PJK Registration form')
