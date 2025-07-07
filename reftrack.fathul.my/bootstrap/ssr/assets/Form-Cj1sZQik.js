@@ -346,6 +346,15 @@ function useProgramForm() {
       onError: (err) => {
         errors.value = err;
         processing.value = false;
+        setTimeout(() => {
+          const firstError = document.querySelector(".text-destructive");
+          if (firstError) {
+            firstError.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+          }
+        }, 100);
       },
       onSuccess: () => {
         processing.value = false;
