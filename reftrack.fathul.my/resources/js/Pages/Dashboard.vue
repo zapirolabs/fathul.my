@@ -1,14 +1,12 @@
 <script setup>
 import { Head } from '@inertiajs/vue3'
-import AppLayout from '@/resources/js/layouts/AppLayout.vue'
-import { useBreadcrumbs } from '@/resources/js/composables/useBreadcrumbs'
-
-const breadcrumbs = useBreadcrumbs('dashboard')
+import Banner from '@/resources/js/components/Banner.vue'
+import ProgramForm from '@/resources/js/components/ProgramForm.vue'
 
 </script>
 
 <template>
-  <Head title="RefTrack - fathul.my"></Head>
-  <AppLayout :breadcrumbs="breadcrumbs">
-  </AppLayout>
+  <Head title="Program Jaminan Kerjaya - fathul.my"></Head>
+  <Banner />
+  <ProgramForm />
 </template>
