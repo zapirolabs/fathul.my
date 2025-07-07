@@ -10,44 +10,31 @@
         </p>
       </div>
 
-      <div class="space-y-8 mb-12">
-        <div class="bg-white border border-red-200 rounded-lg p-6">
-          <div class="flex items-start">
-            <div class="flex-shrink-0">
-              <div class="w-12 h-12 bg-red-800 rounded-full flex items-center justify-center">
-                <GraduationCap class="w-6 h-6 text-white" />
-              </div>
-            </div>
-            <div class="ml-4">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                Graduan Baharu
-              </h3>
-              <p class="text-gray-700 leading-relaxed">
-                Graduan baharu yang mencari pekerjaan dalam bidang teknologi/kejuruteraan atau hanya perlu meningkatkan kemahiran mereka
-              </p>
-            </div>
+      <ul class="space-y-6 max-w-2xl mx-auto text-left mb-12">
+        <li class="flex items-start">
+          <GraduationCap class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">
+              Graduan Baharu
+            </h3>
+            <p class="text-gray-700">
+              Graduan baharu yang mencari pekerjaan dalam bidang teknologi/kejuruteraan atau hanya perlu meningkatkan kemahiran mereka
+            </p>
           </div>
-        </div>
-
-        <div class="bg-white border border-red-200 rounded-lg p-6">
-          <div class="flex items-start">
-            <div class="flex-shrink-0">
-              <div class="w-12 h-12 bg-red-800 rounded-full flex items-center justify-center">
-                <Briefcase class="w-6 h-6 text-white" />
-              </div>
-            </div>
-            <div class="ml-4">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                Graduan Yang Sudah Ada Tawaran Kerja
-              </h3>
-              <p class="text-gray-700 leading-relaxed">
-                Graduan yang sudah mempunyai tawaran kerja tetapi memerlukan sokongan untuk memulakan dengan kukuh melalui 
-                <span class="font-semibold text-red-800">Pensijilan Industri dan Kesediaan Kerja</span>
-              </p>
-            </div>
+        </li>
+        <li class="flex items-start">
+          <Briefcase class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">
+              Graduan Yang Sudah Ada Tawaran Kerja
+            </h3>
+            <p class="text-gray-700">
+              Graduan yang sudah mempunyai tawaran kerja tetapi memerlukan sokongan untuk memulakan dengan kukuh melalui 
+              <span class="font-semibold text-red-800">Pensijilan Industri dan Kesediaan Kerja</span>
+            </p>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
 
       <div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg">
         <div class="flex items-start">
