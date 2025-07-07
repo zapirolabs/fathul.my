@@ -394,21 +394,21 @@ const _sfc_main$1 = {
   setup(__props) {
     const { form, errors } = useProgramForm();
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-gray-50" }, _attrs))}>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$9, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$6, null, null, _parent));
-      _push(`<div class="bg-white py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"> Borang Permohonan </h2><p class="text-lg text-gray-600 max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
-      _push(ssrRenderComponent(unref(_sfc_main$2), { class: "text-lg font-semibold text-gray-900" }, {
+      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl sm:text-4xl font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-lg text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$2), { class: "text-lg font-semibold text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Apakah kaitan anda dengan negeri Pahang? <span class="text-red-600"${_scopeId}>*</span>`);
+            _push2(` Apakah kaitan anda dengan negeri Pahang? <span class="text-destructive"${_scopeId}>*</span>`);
           } else {
             return [
               createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
-              createVNode("span", { class: "text-red-600" }, "*")
+              createVNode("span", { class: "text-destructive" }, "*")
             ];
           }
         }),
@@ -546,7 +546,7 @@ const _sfc_main$1 = {
         _: 1
       }, _parent));
       if (unref(errors).pahangConnection) {
-        _push(`<div class="text-red-600 text-sm">${ssrInterpolate(unref(errors).pahangConnection)}</div>`);
+        _push(`<div class="text-destructive text-sm">${ssrInterpolate(unref(errors).pahangConnection)}</div>`);
       } else {
         _push(`<!---->`);
       }

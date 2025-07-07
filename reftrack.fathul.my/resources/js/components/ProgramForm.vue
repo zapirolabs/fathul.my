@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+  <div class="min-h-screen bg-background">
     <ProgramHeader />
     <KriteriaPemohon />
     <ApaYangAndaPerolehi />
@@ -7,21 +7,21 @@
     <SiapaPatutMemohon />
     
     <!-- Form Section -->
-    <div class="bg-white py-16 sm:py-20">
+    <div class="bg-card py-16 sm:py-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl sm:text-4xl font-bold text-card-foreground mb-4">
             Borang Permohonan
           </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
             Sila lengkapkan maklumat berikut untuk memohon program ini
           </p>
         </div>
 
         <form @submit.prevent="submit" class="space-y-6">
           <div class="space-y-3">
-            <FormLabel class="text-lg font-semibold text-gray-900">
-              Apakah kaitan anda dengan negeri Pahang? <span class="text-red-600">*</span>
+            <FormLabel class="text-lg font-semibold text-card-foreground">
+              Apakah kaitan anda dengan negeri Pahang? <span class="text-destructive">*</span>
             </FormLabel>
             <RadioGroup 
               :default-value="form.pahangConnection" 
@@ -45,7 +45,7 @@
                 <FormLabel for="other">Lain-lain</FormLabel>
               </div>
             </RadioGroup>
-            <div v-if="errors.pahangConnection" class="text-red-600 text-sm">
+            <div v-if="errors.pahangConnection" class="text-destructive text-sm">
               {{ errors.pahangConnection }}
             </div>
           </div>
