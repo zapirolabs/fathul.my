@@ -1,11 +1,11 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-CQerez7p.css",
+    "file": "assets/app-CQzB5KGS.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-C8xtuIhz.js",
+    "file": "assets/Dashboard-Bin4tuRi.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.vue",
     "isDynamicEntry": true,
@@ -17,7 +17,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-CZH95izT.js",
+    "file": "assets/app-DWaIbJbY.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
