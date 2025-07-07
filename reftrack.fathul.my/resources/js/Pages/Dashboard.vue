@@ -7,6 +7,5 @@ import ProgramForm from '@/resources/js/components/ProgramForm.vue'
 
 <template>
   <Head title="Program Jaminan Kerjaya - fathul.my"></Head>
-  <Banner />
   <ProgramForm />
 </template>
