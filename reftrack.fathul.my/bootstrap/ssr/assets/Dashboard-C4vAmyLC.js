@@ -1,8 +1,8 @@
 import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, createTextVNode } from "vue";
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrInterpolate } from "vue/server-renderer";
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate } from "vue/server-renderer";
 import { router, Head } from "@inertiajs/vue3";
 import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon } from "lucide-vue-next";
-import { reactiveOmit } from "@vueuse/core";
+import { reactiveOmit, useVModel } from "@vueuse/core";
 import { useForwardPropsEmits, RadioGroupRoot, useForwardProps, RadioGroupItem, RadioGroupIndicator, Label } from "reka-ui";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -13,25 +13,25 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$a = {};
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_main$b = {};
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Banner.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const _sfc_main$9 = {};
+const _sfc_main$a = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white" }, _attrs))} data-v-1da9ed77><div class="absolute inset-0 opacity-10" data-v-1da9ed77><div class="absolute inset-0 bg-dot-pattern animate-pulse" data-v-1da9ed77></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" data-v-1da9ed77><div class="text-center" data-v-1da9ed77><div class="mb-8 animate-fade-in-up" data-v-1da9ed77><img src="https://cdn.fathul.my/assets/logo/ypadvancedskills-logo-whiteondark.svg" alt="YPAdvancedSkills Logo" class="h-16 mx-auto" data-v-1da9ed77></div><h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up animation-delay-200" data-v-1da9ed77><span class="block text-white" data-v-1da9ed77>Program</span><span class="block bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x" data-v-1da9ed77> Jaminan Kerjaya </span><span class="block text-white" data-v-1da9ed77>2025</span></h1></div></div></div>`);
 }
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramHeader.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-1da9ed77"]]);
-const _sfc_main$8 = {
+const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-1da9ed77"]]);
+const _sfc_main$9 = {
   __name: "KriteriaPemohon",
   __ssrInlineRender: true,
   setup(__props) {
@@ -52,13 +52,13 @@ const _sfc_main$8 = {
     };
   }
 };
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/KriteriaPemohon.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-const _sfc_main$7 = {
+const _sfc_main$8 = {
   __name: "ApaYangAndaPerolehi",
   __ssrInlineRender: true,
   setup(__props) {
@@ -73,13 +73,13 @@ const _sfc_main$7 = {
     };
   }
 };
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ApaYangAndaPerolehi.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-const _sfc_main$6 = {
+const _sfc_main$7 = {
   __name: "ProgramYangDitawarkan",
   __ssrInlineRender: true,
   setup(__props) {
@@ -114,13 +114,13 @@ const _sfc_main$6 = {
     };
   }
 };
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramYangDitawarkan.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const _sfc_main$5 = {
+const _sfc_main$6 = {
   __name: "SiapaPatutMemohon",
   __ssrInlineRender: true,
   setup(__props) {
@@ -135,16 +135,16 @@ const _sfc_main$5 = {
     };
   }
 };
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/SiapaPatutMemohon.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
-const _sfc_main$4 = {
+const _sfc_main$5 = {
   __name: "RadioGroup",
   __ssrInlineRender: true,
   props: {
@@ -185,13 +185,13 @@ const _sfc_main$4 = {
     };
   }
 };
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/radio-group/RadioGroup.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const _sfc_main$3 = {
+const _sfc_main$4 = {
   __name: "RadioGroupItem",
   __ssrInlineRender: true,
   props: {
@@ -251,13 +251,13 @@ const _sfc_main$3 = {
     };
   }
 };
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/radio-group/RadioGroupItem.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const _sfc_main$2 = {
+const _sfc_main$3 = {
   __name: "Label",
   __ssrInlineRender: true,
   props: {
@@ -290,15 +290,52 @@ const _sfc_main$2 = {
     };
   }
 };
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/label/Label.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const _sfc_main$2 = {
+  __name: "Input",
+  __ssrInlineRender: true,
+  props: {
+    defaultValue: { type: [String, Number], required: false },
+    modelValue: { type: [String, Number], required: false },
+    class: { type: null, required: false }
+  },
+  emits: ["update:modelValue"],
+  setup(__props, { emit: __emit }) {
+    const props = __props;
+    const emits = __emit;
+    const modelValue = useVModel(props, "modelValue", emits, {
+      passive: true,
+      defaultValue: props.defaultValue
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      let _temp0;
+      _push(`<input${ssrRenderAttrs((_temp0 = mergeProps({
+        "data-slot": "input",
+        class: unref(cn)(
+          "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+          "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+          props.class
+        )
+      }, _attrs), mergeProps(_temp0, ssrGetDynamicModelProps(_temp0, unref(modelValue)))))}>`);
+    };
+  }
+};
 const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/label/Label.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/input/Input.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
 function useProgramForm() {
   const form = ref({
-    pahangConnection: ""
+    pahangConnection: "",
+    pahangConnectionOther: ""
   });
   const errors = ref({});
   const processing = ref(false);
@@ -333,12 +370,12 @@ const _sfc_main$1 = {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$9, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$6, null, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$5, null, null, _parent));
       _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl sm:text-4xl font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-lg text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
-      _push(ssrRenderComponent(unref(_sfc_main$2), { class: "text-base font-medium text-card-foreground" }, {
+      _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-base font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(` Apakah kaitan anda dengan negeri Pahang? <span class="text-destructive"${_scopeId}>*</span>`);
@@ -351,7 +388,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), {
+      _push(ssrRenderComponent(unref(_sfc_main$5), {
         "default-value": unref(form).pahangConnection,
         "onUpdate:modelValue": (value) => unref(form).pahangConnection = value,
         class: "space-y-2"
@@ -359,11 +396,11 @@ const _sfc_main$1 = {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<div class="flex items-center space-x-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), {
               id: "born-pahang",
               value: "born-pahang"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "born-pahang" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "born-pahang" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Saya dilahirkan di Pahang`);
@@ -376,11 +413,11 @@ const _sfc_main$1 = {
               _: 1
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), {
               id: "living-pahang",
               value: "living-pahang"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "living-pahang" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "living-pahang" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Saya sedang menetap di Pahang`);
@@ -393,11 +430,11 @@ const _sfc_main$1 = {
               _: 1
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), {
               id: "parents-pahang",
               value: "parents-pahang"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "parents-pahang" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "parents-pahang" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Kedua-dua ibu bapa saya berasal dari Pahang`);
@@ -410,17 +447,17 @@ const _sfc_main$1 = {
               _: 1
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), {
               id: "other-pahang",
               value: "other-pahang"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "other-pahang" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "other-pahang" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`Lain-lain kaitan dengan Pahang`);
+                  _push3(`Lain-lain:`);
                 } else {
                   return [
-                    createTextVNode("Lain-lain kaitan dengan Pahang")
+                    createTextVNode("Lain-lain:")
                   ];
                 }
               }),
@@ -430,11 +467,11 @@ const _sfc_main$1 = {
           } else {
             return [
               createVNode("div", { class: "flex items-center space-x-2" }, [
-                createVNode(unref(_sfc_main$3), {
+                createVNode(unref(_sfc_main$4), {
                   id: "born-pahang",
                   value: "born-pahang"
                 }),
-                createVNode(unref(_sfc_main$2), { for: "born-pahang" }, {
+                createVNode(unref(_sfc_main$3), { for: "born-pahang" }, {
                   default: withCtx(() => [
                     createTextVNode("Saya dilahirkan di Pahang")
                   ]),
@@ -442,11 +479,11 @@ const _sfc_main$1 = {
                 })
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
-                createVNode(unref(_sfc_main$3), {
+                createVNode(unref(_sfc_main$4), {
                   id: "living-pahang",
                   value: "living-pahang"
                 }),
-                createVNode(unref(_sfc_main$2), { for: "living-pahang" }, {
+                createVNode(unref(_sfc_main$3), { for: "living-pahang" }, {
                   default: withCtx(() => [
                     createTextVNode("Saya sedang menetap di Pahang")
                   ]),
@@ -454,11 +491,11 @@ const _sfc_main$1 = {
                 })
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
-                createVNode(unref(_sfc_main$3), {
+                createVNode(unref(_sfc_main$4), {
                   id: "parents-pahang",
                   value: "parents-pahang"
                 }),
-                createVNode(unref(_sfc_main$2), { for: "parents-pahang" }, {
+                createVNode(unref(_sfc_main$3), { for: "parents-pahang" }, {
                   default: withCtx(() => [
                     createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
                   ]),
@@ -466,13 +503,13 @@ const _sfc_main$1 = {
                 })
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
-                createVNode(unref(_sfc_main$3), {
+                createVNode(unref(_sfc_main$4), {
                   id: "other-pahang",
                   value: "other-pahang"
                 }),
-                createVNode(unref(_sfc_main$2), { for: "other-pahang" }, {
+                createVNode(unref(_sfc_main$3), { for: "other-pahang" }, {
                   default: withCtx(() => [
-                    createTextVNode("Lain-lain kaitan dengan Pahang")
+                    createTextVNode("Lain-lain:")
                   ]),
                   _: 1
                 })
@@ -482,6 +519,23 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
+      if (unref(form).pahangConnection === "other-pahang") {
+        _push(`<div class="ml-6 mt-2">`);
+        _push(ssrRenderComponent(unref(_sfc_main$2), {
+          modelValue: unref(form).pahangConnectionOther,
+          "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
+          placeholder: "Sila nyatakan kaitan anda dengan Pahang",
+          class: "max-w-md"
+        }, null, _parent));
+        if (unref(errors).pahangConnectionOther) {
+          _push(`<p class="text-sm text-destructive mt-1">${ssrInterpolate(unref(errors).pahangConnectionOther)}</p>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`</div>`);
+      } else {
+        _push(`<!---->`);
+      }
       if (unref(errors).pahangConnection) {
         _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(errors).pahangConnection)}</p>`);
       } else {

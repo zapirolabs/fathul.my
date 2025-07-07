@@ -43,9 +43,21 @@
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="other-pahang" value="other-pahang" />
-                <Label for="other-pahang">Lain-lain kaitan dengan Pahang</Label>
+                <Label for="other-pahang">Lain-lain:</Label>
               </div>
             </RadioGroup>
+            
+            <div v-if="form.pahangConnection === 'other-pahang'" class="ml-6 mt-2">
+              <Input 
+                v-model="form.pahangConnectionOther"
+                placeholder="Sila nyatakan kaitan anda dengan Pahang"
+                class="max-w-md"
+              />
+              <p v-if="errors.pahangConnectionOther" class="text-sm text-destructive mt-1">
+                {{ errors.pahangConnectionOther }}
+              </p>
+            </div>
+            
             <p v-if="errors.pahangConnection" class="text-sm text-destructive">
               {{ errors.pahangConnection }}
             </p>
@@ -64,6 +76,7 @@ import ProgramYangDitawarkan from './ProgramYangDitawarkan.vue'
 import SiapaPatutMemohon from './SiapaPatutMemohon.vue'
 import { RadioGroup, RadioGroupItem } from '@/resources/js/components/ui/radio-group'
 import { Label } from '@/resources/js/components/ui/label'
+import { Input } from '@/resources/js/components/ui/input'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 
 const { form, errors, processing, submit } = useProgramForm()

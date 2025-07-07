@@ -4,6 +4,7 @@ import { router } from '@inertiajs/vue3'
 export function useProgramForm() {
   const form = ref({
     pahangConnection: '',
+    pahangConnectionOther: '',
   })
 
   const errors = ref({})
