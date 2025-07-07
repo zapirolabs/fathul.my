@@ -34,6 +34,6 @@ class FormController extends Controller
             ->sheet('PJK Registration form')
             ->append([$rowData]);
 
-        return back()->with('success', 'Maklumat anda telah berjaya dihantar!');
+        return Inertia::render('Success');
     }
 }
