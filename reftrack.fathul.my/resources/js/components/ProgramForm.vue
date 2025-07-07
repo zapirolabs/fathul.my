@@ -21,6 +21,22 @@
         <form @submit.prevent="submit" class="space-y-6">
           <div class="space-y-3">
             <Label class="text-base font-medium text-card-foreground">
+              Alamat Emel
+              <span class="text-destructive">*</span>
+            </Label>
+            <Input 
+              v-model="form.email"
+              type="email"
+              placeholder="contoh@email.com"
+              class="w-full"
+            />
+            <p v-if="errors.email" class="text-sm text-destructive">
+              {{ errors.email }}
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <Label class="text-base font-medium text-card-foreground">
               Apakah kaitan anda dengan negeri Pahang? 
               <span class="text-destructive">*</span>
             </Label>
