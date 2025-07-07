@@ -4,25 +4,25 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
-  "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-B3q3gh1p.js",
-    "name": "Dashboard",
-    "src": "resources/js/Pages/Dashboard.vue",
+  "resources/js/Pages/Form.vue": {
+    "file": "assets/Form-CGn4YzCB.js",
+    "name": "Form",
+    "src": "resources/js/Pages/Form.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js"
     ],
     "css": [
-      "assets/Dashboard-DvcuHg5w.css"
+      "assets/Form-DvcuHg5w.css"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-DbtazbG-.js",
+    "file": "assets/app-CF1wr5V1.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
-      "resources/js/Pages/Dashboard.vue"
+      "resources/js/Pages/Form.vue"
     ]
   }
 }
