@@ -10,17 +10,17 @@
     <div class="bg-card py-16 sm:py-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-bold text-card-foreground mb-4">
+          <h2 class="text-sm font-bold text-card-foreground mb-4">
             Borang Permohonan
           </h2>
-          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p class="text-sm text-muted-foreground max-w-2xl mx-auto">
             Sila lengkapkan maklumat berikut untuk memohon program ini
           </p>
         </div>
 
         <form @submit.prevent="submit" class="space-y-6">
           <div class="space-y-3">
-            <Label class="text-base font-medium text-card-foreground">
+            <Label class="text-sm font-medium text-card-foreground">
               Alamat Emel
               <span class="text-destructive">*</span>
             </Label>
@@ -36,7 +36,7 @@
           </div>
 
           <div class="space-y-3">
-            <Label class="text-base font-medium text-card-foreground">
+            <Label class="text-sm font-medium text-card-foreground">
               Apakah kaitan anda dengan negeri Pahang? 
               <span class="text-destructive">*</span>
             </Label>
