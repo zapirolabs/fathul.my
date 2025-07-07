@@ -20,9 +20,9 @@
 
         <form @submit.prevent="submit" class="space-y-6">
           <div class="space-y-3">
-            <Label class="text-lg font-semibold text-gray-900">
+            <FormLabel class="text-lg font-semibold text-gray-900">
               Apakah kaitan anda dengan negeri Pahang? <span class="text-red-600">*</span>
-            </Label>
+            </FormLabel>
             <RadioGroup 
               :default-value="form.pahangConnection" 
               @update:model-value="form.pahangConnection = $event"
@@ -30,19 +30,19 @@
             >
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="born" value="born" />
-                <Label for="born">Saya dilahirkan di Pahang</Label>
+                <FormLabel for="born">Saya dilahirkan di Pahang</FormLabel>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="residing" value="residing" />
-                <Label for="residing">Saya sedang menetap di Pahang</Label>
+                <FormLabel for="residing">Saya sedang menetap di Pahang</FormLabel>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="parents" value="parents" />
-                <Label for="parents">Kedua-dua ibu bapa saya berasal dari Pahang</Label>
+                <FormLabel for="parents">Kedua-dua ibu bapa saya berasal dari Pahang</FormLabel>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="other" value="other" />
-                <Label for="other">Lain-lain</Label>
+                <FormLabel for="other">Lain-lain</FormLabel>
               </div>
             </RadioGroup>
             <div v-if="errors.pahangConnection" class="text-red-600 text-sm">
@@ -62,7 +62,7 @@ import ApaYangAndaPerolehi from './ApaYangAndaPerolehi.vue'
 import ProgramYangDitawarkan from './ProgramYangDitawarkan.vue'
 import SiapaPatutMemohon from './SiapaPatutMemohon.vue'
 import { RadioGroup, RadioGroupItem } from '@/resources/js/components/ui/radio-group'
-import { Label } from '@/resources/js/components/ui/label'
+import { FormLabel } from '@/resources/js/components/ui/form'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 
 const { form, errors, processing, submit } = useProgramForm()

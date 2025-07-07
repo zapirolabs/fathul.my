@@ -1,4 +1,4 @@
-import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, createTextVNode } from "vue";
+import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, inject, ref, createTextVNode } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrInterpolate } from "vue/server-renderer";
 import { router, Head } from "@inertiajs/vue3";
 import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon } from "lucide-vue-next";
@@ -6,6 +6,7 @@ import { reactiveOmit } from "@vueuse/core";
 import { useForwardPropsEmits, RadioGroupRoot, useForwardProps, RadioGroupItem, RadioGroupIndicator, Label } from "reka-ui";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { FieldContextKey, useFieldError, useIsFieldTouched, useIsFieldDirty, useIsFieldValid } from "vee-validate";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -13,25 +14,25 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$a = {};
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_main$b = {};
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Banner.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const _sfc_main$9 = {};
+const _sfc_main$a = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white" }, _attrs))} data-v-1da9ed77><div class="absolute inset-0 opacity-10" data-v-1da9ed77><div class="absolute inset-0 bg-dot-pattern animate-pulse" data-v-1da9ed77></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" data-v-1da9ed77><div class="text-center" data-v-1da9ed77><div class="mb-8 animate-fade-in-up" data-v-1da9ed77><img src="https://cdn.fathul.my/assets/logo/ypadvancedskills-logo-whiteondark.svg" alt="YPAdvancedSkills Logo" class="h-16 mx-auto" data-v-1da9ed77></div><h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up animation-delay-200" data-v-1da9ed77><span class="block text-white" data-v-1da9ed77>Program</span><span class="block bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x" data-v-1da9ed77> Jaminan Kerjaya </span><span class="block text-white" data-v-1da9ed77>2025</span></h1></div></div></div>`);
 }
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramHeader.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-1da9ed77"]]);
-const _sfc_main$8 = {
+const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-1da9ed77"]]);
+const _sfc_main$9 = {
   __name: "KriteriaPemohon",
   __ssrInlineRender: true,
   setup(__props) {
@@ -52,13 +53,13 @@ const _sfc_main$8 = {
     };
   }
 };
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/KriteriaPemohon.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-const _sfc_main$7 = {
+const _sfc_main$8 = {
   __name: "ApaYangAndaPerolehi",
   __ssrInlineRender: true,
   setup(__props) {
@@ -73,13 +74,13 @@ const _sfc_main$7 = {
     };
   }
 };
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ApaYangAndaPerolehi.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-const _sfc_main$6 = {
+const _sfc_main$7 = {
   __name: "ProgramYangDitawarkan",
   __ssrInlineRender: true,
   setup(__props) {
@@ -114,13 +115,13 @@ const _sfc_main$6 = {
     };
   }
 };
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramYangDitawarkan.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const _sfc_main$5 = {
+const _sfc_main$6 = {
   __name: "SiapaPatutMemohon",
   __ssrInlineRender: true,
   setup(__props) {
@@ -135,16 +136,16 @@ const _sfc_main$5 = {
     };
   }
 };
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/SiapaPatutMemohon.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
-const _sfc_main$4 = {
+const _sfc_main$5 = {
   __name: "RadioGroup",
   __ssrInlineRender: true,
   props: {
@@ -185,13 +186,13 @@ const _sfc_main$4 = {
     };
   }
 };
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/radio-group/RadioGroup.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const _sfc_main$3 = {
+const _sfc_main$4 = {
   __name: "RadioGroupItem",
   __ssrInlineRender: true,
   props: {
@@ -251,13 +252,36 @@ const _sfc_main$3 = {
     };
   }
 };
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/radio-group/RadioGroupItem.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const _sfc_main$2 = {
+const FORM_ITEM_INJECTION_KEY = Symbol();
+function useFormField() {
+  const fieldContext = inject(FieldContextKey);
+  const fieldItemContext = inject(FORM_ITEM_INJECTION_KEY);
+  if (!fieldContext)
+    throw new Error("useFormField should be used within <FormField>");
+  const { name } = fieldContext;
+  const id = fieldItemContext;
+  const fieldState = {
+    valid: useIsFieldValid(name),
+    isDirty: useIsFieldDirty(name),
+    isTouched: useIsFieldTouched(name),
+    error: useFieldError(name)
+  };
+  return {
+    id,
+    name,
+    formItemId: `${id}-form-item`,
+    formDescriptionId: `${id}-form-item-description`,
+    formMessageId: `${id}-form-item-message`,
+    ...fieldState
+  };
+}
+const _sfc_main$3 = {
   __name: "Label",
   __ssrInlineRender: true,
   props: {
@@ -290,10 +314,49 @@ const _sfc_main$2 = {
     };
   }
 };
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/label/Label.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const _sfc_main$2 = {
+  __name: "FormLabel",
+  __ssrInlineRender: true,
+  props: {
+    for: { type: String, required: false },
+    asChild: { type: Boolean, required: false },
+    as: { type: [String, Object, Function], required: false },
+    class: { type: null, required: false }
+  },
+  setup(__props) {
+    const props = __props;
+    const { error, formItemId } = useFormField();
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(ssrRenderComponent(unref(_sfc_main$3), mergeProps({
+        "data-slot": "form-label",
+        "data-error": !!unref(error),
+        class: unref(cn)("data-[error=true]:text-destructive-foreground", props.class),
+        for: unref(formItemId)
+      }, _attrs), {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            ssrRenderSlot(_ctx.$slots, "default", {}, null, _push2, _parent2, _scopeId);
+          } else {
+            return [
+              renderSlot(_ctx.$slots, "default")
+            ];
+          }
+        }),
+        _: 3
+      }, _parent));
+    };
+  }
+};
 const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/label/Label.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/form/FormLabel.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
 function useProgramForm() {
@@ -333,10 +396,10 @@ const _sfc_main$1 = {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-gray-50" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$9, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$6, null, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$5, null, null, _parent));
       _push(`<div class="bg-white py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"> Borang Permohonan </h2><p class="text-lg text-gray-600 max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$2), { class: "text-lg font-semibold text-gray-900" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -351,7 +414,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), {
+      _push(ssrRenderComponent(unref(_sfc_main$5), {
         "default-value": unref(form).pahangConnection,
         "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
         class: "space-y-2"
@@ -359,7 +422,7 @@ const _sfc_main$1 = {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<div class="flex items-center space-x-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), {
               id: "born",
               value: "born"
             }, null, _parent2, _scopeId));
@@ -376,7 +439,7 @@ const _sfc_main$1 = {
               _: 1
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), {
               id: "residing",
               value: "residing"
             }, null, _parent2, _scopeId));
@@ -393,7 +456,7 @@ const _sfc_main$1 = {
               _: 1
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), {
               id: "parents",
               value: "parents"
             }, null, _parent2, _scopeId));
@@ -410,7 +473,7 @@ const _sfc_main$1 = {
               _: 1
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), {
               id: "other",
               value: "other"
             }, null, _parent2, _scopeId));
@@ -430,7 +493,7 @@ const _sfc_main$1 = {
           } else {
             return [
               createVNode("div", { class: "flex items-center space-x-2" }, [
-                createVNode(unref(_sfc_main$3), {
+                createVNode(unref(_sfc_main$4), {
                   id: "born",
                   value: "born"
                 }),
@@ -442,7 +505,7 @@ const _sfc_main$1 = {
                 })
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
-                createVNode(unref(_sfc_main$3), {
+                createVNode(unref(_sfc_main$4), {
                   id: "residing",
                   value: "residing"
                 }),
@@ -454,7 +517,7 @@ const _sfc_main$1 = {
                 })
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
-                createVNode(unref(_sfc_main$3), {
+                createVNode(unref(_sfc_main$4), {
                   id: "parents",
                   value: "parents"
                 }),
@@ -466,7 +529,7 @@ const _sfc_main$1 = {
                 })
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
-                createVNode(unref(_sfc_main$3), {
+                createVNode(unref(_sfc_main$4), {
                   id: "other",
                   value: "other"
                 }),
