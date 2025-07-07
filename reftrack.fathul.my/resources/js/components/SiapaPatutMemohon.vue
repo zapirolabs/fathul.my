@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg"></div>
+      <div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg">
         <div class="flex items-start">
           <AlertTriangle class="w-6 h-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" />
           <div>
