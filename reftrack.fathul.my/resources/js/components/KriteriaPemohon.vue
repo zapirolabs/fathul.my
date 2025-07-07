@@ -12,27 +12,27 @@
 
       <ul class="space-y-4 max-w-2xl mx-auto text-left">
         <li class="flex items-start">
-          <div class="flex-shrink-0 w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3"></div>
+          <ShieldCheck class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
           <span class="text-gray-700">Warganegara Malaysia</span>
         </li>
         <li class="flex items-start">
-          <div class="flex-shrink-0 w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3"></div>
-          <span class="text-gray-700">Sama ada pelajar atau ibu bapa dilahirkan atau kini menetap di Pahang</span>
+          <MapPin class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
+          <span class="text-gray-700">Anak Pahang / pemastautin di Pahang. Pelajar atau ibu bapa dilahirkan atau sedang menetap di Pahang</span>
         </li>
         <li class="flex items-start">
-          <div class="flex-shrink-0 w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3"></div>
+          <Calendar class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
           <span class="text-gray-700">Berumur antara 18 hingga 35 tahun</span>
         </li>
         <li class="flex items-start">
-          <div class="flex-shrink-0 w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3"></div>
+          <Users class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
           <span class="text-gray-700">Terbuka kepada calon lelaki dan perempuan</span>
         </li>
         <li class="flex items-start">
-          <div class="flex-shrink-0 w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3"></div>
+          <GraduationCap class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
           <span class="text-gray-700">Mempunyai sekurang-kurangnya Diploma dalam mana-mana bidang</span>
         </li>
         <li class="flex items-start">
-          <div class="flex-shrink-0 w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3"></div>
+          <Briefcase class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
           <span class="text-gray-700">Sedang mencari pekerjaan atau ingin meningkatkan kemahiran</span>
         </li>
       </ul>
@@ -41,9 +41,8 @@
 </template>
 
 <script setup>
-// No props needed for this component
+import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase } from 'lucide-vue-next'
 </script>
 
 <style scoped>
-/* Additional styles if needed */
 </style> 

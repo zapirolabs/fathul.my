@@ -1,34 +1,30 @@
 {
   "\u0000plugin-vue:export-helper": [
-    "/build/assets/Dashboard-o9EhWA3r.js",
+    "/build/assets/Dashboard-C9D7nj3f.js",
     "/build/assets/Dashboard-DvcuHg5w.css"
   ],
   "resources/js/Pages/Dashboard.vue": [
-    "/build/assets/Dashboard-o9EhWA3r.js",
+    "/build/assets/Dashboard-C9D7nj3f.js",
     "/build/assets/Dashboard-DvcuHg5w.css"
   ],
   "resources/js/components/Banner.vue": [
-    "/build/assets/Dashboard-o9EhWA3r.js",
+    "/build/assets/Dashboard-C9D7nj3f.js",
     "/build/assets/Dashboard-DvcuHg5w.css"
   ],
   "resources/js/components/KriteriaPemohon.vue": [
-    "/build/assets/Dashboard-o9EhWA3r.js",
-    "/build/assets/Dashboard-DvcuHg5w.css"
-  ],
-  "resources/js/components/KriteriaPemohon.vue?vue&type=style&index=0&scoped=e0728d53&lang.css": [
-    "/build/assets/Dashboard-o9EhWA3r.js",
+    "/build/assets/Dashboard-C9D7nj3f.js",
     "/build/assets/Dashboard-DvcuHg5w.css"
   ],
   "resources/js/components/ProgramForm.vue": [
-    "/build/assets/Dashboard-o9EhWA3r.js",
+    "/build/assets/Dashboard-C9D7nj3f.js",
     "/build/assets/Dashboard-DvcuHg5w.css"
   ],
   "resources/js/components/ProgramHeader.vue": [
-    "/build/assets/Dashboard-o9EhWA3r.js",
+    "/build/assets/Dashboard-C9D7nj3f.js",
     "/build/assets/Dashboard-DvcuHg5w.css"
   ],
   "resources/js/components/ProgramHeader.vue?vue&type=style&index=0&scoped=1da9ed77&lang.css": [
-    "/build/assets/Dashboard-o9EhWA3r.js",
+    "/build/assets/Dashboard-C9D7nj3f.js",
     "/build/assets/Dashboard-DvcuHg5w.css"
   ],
   "resources/js/ssr.js": [],
