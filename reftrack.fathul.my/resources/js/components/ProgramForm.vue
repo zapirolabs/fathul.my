@@ -1,9 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- Import the header component -->
     <ProgramHeader />
     
-    <!-- Form content placeholder - will be developed later -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="text-center">
         <p class="text-gray-600 text-lg">
@@ -19,5 +17,4 @@ import ProgramHeader from './ProgramHeader.vue'
 </script>
 
 <style scoped>
-/* Any additional form-specific styles will go here */
 </style> 

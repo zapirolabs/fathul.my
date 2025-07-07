@@ -16,10 +16,13 @@
     <!-- Main Content -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
       <div class="text-center">
-        <!-- Organization Badge -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6 animate-fade-in-up">
-          <div class="w-2 h-2 bg-amber-400 rounded-full mr-2 animate-pulse"></div>
-          <span class="text-sm font-medium text-white/90">YPAdvancedSkills</span>
+        <!-- Organization Logo -->
+        <div class="mb-8 animate-fade-in-up">
+          <img 
+            src="https://cdn.fathul.my/assets/logo/ypadvancedskills-logo-whiteondark.svg" 
+            alt="YPAdvancedSkills Logo" 
+            class="h-16 mx-auto"
+          />
         </div>
 
         <!-- Main Title -->
@@ -31,33 +34,10 @@
           <span class="block text-white">2025</span>
         </h1>
 
-        <!-- Subtitle -->
-        <p class="text-xl sm:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
-          Kursus yang memberi latihan spesifik khususnya 
-          <span class="font-semibold text-amber-300">99% latihan secara amali</span> 
-          serta praktikal dengan 
-          <span class="font-semibold text-amber-300">jaminan pekerjaan</span> 
-          selepas pekerja menamatkan latihan.
-        </p>
 
-        <!-- Key Features -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up animation-delay-600">
-          <div class="flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-            <span class="text-sm font-medium">99% Praktikal</span>
-          </div>
-          <div class="flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <div class="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-            <span class="text-sm font-medium">Jaminan Pekerjaan</span>
-          </div>
-          <div class="flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <div class="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-            <span class="text-sm font-medium">Latihan Spesifik</span>
-          </div>
-        </div>
 
         <!-- Call to Action -->
-        <div class="animate-fade-in-up animation-delay-800">
+        <div class="animate-fade-in-up animation-delay-400">
           <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-red-900 font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse-slow">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
