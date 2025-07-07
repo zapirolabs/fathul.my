@@ -30,15 +30,7 @@
 
 
 
-        <!-- Call to Action -->
-        <div class="animate-fade-in-up animation-delay-400">
-          <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-red-900 font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse-slow">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-            Mulakan Perjalanan Kerjaya Anda
-          </div>
-        </div>
+
       </div>
     </div>
 
