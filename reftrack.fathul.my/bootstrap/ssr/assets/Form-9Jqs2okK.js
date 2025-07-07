@@ -359,7 +359,6 @@ function useProgramForm() {
   };
   return {
     form,
-    errors: form.errors,
     processing: form.processing,
     submit
   };
@@ -368,7 +367,7 @@ const _sfc_main$1 = {
   __name: "ProgramForm",
   __ssrInlineRender: true,
   setup(__props) {
-    const { form, errors, processing } = useProgramForm();
+    const { form, processing } = useProgramForm();
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
@@ -376,7 +375,7 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$6, null, null, _parent));
-      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6">${ssrInterpolate(console.log("Form data:", unref(form)))} <div class="space-y-3">`);
+      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6">${ssrInterpolate(console.log("Form data:", unref(form)))} ${ssrInterpolate(console.log("Errors:", _ctx.errors))} <div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -397,8 +396,8 @@ const _sfc_main$1 = {
         placeholder: "contoh@email.com",
         class: "w-full"
       }, null, _parent));
-      if (unref(errors).email) {
-        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(errors).email)}</p>`);
+      if (unref(form).errors.email) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.email)}</p>`);
       } else {
         _push(`<!---->`);
       }
@@ -502,8 +501,8 @@ const _sfc_main$1 = {
               _push2(`<!---->`);
             }
             _push2(`</div>`);
-            if (unref(form).pahangConnection === "other-pahang" && unref(errors).pahangConnectionOther) {
-              _push2(`<div class="ml-6"${_scopeId}><p class="text-sm text-destructive mt-1"${_scopeId}>${ssrInterpolate(unref(errors).pahangConnectionOther)}</p></div>`);
+            if (unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther) {
+              _push2(`<div class="ml-6"${_scopeId}><p class="text-sm text-destructive mt-1"${_scopeId}>${ssrInterpolate(unref(form).errors.pahangConnectionOther)}</p></div>`);
             } else {
               _push2(`<!---->`);
             }
@@ -564,19 +563,19 @@ const _sfc_main$1 = {
                   class: "max-w-md"
                 }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
               ]),
-              unref(form).pahangConnection === "other-pahang" && unref(errors).pahangConnectionOther ? (openBlock(), createBlock("div", {
+              unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther ? (openBlock(), createBlock("div", {
                 key: 0,
                 class: "ml-6"
               }, [
-                createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(errors).pahangConnectionOther), 1)
+                createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(form).errors.pahangConnectionOther), 1)
               ])) : createCommentVNode("", true)
             ];
           }
         }),
         _: 1
       }, _parent));
-      if (unref(errors).pahangConnection) {
-        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(errors).pahangConnection)}</p>`);
+      if (unref(form).errors.pahangConnection) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.pahangConnection)}</p>`);
       } else {
         _push(`<!---->`);
       }

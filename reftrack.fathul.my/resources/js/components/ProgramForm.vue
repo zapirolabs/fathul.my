@@ -20,6 +20,7 @@
 
         <form @submit.prevent="submit" class="space-y-6">
           {{ console.log('Form data:', form) }}
+          {{ console.log('Errors:', errors) }}
           <div class="space-y-3">
             <Label class="text-sm font-medium text-card-foreground">
               Alamat Emel
@@ -31,8 +32,8 @@
               placeholder="contoh@email.com"
               class="w-full"
             />
-            <p v-if="errors.email" class="text-sm text-destructive">
-              {{ errors.email }}
+            <p v-if="form.errors.email" class="text-sm text-destructive">
+              {{ form.errors.email }}
             </p>
           </div>
 
@@ -68,15 +69,15 @@
                   class="max-w-md"
                 />
               </div>
-              <div v-if="form.pahangConnection === 'other-pahang' && errors.pahangConnectionOther" class="ml-6">
+              <div v-if="form.pahangConnection === 'other-pahang' && form.errors.pahangConnectionOther" class="ml-6">
                 <p class="text-sm text-destructive mt-1">
-                  {{ errors.pahangConnectionOther }}
+                  {{ form.errors.pahangConnectionOther }}
                 </p>
               </div>
             </RadioGroup>
             
-            <p v-if="errors.pahangConnection" class="text-sm text-destructive">
-              {{ errors.pahangConnection }}
+            <p v-if="form.errors.pahangConnection" class="text-sm text-destructive">
+              {{ form.errors.pahangConnection }}
             </p>
           </div>
 
@@ -108,7 +109,7 @@ import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 
-const { form, errors, processing, submit } = useProgramForm()
+const { form, processing, submit } = useProgramForm()
 </script>
 
 <style scoped>

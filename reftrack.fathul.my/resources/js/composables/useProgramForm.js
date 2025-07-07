@@ -31,7 +31,6 @@ export function useProgramForm() {
 
   return {
     form,
-    errors: form.errors,
     processing: form.processing,
     submit
   }
