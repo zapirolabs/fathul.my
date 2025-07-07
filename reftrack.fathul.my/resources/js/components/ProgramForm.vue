@@ -4,6 +4,7 @@
     <KriteriaPemohon />
     <ApaYangAndaPerolehi />
     <ProgramYangDitawarkan />
+    <SiapaPatutMemohon />
     
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="text-center">
@@ -20,6 +21,7 @@ import ProgramHeader from './ProgramHeader.vue'
 import KriteriaPemohon from './KriteriaPemohon.vue'
 import ApaYangAndaPerolehi from './ApaYangAndaPerolehi.vue'
 import ProgramYangDitawarkan from './ProgramYangDitawarkan.vue'
+import SiapaPatutMemohon from './SiapaPatutMemohon.vue'
 </script>
 
 <style scoped>
