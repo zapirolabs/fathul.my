@@ -18,30 +18,34 @@
           </p>
         </div>
 
-        <form @submit.prevent="submit">
-          <div>
-            <Label class="text-lg font-semibold">
+        <form @submit.prevent="submit" class="space-y-6">
+          <div class="space-y-3">
+            <Label class="text-lg font-semibold text-gray-900">
               Apakah kaitan anda dengan negeri Pahang? <span class="text-red-600">*</span>
             </Label>
-            <RadioGroup v-model="form.pahangConnection">
+            <RadioGroup 
+              :default-value="form.pahangConnection" 
+              @update:model-value="form.pahangConnection = $event"
+              class="space-y-2"
+            >
               <div class="flex items-center space-x-2">
-                <RadioGroupItem value="born" id="born" />
+                <RadioGroupItem id="born" value="born" />
                 <Label for="born">Saya dilahirkan di Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
-                <RadioGroupItem value="residing" id="residing" />
+                <RadioGroupItem id="residing" value="residing" />
                 <Label for="residing">Saya sedang menetap di Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
-                <RadioGroupItem value="parents" id="parents" />
+                <RadioGroupItem id="parents" value="parents" />
                 <Label for="parents">Kedua-dua ibu bapa saya berasal dari Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
-                <RadioGroupItem value="other" id="other" />
+                <RadioGroupItem id="other" value="other" />
                 <Label for="other">Lain-lain</Label>
               </div>
             </RadioGroup>
-            <div v-if="errors.pahangConnection" class="text-red-600 text-sm mt-1">
+            <div v-if="errors.pahangConnection" class="text-red-600 text-sm">
               {{ errors.pahangConnection }}
             </div>
           </div>

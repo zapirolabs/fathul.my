@@ -337,8 +337,8 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$6, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$5, null, null, _parent));
-      _push(`<div class="bg-white py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"> Borang Permohonan </h2><p class="text-lg text-gray-600 max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form><div>`);
-      _push(ssrRenderComponent(unref(_sfc_main$2), { class: "text-lg font-semibold" }, {
+      _push(`<div class="bg-white py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"> Borang Permohonan </h2><p class="text-lg text-gray-600 max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$2), { class: "text-lg font-semibold text-gray-900" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(` Apakah kaitan anda dengan negeri Pahang? <span class="text-red-600"${_scopeId}>*</span>`);
@@ -352,15 +352,16 @@ const _sfc_main$1 = {
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$4), {
-        modelValue: unref(form).pahangConnection,
-        "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event
+        "default-value": unref(form).pahangConnection,
+        "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
+        class: "space-y-2"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<div class="flex items-center space-x-2"${_scopeId}>`);
             _push2(ssrRenderComponent(unref(_sfc_main$3), {
-              value: "born",
-              id: "born"
+              id: "born",
+              value: "born"
             }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "born" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
@@ -376,8 +377,8 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
             _push2(ssrRenderComponent(unref(_sfc_main$3), {
-              value: "residing",
-              id: "residing"
+              id: "residing",
+              value: "residing"
             }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "residing" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
@@ -393,8 +394,8 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
             _push2(ssrRenderComponent(unref(_sfc_main$3), {
-              value: "parents",
-              id: "parents"
+              id: "parents",
+              value: "parents"
             }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "parents" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
@@ -410,8 +411,8 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
             _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
             _push2(ssrRenderComponent(unref(_sfc_main$3), {
-              value: "other",
-              id: "other"
+              id: "other",
+              value: "other"
             }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(unref(_sfc_main$2), { for: "other" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
@@ -430,8 +431,8 @@ const _sfc_main$1 = {
             return [
               createVNode("div", { class: "flex items-center space-x-2" }, [
                 createVNode(unref(_sfc_main$3), {
-                  value: "born",
-                  id: "born"
+                  id: "born",
+                  value: "born"
                 }),
                 createVNode(unref(_sfc_main$2), { for: "born" }, {
                   default: withCtx(() => [
@@ -442,8 +443,8 @@ const _sfc_main$1 = {
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
                 createVNode(unref(_sfc_main$3), {
-                  value: "residing",
-                  id: "residing"
+                  id: "residing",
+                  value: "residing"
                 }),
                 createVNode(unref(_sfc_main$2), { for: "residing" }, {
                   default: withCtx(() => [
@@ -454,8 +455,8 @@ const _sfc_main$1 = {
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
                 createVNode(unref(_sfc_main$3), {
-                  value: "parents",
-                  id: "parents"
+                  id: "parents",
+                  value: "parents"
                 }),
                 createVNode(unref(_sfc_main$2), { for: "parents" }, {
                   default: withCtx(() => [
@@ -466,8 +467,8 @@ const _sfc_main$1 = {
               ]),
               createVNode("div", { class: "flex items-center space-x-2" }, [
                 createVNode(unref(_sfc_main$3), {
-                  value: "other",
-                  id: "other"
+                  id: "other",
+                  value: "other"
                 }),
                 createVNode(unref(_sfc_main$2), { for: "other" }, {
                   default: withCtx(() => [
@@ -482,7 +483,7 @@ const _sfc_main$1 = {
         _: 1
       }, _parent));
       if (unref(errors).pahangConnection) {
-        _push(`<div class="text-red-600 text-sm mt-1">${ssrInterpolate(unref(errors).pahangConnection)}</div>`);
+        _push(`<div class="text-red-600 text-sm">${ssrInterpolate(unref(errors).pahangConnection)}</div>`);
       } else {
         _push(`<!---->`);
       }
