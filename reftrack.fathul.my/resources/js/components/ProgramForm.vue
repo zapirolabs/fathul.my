@@ -19,6 +19,7 @@
         </div>
 
         <form @submit.prevent="submit" class="space-y-6">
+          {{ console.log('Form data:', form) }}
           <div class="space-y-3">
             <Label class="text-sm font-medium text-card-foreground">
               Alamat Emel
@@ -83,7 +84,8 @@
             <Button 
               type="submit" 
               :disabled="processing"
-              class="px-8 py-2"
+              class="px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
+              @click="() => console.log('Button clicked!')"
             >
               {{ processing ? 'Menghantar...' : 'Hantar Permohonan' }}
             </Button>

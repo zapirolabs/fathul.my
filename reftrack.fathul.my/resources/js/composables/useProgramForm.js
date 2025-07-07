@@ -8,10 +8,23 @@ export function useProgramForm() {
   })
 
   const submit = () => {
+    console.log('Submit function called')
+    console.log('Form data:', form.data())
+    console.log('Route:', route('program.store'))
+    
     form.post(route('program.store'), {
       preserveScroll: true,
+      onStart: () => {
+        console.log('Form submission started')
+      },
       onSuccess: () => {
-        // Form will automatically redirect to success page
+        console.log('Form submission successful')
+      },
+      onError: (errors) => {
+        console.log('Form submission errors:', errors)
+      },
+      onFinish: () => {
+        console.log('Form submission finished')
       }
     })
   }

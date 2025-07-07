@@ -338,9 +338,22 @@ function useProgramForm() {
     pahangConnectionOther: ""
   });
   const submit = () => {
+    console.log("Submit function called");
+    console.log("Form data:", form.data());
+    console.log("Route:", route("program.store"));
     form.post(route("program.store"), {
       preserveScroll: true,
+      onStart: () => {
+        console.log("Form submission started");
+      },
       onSuccess: () => {
+        console.log("Form submission successful");
+      },
+      onError: (errors) => {
+        console.log("Form submission errors:", errors);
+      },
+      onFinish: () => {
+        console.log("Form submission finished");
       }
     });
   };
@@ -363,7 +376,7 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$6, null, null, _parent));
-      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
+      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6">${ssrInterpolate(console.log("Form data:", unref(form)))} <div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -571,7 +584,8 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(unref(_sfc_main$c), {
         type: "submit",
         disabled: unref(processing),
-        class: "px-8 py-2"
+        class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors",
+        onClick: () => console.log("Button clicked!")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
