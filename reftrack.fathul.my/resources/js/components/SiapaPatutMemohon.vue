@@ -11,7 +11,7 @@
       </div>
 
       <div class="space-y-8 mb-12">
-        <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+        <div class="bg-white border border-red-200 rounded-lg p-6">
           <div class="flex items-start">
             <div class="flex-shrink-0">
               <div class="w-12 h-12 bg-red-800 rounded-full flex items-center justify-center">
@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+        <div class="bg-white border border-red-200 rounded-lg p-6">
           <div class="flex items-start">
             <div class="flex-shrink-0">
               <div class="w-12 h-12 bg-red-800 rounded-full flex items-center justify-center">
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg">
+      <div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg"></div>
         <div class="flex items-start">
           <AlertTriangle class="w-6 h-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" />
           <div>
