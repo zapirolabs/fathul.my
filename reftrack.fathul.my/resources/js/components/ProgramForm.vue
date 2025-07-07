@@ -50,7 +50,7 @@
             <div v-if="form.pahangConnection === 'other-pahang'" class="ml-6 mt-2">
               <Input 
                 v-model="form.pahangConnectionOther"
-                placeholder="Sila nyatakan kaitan anda dengan Pahang"
+                placeholder="Sila nyatakan..."
                 class="max-w-md"
               />
               <p v-if="errors.pahangConnectionOther" class="text-sm text-destructive mt-1">
