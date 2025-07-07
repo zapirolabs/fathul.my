@@ -16,6 +16,16 @@ class FormController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
+            'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
+        ], [
+            'pahangConnection.required' => 'Sila pilih kaitan anda dengan negeri Pahang.',
+            'pahangConnection.in' => 'Sila pilih salah satu pilihan yang disediakan.',
+            'pahangConnectionOther.required_if' => 'Sila nyatakan kaitan anda dengan negeri Pahang.',
+            'pahangConnectionOther.max' => 'Maklumat tidak boleh melebihi 255 aksara.',
+        ]);
+
         $pahangConnection = $request->input('pahangConnection');
         $pahangConnectionOther = $request->input('pahangConnectionOther');
 
