@@ -1,6 +1,6 @@
-import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
+import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate } from "vue/server-renderer";
-import { router, Head } from "@inertiajs/vue3";
+import { useForm, Head } from "@inertiajs/vue3";
 import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon } from "lucide-vue-next";
 import { reactiveOmit, useVModel } from "@vueuse/core";
 import { useForwardPropsEmits, RadioGroupRoot, useForwardProps, RadioGroupItem, RadioGroupIndicator, Label } from "reka-ui";
@@ -332,42 +332,18 @@ _sfc_main$2.setup = (props, ctx) => {
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
 function useProgramForm() {
-  const form = ref({
+  const form = useForm({
     email: "",
     pahangConnection: "",
     pahangConnectionOther: ""
   });
-  const errors = ref({});
-  const processing = ref(false);
   const submit = () => {
-    processing.value = true;
-    errors.value = {};
-    router.post(route("program.store"), form.value, {
-      onError: (err) => {
-        errors.value = err;
-        processing.value = false;
-        setTimeout(() => {
-          const firstError = document.querySelector(".text-destructive");
-          if (firstError) {
-            firstError.scrollIntoView({
-              behavior: "smooth",
-              block: "center"
-            });
-          }
-        }, 100);
-      },
-      onSuccess: () => {
-        processing.value = false;
-      },
-      onFinish: () => {
-        processing.value = false;
-      }
-    });
+    form.post(route("program.store"));
   };
   return {
     form,
-    errors,
-    processing,
+    errors: form.errors,
+    processing: form.processing,
     submit
   };
 }
