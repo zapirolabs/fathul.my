@@ -2,6 +2,7 @@
   <div class="min-h-screen bg-gray-50">
     <ProgramHeader />
     <KriteriaPemohon />
+    <ApaYangAndaPerolehi />
     
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="text-center">
@@ -16,6 +17,7 @@
 <script setup>
 import ProgramHeader from './ProgramHeader.vue'
 import KriteriaPemohon from './KriteriaPemohon.vue'
+import ApaYangAndaPerolehi from './ApaYangAndaPerolehi.vue'
 </script>
 
 <style scoped>
