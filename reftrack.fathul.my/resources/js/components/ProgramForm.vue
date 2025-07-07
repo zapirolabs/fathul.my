@@ -62,6 +62,16 @@
               {{ errors.pahangConnection }}
             </p>
           </div>
+
+          <div class="flex justify-end pt-6">
+            <Button 
+              type="submit" 
+              :disabled="processing"
+              class="px-8 py-2"
+            >
+              {{ processing ? 'Menghantar...' : 'Hantar Permohonan' }}
+            </Button>
+          </div>
         </form>
       </div>
     </div>
@@ -77,6 +87,7 @@ import SiapaPatutMemohon from './SiapaPatutMemohon.vue'
 import { RadioGroup, RadioGroupItem } from '@/resources/js/components/ui/radio-group'
 import { Label } from '@/resources/js/components/ui/label'
 import { Input } from '@/resources/js/components/ui/input'
+import { Button } from '@/resources/js/components/ui/button'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 
 const { form, errors, processing, submit } = useProgramForm()

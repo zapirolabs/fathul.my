@@ -1,11 +1,11 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-CfVvURM4.css",
+    "file": "assets/app-C-bGNHVS.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/Pages/Form.vue": {
-    "file": "assets/Form-CGn4YzCB.js",
+    "file": "assets/Form-BVH_eJ5z.js",
     "name": "Form",
     "src": "resources/js/Pages/Form.vue",
     "isDynamicEntry": true,
@@ -17,7 +17,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-CF1wr5V1.js",
+    "file": "assets/app-BZ2i_xyg.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
