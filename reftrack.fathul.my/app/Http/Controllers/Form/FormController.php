@@ -19,23 +19,21 @@ class FormController extends Controller
         $pahangConnection = $request->input('pahangConnection');
         $pahangConnectionOther = $request->input('pahangConnectionOther');
 
-        // Prepare the data for column H specifically
-        $finalValue = $pahangConnection;
-        
-        // If "other" was selected, include the custom text
-        if ($pahangConnection === 'other-pahang' && $pahangConnectionOther) {
-            $finalValue = $pahangConnectionOther;
-        }
+        $valueMapping = [
+            'born-pahang' => 'Yes, I was born in Pahang',
+            'living-pahang' => 'I am currently residing in Pahang',
+            'parents-pahang' => 'Both of my parents are from Pahang',
+            'other-pahang' => $pahangConnectionOther ?: 'Other'
+        ];
 
-        // Insert data specifically in column H (8th column)
-        // We need to provide empty values for columns A-G, then our value for H
+        $finalValue = $valueMapping[$pahangConnection] ?? $pahangConnection;
+
         $rowData = ['', '', '', '', '', '', '', $finalValue];
 
-        // Append to Google Sheets
         Sheets::spreadsheet(env('GOOGLE_SPREADSHEET_ID'))
             ->sheet('PJK Registration form')
             ->append([$rowData]);
 
-        return response()->json(['success' => true]);
+        return back()->with('success', 'Maklumat anda telah berjaya dihantar!');
     }
 }
