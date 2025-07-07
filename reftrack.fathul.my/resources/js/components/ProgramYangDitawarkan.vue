@@ -14,27 +14,27 @@
         <div class="space-y-8">
           <div>
             <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-              <BookOpen class="w-6 h-6 text-amber-500 mr-3" />
+              <BookOpen class="w-6 h-6 text-red-800 mr-3" />
               Program Yang Tersedia
             </h3>
             <div class="space-y-4">
-              <div class="flex items-start p-4 bg-gray-50 rounded-lg">
-                <Code class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+              <div class="flex items-start p-4 border border-red-200 rounded-lg">
+                <Code class="w-5 h-5 text-red-800 mr-3 mt-0.5 flex-shrink-0" />
                 <span class="text-gray-700 font-medium">Python Basic Programming</span>
               </div>
-              <div class="flex items-start p-4 bg-gray-50 rounded-lg">
-                <Brain class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+              <div class="flex items-start p-4 border border-red-200 rounded-lg">
+                <Brain class="w-5 h-5 text-red-800 mr-3 mt-0.5 flex-shrink-0" />
                 <span class="text-gray-700 font-medium">GenAI Masterclass</span>
               </div>
-              <div class="flex items-start p-4 bg-gray-50 rounded-lg">
-                <Cloud class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+              <div class="flex items-start p-4 border border-red-200 rounded-lg">
+                <Cloud class="w-5 h-5 text-red-800 mr-3 mt-0.5 flex-shrink-0" />
                 <span class="text-gray-700 font-medium">AWS Foundational Certificate</span>
               </div>
             </div>
-            <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+            <div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-r-lg">
               <div class="flex items-center">
-                <Info class="w-5 h-5 text-blue-600 mr-2" />
-                <p class="text-blue-800 font-medium">
+                <Info class="w-5 h-5 text-yellow-600 mr-2" />
+                <p class="text-yellow-800 font-medium">
                   Kami akan mengumumkan tarikh yang disahkan dalam masa terdekat
                 </p>
               </div>
@@ -45,28 +45,28 @@
         <div class="space-y-8">
           <div>
             <h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-              <Clock class="w-6 h-6 text-amber-500 mr-3" />
+              <Clock class="w-6 h-6 text-red-800 mr-3" />
               Komitmen Yang Diperlukan
             </h3>
-            <div class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg mb-6">
+            <div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg mb-6">
               <div class="flex items-center mb-2">
-                <Calendar class="w-5 h-5 text-amber-600 mr-2" />
-                <span class="text-amber-800 font-semibold text-lg">1 Bulan</span>
+                <Calendar class="w-5 h-5 text-red-800 mr-2" />
+                <span class="text-red-900 font-semibold text-lg">1 Bulan</span>
               </div>
             </div>
 
             <div class="space-y-4">
-              <div class="border border-gray-200 rounded-lg p-4">
+              <div class="border border-red-200 rounded-lg p-4">
                 <div class="flex items-center mb-2">
-                  <MapPin class="w-5 h-5 text-green-600 mr-2" />
+                  <MapPin class="w-5 h-5 text-red-800 mr-2" />
                   <span class="font-semibold text-gray-900">Minggu 1–3: Kelas Fizikal</span>
                 </div>
                 <p class="text-gray-600 text-sm ml-7">Kehadiran sepenuh masa diperlukan</p>
               </div>
               
-              <div class="border border-gray-200 rounded-lg p-4">
+              <div class="border border-red-200 rounded-lg p-4">
                 <div class="flex items-center mb-2">
-                  <Monitor class="w-5 h-5 text-blue-600 mr-2" />
+                  <Monitor class="w-5 h-5 text-red-800 mr-2" />
                   <span class="font-semibold text-gray-900">Minggu 4: Kelas Dalam Talian</span>
                 </div>
                 <p class="text-gray-600 text-sm ml-7">Kehadiran sepenuh masa diperlukan</p>
@@ -76,20 +76,20 @@
 
           <div>
             <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <Package class="w-5 h-5 text-amber-500 mr-2" />
+              <Package class="w-5 h-5 text-red-800 mr-2" />
               Program Termasuk
             </h4>
             <ul class="space-y-3">
               <li class="flex items-start">
-                <CheckCircle class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <CheckCircle class="w-5 h-5 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
                 <span class="text-gray-700">Latihan fizikal di YP Advanced Skills, Kuantan</span>
               </li>
               <li class="flex items-start">
-                <CheckCircle class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <CheckCircle class="w-5 h-5 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
                 <span class="text-gray-700">Modul pembelajaran dalam talian dan pensijilan</span>
               </li>
               <li class="flex items-start">
-                <CheckCircle class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <CheckCircle class="w-5 h-5 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
                 <span class="text-gray-700">Penilaian akhir, bimbingan, dan proses penempatan kerja</span>
               </li>
             </ul>
