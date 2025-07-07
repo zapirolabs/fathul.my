@@ -1,4 +1,4 @@
-import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, createTextVNode } from "vue";
+import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate } from "vue/server-renderer";
 import { router, Head } from "@inertiajs/vue3";
 import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon } from "lucide-vue-next";
@@ -463,7 +463,22 @@ const _sfc_main$1 = {
               }),
               _: 1
             }, _parent2, _scopeId));
+            if (unref(form).pahangConnection === "other-pahang") {
+              _push2(ssrRenderComponent(unref(_sfc_main$2), {
+                modelValue: unref(form).pahangConnectionOther,
+                "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
+                placeholder: "Sila nyatakan...",
+                class: "max-w-md"
+              }, null, _parent2, _scopeId));
+            } else {
+              _push2(`<!---->`);
+            }
             _push2(`</div>`);
+            if (unref(form).pahangConnection === "other-pahang" && unref(errors).pahangConnectionOther) {
+              _push2(`<div class="ml-6"${_scopeId}><p class="text-sm text-destructive mt-1"${_scopeId}>${ssrInterpolate(unref(errors).pahangConnectionOther)}</p></div>`);
+            } else {
+              _push2(`<!---->`);
+            }
           } else {
             return [
               createVNode("div", { class: "flex items-center space-x-2" }, [
@@ -512,30 +527,26 @@ const _sfc_main$1 = {
                     createTextVNode("Lain-lain:")
                   ]),
                   _: 1
-                })
-              ])
+                }),
+                unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$2), {
+                  key: 0,
+                  modelValue: unref(form).pahangConnectionOther,
+                  "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
+                  placeholder: "Sila nyatakan...",
+                  class: "max-w-md"
+                }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
+              ]),
+              unref(form).pahangConnection === "other-pahang" && unref(errors).pahangConnectionOther ? (openBlock(), createBlock("div", {
+                key: 0,
+                class: "ml-6"
+              }, [
+                createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(errors).pahangConnectionOther), 1)
+              ])) : createCommentVNode("", true)
             ];
           }
         }),
         _: 1
       }, _parent));
-      if (unref(form).pahangConnection === "other-pahang") {
-        _push(`<div class="ml-6 mt-2">`);
-        _push(ssrRenderComponent(unref(_sfc_main$2), {
-          modelValue: unref(form).pahangConnectionOther,
-          "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
-          placeholder: "Sila nyatakan...",
-          class: "max-w-md"
-        }, null, _parent));
-        if (unref(errors).pahangConnectionOther) {
-          _push(`<p class="text-sm text-destructive mt-1">${ssrInterpolate(unref(errors).pahangConnectionOther)}</p>`);
-        } else {
-          _push(`<!---->`);
-        }
-        _push(`</div>`);
-      } else {
-        _push(`<!---->`);
-      }
       if (unref(errors).pahangConnection) {
         _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(errors).pahangConnection)}</p>`);
       } else {

@@ -44,19 +44,19 @@
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="other-pahang" value="other-pahang" />
                 <Label for="other-pahang">Lain-lain:</Label>
+                <Input 
+                  v-if="form.pahangConnection === 'other-pahang'"
+                  v-model="form.pahangConnectionOther"
+                  placeholder="Sila nyatakan..."
+                  class="max-w-md"
+                />
+              </div>
+              <div v-if="form.pahangConnection === 'other-pahang' && errors.pahangConnectionOther" class="ml-6">
+                <p class="text-sm text-destructive mt-1">
+                  {{ errors.pahangConnectionOther }}
+                </p>
               </div>
             </RadioGroup>
-            
-            <div v-if="form.pahangConnection === 'other-pahang'" class="ml-6 mt-2">
-              <Input 
-                v-model="form.pahangConnectionOther"
-                placeholder="Sila nyatakan..."
-                class="max-w-md"
-              />
-              <p v-if="errors.pahangConnectionOther" class="text-sm text-destructive mt-1">
-                {{ errors.pahangConnectionOther }}
-              </p>
-            </div>
             
             <p v-if="errors.pahangConnection" class="text-sm text-destructive">
               {{ errors.pahangConnection }}
