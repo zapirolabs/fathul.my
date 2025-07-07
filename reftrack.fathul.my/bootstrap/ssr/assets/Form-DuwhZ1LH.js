@@ -433,6 +433,7 @@ const _sfc_main$1 = {
   setup(__props) {
     const { form, errors, processing } = useProgramForm();
     return (_ctx, _push, _parent, _attrs) => {
+      var _a;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$a, null, null, _parent));
@@ -440,7 +441,7 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
       _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl sm:text-4xl font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-lg text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div>`);
-      if (_ctx.$page.props.flash.success) {
+      if ((_a = _ctx.$page.props.flash) == null ? void 0 : _a.success) {
         _push(`<div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-md"><p class="text-green-800 text-center font-medium">${ssrInterpolate(_ctx.$page.props.flash.success)}</p></div>`);
       } else {
         _push(`<!---->`);

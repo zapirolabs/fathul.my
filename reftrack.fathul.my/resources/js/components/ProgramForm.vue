@@ -19,7 +19,7 @@
         </div>
 
         <!-- Success Message -->
-        <div v-if="$page.props.flash.success" class="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
+        <div v-if="$page.props.flash?.success" class="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
           <p class="text-green-800 text-center font-medium">
             {{ $page.props.flash.success }}
           </p>
