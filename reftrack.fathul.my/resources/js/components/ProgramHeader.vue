@@ -35,7 +35,7 @@
             <img 
               src="https://cdn.fathul.my/assets/logo/nematix-logo-fullcolor.svg" 
               alt="Nematix Logo" 
-              class="h-4 sm:h-5 lg:h-6 ml-2"
+              class="h-4 sm:h-4 lg:h-5 ml-2"
             />
           </p>
         </div>
