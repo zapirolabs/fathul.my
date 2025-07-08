@@ -29,6 +29,7 @@ class FormController extends Controller
             'commitmentLevel' => 'required|in:fully-committed,need-info,not-sure,other-commitment',
             'commitmentLevelOther' => 'required_if:commitmentLevel,other-commitment|max:255',
             'programInterest' => 'required|in:python-basic,genai-masterclass,aws-foundational,more-than-one',
+            'intakeBatch' => 'required_if:programInterest,python-basic|in:batch-1,batch-2,batch-3',
             'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
             'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
         ], [
@@ -59,6 +60,8 @@ class FormController extends Controller
             'commitmentLevelOther.max' => 'Tahap komitmen lain tidak boleh melebihi 255 aksara.',
             'programInterest.required' => 'Sila pilih program yang anda minati.',
             'programInterest.in' => 'Sila pilih program yang sah.',
+            'intakeBatch.required_if' => 'Sila pilih batch intake untuk program Python.',
+            'intakeBatch.in' => 'Sila pilih batch yang sah.',
             'pahangConnection.required' => 'Sila pilih kaitan anda dengan negeri Pahang.',
             'pahangConnection.in' => 'Sila pilih salah satu pilihan yang disediakan.',
             'pahangConnectionOther.required_if' => 'Sila nyatakan kaitan anda dengan negeri Pahang.',
@@ -75,6 +78,7 @@ class FormController extends Controller
         $commitmentLevel = $request->input('commitmentLevel');
         $commitmentLevelOther = $request->input('commitmentLevelOther');
         $programInterest = $request->input('programInterest');
+        $intakeBatch = $request->input('intakeBatch');
         $pahangConnection = $request->input('pahangConnection');
         $pahangConnectionOther = $request->input('pahangConnectionOther');
 
@@ -130,6 +134,16 @@ class FormController extends Controller
 
         $finalInterviewValue = $interviewMapping[$interviewWillingness] ?? $interviewWillingness;
 
+        // Map intake batch to English
+        $batchMapping = [
+            'batch-1' => 'Batch 1',
+            'batch-2' => 'Batch 2', 
+            'batch-3' => 'Batch 3',
+            'none-above' => 'None above/Other Program'
+        ];
+
+        $finalBatchValue = $batchMapping[$intakeBatch] ?? $intakeBatch;
+
         // Generate timestamp in Malaysia timezone with exact format: 08/07/2025 09:24:34
         $timestamp = Carbon::now('Asia/Kuala_Lumpur')->format('d/m/Y H:i:s');
 
@@ -143,7 +157,7 @@ class FormController extends Controller
             $finalCommitmentValue, // G - Commitment Level
             $finalPahangValue, // H - Pahang Connection
             $finalProgramValue, // I - Program Interest
-            '', // J - Reserved
+            $finalBatchValue, // J - Intake Batch
             '', // K - Reserved
             '', // L - Reserved
             '', // M - Reserved

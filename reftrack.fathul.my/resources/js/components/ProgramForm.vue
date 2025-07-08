@@ -321,6 +321,62 @@
             </CardContent>
           </Card>
 
+          <!-- Python Program Details Card (Dynamic) -->
+          <Card v-if="form.programInterest === 'python-basic'">
+            <CardContent class="p-6">
+              <div class="space-y-5">
+                <div class="bg-orange-500 text-white p-4 rounded-t-lg">
+                  <h3 class="font-bold text-lg">(01) Python Basic Programming</h3>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-b-lg space-y-4">
+                  <h4 class="font-semibold text-gray-800">Python Programming Talent Development & Job Placement Initiative</h4>
+                  
+                  <p class="text-gray-700">Unlock your future with in-demand Python skills.</p>
+                  
+                  <p class="text-gray-700">
+                    Brought to you by Yayasan Pahang and industry partners, this program equips fresh 
+                    graduates and job seekers with essential Python skills and prepares them for real job 
+                    placements in tech and engineering.
+                  </p>
+                  
+                  <p class="text-gray-700">
+                    Gain hands-on training and access career opportunities in data science, AI, software 
+                    development, and automation.
+                  </p>
+                </div>
+
+                <div class="space-y-3">
+                  <CardTitle class="text-card-foreground">
+                    Intake batch
+                    <span class="text-destructive">*</span>
+                  </CardTitle>
+                  <RadioGroup 
+                    v-model="form.intakeBatch"
+                    class="space-y-2"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="batch-1" value="batch-1" />
+                      <Label for="batch-1" class="text-sm">Batch 1</Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="batch-2" value="batch-2" />
+                      <Label for="batch-2" class="text-sm">Batch 2</Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="batch-3" value="batch-3" />
+                      <Label for="batch-3" class="text-sm">Batch 3</Label>
+                    </div>
+                  </RadioGroup>
+                  
+                  <p v-if="form.errors.intakeBatch" class="text-sm text-destructive">
+                    {{ form.errors.intakeBatch }}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <!-- Submit Button Card -->
           <Card>
             <CardContent class="p-6">

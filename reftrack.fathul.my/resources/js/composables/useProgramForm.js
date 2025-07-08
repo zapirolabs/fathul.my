@@ -14,6 +14,8 @@ export function useProgramForm() {
     commitmentLevel: '',
     commitmentLevelOther: '',
     programInterest: '',
+    intakeBatch: '',
+    referralCode: '',
     pahangConnection: '',
     pahangConnectionOther: '',
   })
@@ -43,19 +45,14 @@ export function useProgramForm() {
     return registrationReasons.value.includes(value)
   }
 
-  const submit = () => {
-    form.transform((data) => ({
-      ...data,
-      registrationReasons: registrationReasons.value
-    })).post(route('program.store'), {
+  const submitForm = () => {
+    form.post('/program', {
       preserveScroll: true,
-      onStart: () => {
-      },
       onSuccess: () => {
+        // Success handling is done by the controller redirect
       },
       onError: (errors) => {
-      },
-      onFinish: () => {
+        console.log('Form errors:', errors)
       }
     })
   }
@@ -67,6 +64,6 @@ export function useProgramForm() {
     handleRegistrationReasonChange,
     isReasonSelected,
     processing: form.processing,
-    submit
+    submitForm
   }
 }

@@ -494,6 +494,8 @@ function useProgramForm() {
     commitmentLevel: "",
     commitmentLevelOther: "",
     programInterest: "",
+    intakeBatch: "",
+    referralCode: "",
     pahangConnection: "",
     pahangConnectionOther: ""
   });
@@ -518,19 +520,13 @@ function useProgramForm() {
   const isReasonSelected = (value) => {
     return registrationReasons.value.includes(value);
   };
-  const submit = () => {
-    form.transform((data) => ({
-      ...data,
-      registrationReasons: registrationReasons.value
-    })).post(route("program.store"), {
+  const submitForm = () => {
+    form.post("/program", {
       preserveScroll: true,
-      onStart: () => {
-      },
       onSuccess: () => {
       },
       onError: (errors) => {
-      },
-      onFinish: () => {
+        console.log("Form errors:", errors);
       }
     });
   };
@@ -541,7 +537,7 @@ function useProgramForm() {
     handleRegistrationReasonChange,
     isReasonSelected,
     processing: form.processing,
-    submit
+    submitForm
   };
 }
 function updateTheme(value) {
@@ -2551,6 +2547,331 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
+      if (unref(form).programInterest === "python-basic") {
+        _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(`<div class="space-y-5"${_scopeId2}><div class="bg-orange-500 text-white p-4 rounded-t-lg"${_scopeId2}><h3 class="font-bold text-lg"${_scopeId2}>(01) Python Basic Programming</h3></div><div class="bg-gray-50 p-4 rounded-b-lg space-y-4"${_scopeId2}><h4 class="font-semibold text-gray-800"${_scopeId2}>Python Programming Talent Development &amp; Job Placement Initiative</h4><p class="text-gray-700"${_scopeId2}>Unlock your future with in-demand Python skills.</p><p class="text-gray-700"${_scopeId2}> Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. </p><p class="text-gray-700"${_scopeId2}> Gain hands-on training and access career opportunities in data science, AI, software development, and automation. </p></div><div class="space-y-3"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(` Intake batch <span class="text-destructive"${_scopeId3}>*</span>`);
+                        } else {
+                          return [
+                            createTextVNode(" Intake batch "),
+                            createVNode("span", { class: "text-destructive" }, "*")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$9), {
+                      modelValue: unref(form).intakeBatch,
+                      "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                      class: "space-y-2"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                            id: "batch-1",
+                            value: "batch-1"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                            for: "batch-1",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 1`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 1")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                            id: "batch-2",
+                            value: "batch-2"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                            for: "batch-2",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 2`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 2")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                            id: "batch-3",
+                            value: "batch-3"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                            for: "batch-3",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 3`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 3")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div>`);
+                        } else {
+                          return [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$8), {
+                                id: "batch-1",
+                                value: "batch-1"
+                              }),
+                              createVNode(unref(_sfc_main$6), {
+                                for: "batch-1",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 1")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$8), {
+                                id: "batch-2",
+                                value: "batch-2"
+                              }),
+                              createVNode(unref(_sfc_main$6), {
+                                for: "batch-2",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 2")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$8), {
+                                id: "batch-3",
+                                value: "batch-3"
+                              }),
+                              createVNode(unref(_sfc_main$6), {
+                                for: "batch-3",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 3")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    if (unref(form).errors.intakeBatch) {
+                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.intakeBatch)}</p>`);
+                    } else {
+                      _push3(`<!---->`);
+                    }
+                    _push3(`</div></div>`);
+                  } else {
+                    return [
+                      createVNode("div", { class: "space-y-5" }, [
+                        createVNode("div", { class: "bg-orange-500 text-white p-4 rounded-t-lg" }, [
+                          createVNode("h3", { class: "font-bold text-lg" }, "(01) Python Basic Programming")
+                        ]),
+                        createVNode("div", { class: "bg-gray-50 p-4 rounded-b-lg space-y-4" }, [
+                          createVNode("h4", { class: "font-semibold text-gray-800" }, "Python Programming Talent Development & Job Placement Initiative"),
+                          createVNode("p", { class: "text-gray-700" }, "Unlock your future with in-demand Python skills."),
+                          createVNode("p", { class: "text-gray-700" }, " Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. "),
+                          createVNode("p", { class: "text-gray-700" }, " Gain hands-on training and access career opportunities in data science, AI, software development, and automation. ")
+                        ]),
+                        createVNode("div", { class: "space-y-3" }, [
+                          createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                            default: withCtx(() => [
+                              createTextVNode(" Intake batch "),
+                              createVNode("span", { class: "text-destructive" }, "*")
+                            ]),
+                            _: 1
+                          }),
+                          createVNode(unref(_sfc_main$9), {
+                            modelValue: unref(form).intakeBatch,
+                            "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                            class: "space-y-2"
+                          }, {
+                            default: withCtx(() => [
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$8), {
+                                  id: "batch-1",
+                                  value: "batch-1"
+                                }),
+                                createVNode(unref(_sfc_main$6), {
+                                  for: "batch-1",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 1")
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$8), {
+                                  id: "batch-2",
+                                  value: "batch-2"
+                                }),
+                                createVNode(unref(_sfc_main$6), {
+                                  for: "batch-2",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 2")
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$8), {
+                                  id: "batch-3",
+                                  value: "batch-3"
+                                }),
+                                createVNode(unref(_sfc_main$6), {
+                                  for: "batch-3",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 3")
+                                  ]),
+                                  _: 1
+                                })
+                              ])
+                            ]),
+                            _: 1
+                          }, 8, ["modelValue", "onUpdate:modelValue"]),
+                          unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                            key: 0,
+                            class: "text-sm text-destructive"
+                          }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                        ])
+                      ])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+            } else {
+              return [
+                createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+                  default: withCtx(() => [
+                    createVNode("div", { class: "space-y-5" }, [
+                      createVNode("div", { class: "bg-orange-500 text-white p-4 rounded-t-lg" }, [
+                        createVNode("h3", { class: "font-bold text-lg" }, "(01) Python Basic Programming")
+                      ]),
+                      createVNode("div", { class: "bg-gray-50 p-4 rounded-b-lg space-y-4" }, [
+                        createVNode("h4", { class: "font-semibold text-gray-800" }, "Python Programming Talent Development & Job Placement Initiative"),
+                        createVNode("p", { class: "text-gray-700" }, "Unlock your future with in-demand Python skills."),
+                        createVNode("p", { class: "text-gray-700" }, " Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. "),
+                        createVNode("p", { class: "text-gray-700" }, " Gain hands-on training and access career opportunities in data science, AI, software development, and automation. ")
+                      ]),
+                      createVNode("div", { class: "space-y-3" }, [
+                        createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                          default: withCtx(() => [
+                            createTextVNode(" Intake batch "),
+                            createVNode("span", { class: "text-destructive" }, "*")
+                          ]),
+                          _: 1
+                        }),
+                        createVNode(unref(_sfc_main$9), {
+                          modelValue: unref(form).intakeBatch,
+                          "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                          class: "space-y-2"
+                        }, {
+                          default: withCtx(() => [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$8), {
+                                id: "batch-1",
+                                value: "batch-1"
+                              }),
+                              createVNode(unref(_sfc_main$6), {
+                                for: "batch-1",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 1")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$8), {
+                                id: "batch-2",
+                                value: "batch-2"
+                              }),
+                              createVNode(unref(_sfc_main$6), {
+                                for: "batch-2",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 2")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$8), {
+                                id: "batch-3",
+                                value: "batch-3"
+                              }),
+                              createVNode(unref(_sfc_main$6), {
+                                for: "batch-3",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 3")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ]),
+                          _: 1
+                        }, 8, ["modelValue", "onUpdate:modelValue"]),
+                        unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                          key: 0,
+                          class: "text-sm text-destructive"
+                        }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                      ])
+                    ])
+                  ]),
+                  _: 1
+                })
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
       _push(ssrRenderComponent(unref(_sfc_main$4), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
