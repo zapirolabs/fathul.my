@@ -19,9 +19,9 @@ class FormController extends Controller
     {
         // Debug: Log what we're receiving
         \Log::info('=== FORM SUBMISSION DEBUG ===');
-        \Log::info('Request data:', $request->all());
-        \Log::info('registrationReasons:', $request->input('registrationReasons', []));
-        \Log::info('registrationReasons type:', gettype($request->input('registrationReasons', [])));
+        \Log::info('Request data:', [$request->all()]);
+        \Log::info('registrationReasons:', [$request->input('registrationReasons', [])]);
+        \Log::info('registrationReasons type: ' . gettype($request->input('registrationReasons', [])));
         \Log::info('=== END DEBUG ===');
 
         $request->validate([

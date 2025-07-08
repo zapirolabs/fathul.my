@@ -586,13 +586,19 @@ const _sfc_main$1 = {
         id: "upskill",
         checked: unref(form).registrationReasons.includes("upskill"),
         "onUpdate:checked": (checked) => {
+          const currentReasons = [...unref(form).registrationReasons];
           if (checked) {
-            if (!unref(form).registrationReasons.includes("upskill")) {
-              unref(form).registrationReasons.push("upskill");
+            if (!currentReasons.includes("upskill")) {
+              currentReasons.push("upskill");
             }
           } else {
-            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "upskill");
+            const index = currentReasons.indexOf("upskill");
+            if (index > -1) {
+              currentReasons.splice(index, 1);
+            }
           }
+          unref(form).registrationReasons = currentReasons;
+          console.log("Updated reasons after upskill:", unref(form).registrationReasons);
         }
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
@@ -615,13 +621,19 @@ const _sfc_main$1 = {
         id: "certificate",
         checked: unref(form).registrationReasons.includes("certificate"),
         "onUpdate:checked": (checked) => {
+          const currentReasons = [...unref(form).registrationReasons];
           if (checked) {
-            if (!unref(form).registrationReasons.includes("certificate")) {
-              unref(form).registrationReasons.push("certificate");
+            if (!currentReasons.includes("certificate")) {
+              currentReasons.push("certificate");
             }
           } else {
-            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "certificate");
+            const index = currentReasons.indexOf("certificate");
+            if (index > -1) {
+              currentReasons.splice(index, 1);
+            }
           }
+          unref(form).registrationReasons = currentReasons;
+          console.log("Updated reasons after certificate:", unref(form).registrationReasons);
         }
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
@@ -644,13 +656,19 @@ const _sfc_main$1 = {
         id: "job",
         checked: unref(form).registrationReasons.includes("job"),
         "onUpdate:checked": (checked) => {
+          const currentReasons = [...unref(form).registrationReasons];
           if (checked) {
-            if (!unref(form).registrationReasons.includes("job")) {
-              unref(form).registrationReasons.push("job");
+            if (!currentReasons.includes("job")) {
+              currentReasons.push("job");
             }
           } else {
-            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "job");
+            const index = currentReasons.indexOf("job");
+            if (index > -1) {
+              currentReasons.splice(index, 1);
+            }
           }
+          unref(form).registrationReasons = currentReasons;
+          console.log("Updated reasons after job:", unref(form).registrationReasons);
         }
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
@@ -673,14 +691,20 @@ const _sfc_main$1 = {
         id: "other-reason",
         checked: unref(form).registrationReasons.includes("other"),
         "onUpdate:checked": (checked) => {
+          const currentReasons = [...unref(form).registrationReasons];
           if (checked) {
-            if (!unref(form).registrationReasons.includes("other")) {
-              unref(form).registrationReasons.push("other");
+            if (!currentReasons.includes("other")) {
+              currentReasons.push("other");
             }
           } else {
-            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "other");
+            const index = currentReasons.indexOf("other");
+            if (index > -1) {
+              currentReasons.splice(index, 1);
+            }
             unref(form).registrationReasonsOther = "";
           }
+          unref(form).registrationReasons = currentReasons;
+          console.log("Updated reasons after other:", unref(form).registrationReasons);
         }
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {

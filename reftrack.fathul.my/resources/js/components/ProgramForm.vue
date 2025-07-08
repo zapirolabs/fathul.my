@@ -96,13 +96,19 @@
                   id="upskill"
                   :checked="form.registrationReasons.includes('upskill')"
                   @update:checked="(checked) => {
+                    const currentReasons = [...form.registrationReasons]
                     if (checked) {
-                      if (!form.registrationReasons.includes('upskill')) {
-                        form.registrationReasons.push('upskill')
+                      if (!currentReasons.includes('upskill')) {
+                        currentReasons.push('upskill')
                       }
                     } else {
-                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'upskill')
+                      const index = currentReasons.indexOf('upskill')
+                      if (index > -1) {
+                        currentReasons.splice(index, 1)
+                      }
                     }
+                    form.registrationReasons = currentReasons
+                    console.log('Updated reasons after upskill:', form.registrationReasons)
                   }"
                 />
                 <Label for="upskill" class="text-sm">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
@@ -112,13 +118,19 @@
                   id="certificate"
                   :checked="form.registrationReasons.includes('certificate')"
                   @update:checked="(checked) => {
+                    const currentReasons = [...form.registrationReasons]
                     if (checked) {
-                      if (!form.registrationReasons.includes('certificate')) {
-                        form.registrationReasons.push('certificate')
+                      if (!currentReasons.includes('certificate')) {
+                        currentReasons.push('certificate')
                       }
                     } else {
-                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'certificate')
+                      const index = currentReasons.indexOf('certificate')
+                      if (index > -1) {
+                        currentReasons.splice(index, 1)
+                      }
                     }
+                    form.registrationReasons = currentReasons
+                    console.log('Updated reasons after certificate:', form.registrationReasons)
                   }"
                 />
                 <Label for="certificate" class="text-sm">Untuk mendapatkan sijil yang diiktiraf</Label>
@@ -128,13 +140,19 @@
                   id="job"
                   :checked="form.registrationReasons.includes('job')"
                   @update:checked="(checked) => {
+                    const currentReasons = [...form.registrationReasons]
                     if (checked) {
-                      if (!form.registrationReasons.includes('job')) {
-                        form.registrationReasons.push('job')
+                      if (!currentReasons.includes('job')) {
+                        currentReasons.push('job')
                       }
                     } else {
-                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'job')
+                      const index = currentReasons.indexOf('job')
+                      if (index > -1) {
+                        currentReasons.splice(index, 1)
+                      }
                     }
+                    form.registrationReasons = currentReasons
+                    console.log('Updated reasons after job:', form.registrationReasons)
                   }"
                 />
                 <Label for="job" class="text-sm">Untuk meningkatkan peluang mendapat pekerjaan</Label>
@@ -145,14 +163,20 @@
                     id="other-reason"
                     :checked="form.registrationReasons.includes('other')"
                     @update:checked="(checked) => {
+                      const currentReasons = [...form.registrationReasons]
                       if (checked) {
-                        if (!form.registrationReasons.includes('other')) {
-                          form.registrationReasons.push('other')
+                        if (!currentReasons.includes('other')) {
+                          currentReasons.push('other')
                         }
                       } else {
-                        form.registrationReasons = form.registrationReasons.filter(r => r !== 'other')
+                        const index = currentReasons.indexOf('other')
+                        if (index > -1) {
+                          currentReasons.splice(index, 1)
+                        }
                         form.registrationReasonsOther = ''
                       }
+                      form.registrationReasons = currentReasons
+                      console.log('Updated reasons after other:', form.registrationReasons)
                     }"
                   />
                   <Label for="other-reason" class="text-sm">Lain-lain:</Label>
