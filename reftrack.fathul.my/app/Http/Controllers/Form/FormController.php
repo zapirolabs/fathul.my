@@ -148,6 +148,11 @@ class FormController extends Controller
         // Generate timestamp in Malaysia timezone with exact format: 08/07/2025 09:24:34
         $timestamp = Carbon::now('Asia/Kuala_Lumpur')->format('d/m/Y H:i:s');
 
+        // Determine batch column based on program type
+        $pythonBatch = ($programInterest === 'python-basic') ? $finalBatchValue : '';
+        $genaiBatch = ($programInterest === 'genai-masterclass') ? $finalBatchValue : '';
+        $awsBatch = ($programInterest === 'aws-foundational') ? $finalBatchValue : '';
+
         $rowData = [
             $timestamp, // A - Timestamp
             $email, // B - Email
@@ -158,13 +163,13 @@ class FormController extends Controller
             $finalCommitmentValue, // G - Commitment Level
             $finalPahangValue, // H - Pahang Connection
             $finalProgramValue, // I - Program Interest
-            $finalBatchValue, // J - Intake Batch
+            $pythonBatch, // J - Python Intake Batch
             '', // K - Reserved
             '', // L - Reserved
-            '', // M - Reserved
+            $genaiBatch, // M - GenAI Intake Batch
             '', // N - Reserved
             '', // O - Reserved
-            '', // P - Reserved
+            $awsBatch, // P - AWS Intake Batch
             '', // Q - Reserved
             '', // R - Reserved
             $finalInterviewValue, // S - Interview Willingness
