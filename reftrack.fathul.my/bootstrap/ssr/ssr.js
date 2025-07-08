@@ -341,7 +341,7 @@ createServer(
       title: (title) => title,
       resolve: (name) => {
         const eagerPages = /* @__PURE__ */ Object.assign({});
-        const lazyPages = /* @__PURE__ */ Object.assign({ "./Pages/Form.vue": () => import("./assets/Form-ZKWXE4t5.js"), "./Pages/Success.vue": () => import("./assets/Success-ChFfqMQP.js") });
+        const lazyPages = /* @__PURE__ */ Object.assign({ "./Pages/Form.vue": () => import("./assets/Form-BmRf8DWo.js"), "./Pages/Success.vue": () => import("./assets/Success-ChFfqMQP.js") });
         const pagePath = `./Pages/${name}.vue`;
         if (eagerPages[pagePath]) {
           return eagerPages[pagePath];

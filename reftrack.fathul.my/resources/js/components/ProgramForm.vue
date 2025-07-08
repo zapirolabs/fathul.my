@@ -21,10 +21,10 @@
         <form @submit.prevent="submit" class="space-y-6">
           <!-- Full Name -->
           <div class="space-y-3">
-            <Label class="leading-none font-semibold text-lg text-card-foreground">
+            <CardTitle class="text-card-foreground">
               Nama Penuh
               <span class="text-destructive">*</span>
-            </Label>
+            </CardTitle>
             <Input 
               v-model="form.fullName"
               type="text"
@@ -38,10 +38,10 @@
 
           <!-- Phone Number -->
           <div class="space-y-3">
-            <Label class="leading-none font-semibold text-lg text-card-foreground">
+            <CardTitle class="text-card-foreground">
               Nombor Telefon
               <span class="text-destructive">*</span>
-            </Label>
+            </CardTitle>
             <Input 
               v-model="form.phoneNumber"
               type="tel"
@@ -55,10 +55,10 @@
 
           <!-- Email -->
           <div class="space-y-3">
-            <Label class="leading-none font-semibold text-lg text-card-foreground">
+            <CardTitle class="text-card-foreground">
               Alamat Emel
               <span class="text-destructive">*</span>
-            </Label>
+            </CardTitle>
             <Input 
               v-model="form.email"
               type="email"
@@ -72,10 +72,10 @@
 
           <!-- Age -->
           <div class="space-y-3">
-            <Label class="leading-none font-semibold text-lg text-card-foreground">
+            <CardTitle class="text-card-foreground">
               Umur
               <span class="text-destructive">*</span>
-            </Label>
+            </CardTitle>
             <Input 
               v-model="form.age"
               type="number"
