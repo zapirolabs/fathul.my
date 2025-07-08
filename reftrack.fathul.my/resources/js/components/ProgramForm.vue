@@ -278,7 +278,10 @@
                   </Button>
                   
                   <div class="border-t pt-4 space-y-3">
-                    <p class="text-sm font-medium text-card-foreground">Pilih program yang anda minati:</p>
+                    <p class="text-sm font-medium text-card-foreground">
+                      Pilih program yang anda minati:
+                      <span class="text-destructive">*</span>
+                    </p>
                     <div class="space-y-3">
                       <div class="flex items-center space-x-2">
                         <Checkbox 
@@ -314,6 +317,10 @@
                         </Label>
                       </div>
                     </div>
+                    
+                    <p v-if="form.errors.selectedPrograms" class="text-sm text-destructive">
+                      {{ form.errors.selectedPrograms }}
+                    </p>
                   </div>
                 </div>
 

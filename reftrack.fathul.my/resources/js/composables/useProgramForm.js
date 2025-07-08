@@ -70,7 +70,8 @@ export function useProgramForm() {
   const submitForm = () => {
     form.transform((data) => ({
       ...data,
-      registrationReasons: registrationReasons.value
+      registrationReasons: registrationReasons.value,
+      selectedPrograms: form.programInterest === 'more-than-one' ? selectedPrograms.value : []
     })).post('/program', {
       preserveScroll: true,
       onSuccess: () => {

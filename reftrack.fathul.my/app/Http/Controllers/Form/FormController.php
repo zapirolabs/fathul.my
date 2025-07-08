@@ -29,6 +29,8 @@ class FormController extends Controller
             'commitmentLevel' => 'required|in:fully-committed,need-info,not-sure,other-commitment',
             'commitmentLevelOther' => 'required_if:commitmentLevel,other-commitment|max:255',
             'programInterest' => 'required|in:python-basic,genai-masterclass,aws-foundational,more-than-one',
+            'selectedPrograms' => 'required_if:programInterest,more-than-one|array|min:1',
+            'selectedPrograms.*' => 'in:python-basic,genai-masterclass,aws-foundational',
             'intakeBatch' => 'required_if:programInterest,python-basic,genai-masterclass,aws-foundational|in:batch-1,batch-2,batch-3,batch-4',
             'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
             'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
@@ -60,7 +62,10 @@ class FormController extends Controller
             'commitmentLevelOther.max' => 'Tahap komitmen lain tidak boleh melebihi 255 aksara.',
             'programInterest.required' => 'Sila pilih program yang anda minati.',
             'programInterest.in' => 'Sila pilih program yang sah.',
-            'intakeBatch.required_if' => 'Sila pilih batch intake untuk program Python.',
+            'selectedPrograms.required_if' => 'Sila pilih sekurang-kurangnya satu program.',
+            'selectedPrograms.min' => 'Sila pilih sekurang-kurangnya satu program.',
+            'selectedPrograms.*.in' => 'Sila pilih program yang sah.',
+            'intakeBatch.required_if' => 'Sila pilih batch intake untuk program yang dipilih.',
             'intakeBatch.in' => 'Sila pilih batch yang sah.',
             'pahangConnection.required' => 'Sila pilih kaitan anda dengan negeri Pahang.',
             'pahangConnection.in' => 'Sila pilih salah satu pilihan yang disediakan.',
@@ -78,6 +83,7 @@ class FormController extends Controller
         $commitmentLevel = $request->input('commitmentLevel');
         $commitmentLevelOther = $request->input('commitmentLevelOther');
         $programInterest = $request->input('programInterest');
+        $selectedPrograms = $request->input('selectedPrograms', []);
         $intakeBatch = $request->input('intakeBatch');
         $pahangConnection = $request->input('pahangConnection');
         $pahangConnectionOther = $request->input('pahangConnectionOther');
@@ -149,9 +155,31 @@ class FormController extends Controller
         $timestamp = Carbon::now('Asia/Kuala_Lumpur')->format('d/m/Y H:i:s');
 
         // Determine batch column based on program type
-        $pythonBatch = ($programInterest === 'python-basic') ? $finalBatchValue : '';
-        $genaiBatch = ($programInterest === 'genai-masterclass') ? $finalBatchValue : '';
-        $awsBatch = ($programInterest === 'aws-foundational') ? $finalBatchValue : '';
+        $pythonBatch = '';
+        $genaiBatch = '';
+        $awsBatch = '';
+        
+        if ($programInterest === 'more-than-one') {
+            // For multi-program selection, batch applies to selected programs
+            if (in_array('python-basic', $selectedPrograms)) {
+                $pythonBatch = $finalBatchValue;
+            }
+            if (in_array('genai-masterclass', $selectedPrograms)) {
+                $genaiBatch = $finalBatchValue;
+            }
+            if (in_array('aws-foundational', $selectedPrograms)) {
+                $awsBatch = $finalBatchValue;
+            }
+        } else {
+            // For single program selection
+            if ($programInterest === 'python-basic') {
+                $pythonBatch = $finalBatchValue;
+            } elseif ($programInterest === 'genai-masterclass') {
+                $genaiBatch = $finalBatchValue;
+            } elseif ($programInterest === 'aws-foundational') {
+                $awsBatch = $finalBatchValue;
+            }
+        }
 
         $rowData = [
             $timestamp, // A - Timestamp

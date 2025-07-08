@@ -755,7 +755,8 @@ function useProgramForm() {
   const submitForm = () => {
     form.transform((data) => ({
       ...data,
-      registrationReasons: registrationReasons.value
+      registrationReasons: registrationReasons.value,
+      selectedPrograms: form.programInterest === "more-than-one" ? selectedPrograms.value : []
     })).post("/program", {
       preserveScroll: true,
       onSuccess: () => {
@@ -2590,7 +2591,7 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    _push3(`<div class="border-t pt-4 space-y-3"${_scopeId2}><p class="text-sm font-medium text-card-foreground"${_scopeId2}>Pilih program yang anda minati:</p><div class="space-y-3"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
+                    _push3(`<div class="border-t pt-4 space-y-3"${_scopeId2}><p class="text-sm font-medium text-card-foreground"${_scopeId2}> Pilih program yang anda minati: <span class="text-destructive"${_scopeId2}>*</span></p><div class="space-y-3"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
                     _push3(ssrRenderComponent(unref(_sfc_main$c), {
                       id: "multi-python",
                       "model-value": unref(isProgramSelected)("python-basic"),
@@ -2668,7 +2669,13 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    _push3(`</div></div></div></div>`);
+                    _push3(`</div></div>`);
+                    if (unref(form).errors.selectedPrograms) {
+                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.selectedPrograms)}</p>`);
+                    } else {
+                      _push3(`<!---->`);
+                    }
+                    _push3(`</div></div>`);
                   }
                   if (unref(form).errors.programInterest) {
                     _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.programInterest)}</p>`);
@@ -2788,7 +2795,10 @@ const _sfc_main$1 = {
                           _: 1
                         }, 8, ["onClick"]),
                         createVNode("div", { class: "border-t pt-4 space-y-3" }, [
-                          createVNode("p", { class: "text-sm font-medium text-card-foreground" }, "Pilih program yang anda minati:"),
+                          createVNode("p", { class: "text-sm font-medium text-card-foreground" }, [
+                            createTextVNode(" Pilih program yang anda minati: "),
+                            createVNode("span", { class: "text-destructive" }, "*")
+                          ]),
                           createVNode("div", { class: "space-y-3" }, [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
                               createVNode(unref(_sfc_main$c), {
@@ -2853,7 +2863,11 @@ const _sfc_main$1 = {
                                 _: 1
                               })
                             ])
-                          ])
+                          ]),
+                          unref(form).errors.selectedPrograms ? (openBlock(), createBlock("p", {
+                            key: 0,
+                            class: "text-sm text-destructive"
+                          }, toDisplayString(unref(form).errors.selectedPrograms), 1)) : createCommentVNode("", true)
                         ])
                       ])),
                       unref(form).errors.programInterest ? (openBlock(), createBlock("p", {
@@ -2980,7 +2994,10 @@ const _sfc_main$1 = {
                         _: 1
                       }, 8, ["onClick"]),
                       createVNode("div", { class: "border-t pt-4 space-y-3" }, [
-                        createVNode("p", { class: "text-sm font-medium text-card-foreground" }, "Pilih program yang anda minati:"),
+                        createVNode("p", { class: "text-sm font-medium text-card-foreground" }, [
+                          createTextVNode(" Pilih program yang anda minati: "),
+                          createVNode("span", { class: "text-destructive" }, "*")
+                        ]),
                         createVNode("div", { class: "space-y-3" }, [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
                             createVNode(unref(_sfc_main$c), {
@@ -3045,7 +3062,11 @@ const _sfc_main$1 = {
                               _: 1
                             })
                           ])
-                        ])
+                        ]),
+                        unref(form).errors.selectedPrograms ? (openBlock(), createBlock("p", {
+                          key: 0,
+                          class: "text-sm text-destructive"
+                        }, toDisplayString(unref(form).errors.selectedPrograms), 1)) : createCommentVNode("", true)
                       ])
                     ])),
                     unref(form).errors.programInterest ? (openBlock(), createBlock("p", {
