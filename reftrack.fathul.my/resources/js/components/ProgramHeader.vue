@@ -23,7 +23,7 @@
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up animation-delay-200">
           <span class="block text-white">Program</span>
           <span class="block bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x">
-            Jaminan Kerjaya
+            JAMINAN KERJAYA
           </span>
           <span class="block text-white">2025</span>
         </h1>
