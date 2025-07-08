@@ -575,9 +575,16 @@ const _sfc_main$1 = {
       _push(`<div class="space-y-3"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "upskill",
-        checked: unref(form).registrationReasons,
-        "onUpdate:checked": ($event) => unref(form).registrationReasons = $event,
-        value: "upskill"
+        checked: unref(form).registrationReasons.includes("upskill"),
+        "onUpdate:checked": (checked) => {
+          if (checked) {
+            if (!unref(form).registrationReasons.includes("upskill")) {
+              unref(form).registrationReasons.push("upskill");
+            }
+          } else {
+            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "upskill");
+          }
+        }
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "upskill",
@@ -597,9 +604,16 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "certificate",
-        checked: unref(form).registrationReasons,
-        "onUpdate:checked": ($event) => unref(form).registrationReasons = $event,
-        value: "certificate"
+        checked: unref(form).registrationReasons.includes("certificate"),
+        "onUpdate:checked": (checked) => {
+          if (checked) {
+            if (!unref(form).registrationReasons.includes("certificate")) {
+              unref(form).registrationReasons.push("certificate");
+            }
+          } else {
+            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "certificate");
+          }
+        }
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "certificate",
@@ -619,9 +633,16 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "job",
-        checked: unref(form).registrationReasons,
-        "onUpdate:checked": ($event) => unref(form).registrationReasons = $event,
-        value: "job"
+        checked: unref(form).registrationReasons.includes("job"),
+        "onUpdate:checked": (checked) => {
+          if (checked) {
+            if (!unref(form).registrationReasons.includes("job")) {
+              unref(form).registrationReasons.push("job");
+            }
+          } else {
+            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "job");
+          }
+        }
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "job",
@@ -641,13 +662,17 @@ const _sfc_main$1 = {
       _push(`</div><div class="space-y-2"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "other-reason",
-        checked: unref(form).registrationReasons,
-        "onUpdate:checked": [($event) => unref(form).registrationReasons = $event, (checked) => {
-          if (!checked) {
+        checked: unref(form).registrationReasons.includes("other"),
+        "onUpdate:checked": (checked) => {
+          if (checked) {
+            if (!unref(form).registrationReasons.includes("other")) {
+              unref(form).registrationReasons.push("other");
+            }
+          } else {
+            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "other");
             unref(form).registrationReasonsOther = "";
           }
-        }],
-        value: "other"
+        }
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "other-reason",
@@ -1269,8 +1294,7 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(unref(_sfc_main$d), {
         type: "submit",
         disabled: unref(processing),
-        class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors",
-        onClick: () => console.log("Button clicked!")
+        class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

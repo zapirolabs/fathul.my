@@ -94,24 +94,48 @@
               <div class="flex items-center space-x-2">
                 <Checkbox 
                   id="upskill"
-                  v-model:checked="form.registrationReasons"
-                  value="upskill"
+                  :checked="form.registrationReasons.includes('upskill')"
+                  @update:checked="(checked) => {
+                    if (checked) {
+                      if (!form.registrationReasons.includes('upskill')) {
+                        form.registrationReasons.push('upskill')
+                      }
+                    } else {
+                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'upskill')
+                    }
+                  }"
                 />
                 <Label for="upskill" class="text-sm">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <Checkbox 
                   id="certificate"
-                  v-model:checked="form.registrationReasons"
-                  value="certificate"
+                  :checked="form.registrationReasons.includes('certificate')"
+                  @update:checked="(checked) => {
+                    if (checked) {
+                      if (!form.registrationReasons.includes('certificate')) {
+                        form.registrationReasons.push('certificate')
+                      }
+                    } else {
+                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'certificate')
+                    }
+                  }"
                 />
                 <Label for="certificate" class="text-sm">Untuk mendapatkan sijil yang diiktiraf</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <Checkbox 
                   id="job"
-                  v-model:checked="form.registrationReasons"
-                  value="job"
+                  :checked="form.registrationReasons.includes('job')"
+                  @update:checked="(checked) => {
+                    if (checked) {
+                      if (!form.registrationReasons.includes('job')) {
+                        form.registrationReasons.push('job')
+                      }
+                    } else {
+                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'job')
+                    }
+                  }"
                 />
                 <Label for="job" class="text-sm">Untuk meningkatkan peluang mendapat pekerjaan</Label>
               </div>
@@ -119,10 +143,14 @@
                 <div class="flex items-center space-x-2">
                   <Checkbox 
                     id="other-reason"
-                    v-model:checked="form.registrationReasons"
-                    value="other"
+                    :checked="form.registrationReasons.includes('other')"
                     @update:checked="(checked) => {
-                      if (!checked) {
+                      if (checked) {
+                        if (!form.registrationReasons.includes('other')) {
+                          form.registrationReasons.push('other')
+                        }
+                      } else {
+                        form.registrationReasons = form.registrationReasons.filter(r => r !== 'other')
                         form.registrationReasonsOther = ''
                       }
                     }"
@@ -271,7 +299,6 @@
               type="submit" 
               :disabled="processing"
               class="px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
-              @click="() => console.log('Button clicked!')"
             >
               {{ processing ? 'Menghantar...' : 'Hantar Permohonan' }}
             </Button>
