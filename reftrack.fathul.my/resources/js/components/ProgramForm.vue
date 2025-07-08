@@ -135,25 +135,27 @@
                 />
                 <Label for="job">Untuk meningkatkan peluang mendapat pekerjaan</Label>
               </div>
-              <div class="flex items-center space-x-2">
-                <Checkbox 
-                  id="other-reason"
-                  :checked="form.registrationReasons.includes('other')"
-                  @update:checked="(checked) => {
-                    if (checked) {
-                      form.registrationReasons.push('other')
-                    } else {
-                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'other')
-                      form.registrationReasonsOther = ''
-                    }
-                  }"
-                />
-                <Label for="other-reason">Lain-lain:</Label>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <Checkbox 
+                    id="other-reason"
+                    :checked="form.registrationReasons.includes('other')"
+                    @update:checked="(checked) => {
+                      if (checked) {
+                        form.registrationReasons.push('other')
+                      } else {
+                        form.registrationReasons = form.registrationReasons.filter(r => r !== 'other')
+                        form.registrationReasonsOther = ''
+                      }
+                    }"
+                  />
+                  <Label for="other-reason">Lain-lain:</Label>
+                </div>
                 <Input 
                   v-if="form.registrationReasons.includes('other')"
                   v-model="form.registrationReasonsOther"
                   placeholder="Sila nyatakan..."
-                  class="max-w-md"
+                  class="ml-6 max-w-md"
                 />
               </div>
               <div v-if="form.registrationReasons.includes('other') && form.errors.registrationReasonsOther" class="ml-6">

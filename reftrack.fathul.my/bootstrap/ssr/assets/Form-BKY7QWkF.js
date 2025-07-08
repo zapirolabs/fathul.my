@@ -648,7 +648,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(`</div><div class="flex items-center space-x-2">`);
+      _push(`</div><div class="space-y-2"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "other-reason",
         checked: unref(form).registrationReasons.includes("other"),
@@ -673,12 +673,13 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
+      _push(`</div>`);
       if (unref(form).registrationReasons.includes("other")) {
         _push(ssrRenderComponent(unref(_sfc_main$2), {
           modelValue: unref(form).registrationReasonsOther,
           "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
           placeholder: "Sila nyatakan...",
-          class: "max-w-md"
+          class: "ml-6 max-w-md"
         }, null, _parent));
       } else {
         _push(`<!---->`);
