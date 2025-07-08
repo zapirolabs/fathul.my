@@ -668,7 +668,7 @@ const _sfc_main$1 = {
             _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<div class="space-y-3"${_scopeId2}>`);
+                  _push3(`<div class="space-y-5"${_scopeId2}>`);
                   _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
@@ -791,7 +791,7 @@ const _sfc_main$1 = {
                   _push3(`</div>`);
                 } else {
                   return [
-                    createVNode("div", { class: "space-y-3" }, [
+                    createVNode("div", { class: "space-y-5" }, [
                       createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Apakah sebab utama anda mendaftar? "),
@@ -892,7 +892,7 @@ const _sfc_main$1 = {
             return [
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
-                  createVNode("div", { class: "space-y-3" }, [
+                  createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Apakah sebab utama anda mendaftar? "),
@@ -998,7 +998,7 @@ const _sfc_main$1 = {
             _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<div class="space-y-3"${_scopeId2}>`);
+                  _push3(`<div class="space-y-5"${_scopeId2}>`);
                   _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
@@ -1203,7 +1203,7 @@ const _sfc_main$1 = {
                   _push3(`</div>`);
                 } else {
                   return [
-                    createVNode("div", { class: "space-y-3" }, [
+                    createVNode("div", { class: "space-y-5" }, [
                       createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? "),
@@ -1307,7 +1307,7 @@ const _sfc_main$1 = {
             return [
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
-                  createVNode("div", { class: "space-y-3" }, [
+                  createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? "),
@@ -1416,7 +1416,7 @@ const _sfc_main$1 = {
             _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<div class="space-y-3"${_scopeId2}>`);
+                  _push3(`<div class="space-y-5"${_scopeId2}>`);
                   _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
@@ -1593,7 +1593,7 @@ const _sfc_main$1 = {
                   _push3(`</div>`);
                 } else {
                   return [
-                    createVNode("div", { class: "space-y-3" }, [
+                    createVNode("div", { class: "space-y-5" }, [
                       createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Apakah program yang anda minati? "),
@@ -1684,7 +1684,7 @@ const _sfc_main$1 = {
             return [
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
-                  createVNode("div", { class: "space-y-3" }, [
+                  createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Apakah program yang anda minati? "),

@@ -92,7 +92,7 @@
           <!-- Registration Reasons Card -->
           <Card>
             <CardContent class="p-6">
-              <div class="space-y-3">
+              <div class="space-y-5">
                 <CardTitle class="text-card-foreground">
                   Apakah sebab utama anda mendaftar?
                   <span class="text-destructive">*</span>
@@ -153,7 +153,7 @@
           <!-- Commitment Level Card -->
           <Card>
             <CardContent class="p-6">
-              <div class="space-y-3">
+              <div class="space-y-5">
                 <CardTitle class="text-card-foreground">
                   Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini?
                   <span class="text-destructive">*</span>
@@ -201,7 +201,7 @@
           <!-- Program Interest Card -->
           <Card>
             <CardContent class="p-6">
-              <div class="space-y-3">
+              <div class="space-y-5">
                 <CardTitle class="text-card-foreground">
                   Apakah program yang anda minati?
                   <span class="text-destructive">*</span>
