@@ -174,6 +174,14 @@
             <p v-if="form.errors.registrationReasons" class="text-sm text-destructive">
               {{ form.errors.registrationReasons }}
             </p>
+            
+            <!-- Debug: Show current array state -->
+            <div class="mt-2 p-2 bg-gray-100 text-xs">
+              <strong>Debug - Current registrationReasons:</strong> 
+              {{ JSON.stringify(form.registrationReasons) }}
+              <br>
+              <strong>Length:</strong> {{ form.registrationReasons.length }}
+            </div>
           </div>
 
           <div class="space-y-3">

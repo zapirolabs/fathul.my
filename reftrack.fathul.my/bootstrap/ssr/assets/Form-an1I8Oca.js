@@ -422,6 +422,12 @@ function useProgramForm() {
     pahangConnectionOther: ""
   });
   const submit = () => {
+    console.log("=== FORM SUBMISSION DEBUG ===");
+    console.log("registrationReasons array:", form.registrationReasons);
+    console.log("registrationReasons length:", form.registrationReasons.length);
+    console.log("registrationReasons type:", typeof form.registrationReasons);
+    console.log("Full form data:", form.data());
+    console.log("=== END DEBUG ===");
     form.post(route("program.store"), {
       preserveScroll: true,
       onStart: () => {
@@ -429,6 +435,9 @@ function useProgramForm() {
       onSuccess: () => {
       },
       onError: (errors) => {
+        console.log("=== VALIDATION ERRORS ===");
+        console.log("Errors received:", errors);
+        console.log("=== END ERRORS ===");
       },
       onFinish: () => {
       }
@@ -712,7 +721,7 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
-      _push(`</div><div class="space-y-3">`);
+      _push(`<div class="mt-2 p-2 bg-gray-100 text-xs"><strong>Debug - Current registrationReasons:</strong> ${ssrInterpolate(JSON.stringify(unref(form).registrationReasons))} <br><strong>Length:</strong> ${ssrInterpolate(unref(form).registrationReasons.length)}</div></div><div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

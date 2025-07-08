@@ -16,6 +16,14 @@ export function useProgramForm() {
   })
 
   const submit = () => {
+    // Debug: Log the actual form data being sent
+    console.log('=== FORM SUBMISSION DEBUG ===')
+    console.log('registrationReasons array:', form.registrationReasons)
+    console.log('registrationReasons length:', form.registrationReasons.length)
+    console.log('registrationReasons type:', typeof form.registrationReasons)
+    console.log('Full form data:', form.data())
+    console.log('=== END DEBUG ===')
+    
     form.post(route('program.store'), {
       preserveScroll: true,
       onStart: () => {
@@ -25,7 +33,9 @@ export function useProgramForm() {
         // Form submission successful
       },
       onError: (errors) => {
-        // Handle form submission errors
+        console.log('=== VALIDATION ERRORS ===')
+        console.log('Errors received:', errors)
+        console.log('=== END ERRORS ===')
       },
       onFinish: () => {
         // Form submission finished

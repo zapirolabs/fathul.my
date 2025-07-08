@@ -17,6 +17,13 @@ class FormController extends Controller
 
     public function store(Request $request)
     {
+        // Debug: Log what we're receiving
+        \Log::info('=== FORM SUBMISSION DEBUG ===');
+        \Log::info('Request data:', $request->all());
+        \Log::info('registrationReasons:', $request->input('registrationReasons', []));
+        \Log::info('registrationReasons type:', gettype($request->input('registrationReasons', [])));
+        \Log::info('=== END DEBUG ===');
+
         $request->validate([
             'fullName' => 'required|string|max:255',
             'phoneNumber' => 'required|string|max:20',
