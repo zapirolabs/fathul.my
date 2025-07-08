@@ -92,103 +92,46 @@
             </Label>
             <div class="space-y-3">
               <div class="flex items-center space-x-2">
-                <Checkbox 
-                  id="upskill"
-                  :checked="form.registrationReasons.includes('upskill')"
-                  @update:checked="(checked) => {
-                    const currentReasons = [...form.registrationReasons]
-                    if (checked) {
-                      if (!currentReasons.includes('upskill')) {
-                        currentReasons.push('upskill')
-                      }
-                    } else {
-                      const index = currentReasons.indexOf('upskill')
-                      if (index > -1) {
-                        currentReasons.splice(index, 1)
-                      }
-                    }
-                    form.registrationReasons = currentReasons
-                    console.log('Updated reasons after upskill:', form.registrationReasons)
-                  }"
-                />
-                <Label for="upskill" class="text-sm">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
-              </div>
-              <div class="flex items-center space-x-2">
-                <Checkbox 
-                  id="certificate"
-                  :checked="form.registrationReasons.includes('certificate')"
-                  @update:checked="(checked) => {
-                    const currentReasons = [...form.registrationReasons]
-                    if (checked) {
-                      if (!currentReasons.includes('certificate')) {
-                        currentReasons.push('certificate')
-                      }
-                    } else {
-                      const index = currentReasons.indexOf('certificate')
-                      if (index > -1) {
-                        currentReasons.splice(index, 1)
-                      }
-                    }
-                    form.registrationReasons = currentReasons
-                    console.log('Updated reasons after certificate:', form.registrationReasons)
-                  }"
-                />
-                <Label for="certificate" class="text-sm">Untuk mendapatkan sijil yang diiktiraf</Label>
-              </div>
-              <div class="flex items-center space-x-2">
-                <Checkbox 
-                  id="job"
-                  :checked="form.registrationReasons.includes('job')"
-                  @update:checked="(checked) => {
-                    const currentReasons = [...form.registrationReasons]
-                    if (checked) {
-                      if (!currentReasons.includes('job')) {
-                        currentReasons.push('job')
-                      }
-                    } else {
-                      const index = currentReasons.indexOf('job')
-                      if (index > -1) {
-                        currentReasons.splice(index, 1)
-                      }
-                    }
-                    form.registrationReasons = currentReasons
-                    console.log('Updated reasons after job:', form.registrationReasons)
-                  }"
-                />
-                <Label for="job" class="text-sm">Untuk meningkatkan peluang mendapat pekerjaan</Label>
-              </div>
-              <div class="space-y-2">
+                                  <Checkbox 
+                    id="upskill"
+                    :checked="isReasonSelected('To upskill and learn something new')"
+                    @update:checked="(checked) => handleRegistrationReasonChange('To upskill and learn something new', checked)"
+                  />
+                  <Label for="upskill" class="text-sm">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
+                </div>
                 <div class="flex items-center space-x-2">
                   <Checkbox 
-                    id="other-reason"
-                    :checked="form.registrationReasons.includes('other')"
-                    @update:checked="(checked) => {
-                      const currentReasons = [...form.registrationReasons]
-                      if (checked) {
-                        if (!currentReasons.includes('other')) {
-                          currentReasons.push('other')
-                        }
-                      } else {
-                        const index = currentReasons.indexOf('other')
-                        if (index > -1) {
-                          currentReasons.splice(index, 1)
-                        }
-                        form.registrationReasonsOther = ''
-                      }
-                      form.registrationReasons = currentReasons
-                      console.log('Updated reasons after other:', form.registrationReasons)
-                    }"
+                    id="certificate"
+                    :checked="isReasonSelected('To earn a recognised certificate')"
+                    @update:checked="(checked) => handleRegistrationReasonChange('To earn a recognised certificate', checked)"
                   />
-                  <Label for="other-reason" class="text-sm">Lain-lain:</Label>
+                  <Label for="certificate" class="text-sm">Untuk mendapatkan sijil yang diiktiraf</Label>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <Checkbox 
+                    id="job"
+                    :checked="isReasonSelected('To improve my chances of getting a job')"
+                    @update:checked="(checked) => handleRegistrationReasonChange('To improve my chances of getting a job', checked)"
+                  />
+                  <Label for="job" class="text-sm">Untuk meningkatkan peluang mendapat pekerjaan</Label>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center space-x-2">
+                    <Checkbox 
+                      id="other-reason"
+                      :checked="isReasonSelected('Other')"
+                      @update:checked="(checked) => handleRegistrationReasonChange('Other', checked)"
+                    />
+                    <Label for="other-reason" class="text-sm">Lain-lain:</Label>
                 </div>
                 <Input 
-                  v-if="form.registrationReasons.includes('other')"
+                  v-if="isReasonSelected('Other')"
                   v-model="form.registrationReasonsOther"
                   placeholder="Sila nyatakan..."
                   class="ml-6 max-w-md"
                 />
               </div>
-              <div v-if="form.registrationReasons.includes('other') && form.errors.registrationReasonsOther" class="ml-6">
+              <div v-if="isReasonSelected('Other') && form.errors.registrationReasonsOther" class="ml-6">
                 <p class="text-sm text-destructive mt-1">
                   {{ form.errors.registrationReasonsOther }}
                 </p>
@@ -202,9 +145,9 @@
             <!-- Debug: Show current array state -->
             <div class="mt-2 p-2 bg-gray-100 text-xs">
               <strong>Debug - Current registrationReasons:</strong> 
-              {{ JSON.stringify(form.registrationReasons) }}
+              {{ JSON.stringify(registrationReasons) }}
               <br>
-              <strong>Length:</strong> {{ form.registrationReasons.length }}
+              <strong>Length:</strong> {{ registrationReasons.length }}
             </div>
           </div>
 
@@ -353,8 +296,7 @@ import { Label } from '@/resources/js/components/ui/label'
 import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
-
-const { form, processing, submit } = useProgramForm()
+const { form, registrationReasons, handleRegistrationReasonChange, isReasonSelected, processing, submit } = useProgramForm()
 </script>
 
 <style scoped>

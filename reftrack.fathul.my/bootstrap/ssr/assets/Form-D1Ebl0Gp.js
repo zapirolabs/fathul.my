@@ -1,4 +1,4 @@
-import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
+import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate } from "vue/server-renderer";
 import { useForm, Head } from "@inertiajs/vue3";
 import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon, Check } from "lucide-vue-next";
@@ -408,12 +408,12 @@ _sfc_main$2.setup = (props, ctx) => {
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
 function useProgramForm() {
+  const registrationReasons = ref([]);
   const form = useForm({
     fullName: "",
     phoneNumber: "",
     email: "",
     age: "",
-    registrationReasons: [],
     registrationReasonsOther: "",
     commitmentLevel: "",
     commitmentLevelOther: "",
@@ -421,14 +421,38 @@ function useProgramForm() {
     pahangConnection: "",
     pahangConnectionOther: ""
   });
+  const updateRegistrationReasons = (value, checked) => {
+    if (checked) {
+      if (!registrationReasons.value.includes(value)) {
+        registrationReasons.value.push(value);
+      }
+    } else {
+      const index = registrationReasons.value.indexOf(value);
+      if (index > -1) {
+        registrationReasons.value.splice(index, 1);
+      }
+    }
+    console.log("Updated registrationReasons:", registrationReasons.value);
+  };
+  const handleRegistrationReasonChange = (value, checked) => {
+    updateRegistrationReasons(value, checked);
+    if (value === "Other" && !checked) {
+      form.registrationReasonsOther = "";
+    }
+  };
+  const isReasonSelected = (value) => {
+    return registrationReasons.value.includes(value);
+  };
   const submit = () => {
     console.log("=== FORM SUBMISSION DEBUG ===");
-    console.log("registrationReasons array:", form.registrationReasons);
-    console.log("registrationReasons length:", form.registrationReasons.length);
-    console.log("registrationReasons type:", typeof form.registrationReasons);
+    console.log("registrationReasons array:", registrationReasons.value);
+    console.log("registrationReasons length:", registrationReasons.value.length);
     console.log("Full form data:", form.data());
     console.log("=== END DEBUG ===");
-    form.post(route("program.store"), {
+    form.transform((data) => ({
+      ...data,
+      registrationReasons: registrationReasons.value
+    })).post(route("program.store"), {
       preserveScroll: true,
       onStart: () => {
       },
@@ -445,6 +469,10 @@ function useProgramForm() {
   };
   return {
     form,
+    registrationReasons,
+    updateRegistrationReasons,
+    handleRegistrationReasonChange,
+    isReasonSelected,
     processing: form.processing,
     submit
   };
@@ -453,7 +481,7 @@ const _sfc_main$1 = {
   __name: "ProgramForm",
   __ssrInlineRender: true,
   setup(__props) {
-    const { form, processing } = useProgramForm();
+    const { form, registrationReasons, handleRegistrationReasonChange, isReasonSelected, processing } = useProgramForm();
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
@@ -584,22 +612,8 @@ const _sfc_main$1 = {
       _push(`<div class="space-y-3"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "upskill",
-        checked: unref(form).registrationReasons.includes("upskill"),
-        "onUpdate:checked": (checked) => {
-          const currentReasons = [...unref(form).registrationReasons];
-          if (checked) {
-            if (!currentReasons.includes("upskill")) {
-              currentReasons.push("upskill");
-            }
-          } else {
-            const index = currentReasons.indexOf("upskill");
-            if (index > -1) {
-              currentReasons.splice(index, 1);
-            }
-          }
-          unref(form).registrationReasons = currentReasons;
-          console.log("Updated reasons after upskill:", unref(form).registrationReasons);
-        }
+        checked: unref(isReasonSelected)("To upskill and learn something new"),
+        "onUpdate:checked": (checked) => unref(handleRegistrationReasonChange)("To upskill and learn something new", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "upskill",
@@ -619,22 +633,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "certificate",
-        checked: unref(form).registrationReasons.includes("certificate"),
-        "onUpdate:checked": (checked) => {
-          const currentReasons = [...unref(form).registrationReasons];
-          if (checked) {
-            if (!currentReasons.includes("certificate")) {
-              currentReasons.push("certificate");
-            }
-          } else {
-            const index = currentReasons.indexOf("certificate");
-            if (index > -1) {
-              currentReasons.splice(index, 1);
-            }
-          }
-          unref(form).registrationReasons = currentReasons;
-          console.log("Updated reasons after certificate:", unref(form).registrationReasons);
-        }
+        checked: unref(isReasonSelected)("To earn a recognised certificate"),
+        "onUpdate:checked": (checked) => unref(handleRegistrationReasonChange)("To earn a recognised certificate", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "certificate",
@@ -654,22 +654,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "job",
-        checked: unref(form).registrationReasons.includes("job"),
-        "onUpdate:checked": (checked) => {
-          const currentReasons = [...unref(form).registrationReasons];
-          if (checked) {
-            if (!currentReasons.includes("job")) {
-              currentReasons.push("job");
-            }
-          } else {
-            const index = currentReasons.indexOf("job");
-            if (index > -1) {
-              currentReasons.splice(index, 1);
-            }
-          }
-          unref(form).registrationReasons = currentReasons;
-          console.log("Updated reasons after job:", unref(form).registrationReasons);
-        }
+        checked: unref(isReasonSelected)("To improve my chances of getting a job"),
+        "onUpdate:checked": (checked) => unref(handleRegistrationReasonChange)("To improve my chances of getting a job", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "job",
@@ -689,23 +675,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="space-y-2"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "other-reason",
-        checked: unref(form).registrationReasons.includes("other"),
-        "onUpdate:checked": (checked) => {
-          const currentReasons = [...unref(form).registrationReasons];
-          if (checked) {
-            if (!currentReasons.includes("other")) {
-              currentReasons.push("other");
-            }
-          } else {
-            const index = currentReasons.indexOf("other");
-            if (index > -1) {
-              currentReasons.splice(index, 1);
-            }
-            unref(form).registrationReasonsOther = "";
-          }
-          unref(form).registrationReasons = currentReasons;
-          console.log("Updated reasons after other:", unref(form).registrationReasons);
-        }
+        checked: unref(isReasonSelected)("Other"),
+        "onUpdate:checked": (checked) => unref(handleRegistrationReasonChange)("Other", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "other-reason",
@@ -723,7 +694,7 @@ const _sfc_main$1 = {
         _: 1
       }, _parent));
       _push(`</div>`);
-      if (unref(form).registrationReasons.includes("other")) {
+      if (unref(isReasonSelected)("Other")) {
         _push(ssrRenderComponent(unref(_sfc_main$2), {
           modelValue: unref(form).registrationReasonsOther,
           "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
@@ -734,7 +705,7 @@ const _sfc_main$1 = {
         _push(`<!---->`);
       }
       _push(`</div>`);
-      if (unref(form).registrationReasons.includes("other") && unref(form).errors.registrationReasonsOther) {
+      if (unref(isReasonSelected)("Other") && unref(form).errors.registrationReasonsOther) {
         _push(`<div class="ml-6"><p class="text-sm text-destructive mt-1">${ssrInterpolate(unref(form).errors.registrationReasonsOther)}</p></div>`);
       } else {
         _push(`<!---->`);
@@ -745,7 +716,7 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
-      _push(`<div class="mt-2 p-2 bg-gray-100 text-xs"><strong>Debug - Current registrationReasons:</strong> ${ssrInterpolate(JSON.stringify(unref(form).registrationReasons))} <br><strong>Length:</strong> ${ssrInterpolate(unref(form).registrationReasons.length)}</div></div><div class="space-y-3">`);
+      _push(`<div class="mt-2 p-2 bg-gray-100 text-xs"><strong>Debug - Current registrationReasons:</strong> ${ssrInterpolate(JSON.stringify(unref(registrationReasons)))} <br><strong>Length:</strong> ${ssrInterpolate(unref(registrationReasons).length)}</div></div><div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
