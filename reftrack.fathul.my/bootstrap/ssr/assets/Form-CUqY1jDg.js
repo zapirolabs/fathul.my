@@ -435,7 +435,7 @@ function useProgramForm() {
   };
   const handleRegistrationReasonChange = (value, checked) => {
     updateRegistrationReasons(value, checked);
-    if (value === "Other" && !checked) {
+    if (value === "other" && !checked) {
       form.registrationReasonsOther = "";
     }
   };
@@ -443,28 +443,20 @@ function useProgramForm() {
     return registrationReasons.value.includes(value);
   };
   const submit = () => {
-    try {
-      form.transform((data) => ({
-        ...data,
-        registrationReasons: registrationReasons.value
-      })).post(route("program.store"), {
-        preserveScroll: true,
-        onStart: () => {
-          console.log("Form submission started");
-        },
-        onSuccess: () => {
-          console.log("Form submission successful");
-        },
-        onError: (errors) => {
-          console.log("Form submission errors:", errors);
-        },
-        onFinish: () => {
-          console.log("Form submission finished");
-        }
-      });
-    } catch (error) {
-      console.error("Submit error:", error);
-    }
+    form.transform((data) => ({
+      ...data,
+      registrationReasons: registrationReasons.value
+    })).post(route("program.store"), {
+      preserveScroll: true,
+      onStart: () => {
+      },
+      onSuccess: () => {
+      },
+      onError: (errors) => {
+      },
+      onFinish: () => {
+      }
+    });
   };
   return {
     form,
@@ -611,8 +603,8 @@ const _sfc_main$1 = {
       _push(`<div class="space-y-3"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "upskill",
-        "model-value": unref(isReasonSelected)("To upskill and learn something new"),
-        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("To upskill and learn something new", checked)
+        "model-value": unref(isReasonSelected)("upskill"),
+        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("upskill", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "upskill",
@@ -632,8 +624,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "certificate",
-        "model-value": unref(isReasonSelected)("To earn a recognised certificate"),
-        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("To earn a recognised certificate", checked)
+        "model-value": unref(isReasonSelected)("certificate"),
+        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("certificate", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "certificate",
@@ -653,8 +645,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "job",
-        "model-value": unref(isReasonSelected)("To improve my chances of getting a job"),
-        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("To improve my chances of getting a job", checked)
+        "model-value": unref(isReasonSelected)("job"),
+        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("job", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "job",
@@ -674,8 +666,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "other-reason",
-        "model-value": unref(isReasonSelected)("Other"),
-        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("Other", checked)
+        "model-value": unref(isReasonSelected)("other"),
+        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("other", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "other-reason",
@@ -692,7 +684,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      if (unref(isReasonSelected)("Other")) {
+      if (unref(isReasonSelected)("other")) {
         _push(ssrRenderComponent(unref(_sfc_main$2), {
           modelValue: unref(form).registrationReasonsOther,
           "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
@@ -703,7 +695,7 @@ const _sfc_main$1 = {
         _push(`<!---->`);
       }
       _push(`</div>`);
-      if (unref(isReasonSelected)("Other") && unref(form).errors.registrationReasonsOther) {
+      if (unref(isReasonSelected)("other") && unref(form).errors.registrationReasonsOther) {
         _push(`<div class="ml-6"><p class="text-sm text-destructive mt-1">${ssrInterpolate(unref(form).errors.registrationReasonsOther)}</p></div>`);
       } else {
         _push(`<!---->`);

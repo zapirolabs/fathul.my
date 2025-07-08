@@ -33,7 +33,7 @@ export function useProgramForm() {
   const handleRegistrationReasonChange = (value, checked) => {
     updateRegistrationReasons(value, checked)
     
-    if (value === 'Other' && !checked) {
+    if (value === 'other' && !checked) {
       form.registrationReasonsOther = ''
     }
   }
@@ -43,28 +43,20 @@ export function useProgramForm() {
   }
 
   const submit = () => {
-    try {
-      form.transform((data) => ({
-        ...data,
-        registrationReasons: registrationReasons.value
-      })).post(route('program.store'), {
-        preserveScroll: true,
-        onStart: () => {
-          console.log('Form submission started')
-        },
-        onSuccess: () => {
-          console.log('Form submission successful')
-        },
-        onError: (errors) => {
-          console.log('Form submission errors:', errors)
-        },
-        onFinish: () => {
-          console.log('Form submission finished')
-        }
-      })
-    } catch (error) {
-      console.error('Submit error:', error)
-    }
+    form.transform((data) => ({
+      ...data,
+      registrationReasons: registrationReasons.value
+    })).post(route('program.store'), {
+      preserveScroll: true,
+      onStart: () => {
+      },
+      onSuccess: () => {
+      },
+      onError: (errors) => {
+      },
+      onFinish: () => {
+      }
+    })
   }
 
   return {
