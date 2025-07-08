@@ -585,7 +585,7 @@ const _sfc_main$1 = {
         checked: unref(form).registrationReasons.includes("upskill"),
         "onUpdate:checked": (checked) => {
           if (checked) {
-            unref(form).registrationReasons.push("upskill");
+            unref(form).registrationReasons = [...unref(form).registrationReasons, "upskill"];
           } else {
             unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "upskill");
           }
@@ -609,7 +609,7 @@ const _sfc_main$1 = {
         checked: unref(form).registrationReasons.includes("certificate"),
         "onUpdate:checked": (checked) => {
           if (checked) {
-            unref(form).registrationReasons.push("certificate");
+            unref(form).registrationReasons = [...unref(form).registrationReasons, "certificate"];
           } else {
             unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "certificate");
           }
@@ -633,7 +633,7 @@ const _sfc_main$1 = {
         checked: unref(form).registrationReasons.includes("job"),
         "onUpdate:checked": (checked) => {
           if (checked) {
-            unref(form).registrationReasons.push("job");
+            unref(form).registrationReasons = [...unref(form).registrationReasons, "job"];
           } else {
             unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "job");
           }
@@ -657,7 +657,7 @@ const _sfc_main$1 = {
         checked: unref(form).registrationReasons.includes("other"),
         "onUpdate:checked": (checked) => {
           if (checked) {
-            unref(form).registrationReasons.push("other");
+            unref(form).registrationReasons = [...unref(form).registrationReasons, "other"];
           } else {
             unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "other");
             unref(form).registrationReasonsOther = "";

@@ -99,7 +99,7 @@
                   :checked="form.registrationReasons.includes('upskill')"
                   @update:checked="(checked) => {
                     if (checked) {
-                      form.registrationReasons.push('upskill')
+                      form.registrationReasons = [...form.registrationReasons, 'upskill']
                     } else {
                       form.registrationReasons = form.registrationReasons.filter(r => r !== 'upskill')
                     }
@@ -113,7 +113,7 @@
                   :checked="form.registrationReasons.includes('certificate')"
                   @update:checked="(checked) => {
                     if (checked) {
-                      form.registrationReasons.push('certificate')
+                      form.registrationReasons = [...form.registrationReasons, 'certificate']
                     } else {
                       form.registrationReasons = form.registrationReasons.filter(r => r !== 'certificate')
                     }
@@ -127,7 +127,7 @@
                   :checked="form.registrationReasons.includes('job')"
                   @update:checked="(checked) => {
                     if (checked) {
-                      form.registrationReasons.push('job')
+                      form.registrationReasons = [...form.registrationReasons, 'job']
                     } else {
                       form.registrationReasons = form.registrationReasons.filter(r => r !== 'job')
                     }
@@ -142,7 +142,7 @@
                     :checked="form.registrationReasons.includes('other')"
                     @update:checked="(checked) => {
                       if (checked) {
-                        form.registrationReasons.push('other')
+                        form.registrationReasons = [...form.registrationReasons, 'other']
                       } else {
                         form.registrationReasons = form.registrationReasons.filter(r => r !== 'other')
                         form.registrationReasonsOther = ''

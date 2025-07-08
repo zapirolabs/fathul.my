@@ -1,6 +1,6 @@
 {
-  "_index-Dk1HMEXo.js": {
-    "file": "assets/index-Dk1HMEXo.js",
+  "_index-CMwE2Ju-.js": {
+    "file": "assets/index-CMwE2Ju-.js",
     "name": "index",
     "imports": [
       "resources/js/app.js"
@@ -12,30 +12,30 @@
     "isEntry": true
   },
   "resources/js/Pages/Form.vue": {
-    "file": "assets/Form-Dtidt1Z7.js",
+    "file": "assets/Form-DksTcppu.js",
     "name": "Form",
     "src": "resources/js/Pages/Form.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_index-Dk1HMEXo.js"
+      "_index-CMwE2Ju-.js"
     ],
     "css": [
       "assets/Form-DvcuHg5w.css"
     ]
   },
   "resources/js/Pages/Success.vue": {
-    "file": "assets/Success-HQx6s-t9.js",
+    "file": "assets/Success-DUhag3Nb.js",
     "name": "Success",
     "src": "resources/js/Pages/Success.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_index-Dk1HMEXo.js"
+      "_index-CMwE2Ju-.js"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-BW-FC5pI.js",
+    "file": "assets/app-CG8B52x0.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
