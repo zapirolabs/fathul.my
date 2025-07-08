@@ -293,7 +293,10 @@
                   </div>
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="genai-masterclass" value="genai-masterclass" />
-                    <Label for="genai-masterclass" class="text-sm">GenAI Masterclass</Label>
+                    <Label for="genai-masterclass" class="text-sm flex items-center space-x-2">
+                      <img :src="chatGptLogoUrl" alt="ChatGPT Logo" class="w-6 h-6" />
+                      <span>GenAI Masterclass</span>
+                    </Label>
                   </div>
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="aws-foundational" value="aws-foundational" />
@@ -351,7 +354,7 @@ import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 import { useAppearance } from '@/resources/js/composables/useAppearance'
 
 const { form, handleRegistrationReasonChange, isReasonSelected, processing, submit } = useProgramForm()
-const { awsLogoUrl } = useAppearance()
+const { awsLogoUrl, chatGptLogoUrl } = useAppearance()
 </script>
 
 <style scoped>
