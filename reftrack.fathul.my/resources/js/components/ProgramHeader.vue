@@ -20,7 +20,7 @@
         </div>
 
         <!-- Main Title -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up animation-delay-200">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-10 animate-fade-in-up animation-delay-200">
           <span class="block text-white">Program</span>
           <span class="block bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x">
             Jaminan Kerjaya
@@ -30,12 +30,12 @@
 
         <!-- Collaboration Description -->
         <div class="animate-fade-in-up animation-delay-400">
-          <p class="text-lg text-white/90 flex items-center justify-center space-x-2">
-            <span>A collaboration and education product of  </span>
+          <p class="text-sm sm:text-base lg:text-lg text-white/90 flex items-center justify-center whitespace-nowrap">
+            <span>A collaboration and education product of</span>
             <img 
               src="https://cdn.fathul.my/assets/logo/nematix-logo-fullcolor.svg" 
               alt="Nematix Logo" 
-              class="h-6 mb-2 ml-1 sm:h-8 sm:mb-0 sm:ml-2"
+              class="h-4 sm:h-5 lg:h-6 ml-2"
             />
           </p>
         </div>
