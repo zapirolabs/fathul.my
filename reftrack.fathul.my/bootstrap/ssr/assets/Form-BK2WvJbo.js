@@ -711,7 +711,8 @@ function useProgramForm() {
     intakeBatch: "",
     referralCode: "",
     pahangConnection: "",
-    pahangConnectionOther: ""
+    pahangConnectionOther: "",
+    furtherInquiries: ""
   });
   const updateRegistrationReasons = (value, checked) => {
     if (checked) {
@@ -5730,6 +5731,32 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
+      _push(`<div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$6), { class: "text-card-foreground" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Further Inquiries `);
+          } else {
+            return [
+              createTextVNode(" Further Inquiries ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$a), {
+        modelValue: unref(form).furtherInquiries,
+        "onUpdate:modelValue": ($event) => unref(form).furtherInquiries = $event,
+        type: "text",
+        placeholder: "Any questions or additional information you'd like to share (optional)",
+        class: "w-full"
+      }, null, _parent));
+      if (unref(form).errors.furtherInquiries) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.furtherInquiries)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div>`);
       _push(ssrRenderComponent(unref(_sfc_main$9), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

@@ -19,6 +19,7 @@ export function useProgramForm() {
     referralCode: '',
     pahangConnection: '',
     pahangConnectionOther: '',
+    furtherInquiries: '',
   })
 
   const updateRegistrationReasons = (value, checked) => {

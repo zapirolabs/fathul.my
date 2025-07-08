@@ -34,6 +34,7 @@ class FormController extends Controller
             'intakeBatch' => 'required_if:programInterest,python-basic,genai-masterclass,aws-foundational|in:batch-1,batch-2,batch-3,batch-4',
             'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
             'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
+            'furtherInquiries' => 'nullable|string|max:1000',
         ], [
             'fullName.required' => 'Sila masukkan nama penuh anda.',
             'fullName.string' => 'Nama penuh mestilah dalam format teks.',
@@ -71,6 +72,7 @@ class FormController extends Controller
             'pahangConnection.in' => 'Sila pilih salah satu pilihan yang disediakan.',
             'pahangConnectionOther.required_if' => 'Sila nyatakan kaitan anda dengan negeri Pahang.',
             'pahangConnectionOther.max' => 'Maklumat tidak boleh melebihi 255 aksara.',
+            'furtherInquiries.max' => 'Further inquiries tidak boleh melebihi 1000 aksara.',
         ]);
 
         $fullName = $request->input('fullName');
@@ -87,6 +89,7 @@ class FormController extends Controller
         $intakeBatch = $request->input('intakeBatch');
         $pahangConnection = $request->input('pahangConnection');
         $pahangConnectionOther = $request->input('pahangConnectionOther');
+        $furtherInquiries = $request->input('furtherInquiries');
 
         // Map registration reasons to English
         $reasonsMapping = [
@@ -199,7 +202,7 @@ class FormController extends Controller
             '', // O - Reserved
             $awsBatch, // P - AWS Intake Batch
             '', // Q - Reserved
-            '', // R - Reserved
+            $furtherInquiries ?: '', // R - Further Inquiries
             $finalInterviewValue, // S - Interview Willingness
         ];
 

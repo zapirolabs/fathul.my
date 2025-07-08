@@ -631,6 +631,17 @@
             </CardContent>
           </Card>
 
+          <!-- Further Inquiries -->
+          <div class="space-y-3">
+            <CardTitle class="text-card-foreground">
+              Further Inquiries
+            </CardTitle>
+            <Input v-model="form.furtherInquiries" type="text" placeholder="Any questions or additional information you'd like to share (optional)" class="w-full" />
+            <p v-if="form.errors.furtherInquiries" class="text-sm text-destructive">
+              {{ form.errors.furtherInquiries }}
+            </p>
+          </div>
+
           <!-- Submit Button Card -->
           <Card>
             <CardContent class="p-6">
