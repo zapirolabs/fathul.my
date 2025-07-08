@@ -94,24 +94,24 @@
               <div class="flex items-center space-x-2">
                                   <Checkbox 
                     id="upskill"
-                    :checked="isReasonSelected('To upskill and learn something new')"
-                    @update:checked="(checked) => handleRegistrationReasonChange('To upskill and learn something new', checked)"
+                    :model-value="isReasonSelected('To upskill and learn something new')"
+                    @update:model-value="(checked) => handleRegistrationReasonChange('To upskill and learn something new', checked)"
                   />
                   <Label for="upskill" class="text-sm">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
                 </div>
                 <div class="flex items-center space-x-2">
                   <Checkbox 
                     id="certificate"
-                    :checked="isReasonSelected('To earn a recognised certificate')"
-                    @update:checked="(checked) => handleRegistrationReasonChange('To earn a recognised certificate', checked)"
+                    :model-value="isReasonSelected('To earn a recognised certificate')"
+                    @update:model-value="(checked) => handleRegistrationReasonChange('To earn a recognised certificate', checked)"
                   />
                   <Label for="certificate" class="text-sm">Untuk mendapatkan sijil yang diiktiraf</Label>
                 </div>
                 <div class="flex items-center space-x-2">
                   <Checkbox 
                     id="job"
-                    :checked="isReasonSelected('To improve my chances of getting a job')"
-                    @update:checked="(checked) => handleRegistrationReasonChange('To improve my chances of getting a job', checked)"
+                    :model-value="isReasonSelected('To improve my chances of getting a job')"
+                    @update:model-value="(checked) => handleRegistrationReasonChange('To improve my chances of getting a job', checked)"
                   />
                   <Label for="job" class="text-sm">Untuk meningkatkan peluang mendapat pekerjaan</Label>
                 </div>
@@ -119,8 +119,8 @@
                   <div class="flex items-center space-x-2">
                     <Checkbox 
                       id="other-reason"
-                      :checked="isReasonSelected('Other')"
-                      @update:checked="(checked) => handleRegistrationReasonChange('Other', checked)"
+                      :model-value="isReasonSelected('Other')"
+                      @update:model-value="(checked) => handleRegistrationReasonChange('Other', checked)"
                     />
                     <Label for="other-reason" class="text-sm">Lain-lain:</Label>
                 </div>

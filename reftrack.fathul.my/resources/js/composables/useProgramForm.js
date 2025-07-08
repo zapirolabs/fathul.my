@@ -20,32 +20,52 @@ export function useProgramForm() {
 
   // Helper function to update registration reasons
   const updateRegistrationReasons = (value, checked) => {
+    console.log('=== updateRegistrationReasons called ===')
+    console.log('Value:', value)
+    console.log('Checked:', checked)
+    console.log('Current array before:', registrationReasons.value)
+    
     if (checked) {
       if (!registrationReasons.value.includes(value)) {
         registrationReasons.value.push(value)
+        console.log('Added to array')
+      } else {
+        console.log('Already in array, skipping')
       }
     } else {
       const index = registrationReasons.value.indexOf(value)
       if (index > -1) {
         registrationReasons.value.splice(index, 1)
+        console.log('Removed from array')
+      } else {
+        console.log('Not found in array, skipping')
       }
     }
-    console.log('Updated registrationReasons:', registrationReasons.value)
+    console.log('Current array after:', registrationReasons.value)
+    console.log('=== End updateRegistrationReasons ===')
   }
 
   // Handle checkbox changes
   const handleRegistrationReasonChange = (value, checked) => {
+    console.log('=== handleRegistrationReasonChange called ===')
+    console.log('Value:', value)
+    console.log('Checked:', checked)
+    
     updateRegistrationReasons(value, checked)
     
     // Clear the "other" field if "Other" is unchecked
     if (value === 'Other' && !checked) {
       form.registrationReasonsOther = ''
+      console.log('Cleared other field')
     }
+    console.log('=== End handleRegistrationReasonChange ===')
   }
 
   // Check if a reason is selected
   const isReasonSelected = (value) => {
-    return registrationReasons.value.includes(value)
+    const selected = registrationReasons.value.includes(value)
+    console.log(`isReasonSelected(${value}):`, selected)
+    return selected
   }
 
   const submit = () => {

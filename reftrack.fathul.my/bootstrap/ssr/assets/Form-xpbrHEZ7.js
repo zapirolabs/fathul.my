@@ -422,26 +422,44 @@ function useProgramForm() {
     pahangConnectionOther: ""
   });
   const updateRegistrationReasons = (value, checked) => {
+    console.log("=== updateRegistrationReasons called ===");
+    console.log("Value:", value);
+    console.log("Checked:", checked);
+    console.log("Current array before:", registrationReasons.value);
     if (checked) {
       if (!registrationReasons.value.includes(value)) {
         registrationReasons.value.push(value);
+        console.log("Added to array");
+      } else {
+        console.log("Already in array, skipping");
       }
     } else {
       const index = registrationReasons.value.indexOf(value);
       if (index > -1) {
         registrationReasons.value.splice(index, 1);
+        console.log("Removed from array");
+      } else {
+        console.log("Not found in array, skipping");
       }
     }
-    console.log("Updated registrationReasons:", registrationReasons.value);
+    console.log("Current array after:", registrationReasons.value);
+    console.log("=== End updateRegistrationReasons ===");
   };
   const handleRegistrationReasonChange = (value, checked) => {
+    console.log("=== handleRegistrationReasonChange called ===");
+    console.log("Value:", value);
+    console.log("Checked:", checked);
     updateRegistrationReasons(value, checked);
     if (value === "Other" && !checked) {
       form.registrationReasonsOther = "";
+      console.log("Cleared other field");
     }
+    console.log("=== End handleRegistrationReasonChange ===");
   };
   const isReasonSelected = (value) => {
-    return registrationReasons.value.includes(value);
+    const selected = registrationReasons.value.includes(value);
+    console.log(`isReasonSelected(${value}):`, selected);
+    return selected;
   };
   const submit = () => {
     console.log("=== FORM SUBMISSION DEBUG ===");
@@ -612,8 +630,8 @@ const _sfc_main$1 = {
       _push(`<div class="space-y-3"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "upskill",
-        checked: unref(isReasonSelected)("To upskill and learn something new"),
-        "onUpdate:checked": (checked) => unref(handleRegistrationReasonChange)("To upskill and learn something new", checked)
+        "model-value": unref(isReasonSelected)("To upskill and learn something new"),
+        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("To upskill and learn something new", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "upskill",
@@ -633,8 +651,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "certificate",
-        checked: unref(isReasonSelected)("To earn a recognised certificate"),
-        "onUpdate:checked": (checked) => unref(handleRegistrationReasonChange)("To earn a recognised certificate", checked)
+        "model-value": unref(isReasonSelected)("To earn a recognised certificate"),
+        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("To earn a recognised certificate", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "certificate",
@@ -654,8 +672,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "job",
-        checked: unref(isReasonSelected)("To improve my chances of getting a job"),
-        "onUpdate:checked": (checked) => unref(handleRegistrationReasonChange)("To improve my chances of getting a job", checked)
+        "model-value": unref(isReasonSelected)("To improve my chances of getting a job"),
+        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("To improve my chances of getting a job", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "job",
@@ -675,8 +693,8 @@ const _sfc_main$1 = {
       _push(`</div><div class="space-y-2"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "other-reason",
-        checked: unref(isReasonSelected)("Other"),
-        "onUpdate:checked": (checked) => unref(handleRegistrationReasonChange)("Other", checked)
+        "model-value": unref(isReasonSelected)("Other"),
+        "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("Other", checked)
       }, null, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$3), {
         for: "other-reason",
