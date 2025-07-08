@@ -23,10 +23,10 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <Label class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-sm font-medium text-card-foreground">
                   Nama Penuh
                   <span class="text-destructive">*</span>
-                </Label>
+                </CardTitle>
                 <Input 
                   v-model="form.fullName"
                   type="text"
@@ -44,10 +44,10 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <Label class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-sm font-medium text-card-foreground">
                   Nombor Telefon
                   <span class="text-destructive">*</span>
-                </Label>
+                </CardTitle>
                 <Input 
                   v-model="form.phoneNumber"
                   type="tel"
@@ -65,10 +65,10 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <Label class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-sm font-medium text-card-foreground">
                   Alamat Emel
                   <span class="text-destructive">*</span>
-                </Label>
+                </CardTitle>
                 <Input 
                   v-model="form.email"
                   type="email"
@@ -86,10 +86,10 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <Label class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-sm font-medium text-card-foreground">
                   Umur
                   <span class="text-destructive">*</span>
-                </Label>
+                </CardTitle>
                 <Input 
                   v-model="form.age"
                   type="number"
@@ -109,10 +109,10 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <Label class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-sm font-medium text-card-foreground">
                   Apakah sebab utama anda mendaftar?
                   <span class="text-destructive">*</span>
-                </Label>
+                </CardTitle>
                 <div class="space-y-3">
                   <div class="flex items-center space-x-2">
                     <Checkbox 
@@ -170,10 +170,10 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <Label class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-sm font-medium text-card-foreground">
                   Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini?
                   <span class="text-destructive">*</span>
-                </Label>
+                </CardTitle>
                 <RadioGroup 
                   v-model="form.commitmentLevel"
                   class="space-y-2"
@@ -218,10 +218,10 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <Label class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-sm font-medium text-card-foreground">
                   Apakah program yang anda minati?
                   <span class="text-destructive">*</span>
-                </Label>
+                </CardTitle>
                 <RadioGroup 
                   v-model="form.programInterest"
                   class="space-y-2"
@@ -255,10 +255,10 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-5">
-                <Label class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-sm font-medium text-card-foreground">
                   Apakah kaitan anda dengan negeri Pahang? 
                   <span class="text-destructive">*</span>
-                </Label>
+                </CardTitle>
                 <RadioGroup 
                   v-model="form.pahangConnection"
                   class="space-y-2"
@@ -330,7 +330,7 @@ import { Checkbox } from '@/resources/js/components/ui/checkbox'
 import { Label } from '@/resources/js/components/ui/label'
 import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'
-import { Card, CardContent } from '@/resources/js/components/ui/card'
+import { Card, CardContent, CardTitle } from '@/resources/js/components/ui/card'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 const { form, handleRegistrationReasonChange, isReasonSelected, processing, submit } = useProgramForm()
 </script>
