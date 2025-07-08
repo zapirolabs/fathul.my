@@ -330,12 +330,21 @@
                   <span>Python Basic Programming</span>
                 </CardTitle>
                 
-                <CardDescription class="text-muted-foreground">
-                  Python Programming Talent Development & Job Placement Initiative. Unlock your future with in-demand Python skills. 
-                  Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with 
-                  essential Python skills and prepares them for real job placements in tech and engineering. Gain hands-on training 
-                  and access career opportunities in data science, AI, software development, and automation.
-                </CardDescription>
+                <Accordion type="single" collapsible class="w-full">
+                  <AccordionItem value="description">
+                    <AccordionTrigger class="text-left text-sm">
+                      Program Description
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <CardDescription class="text-muted-foreground">
+                        Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran 
+                        pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri 
+                        teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar 
+                        kerjaya ke bidang teknologi.
+                      </CardDescription>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
 
                 <div class="space-y-5">
                   <CardTitle class="text-card-foreground">
@@ -400,6 +409,7 @@ import { Label } from '@/resources/js/components/ui/label'
 import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'
 import { Card, CardContent, CardTitle, CardDescription } from '@/resources/js/components/ui/card'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/resources/js/components/ui/accordion'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 import { useAppearance } from '@/resources/js/composables/useAppearance'
 

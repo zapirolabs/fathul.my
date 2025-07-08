@@ -1,7 +1,7 @@
 import { mergeProps, unref, withCtx, createTextVNode, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent } from "vue/server-renderer";
 import "@inertiajs/vue3";
-import { _ as _sfc_main$1 } from "./index-BRQTVL0F.js";
+import { _ as _sfc_main$1 } from "./index-CBusBGn5.js";
 import "class-variance-authority";
 import "reka-ui";
 import "clsx";
