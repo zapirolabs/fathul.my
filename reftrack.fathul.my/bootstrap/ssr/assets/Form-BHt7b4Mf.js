@@ -1,5 +1,5 @@
-import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate } from "vue/server-renderer";
+import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, onMounted, computed, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate, ssrRenderAttr } from "vue/server-renderer";
 import { useForm, Head } from "@inertiajs/vue3";
 import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon, Check } from "lucide-vue-next";
 import { reactiveOmit, useVModel } from "@vueuse/core";
@@ -544,11 +544,58 @@ function useProgramForm() {
     submit
   };
 }
+function updateTheme(value) {
+  if (typeof window === "undefined") {
+    return;
+  }
+  if (value === "system") {
+    const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
+    const systemTheme = mediaQueryList.matches ? "dark" : "light";
+    document.documentElement.classList.toggle("dark", systemTheme === "dark");
+  } else {
+    document.documentElement.classList.toggle("dark", value === "dark");
+  }
+}
+const setCookie = (name, value, days = 365) => {
+  if (typeof document === "undefined") {
+    return;
+  }
+  const maxAge = days * 24 * 60 * 60;
+  document.cookie = `${name}=${value};path=/;max-age=${maxAge};SameSite=Lax`;
+};
+function useAppearance() {
+  const appearance = ref("system");
+  onMounted(() => {
+    const savedAppearance = localStorage.getItem("appearance");
+    if (savedAppearance) {
+      appearance.value = savedAppearance;
+    }
+  });
+  function updateAppearance(value) {
+    appearance.value = value;
+    localStorage.setItem("appearance", value);
+    setCookie("appearance", value);
+    updateTheme(value);
+  }
+  const awsLogoUrl = computed(() => {
+    if (typeof window === "undefined") {
+      return "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg";
+    }
+    const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return isDark ? "https://cdn.fathul.my/assets/logo/aws-logo-whiteondark.svg" : "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg";
+  });
+  return {
+    appearance,
+    updateAppearance,
+    awsLogoUrl
+  };
+}
 const _sfc_main$1 = {
   __name: "ProgramForm",
   __ssrInlineRender: true,
   setup(__props) {
     const { form, handleRegistrationReasonChange, isReasonSelected, processing } = useProgramForm();
+    const { awsLogoUrl } = useAppearance();
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
@@ -2142,14 +2189,14 @@ const _sfc_main$1 = {
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
-                              _push5(`<img src="https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg" alt="AWS Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>AWS Foundational Certificate</span>`);
+                              _push5(`<img${ssrRenderAttr("src", unref(awsLogoUrl))} alt="AWS Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>AWS Foundational Certificate</span>`);
                             } else {
                               return [
                                 createVNode("img", {
-                                  src: "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg",
+                                  src: unref(awsLogoUrl),
                                   alt: "AWS Logo",
                                   class: "w-8 h-6"
-                                }),
+                                }, null, 8, ["src"]),
                                 createVNode("span", null, "AWS Foundational Certificate")
                               ];
                             }
@@ -2220,10 +2267,10 @@ const _sfc_main$1 = {
                             }, {
                               default: withCtx(() => [
                                 createVNode("img", {
-                                  src: "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg",
+                                  src: unref(awsLogoUrl),
                                   alt: "AWS Logo",
                                   class: "w-8 h-6"
-                                }),
+                                }, null, 8, ["src"]),
                                 createVNode("span", null, "AWS Foundational Certificate")
                               ]),
                               _: 1
@@ -2312,10 +2359,10 @@ const _sfc_main$1 = {
                             }, {
                               default: withCtx(() => [
                                 createVNode("img", {
-                                  src: "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg",
+                                  src: unref(awsLogoUrl),
                                   alt: "AWS Logo",
                                   class: "w-8 h-6"
-                                }),
+                                }, null, 8, ["src"]),
                                 createVNode("span", null, "AWS Foundational Certificate")
                               ]),
                               _: 1
@@ -2408,10 +2455,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx(() => [
                               createVNode("img", {
-                                src: "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg",
+                                src: unref(awsLogoUrl),
                                 alt: "AWS Logo",
                                 class: "w-8 h-6"
-                              }),
+                              }, null, 8, ["src"]),
                               createVNode("span", null, "AWS Foundational Certificate")
                             ]),
                             _: 1

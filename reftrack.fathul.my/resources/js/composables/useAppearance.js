@@ -1,4 +1,4 @@
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, computed } from 'vue';
 
 export function updateTheme(value) {
     if (typeof window === 'undefined') {
@@ -82,8 +82,22 @@ export function useAppearance() {
         updateTheme(value);
     }
 
+    const awsLogoUrl = computed(() => {
+        if (typeof window === 'undefined') {
+            return 'https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg';
+        }
+        
+        const isDark = appearance.value === 'dark' || 
+                      (appearance.value === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        
+        return isDark 
+            ? 'https://cdn.fathul.my/assets/logo/aws-logo-whiteondark.svg'
+            : 'https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg';
+    });
+
     return {
         appearance,
         updateAppearance,
+        awsLogoUrl,
     };
 } 

@@ -298,7 +298,7 @@
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="aws-foundational" value="aws-foundational" />
                     <Label for="aws-foundational" class="text-sm flex items-center space-x-2">
-                      <img src="https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg" alt="AWS Logo" class="w-8 h-6" />
+                      <img :src="awsLogoUrl" alt="AWS Logo" class="w-8 h-6" />
                       <span>AWS Foundational Certificate</span>
                     </Label>
                   </div>
@@ -348,7 +348,10 @@ import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'
 import { Card, CardContent, CardTitle } from '@/resources/js/components/ui/card'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
+import { useAppearance } from '@/resources/js/composables/useAppearance'
+
 const { form, handleRegistrationReasonChange, isReasonSelected, processing, submit } = useProgramForm()
+const { awsLogoUrl } = useAppearance()
 </script>
 
 <style scoped>
