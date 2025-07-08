@@ -555,11 +555,11 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(_sfc_main$c, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$b, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$a, null, null, _parent));
-      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div>`);
+      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6 mb-3" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-5"${_scopeId2}>`);
@@ -869,7 +869,7 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6 mb-3" }, {
+              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
@@ -974,7 +974,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(`<form class="space-y-6"><div class="space-y-3">`);
+      _push(`<div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

@@ -18,9 +18,11 @@
           </p>
         </div>
 
-         <!-- Pahang Connection Card -->
+
+        <form @submit.prevent="submit" class="space-y-6">
+          <!-- Pahang Connection Card -->
          <Card>
-            <CardContent class="p-6 mb-3">
+            <CardContent class="p-6">
               <div class="space-y-5">
                 <CardTitle class="text-card-foreground">
                   Apakah kaitan anda dengan negeri Pahang? 
@@ -65,8 +67,6 @@
               </div>
             </CardContent>
           </Card>
-
-        <form @submit.prevent="submit" class="space-y-6">
           <!-- Full Name -->
           <div class="space-y-3">
             <CardTitle class="text-card-foreground">
