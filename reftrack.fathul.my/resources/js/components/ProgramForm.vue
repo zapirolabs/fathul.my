@@ -97,7 +97,7 @@
                   Apakah sebab utama anda mendaftar?
                   <span class="text-destructive">*</span>
                 </CardTitle>
-                <div class="space-y-3">
+                <div class="space-y-5">
                   <div class="flex items-center space-x-2">
                     <Checkbox 
                       id="upskill"

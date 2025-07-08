@@ -682,7 +682,7 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(`<div class="space-y-3"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
+                  _push3(`<div class="space-y-5"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
                   _push3(ssrRenderComponent(unref(_sfc_main$7), {
                     id: "upskill",
                     "model-value": unref(isReasonSelected)("upskill"),
@@ -799,7 +799,7 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode("div", { class: "space-y-3" }, [
+                      createVNode("div", { class: "space-y-5" }, [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
                           createVNode(unref(_sfc_main$7), {
                             id: "upskill",
@@ -900,7 +900,7 @@ const _sfc_main$1 = {
                       ]),
                       _: 1
                     }),
-                    createVNode("div", { class: "space-y-3" }, [
+                    createVNode("div", { class: "space-y-5" }, [
                       createVNode("div", { class: "flex items-center space-x-2" }, [
                         createVNode(unref(_sfc_main$7), {
                           id: "upskill",
