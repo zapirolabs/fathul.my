@@ -43,21 +43,28 @@ export function useProgramForm() {
   }
 
   const submit = () => {
-    alert('Submit function called!')
-    form.transform((data) => ({
-      ...data,
-      registrationReasons: registrationReasons.value
-    })).post(route('program.store'), {
-      preserveScroll: true,
-      onStart: () => {
-      },
-      onSuccess: () => {
-      },
-      onError: (errors) => {
-      },
-      onFinish: () => {
-      }
-    })
+    try {
+      form.transform((data) => ({
+        ...data,
+        registrationReasons: registrationReasons.value
+      })).post(route('program.store'), {
+        preserveScroll: true,
+        onStart: () => {
+          console.log('Form submission started')
+        },
+        onSuccess: () => {
+          console.log('Form submission successful')
+        },
+        onError: (errors) => {
+          console.log('Form submission errors:', errors)
+        },
+        onFinish: () => {
+          console.log('Form submission finished')
+        }
+      })
+    } catch (error) {
+      console.error('Submit error:', error)
+    }
   }
 
   return {
