@@ -2798,10 +2798,10 @@ const _sfc_main$1 = {
                                 _push5(ssrRenderComponent(unref(_sfc_main$2), { class: "text-left text-sm" }, {
                                   default: withCtx((_5, _push6, _parent6, _scopeId5) => {
                                     if (_push6) {
-                                      _push6(` Program Description `);
+                                      _push6(` Description `);
                                     } else {
                                       return [
-                                        createTextVNode(" Program Description ")
+                                        createTextVNode(" Description ")
                                       ];
                                     }
                                   }),
@@ -2839,7 +2839,7 @@ const _sfc_main$1 = {
                                 return [
                                   createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
                                     default: withCtx(() => [
-                                      createTextVNode(" Program Description ")
+                                      createTextVNode(" Description ")
                                     ]),
                                     _: 1
                                   }),
@@ -2859,13 +2859,93 @@ const _sfc_main$1 = {
                             }),
                             _: 1
                           }, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$3), { value: "what-you-get" }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(ssrRenderComponent(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(` Apa Yang Anda Akan Perolehi `);
+                                    } else {
+                                      return [
+                                        createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                                _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Asas &amp; Lanjutan Python:</strong> Pengaturcaraan berorientasikan objek, penyahpepijatan, dan pengoptimuman. </div><div${_scopeId5}><strong${_scopeId5}>Pembangunan API &amp; Integrasi Pangkalan Data:</strong> Membina RESTful API, web scraping, dan bekerja dengan pelbagai pangkalan data. </div><div${_scopeId5}><strong${_scopeId5}>Automasi Perniagaan:</strong> Scripting untuk proses sebenar. </div><div${_scopeId5}><strong${_scopeId5}>Portfolio Projek Industri:</strong> Cabaran kod sebenar &amp; projek untuk paparan kerjaya. </div></div>`);
+                                    } else {
+                                      return [
+                                        createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                            createTextVNode(" Pengaturcaraan berorientasikan objek, penyahpepijatan, dan pengoptimuman. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Pembangunan API & Integrasi Pangkalan Data:"),
+                                            createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai pangkalan data. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Automasi Perniagaan:"),
+                                            createTextVNode(" Scripting untuk proses sebenar. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Portfolio Projek Industri:"),
+                                            createTextVNode(" Cabaran kod sebenar & projek untuk paparan kerjaya. ")
+                                          ])
+                                        ])
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                              } else {
+                                return [
+                                  createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                    ]),
+                                    _: 1
+                                  }),
+                                  createVNode(unref(_sfc_main$4), null, {
+                                    default: withCtx(() => [
+                                      createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                          createTextVNode(" Pengaturcaraan berorientasikan objek, penyahpepijatan, dan pengoptimuman. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Pembangunan API & Integrasi Pangkalan Data:"),
+                                          createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai pangkalan data. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Automasi Perniagaan:"),
+                                          createTextVNode(" Scripting untuk proses sebenar. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Portfolio Projek Industri:"),
+                                          createTextVNode(" Cabaran kod sebenar & projek untuk paparan kerjaya. ")
+                                        ])
+                                      ])
+                                    ]),
+                                    _: 1
+                                  })
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
                         } else {
                           return [
                             createVNode(unref(_sfc_main$3), { value: "description" }, {
                               default: withCtx(() => [
                                 createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
                                   default: withCtx(() => [
-                                    createTextVNode(" Program Description ")
+                                    createTextVNode(" Description ")
                                   ]),
                                   _: 1
                                 }),
@@ -2877,6 +2957,40 @@ const _sfc_main$1 = {
                                       ]),
                                       _: 1
                                     })
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                        createTextVNode(" Pengaturcaraan berorientasikan objek, penyahpepijatan, dan pengoptimuman. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Pembangunan API & Integrasi Pangkalan Data:"),
+                                        createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai pangkalan data. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Automasi Perniagaan:"),
+                                        createTextVNode(" Scripting untuk proses sebenar. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Portfolio Projek Industri:"),
+                                        createTextVNode(" Cabaran kod sebenar & projek untuk paparan kerjaya. ")
+                                      ])
+                                    ])
                                   ]),
                                   _: 1
                                 })
@@ -3052,7 +3166,7 @@ const _sfc_main$1 = {
                               default: withCtx(() => [
                                 createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
                                   default: withCtx(() => [
-                                    createTextVNode(" Program Description ")
+                                    createTextVNode(" Description ")
                                   ]),
                                   _: 1
                                 }),
@@ -3064,6 +3178,40 @@ const _sfc_main$1 = {
                                       ]),
                                       _: 1
                                     })
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                        createTextVNode(" Pengaturcaraan berorientasikan objek, penyahpepijatan, dan pengoptimuman. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Pembangunan API & Integrasi Pangkalan Data:"),
+                                        createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai pangkalan data. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Automasi Perniagaan:"),
+                                        createTextVNode(" Scripting untuk proses sebenar. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Portfolio Projek Industri:"),
+                                        createTextVNode(" Cabaran kod sebenar & projek untuk paparan kerjaya. ")
+                                      ])
+                                    ])
                                   ]),
                                   _: 1
                                 })
@@ -3172,7 +3320,7 @@ const _sfc_main$1 = {
                             default: withCtx(() => [
                               createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
                                 default: withCtx(() => [
-                                  createTextVNode(" Program Description ")
+                                  createTextVNode(" Description ")
                                 ]),
                                 _: 1
                               }),
@@ -3184,6 +3332,40 @@ const _sfc_main$1 = {
                                     ]),
                                     _: 1
                                   })
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            _: 1
+                          }),
+                          createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                            default: withCtx(() => [
+                              createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                default: withCtx(() => [
+                                  createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                ]),
+                                _: 1
+                              }),
+                              createVNode(unref(_sfc_main$4), null, {
+                                default: withCtx(() => [
+                                  createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                      createTextVNode(" Pengaturcaraan berorientasikan objek, penyahpepijatan, dan pengoptimuman. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Pembangunan API & Integrasi Pangkalan Data:"),
+                                      createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai pangkalan data. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Automasi Perniagaan:"),
+                                      createTextVNode(" Scripting untuk proses sebenar. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Portfolio Projek Industri:"),
+                                      createTextVNode(" Cabaran kod sebenar & projek untuk paparan kerjaya. ")
+                                    ])
+                                  ])
                                 ]),
                                 _: 1
                               })

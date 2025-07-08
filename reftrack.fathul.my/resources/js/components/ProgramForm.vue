@@ -333,7 +333,7 @@
                 <Accordion type="single" collapsible class="w-full">
                   <AccordionItem value="description">
                     <AccordionTrigger class="text-left text-sm">
-                      Program Description
+                      Description
                     </AccordionTrigger>
                     <AccordionContent>
                       <CardDescription class="text-muted-foreground">
@@ -342,6 +342,27 @@
                         teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar 
                         kerjaya ke bidang teknologi.
                       </CardDescription>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="what-you-get">
+                    <AccordionTrigger class="text-left text-sm">
+                      Apa Yang Anda Akan Perolehi
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div class="space-y-3 text-muted-foreground">
+                        <div>
+                          <strong>Asas & Lanjutan Python:</strong> Pengaturcaraan berorientasikan objek, penyahpepijatan, dan pengoptimuman.
+                        </div>
+                        <div>
+                          <strong>Pembangunan API & Integrasi Pangkalan Data:</strong> Membina RESTful API, web scraping, dan bekerja dengan pelbagai pangkalan data.
+                        </div>
+                        <div>
+                          <strong>Automasi Perniagaan:</strong> Scripting untuk proses sebenar.
+                        </div>
+                        <div>
+                          <strong>Portfolio Projek Industri:</strong> Cabaran kod sebenar & projek untuk paparan kerjaya.
+                        </div>
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
