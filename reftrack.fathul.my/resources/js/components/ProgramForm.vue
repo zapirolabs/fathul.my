@@ -87,6 +87,87 @@
             </p>
           </div>
 
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Apakah sebab utama anda mendaftar?
+              <span class="text-destructive">*</span>
+            </Label>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-2">
+                <Checkbox 
+                  id="upskill"
+                  :checked="form.registrationReasons.includes('upskill')"
+                  @update:checked="(checked) => {
+                    if (checked) {
+                      form.registrationReasons.push('upskill')
+                    } else {
+                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'upskill')
+                    }
+                  }"
+                />
+                <Label for="upskill">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <Checkbox 
+                  id="certificate"
+                  :checked="form.registrationReasons.includes('certificate')"
+                  @update:checked="(checked) => {
+                    if (checked) {
+                      form.registrationReasons.push('certificate')
+                    } else {
+                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'certificate')
+                    }
+                  }"
+                />
+                <Label for="certificate">Untuk mendapatkan sijil yang diiktiraf</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <Checkbox 
+                  id="job"
+                  :checked="form.registrationReasons.includes('job')"
+                  @update:checked="(checked) => {
+                    if (checked) {
+                      form.registrationReasons.push('job')
+                    } else {
+                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'job')
+                    }
+                  }"
+                />
+                <Label for="job">Untuk meningkatkan peluang mendapat pekerjaan</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <Checkbox 
+                  id="other-reason"
+                  :checked="form.registrationReasons.includes('other')"
+                  @update:checked="(checked) => {
+                    if (checked) {
+                      form.registrationReasons.push('other')
+                    } else {
+                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'other')
+                      form.registrationReasonsOther = ''
+                    }
+                  }"
+                />
+                <Label for="other-reason">Lain-lain:</Label>
+                <Input 
+                  v-if="form.registrationReasons.includes('other')"
+                  v-model="form.registrationReasonsOther"
+                  placeholder="Sila nyatakan..."
+                  class="max-w-md"
+                />
+              </div>
+              <div v-if="form.registrationReasons.includes('other') && form.errors.registrationReasonsOther" class="ml-6">
+                <p class="text-sm text-destructive mt-1">
+                  {{ form.errors.registrationReasonsOther }}
+                </p>
+              </div>
+            </div>
+            
+            <p v-if="form.errors.registrationReasons" class="text-sm text-destructive">
+              {{ form.errors.registrationReasons }}
+            </p>
+          </div>
+
           <div class="space-y-5">
             <Label class="text-sm font-medium text-card-foreground">
               Apakah kaitan anda dengan negeri Pahang? 
@@ -154,6 +235,7 @@ import ApaYangAndaPerolehi from './ApaYangAndaPerolehi.vue'
 import ProgramYangDitawarkan from './ProgramYangDitawarkan.vue'
 import SiapaPatutMemohon from './SiapaPatutMemohon.vue'
 import { RadioGroup, RadioGroupItem } from '@/resources/js/components/ui/radio-group'
+import { Checkbox } from '@/resources/js/components/ui/checkbox'
 import { Label } from '@/resources/js/components/ui/label'
 import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'

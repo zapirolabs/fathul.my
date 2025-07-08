@@ -21,6 +21,9 @@ class FormController extends Controller
             'phoneNumber' => 'required|string|max:20',
             'email' => 'required|email:rfc,dns|max:255',
             'age' => 'required|integer|min:18|max:35',
+            'registrationReasons' => 'required|array|min:1',
+            'registrationReasons.*' => 'in:upskill,certificate,job,other',
+            'registrationReasonsOther' => 'required_if:registrationReasons.*,other|max:255',
             'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
             'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
         ], [
@@ -37,6 +40,11 @@ class FormController extends Controller
             'age.integer' => 'Umur mestilah dalam bentuk nombor.',
             'age.min' => 'Umur minimum adalah 18 tahun.',
             'age.max' => 'Umur maksimum adalah 35 tahun.',
+            'registrationReasons.required' => 'Sila pilih sekurang-kurangnya satu sebab pendaftaran.',
+            'registrationReasons.min' => 'Sila pilih sekurang-kurangnya satu sebab pendaftaran.',
+            'registrationReasons.*.in' => 'Sila pilih sebab pendaftaran yang sah.',
+            'registrationReasonsOther.required_if' => 'Sila nyatakan sebab lain untuk pendaftaran.',
+            'registrationReasonsOther.max' => 'Sebab lain tidak boleh melebihi 255 aksara.',
             'pahangConnection.required' => 'Sila pilih kaitan anda dengan negeri Pahang.',
             'pahangConnection.in' => 'Sila pilih salah satu pilihan yang disediakan.',
             'pahangConnectionOther.required_if' => 'Sila nyatakan kaitan anda dengan negeri Pahang.',
@@ -47,20 +55,37 @@ class FormController extends Controller
         $phoneNumber = $request->input('phoneNumber');
         $email = $request->input('email');
         $age = $request->input('age');
+        $registrationReasons = $request->input('registrationReasons', []);
+        $registrationReasonsOther = $request->input('registrationReasonsOther');
         $pahangConnection = $request->input('pahangConnection');
         $pahangConnectionOther = $request->input('pahangConnectionOther');
 
-        $valueMapping = [
+        // Map registration reasons to English
+        $reasonsMapping = [
+            'upskill' => 'To upskill and learn something new',
+            'certificate' => 'To earn a recognised certificate',
+            'job' => 'To improve my chances of getting a job',
+            'other' => $registrationReasonsOther ?: 'Other'
+        ];
+
+        $mappedReasons = [];
+        foreach ($registrationReasons as $reason) {
+            $mappedReasons[] = $reasonsMapping[$reason] ?? $reason;
+        }
+        $finalReasons = implode(', ', $mappedReasons);
+
+        // Map Pahang connection to English
+        $pahangMapping = [
             'born-pahang' => 'Yes, I was born in Pahang',
             'living-pahang' => 'I am currently residing in Pahang',
             'parents-pahang' => 'Both of my parents are from Pahang',
             'other-pahang' => $pahangConnectionOther ?: 'Other'
         ];
 
-        $finalValue = $valueMapping[$pahangConnection] ?? $pahangConnection;
+        $finalPahangValue = $pahangMapping[$pahangConnection] ?? $pahangConnection;
 
-        // Store: A=?, B=Email, C=Full Name, D=Phone, E=Age, H=Pahang Connection
-        $rowData = ['', $email, $fullName, $phoneNumber, $age, '', '', $finalValue];
+        // Store: A=?, B=Email, C=Full Name, D=Phone, E=Age, F=Registration Reasons, H=Pahang Connection
+        $rowData = ['', $email, $fullName, $phoneNumber, $age, $finalReasons, '', $finalPahangValue];
 
         Sheets::spreadsheet(env('GOOGLE_SPREADSHEET_ID'))
             ->sheet('PJK Registration form')

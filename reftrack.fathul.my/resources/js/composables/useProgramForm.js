@@ -6,6 +6,8 @@ export function useProgramForm() {
     phoneNumber: '',
     email: '',
     age: '',
+    registrationReasons: [],
+    registrationReasonsOther: '',
     pahangConnection: '',
     pahangConnectionOther: '',
   })
