@@ -108,10 +108,24 @@ export function useAppearance() {
             : 'https://cdn.fathul.my/assets/logo/chatgpt-logo-black.svg';
     });
 
+    const pythonLogoUrl = computed(() => {
+        if (typeof window === 'undefined') {
+            return 'https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg';
+        }
+        
+        const isDark = appearance.value === 'dark' || 
+                      (appearance.value === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        
+        return isDark 
+            ? 'https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg'
+            : 'https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg';
+    });
+
     return {
         appearance,
         updateAppearance,
         awsLogoUrl,
         chatGptLogoUrl,
+        pythonLogoUrl,
     };
 } 

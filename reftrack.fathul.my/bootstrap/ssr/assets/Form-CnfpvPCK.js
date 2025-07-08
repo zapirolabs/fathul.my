@@ -591,11 +591,19 @@ function useAppearance() {
     const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
     return isDark ? "https://cdn.fathul.my/assets/logo/chatgpt-logo-whiteondark.svg" : "https://cdn.fathul.my/assets/logo/chatgpt-logo-black.svg";
   });
+  const pythonLogoUrl = computed(() => {
+    if (typeof window === "undefined") {
+      return "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg";
+    }
+    const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return isDark ? "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg" : "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg";
+  });
   return {
     appearance,
     updateAppearance,
     awsLogoUrl,
-    chatGptLogoUrl
+    chatGptLogoUrl,
+    pythonLogoUrl
   };
 }
 const _sfc_main$1 = {
@@ -603,7 +611,7 @@ const _sfc_main$1 = {
   __ssrInlineRender: true,
   setup(__props) {
     const { form, handleRegistrationReasonChange, isReasonSelected, processing } = useProgramForm();
-    const { awsLogoUrl, chatGptLogoUrl } = useAppearance();
+    const { awsLogoUrl, chatGptLogoUrl, pythonLogoUrl } = useAppearance();
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
@@ -2153,14 +2161,19 @@ const _sfc_main$1 = {
                         }, null, _parent4, _scopeId3));
                         _push4(ssrRenderComponent(unref(_sfc_main$6), {
                           for: "python-basic",
-                          class: "text-sm"
+                          class: "text-sm flex items-center space-x-2"
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
-                              _push5(`Python Basic Programming`);
+                              _push5(`<img${ssrRenderAttr("src", unref(pythonLogoUrl))} alt="Python Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>Python Basic Programming</span>`);
                             } else {
                               return [
-                                createTextVNode("Python Basic Programming")
+                                createVNode("img", {
+                                  src: unref(pythonLogoUrl),
+                                  alt: "Python Logo",
+                                  class: "w-8 h-6"
+                                }, null, 8, ["src"]),
+                                createVNode("span", null, "Python Basic Programming")
                               ];
                             }
                           }),
@@ -2177,13 +2190,13 @@ const _sfc_main$1 = {
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
-                              _push5(`<img${ssrRenderAttr("src", unref(chatGptLogoUrl))} alt="ChatGPT Logo" class="w-6 h-6"${_scopeId4}><span${_scopeId4}>GenAI Masterclass</span>`);
+                              _push5(`<img${ssrRenderAttr("src", unref(chatGptLogoUrl))} alt="ChatGPT Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>GenAI Masterclass</span>`);
                             } else {
                               return [
                                 createVNode("img", {
                                   src: unref(chatGptLogoUrl),
                                   alt: "ChatGPT Logo",
-                                  class: "w-6 h-6"
+                                  class: "w-8 h-6"
                                 }, null, 8, ["src"]),
                                 createVNode("span", null, "GenAI Masterclass")
                               ];
@@ -2246,10 +2259,15 @@ const _sfc_main$1 = {
                             }),
                             createVNode(unref(_sfc_main$6), {
                               for: "python-basic",
-                              class: "text-sm"
+                              class: "text-sm flex items-center space-x-2"
                             }, {
                               default: withCtx(() => [
-                                createTextVNode("Python Basic Programming")
+                                createVNode("img", {
+                                  src: unref(pythonLogoUrl),
+                                  alt: "Python Logo",
+                                  class: "w-8 h-6"
+                                }, null, 8, ["src"]),
+                                createVNode("span", null, "Python Basic Programming")
                               ]),
                               _: 1
                             })
@@ -2267,7 +2285,7 @@ const _sfc_main$1 = {
                                 createVNode("img", {
                                   src: unref(chatGptLogoUrl),
                                   alt: "ChatGPT Logo",
-                                  class: "w-6 h-6"
+                                  class: "w-8 h-6"
                                 }, null, 8, ["src"]),
                                 createVNode("span", null, "GenAI Masterclass")
                               ]),
@@ -2343,10 +2361,15 @@ const _sfc_main$1 = {
                             }),
                             createVNode(unref(_sfc_main$6), {
                               for: "python-basic",
-                              class: "text-sm"
+                              class: "text-sm flex items-center space-x-2"
                             }, {
                               default: withCtx(() => [
-                                createTextVNode("Python Basic Programming")
+                                createVNode("img", {
+                                  src: unref(pythonLogoUrl),
+                                  alt: "Python Logo",
+                                  class: "w-8 h-6"
+                                }, null, 8, ["src"]),
+                                createVNode("span", null, "Python Basic Programming")
                               ]),
                               _: 1
                             })
@@ -2364,7 +2387,7 @@ const _sfc_main$1 = {
                                 createVNode("img", {
                                   src: unref(chatGptLogoUrl),
                                   alt: "ChatGPT Logo",
-                                  class: "w-6 h-6"
+                                  class: "w-8 h-6"
                                 }, null, 8, ["src"]),
                                 createVNode("span", null, "GenAI Masterclass")
                               ]),
@@ -2444,10 +2467,15 @@ const _sfc_main$1 = {
                           }),
                           createVNode(unref(_sfc_main$6), {
                             for: "python-basic",
-                            class: "text-sm"
+                            class: "text-sm flex items-center space-x-2"
                           }, {
                             default: withCtx(() => [
-                              createTextVNode("Python Basic Programming")
+                              createVNode("img", {
+                                src: unref(pythonLogoUrl),
+                                alt: "Python Logo",
+                                class: "w-8 h-6"
+                              }, null, 8, ["src"]),
+                              createVNode("span", null, "Python Basic Programming")
                             ]),
                             _: 1
                           })
@@ -2465,7 +2493,7 @@ const _sfc_main$1 = {
                               createVNode("img", {
                                 src: unref(chatGptLogoUrl),
                                 alt: "ChatGPT Logo",
-                                class: "w-6 h-6"
+                                class: "w-8 h-6"
                               }, null, 8, ["src"]),
                               createVNode("span", null, "GenAI Masterclass")
                             ]),
