@@ -555,7 +555,426 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(_sfc_main$c, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$b, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$a, null, null, _parent));
-      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
+      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div>`);
+      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`<div class="space-y-5"${_scopeId2}>`);
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                      if (_push4) {
+                        _push4(` Apakah kaitan anda dengan negeri Pahang? <span class="text-destructive"${_scopeId3}>*</span>`);
+                      } else {
+                        return [
+                          createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
+                          createVNode("span", { class: "text-destructive" }, "*")
+                        ];
+                      }
+                    }),
+                    _: 1
+                  }, _parent3, _scopeId2));
+                  _push3(ssrRenderComponent(unref(_sfc_main$9), {
+                    modelValue: unref(form).pahangConnection,
+                    "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
+                    class: "space-y-2"
+                  }, {
+                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                      if (_push4) {
+                        _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
+                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          id: "born-pahang",
+                          value: "born-pahang"
+                        }, null, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          for: "born-pahang",
+                          class: "text-sm"
+                        }, {
+                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                            if (_push5) {
+                              _push5(`Saya dilahirkan di Pahang`);
+                            } else {
+                              return [
+                                createTextVNode("Saya dilahirkan di Pahang")
+                              ];
+                            }
+                          }),
+                          _: 1
+                        }, _parent4, _scopeId3));
+                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          id: "living-pahang",
+                          value: "living-pahang"
+                        }, null, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          for: "living-pahang",
+                          class: "text-sm"
+                        }, {
+                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                            if (_push5) {
+                              _push5(`Saya sedang menetap di Pahang`);
+                            } else {
+                              return [
+                                createTextVNode("Saya sedang menetap di Pahang")
+                              ];
+                            }
+                          }),
+                          _: 1
+                        }, _parent4, _scopeId3));
+                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          id: "parents-pahang",
+                          value: "parents-pahang"
+                        }, null, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          for: "parents-pahang",
+                          class: "text-sm"
+                        }, {
+                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                            if (_push5) {
+                              _push5(`Kedua-dua ibu bapa saya berasal dari Pahang`);
+                            } else {
+                              return [
+                                createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
+                              ];
+                            }
+                          }),
+                          _: 1
+                        }, _parent4, _scopeId3));
+                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          id: "other-pahang",
+                          value: "other-pahang"
+                        }, null, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          for: "other-pahang",
+                          class: "text-sm"
+                        }, {
+                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                            if (_push5) {
+                              _push5(`Lain-lain:`);
+                            } else {
+                              return [
+                                createTextVNode("Lain-lain:")
+                              ];
+                            }
+                          }),
+                          _: 1
+                        }, _parent4, _scopeId3));
+                        if (unref(form).pahangConnection === "other-pahang") {
+                          _push4(ssrRenderComponent(unref(_sfc_main$5), {
+                            modelValue: unref(form).pahangConnectionOther,
+                            "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
+                            placeholder: "Sila nyatakan...",
+                            class: "max-w-md"
+                          }, null, _parent4, _scopeId3));
+                        } else {
+                          _push4(`<!---->`);
+                        }
+                        _push4(`</div>`);
+                        if (unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther) {
+                          _push4(`<div class="ml-6"${_scopeId3}><p class="text-sm text-destructive mt-1"${_scopeId3}>${ssrInterpolate(unref(form).errors.pahangConnectionOther)}</p></div>`);
+                        } else {
+                          _push4(`<!---->`);
+                        }
+                      } else {
+                        return [
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "born-pahang",
+                              value: "born-pahang"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "born-pahang",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Saya dilahirkan di Pahang")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "living-pahang",
+                              value: "living-pahang"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "living-pahang",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Saya sedang menetap di Pahang")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "parents-pahang",
+                              value: "parents-pahang"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "parents-pahang",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "other-pahang",
+                              value: "other-pahang"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "other-pahang",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Lain-lain:")
+                              ]),
+                              _: 1
+                            }),
+                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                              key: 0,
+                              modelValue: unref(form).pahangConnectionOther,
+                              "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
+                              placeholder: "Sila nyatakan...",
+                              class: "max-w-md"
+                            }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
+                          ]),
+                          unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther ? (openBlock(), createBlock("div", {
+                            key: 0,
+                            class: "ml-6"
+                          }, [
+                            createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(form).errors.pahangConnectionOther), 1)
+                          ])) : createCommentVNode("", true)
+                        ];
+                      }
+                    }),
+                    _: 1
+                  }, _parent3, _scopeId2));
+                  if (unref(form).errors.pahangConnection) {
+                    _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.pahangConnection)}</p>`);
+                  } else {
+                    _push3(`<!---->`);
+                  }
+                  _push3(`</div>`);
+                } else {
+                  return [
+                    createVNode("div", { class: "space-y-5" }, [
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                        default: withCtx(() => [
+                          createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
+                          createVNode("span", { class: "text-destructive" }, "*")
+                        ]),
+                        _: 1
+                      }),
+                      createVNode(unref(_sfc_main$9), {
+                        modelValue: unref(form).pahangConnection,
+                        "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
+                        class: "space-y-2"
+                      }, {
+                        default: withCtx(() => [
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "born-pahang",
+                              value: "born-pahang"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "born-pahang",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Saya dilahirkan di Pahang")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "living-pahang",
+                              value: "living-pahang"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "living-pahang",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Saya sedang menetap di Pahang")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "parents-pahang",
+                              value: "parents-pahang"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "parents-pahang",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "other-pahang",
+                              value: "other-pahang"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "other-pahang",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Lain-lain:")
+                              ]),
+                              _: 1
+                            }),
+                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                              key: 0,
+                              modelValue: unref(form).pahangConnectionOther,
+                              "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
+                              placeholder: "Sila nyatakan...",
+                              class: "max-w-md"
+                            }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
+                          ]),
+                          unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther ? (openBlock(), createBlock("div", {
+                            key: 0,
+                            class: "ml-6"
+                          }, [
+                            createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(form).errors.pahangConnectionOther), 1)
+                          ])) : createCommentVNode("", true)
+                        ]),
+                        _: 1
+                      }, 8, ["modelValue", "onUpdate:modelValue"]),
+                      unref(form).errors.pahangConnection ? (openBlock(), createBlock("p", {
+                        key: 0,
+                        class: "text-sm text-destructive"
+                      }, toDisplayString(unref(form).errors.pahangConnection), 1)) : createCommentVNode("", true)
+                    ])
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+          } else {
+            return [
+              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+                default: withCtx(() => [
+                  createVNode("div", { class: "space-y-5" }, [
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                      default: withCtx(() => [
+                        createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
+                        createVNode("span", { class: "text-destructive" }, "*")
+                      ]),
+                      _: 1
+                    }),
+                    createVNode(unref(_sfc_main$9), {
+                      modelValue: unref(form).pahangConnection,
+                      "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
+                      class: "space-y-2"
+                    }, {
+                      default: withCtx(() => [
+                        createVNode("div", { class: "flex items-center space-x-2" }, [
+                          createVNode(unref(_sfc_main$8), {
+                            id: "born-pahang",
+                            value: "born-pahang"
+                          }),
+                          createVNode(unref(_sfc_main$6), {
+                            for: "born-pahang",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx(() => [
+                              createTextVNode("Saya dilahirkan di Pahang")
+                            ]),
+                            _: 1
+                          })
+                        ]),
+                        createVNode("div", { class: "flex items-center space-x-2" }, [
+                          createVNode(unref(_sfc_main$8), {
+                            id: "living-pahang",
+                            value: "living-pahang"
+                          }),
+                          createVNode(unref(_sfc_main$6), {
+                            for: "living-pahang",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx(() => [
+                              createTextVNode("Saya sedang menetap di Pahang")
+                            ]),
+                            _: 1
+                          })
+                        ]),
+                        createVNode("div", { class: "flex items-center space-x-2" }, [
+                          createVNode(unref(_sfc_main$8), {
+                            id: "parents-pahang",
+                            value: "parents-pahang"
+                          }),
+                          createVNode(unref(_sfc_main$6), {
+                            for: "parents-pahang",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx(() => [
+                              createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
+                            ]),
+                            _: 1
+                          })
+                        ]),
+                        createVNode("div", { class: "flex items-center space-x-2" }, [
+                          createVNode(unref(_sfc_main$8), {
+                            id: "other-pahang",
+                            value: "other-pahang"
+                          }),
+                          createVNode(unref(_sfc_main$6), {
+                            for: "other-pahang",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx(() => [
+                              createTextVNode("Lain-lain:")
+                            ]),
+                            _: 1
+                          }),
+                          unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                            key: 0,
+                            modelValue: unref(form).pahangConnectionOther,
+                            "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
+                            placeholder: "Sila nyatakan...",
+                            class: "max-w-md"
+                          }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
+                        ]),
+                        unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther ? (openBlock(), createBlock("div", {
+                          key: 0,
+                          class: "ml-6"
+                        }, [
+                          createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(form).errors.pahangConnectionOther), 1)
+                        ])) : createCommentVNode("", true)
+                      ]),
+                      _: 1
+                    }, 8, ["modelValue", "onUpdate:modelValue"]),
+                    unref(form).errors.pahangConnection ? (openBlock(), createBlock("p", {
+                      key: 0,
+                      class: "text-sm text-destructive"
+                    }, toDisplayString(unref(form).errors.pahangConnection), 1)) : createCommentVNode("", true)
+                  ])
+                ]),
+                _: 1
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<form class="space-y-6"><div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -1002,10 +1421,10 @@ const _sfc_main$1 = {
                   _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(` Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? <span class="text-destructive"${_scopeId3}>*</span>`);
+                        _push4(` Adakah anda bersedia untuk komited dengan latihan selama 1 bulan ini? <span class="text-destructive"${_scopeId3}>*</span>`);
                       } else {
                         return [
-                          createTextVNode(" Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? "),
+                          createTextVNode(" Adakah anda bersedia untuk komited dengan latihan selama 1 bulan ini? "),
                           createVNode("span", { class: "text-destructive" }, "*")
                         ];
                       }
@@ -1030,10 +1449,10 @@ const _sfc_main$1 = {
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
-                              _push5(`Ya, saya komitmen sepenuhnya`);
+                              _push5(`Ya, saya komited sepenuhnya`);
                             } else {
                               return [
-                                createTextVNode("Ya, saya komitmen sepenuhnya")
+                                createTextVNode("Ya, saya komited sepenuhnya")
                               ];
                             }
                           }),
@@ -1050,10 +1469,10 @@ const _sfc_main$1 = {
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
-                              _push5(`Saya memerlukan maklumat lanjut sebelum membuat keputusan`);
+                              _push5(`Saya memerlukan lebih banyak maklumat sebelum membuat keputusan`);
                             } else {
                               return [
-                                createTextVNode("Saya memerlukan maklumat lanjut sebelum membuat keputusan")
+                                createTextVNode("Saya memerlukan lebih banyak maklumat sebelum membuat keputusan")
                               ];
                             }
                           }),
@@ -1127,7 +1546,7 @@ const _sfc_main$1 = {
                               class: "text-sm"
                             }, {
                               default: withCtx(() => [
-                                createTextVNode("Ya, saya komitmen sepenuhnya")
+                                createTextVNode("Ya, saya komited sepenuhnya")
                               ]),
                               _: 1
                             })
@@ -1142,7 +1561,7 @@ const _sfc_main$1 = {
                               class: "text-sm"
                             }, {
                               default: withCtx(() => [
-                                createTextVNode("Saya memerlukan maklumat lanjut sebelum membuat keputusan")
+                                createTextVNode("Saya memerlukan lebih banyak maklumat sebelum membuat keputusan")
                               ]),
                               _: 1
                             })
@@ -1206,7 +1625,7 @@ const _sfc_main$1 = {
                     createVNode("div", { class: "space-y-5" }, [
                       createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
-                          createTextVNode(" Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? "),
+                          createTextVNode(" Adakah anda bersedia untuk komited dengan latihan selama 1 bulan ini? "),
                           createVNode("span", { class: "text-destructive" }, "*")
                         ]),
                         _: 1
@@ -1227,7 +1646,7 @@ const _sfc_main$1 = {
                               class: "text-sm"
                             }, {
                               default: withCtx(() => [
-                                createTextVNode("Ya, saya komitmen sepenuhnya")
+                                createTextVNode("Ya, saya komited sepenuhnya")
                               ]),
                               _: 1
                             })
@@ -1242,7 +1661,7 @@ const _sfc_main$1 = {
                               class: "text-sm"
                             }, {
                               default: withCtx(() => [
-                                createTextVNode("Saya memerlukan maklumat lanjut sebelum membuat keputusan")
+                                createTextVNode("Saya memerlukan lebih banyak maklumat sebelum membuat keputusan")
                               ]),
                               _: 1
                             })
@@ -1310,7 +1729,7 @@ const _sfc_main$1 = {
                   createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
-                        createTextVNode(" Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? "),
+                        createTextVNode(" Adakah anda bersedia untuk komited dengan latihan selama 1 bulan ini? "),
                         createVNode("span", { class: "text-destructive" }, "*")
                       ]),
                       _: 1
@@ -1331,7 +1750,7 @@ const _sfc_main$1 = {
                             class: "text-sm"
                           }, {
                             default: withCtx(() => [
-                              createTextVNode("Ya, saya komitmen sepenuhnya")
+                              createTextVNode("Ya, saya komited sepenuhnya")
                             ]),
                             _: 1
                           })
@@ -1346,7 +1765,7 @@ const _sfc_main$1 = {
                             class: "text-sm"
                           }, {
                             default: withCtx(() => [
-                              createTextVNode("Saya memerlukan maklumat lanjut sebelum membuat keputusan")
+                              createTextVNode("Saya memerlukan lebih banyak maklumat sebelum membuat keputusan")
                             ]),
                             _: 1
                           })
@@ -1765,424 +2184,6 @@ const _sfc_main$1 = {
                       key: 0,
                       class: "text-sm text-destructive"
                     }, toDisplayString(unref(form).errors.programInterest), 1)) : createCommentVNode("", true)
-                  ])
-                ]),
-                _: 1
-              })
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<div class="space-y-5"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
-                      if (_push4) {
-                        _push4(` Apakah kaitan anda dengan negeri Pahang? <span class="text-destructive"${_scopeId3}>*</span>`);
-                      } else {
-                        return [
-                          createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ];
-                      }
-                    }),
-                    _: 1
-                  }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$9), {
-                    modelValue: unref(form).pahangConnection,
-                    "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
-                    class: "space-y-2"
-                  }, {
-                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
-                      if (_push4) {
-                        _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
-                          id: "born-pahang",
-                          value: "born-pahang"
-                        }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
-                          for: "born-pahang",
-                          class: "text-sm"
-                        }, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(`Saya dilahirkan di Pahang`);
-                            } else {
-                              return [
-                                createTextVNode("Saya dilahirkan di Pahang")
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
-                          id: "living-pahang",
-                          value: "living-pahang"
-                        }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
-                          for: "living-pahang",
-                          class: "text-sm"
-                        }, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(`Saya sedang menetap di Pahang`);
-                            } else {
-                              return [
-                                createTextVNode("Saya sedang menetap di Pahang")
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
-                          id: "parents-pahang",
-                          value: "parents-pahang"
-                        }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
-                          for: "parents-pahang",
-                          class: "text-sm"
-                        }, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(`Kedua-dua ibu bapa saya berasal dari Pahang`);
-                            } else {
-                              return [
-                                createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
-                          id: "other-pahang",
-                          value: "other-pahang"
-                        }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
-                          for: "other-pahang",
-                          class: "text-sm"
-                        }, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(`Lain-lain:`);
-                            } else {
-                              return [
-                                createTextVNode("Lain-lain:")
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                        if (unref(form).pahangConnection === "other-pahang") {
-                          _push4(ssrRenderComponent(unref(_sfc_main$5), {
-                            modelValue: unref(form).pahangConnectionOther,
-                            "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
-                            placeholder: "Sila nyatakan...",
-                            class: "max-w-md"
-                          }, null, _parent4, _scopeId3));
-                        } else {
-                          _push4(`<!---->`);
-                        }
-                        _push4(`</div>`);
-                        if (unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther) {
-                          _push4(`<div class="ml-6"${_scopeId3}><p class="text-sm text-destructive mt-1"${_scopeId3}>${ssrInterpolate(unref(form).errors.pahangConnectionOther)}</p></div>`);
-                        } else {
-                          _push4(`<!---->`);
-                        }
-                      } else {
-                        return [
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
-                              id: "born-pahang",
-                              value: "born-pahang"
-                            }),
-                            createVNode(unref(_sfc_main$6), {
-                              for: "born-pahang",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Saya dilahirkan di Pahang")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
-                              id: "living-pahang",
-                              value: "living-pahang"
-                            }),
-                            createVNode(unref(_sfc_main$6), {
-                              for: "living-pahang",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Saya sedang menetap di Pahang")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
-                              id: "parents-pahang",
-                              value: "parents-pahang"
-                            }),
-                            createVNode(unref(_sfc_main$6), {
-                              for: "parents-pahang",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
-                              id: "other-pahang",
-                              value: "other-pahang"
-                            }),
-                            createVNode(unref(_sfc_main$6), {
-                              for: "other-pahang",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Lain-lain:")
-                              ]),
-                              _: 1
-                            }),
-                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
-                              key: 0,
-                              modelValue: unref(form).pahangConnectionOther,
-                              "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
-                              placeholder: "Sila nyatakan...",
-                              class: "max-w-md"
-                            }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
-                          ]),
-                          unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther ? (openBlock(), createBlock("div", {
-                            key: 0,
-                            class: "ml-6"
-                          }, [
-                            createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(form).errors.pahangConnectionOther), 1)
-                          ])) : createCommentVNode("", true)
-                        ];
-                      }
-                    }),
-                    _: 1
-                  }, _parent3, _scopeId2));
-                  if (unref(form).errors.pahangConnection) {
-                    _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.pahangConnection)}</p>`);
-                  } else {
-                    _push3(`<!---->`);
-                  }
-                  _push3(`</div>`);
-                } else {
-                  return [
-                    createVNode("div", { class: "space-y-5" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                        default: withCtx(() => [
-                          createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ]),
-                        _: 1
-                      }),
-                      createVNode(unref(_sfc_main$9), {
-                        modelValue: unref(form).pahangConnection,
-                        "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
-                        class: "space-y-2"
-                      }, {
-                        default: withCtx(() => [
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
-                              id: "born-pahang",
-                              value: "born-pahang"
-                            }),
-                            createVNode(unref(_sfc_main$6), {
-                              for: "born-pahang",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Saya dilahirkan di Pahang")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
-                              id: "living-pahang",
-                              value: "living-pahang"
-                            }),
-                            createVNode(unref(_sfc_main$6), {
-                              for: "living-pahang",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Saya sedang menetap di Pahang")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
-                              id: "parents-pahang",
-                              value: "parents-pahang"
-                            }),
-                            createVNode(unref(_sfc_main$6), {
-                              for: "parents-pahang",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
-                              id: "other-pahang",
-                              value: "other-pahang"
-                            }),
-                            createVNode(unref(_sfc_main$6), {
-                              for: "other-pahang",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Lain-lain:")
-                              ]),
-                              _: 1
-                            }),
-                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
-                              key: 0,
-                              modelValue: unref(form).pahangConnectionOther,
-                              "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
-                              placeholder: "Sila nyatakan...",
-                              class: "max-w-md"
-                            }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
-                          ]),
-                          unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther ? (openBlock(), createBlock("div", {
-                            key: 0,
-                            class: "ml-6"
-                          }, [
-                            createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(form).errors.pahangConnectionOther), 1)
-                          ])) : createCommentVNode("", true)
-                        ]),
-                        _: 1
-                      }, 8, ["modelValue", "onUpdate:modelValue"]),
-                      unref(form).errors.pahangConnection ? (openBlock(), createBlock("p", {
-                        key: 0,
-                        class: "text-sm text-destructive"
-                      }, toDisplayString(unref(form).errors.pahangConnection), 1)) : createCommentVNode("", true)
-                    ])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-          } else {
-            return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
-                default: withCtx(() => [
-                  createVNode("div", { class: "space-y-5" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                      default: withCtx(() => [
-                        createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
-                        createVNode("span", { class: "text-destructive" }, "*")
-                      ]),
-                      _: 1
-                    }),
-                    createVNode(unref(_sfc_main$9), {
-                      modelValue: unref(form).pahangConnection,
-                      "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
-                      class: "space-y-2"
-                    }, {
-                      default: withCtx(() => [
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
-                            id: "born-pahang",
-                            value: "born-pahang"
-                          }),
-                          createVNode(unref(_sfc_main$6), {
-                            for: "born-pahang",
-                            class: "text-sm"
-                          }, {
-                            default: withCtx(() => [
-                              createTextVNode("Saya dilahirkan di Pahang")
-                            ]),
-                            _: 1
-                          })
-                        ]),
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
-                            id: "living-pahang",
-                            value: "living-pahang"
-                          }),
-                          createVNode(unref(_sfc_main$6), {
-                            for: "living-pahang",
-                            class: "text-sm"
-                          }, {
-                            default: withCtx(() => [
-                              createTextVNode("Saya sedang menetap di Pahang")
-                            ]),
-                            _: 1
-                          })
-                        ]),
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
-                            id: "parents-pahang",
-                            value: "parents-pahang"
-                          }),
-                          createVNode(unref(_sfc_main$6), {
-                            for: "parents-pahang",
-                            class: "text-sm"
-                          }, {
-                            default: withCtx(() => [
-                              createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
-                            ]),
-                            _: 1
-                          })
-                        ]),
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
-                            id: "other-pahang",
-                            value: "other-pahang"
-                          }),
-                          createVNode(unref(_sfc_main$6), {
-                            for: "other-pahang",
-                            class: "text-sm"
-                          }, {
-                            default: withCtx(() => [
-                              createTextVNode("Lain-lain:")
-                            ]),
-                            _: 1
-                          }),
-                          unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
-                            key: 0,
-                            modelValue: unref(form).pahangConnectionOther,
-                            "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
-                            placeholder: "Sila nyatakan...",
-                            class: "max-w-md"
-                          }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
-                        ]),
-                        unref(form).pahangConnection === "other-pahang" && unref(form).errors.pahangConnectionOther ? (openBlock(), createBlock("div", {
-                          key: 0,
-                          class: "ml-6"
-                        }, [
-                          createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(form).errors.pahangConnectionOther), 1)
-                        ])) : createCommentVNode("", true)
-                      ]),
-                      _: 1
-                    }, 8, ["modelValue", "onUpdate:modelValue"]),
-                    unref(form).errors.pahangConnection ? (openBlock(), createBlock("p", {
-                      key: 0,
-                      class: "text-sm text-destructive"
-                    }, toDisplayString(unref(form).errors.pahangConnection), 1)) : createCommentVNode("", true)
                   ])
                 ]),
                 _: 1

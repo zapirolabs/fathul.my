@@ -18,6 +18,54 @@
           </p>
         </div>
 
+         <!-- Pahang Connection Card -->
+         <Card>
+            <CardContent class="p-6">
+              <div class="space-y-5">
+                <CardTitle class="text-card-foreground">
+                  Apakah kaitan anda dengan negeri Pahang? 
+                  <span class="text-destructive">*</span>
+                </CardTitle>
+                <RadioGroup 
+                  v-model="form.pahangConnection"
+                  class="space-y-2"
+                >
+                  <div class="flex items-center space-x-2">
+                    <RadioGroupItem id="born-pahang" value="born-pahang" />
+                    <Label for="born-pahang" class="text-sm">Saya dilahirkan di Pahang</Label>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <RadioGroupItem id="living-pahang" value="living-pahang" />
+                    <Label for="living-pahang" class="text-sm">Saya sedang menetap di Pahang</Label>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <RadioGroupItem id="parents-pahang" value="parents-pahang" />
+                    <Label for="parents-pahang" class="text-sm">Kedua-dua ibu bapa saya berasal dari Pahang</Label>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <RadioGroupItem id="other-pahang" value="other-pahang" />
+                    <Label for="other-pahang" class="text-sm">Lain-lain:</Label>
+                    <Input 
+                      v-if="form.pahangConnection === 'other-pahang'"
+                      v-model="form.pahangConnectionOther"
+                      placeholder="Sila nyatakan..."
+                      class="max-w-md"
+                    />
+                  </div>
+                  <div v-if="form.pahangConnection === 'other-pahang' && form.errors.pahangConnectionOther" class="ml-6">
+                    <p class="text-sm text-destructive mt-1">
+                      {{ form.errors.pahangConnectionOther }}
+                    </p>
+                  </div>
+                </RadioGroup>
+                
+                <p v-if="form.errors.pahangConnection" class="text-sm text-destructive">
+                  {{ form.errors.pahangConnection }}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
         <form @submit.prevent="submit" class="space-y-6">
           <!-- Full Name -->
           <div class="space-y-3">
@@ -155,7 +203,7 @@
             <CardContent class="p-6">
               <div class="space-y-5">
                 <CardTitle class="text-card-foreground">
-                  Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini?
+                  Adakah anda bersedia untuk komited dengan latihan selama 1 bulan ini?
                   <span class="text-destructive">*</span>
                 </CardTitle>
                 <RadioGroup 
@@ -164,11 +212,11 @@
                 >
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="fully-committed" value="fully-committed" />
-                    <Label for="fully-committed" class="text-sm">Ya, saya komitmen sepenuhnya</Label>
+                    <Label for="fully-committed" class="text-sm">Ya, saya komited sepenuhnya</Label>
                   </div>
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="need-info" value="need-info" />
-                    <Label for="need-info" class="text-sm">Saya memerlukan maklumat lanjut sebelum membuat keputusan</Label>
+                    <Label for="need-info" class="text-sm">Saya memerlukan lebih banyak maklumat sebelum membuat keputusan</Label>
                   </div>
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="not-sure" value="not-sure" />
@@ -230,54 +278,6 @@
                 
                 <p v-if="form.errors.programInterest" class="text-sm text-destructive">
                   {{ form.errors.programInterest }}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <!-- Pahang Connection Card -->
-          <Card>
-            <CardContent class="p-6">
-              <div class="space-y-5">
-                <CardTitle class="text-card-foreground">
-                  Apakah kaitan anda dengan negeri Pahang? 
-                  <span class="text-destructive">*</span>
-                </CardTitle>
-                <RadioGroup 
-                  v-model="form.pahangConnection"
-                  class="space-y-2"
-                >
-                  <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="born-pahang" value="born-pahang" />
-                    <Label for="born-pahang" class="text-sm">Saya dilahirkan di Pahang</Label>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="living-pahang" value="living-pahang" />
-                    <Label for="living-pahang" class="text-sm">Saya sedang menetap di Pahang</Label>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="parents-pahang" value="parents-pahang" />
-                    <Label for="parents-pahang" class="text-sm">Kedua-dua ibu bapa saya berasal dari Pahang</Label>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="other-pahang" value="other-pahang" />
-                    <Label for="other-pahang" class="text-sm">Lain-lain:</Label>
-                    <Input 
-                      v-if="form.pahangConnection === 'other-pahang'"
-                      v-model="form.pahangConnectionOther"
-                      placeholder="Sila nyatakan..."
-                      class="max-w-md"
-                    />
-                  </div>
-                  <div v-if="form.pahangConnection === 'other-pahang' && form.errors.pahangConnectionOther" class="ml-6">
-                    <p class="text-sm text-destructive mt-1">
-                      {{ form.errors.pahangConnectionOther }}
-                    </p>
-                  </div>
-                </RadioGroup>
-                
-                <p v-if="form.errors.pahangConnection" class="text-sm text-destructive">
-                  {{ form.errors.pahangConnection }}
                 </p>
               </div>
             </CardContent>
