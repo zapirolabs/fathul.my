@@ -29,7 +29,7 @@
         </h1>
 
         <!-- Collaboration Description -->
-        <div class="animate-fade-in-up animation-delay-400">
+        <!-- <div class="animate-fade-in-up animation-delay-400">
           <p class="text-sm sm:text-base lg:text-lg text-white/90 flex items-center justify-center whitespace-nowrap">
             <span>A collaboration and education product of</span>
             <img 
@@ -38,7 +38,7 @@
               class="h-4 sm:h-3 lg:h-4 ml-2"
             />
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
 

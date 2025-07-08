@@ -24,7 +24,7 @@ _sfc_main$k.setup = (props, ctx) => {
 };
 const _sfc_main$j = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white" }, _attrs))} data-v-45d9abac><div class="absolute inset-0 opacity-10" data-v-45d9abac><div class="absolute inset-0 bg-dot-pattern animate-pulse" data-v-45d9abac></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" data-v-45d9abac><div class="text-center" data-v-45d9abac><div class="mb-8 animate-fade-in-up" data-v-45d9abac><img src="https://cdn.fathul.my/assets/logo/ypadvancedskills-logo-whiteondark.svg" alt="YPAdvancedSkills Logo" class="h-16 mx-auto" data-v-45d9abac></div><h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-10 animate-fade-in-up animation-delay-200" data-v-45d9abac><span class="block text-white" data-v-45d9abac>Program</span><span class="block bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x" data-v-45d9abac> Jaminan Kerjaya </span><span class="block text-white" data-v-45d9abac>2025</span></h1><div class="animate-fade-in-up animation-delay-400" data-v-45d9abac><p class="text-sm sm:text-base lg:text-lg text-white/90 flex items-center justify-center whitespace-nowrap" data-v-45d9abac><span data-v-45d9abac>A collaboration and education product of</span><img src="https://cdn.fathul.my/assets/logo/nematix-logo-fullcolor.svg" alt="Nematix Logo" class="h-4 sm:h-3 lg:h-4 ml-2" data-v-45d9abac></p></div></div></div></div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white" }, _attrs))} data-v-c7164035><div class="absolute inset-0 opacity-10" data-v-c7164035><div class="absolute inset-0 bg-dot-pattern animate-pulse" data-v-c7164035></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" data-v-c7164035><div class="text-center" data-v-c7164035><div class="mb-8 animate-fade-in-up" data-v-c7164035><img src="https://cdn.fathul.my/assets/logo/ypadvancedskills-logo-whiteondark.svg" alt="YPAdvancedSkills Logo" class="h-16 mx-auto" data-v-c7164035></div><h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-10 animate-fade-in-up animation-delay-200" data-v-c7164035><span class="block text-white" data-v-c7164035>Program</span><span class="block bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x" data-v-c7164035> Jaminan Kerjaya </span><span class="block text-white" data-v-c7164035>2025</span></h1></div></div></div>`);
 }
 const _sfc_setup$j = _sfc_main$j.setup;
 _sfc_main$j.setup = (props, ctx) => {
@@ -32,7 +32,7 @@ _sfc_main$j.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramHeader.vue");
   return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
-const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-45d9abac"]]);
+const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-c7164035"]]);
 const _sfc_main$i = {
   __name: "KriteriaPemohon",
   __ssrInlineRender: true,
