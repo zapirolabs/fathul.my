@@ -470,6 +470,104 @@
             </CardContent>
           </Card>
 
+          <!-- AWS Foundational Certificate Program Details Card (Dynamic) -->
+          <Card v-if="form.programInterest === 'aws-foundational'">
+            <CardContent class="p-6">
+              <div class="space-y-5">
+                <CardTitle class="text-card-foreground flex items-center space-x-2">
+                  <img :src="awsLogoUrl" alt="AWS Logo" class="w-8 h-6" />
+                  <span>AWS Foundational Certificate</span>
+                </CardTitle>
+
+                <Accordion type="single" collapsible class="w-full">
+                  <AccordionItem value="description">
+                    <AccordionTrigger class="text-left text-sm">
+                      Pengenalan Program
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <CardDescription class="text-muted-foreground">
+                        Program 4 minggu yang mempersiapkan anda dengan kemahiran cloud computing, 
+                        keselamatan, automasi dan DevOps berasaskan AWS – platform awan nombor satu dunia. 
+                        Dapatkan pensijilan AWS dan bersedia untuk kerjaya teknologi awan yang berdaya saing 
+                        tinggi.
+                      </CardDescription>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="what-you-get">
+                    <AccordionTrigger class="text-left text-sm">
+                      Apa Yang Anda Akan Perolehi
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div class="space-y-3 text-muted-foreground">
+                        <div>
+                          <strong>Asas & Lanjutan AWS:</strong> Pengenalan mendalam AWS, seni bina awan, keselamatan 
+                          dan servis teras.
+                        </div>
+                        <div>
+                          <strong>Kemahiran Hands-On AWS:</strong> Sediakan dan urus infrastruktur awan, laksana 
+                          amalan keselamatan terbaik, serta penggunaan DevOps.
+                        </div>
+                        <div>
+                          <strong>Automasi & DevOps:</strong>  Infrastructure as Code, CI/CD pipeline & automasi cloud.
+                        </div>
+                        <div>
+                          <strong>Persediaan Pensijilan:</strong> Latihan projek sebenar dan strategi peperiksaan AWS 
+                          Cloud Practitioner & Solutions Architect.
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="course-outline">
+                    <AccordionTrigger class="text-left text-sm">
+                      Rangka Kursus (4 Minggu)
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div class="space-y-3 text-muted-foreground">
+                        <div>
+                          <strong>Minggu 1:</strong> Pengenalan AWS, Asas Cloud & Servis Teras
+                        </div>
+                        <div>
+                          <strong>Minggu 2:</strong> Seni Bina AWS, Amalan Keselamatan & Pengurusan Identiti
+                        </div>
+                        <div>
+                          <strong>Minggu 3:</strong> Automasi, DevOps & Deployment Cloud Sebenar
+                        </div>
+                        <div>
+                          <strong>Minggu 4:</strong> Projek Capstone Cloud, Latihan Persijilan & Persediaan Kerjaya
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <div class="space-y-5">
+                  <CardTitle class="text-card-foreground">
+                    Intake Batch
+                    <span class="text-destructive">*</span>
+                  </CardTitle>
+                  <RadioGroup v-model="form.intakeBatch" class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="aws-batch-1" value="batch-1" />
+                      <Label for="aws-batch-1" class="text-sm">Batch 1</Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="aws-batch-2" value="batch-2" />
+                      <Label for="aws-batch-2" class="text-sm">Batch 2</Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="aws-batch-3" value="batch-3" />
+                      <Label for="aws-batch-3" class="text-sm">Batch 3</Label>
+                    </div>
+                  </RadioGroup>
+
+                  <p v-if="form.errors.intakeBatch" class="text-sm text-destructive">
+                    {{ form.errors.intakeBatch }}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <!-- Submit Button Card -->
           <Card>
             <CardContent class="p-6">

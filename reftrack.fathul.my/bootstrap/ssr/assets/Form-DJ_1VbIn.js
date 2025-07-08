@@ -4535,6 +4535,882 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
+      if (unref(form).programInterest === "aws-foundational") {
+        _push(ssrRenderComponent(unref(_sfc_main$9), null, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(ssrRenderComponent(unref(_sfc_main$8), { class: "p-6" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(`<div class="space-y-5"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$6), { class: "text-card-foreground flex items-center space-x-2" }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<img${ssrRenderAttr("src", unref(awsLogoUrl))} alt="AWS Logo" class="w-8 h-6"${_scopeId3}><span${_scopeId3}>AWS Foundational Certificate</span>`);
+                        } else {
+                          return [
+                            createVNode("img", {
+                              src: unref(awsLogoUrl),
+                              alt: "AWS Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "AWS Foundational Certificate")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$5), {
+                      type: "single",
+                      collapsible: "",
+                      class: "w-full"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(ssrRenderComponent(unref(_sfc_main$3), { value: "description" }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(ssrRenderComponent(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(` Pengenalan Program `);
+                                    } else {
+                                      return [
+                                        createTextVNode(" Pengenalan Program ")
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                                _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(ssrRenderComponent(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                        default: withCtx((_6, _push7, _parent7, _scopeId6) => {
+                                          if (_push7) {
+                                            _push7(` Program 4 minggu yang mempersiapkan anda dengan kemahiran cloud computing, keselamatan, automasi dan DevOps berasaskan AWS – platform awan nombor satu dunia. Dapatkan pensijilan AWS dan bersedia untuk kerjaya teknologi awan yang berdaya saing tinggi. `);
+                                          } else {
+                                            return [
+                                              createTextVNode(" Program 4 minggu yang mempersiapkan anda dengan kemahiran cloud computing, keselamatan, automasi dan DevOps berasaskan AWS – platform awan nombor satu dunia. Dapatkan pensijilan AWS dan bersedia untuk kerjaya teknologi awan yang berdaya saing tinggi. ")
+                                            ];
+                                          }
+                                        }),
+                                        _: 1
+                                      }, _parent6, _scopeId5));
+                                    } else {
+                                      return [
+                                        createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                          default: withCtx(() => [
+                                            createTextVNode(" Program 4 minggu yang mempersiapkan anda dengan kemahiran cloud computing, keselamatan, automasi dan DevOps berasaskan AWS – platform awan nombor satu dunia. Dapatkan pensijilan AWS dan bersedia untuk kerjaya teknologi awan yang berdaya saing tinggi. ")
+                                          ]),
+                                          _: 1
+                                        })
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                              } else {
+                                return [
+                                  createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Pengenalan Program ")
+                                    ]),
+                                    _: 1
+                                  }),
+                                  createVNode(unref(_sfc_main$4), null, {
+                                    default: withCtx(() => [
+                                      createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                        default: withCtx(() => [
+                                          createTextVNode(" Program 4 minggu yang mempersiapkan anda dengan kemahiran cloud computing, keselamatan, automasi dan DevOps berasaskan AWS – platform awan nombor satu dunia. Dapatkan pensijilan AWS dan bersedia untuk kerjaya teknologi awan yang berdaya saing tinggi. ")
+                                        ]),
+                                        _: 1
+                                      })
+                                    ]),
+                                    _: 1
+                                  })
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$3), { value: "what-you-get" }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(ssrRenderComponent(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(` Apa Yang Anda Akan Perolehi `);
+                                    } else {
+                                      return [
+                                        createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                                _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Asas &amp; Lanjutan AWS:</strong> Pengenalan mendalam AWS, seni bina awan, keselamatan dan servis teras. </div><div${_scopeId5}><strong${_scopeId5}>Kemahiran Hands-On AWS:</strong> Sediakan dan urus infrastruktur awan, laksana amalan keselamatan terbaik, serta penggunaan DevOps. </div><div${_scopeId5}><strong${_scopeId5}>Automasi &amp; DevOps:</strong> Infrastructure as Code, CI/CD pipeline &amp; automasi cloud. </div><div${_scopeId5}><strong${_scopeId5}>Persediaan Pensijilan:</strong> Latihan projek sebenar dan strategi peperiksaan AWS Cloud Practitioner &amp; Solutions Architect. </div></div>`);
+                                    } else {
+                                      return [
+                                        createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Asas & Lanjutan AWS:"),
+                                            createTextVNode(" Pengenalan mendalam AWS, seni bina awan, keselamatan dan servis teras. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Kemahiran Hands-On AWS:"),
+                                            createTextVNode(" Sediakan dan urus infrastruktur awan, laksana amalan keselamatan terbaik, serta penggunaan DevOps. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Automasi & DevOps:"),
+                                            createTextVNode(" Infrastructure as Code, CI/CD pipeline & automasi cloud. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Persediaan Pensijilan:"),
+                                            createTextVNode(" Latihan projek sebenar dan strategi peperiksaan AWS Cloud Practitioner & Solutions Architect. ")
+                                          ])
+                                        ])
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                              } else {
+                                return [
+                                  createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                    ]),
+                                    _: 1
+                                  }),
+                                  createVNode(unref(_sfc_main$4), null, {
+                                    default: withCtx(() => [
+                                      createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Asas & Lanjutan AWS:"),
+                                          createTextVNode(" Pengenalan mendalam AWS, seni bina awan, keselamatan dan servis teras. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Kemahiran Hands-On AWS:"),
+                                          createTextVNode(" Sediakan dan urus infrastruktur awan, laksana amalan keselamatan terbaik, serta penggunaan DevOps. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Automasi & DevOps:"),
+                                          createTextVNode(" Infrastructure as Code, CI/CD pipeline & automasi cloud. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Persediaan Pensijilan:"),
+                                          createTextVNode(" Latihan projek sebenar dan strategi peperiksaan AWS Cloud Practitioner & Solutions Architect. ")
+                                        ])
+                                      ])
+                                    ]),
+                                    _: 1
+                                  })
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$3), { value: "course-outline" }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(ssrRenderComponent(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(` Rangka Kursus (4 Minggu) `);
+                                    } else {
+                                      return [
+                                        createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                                _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Minggu 1:</strong> Pengenalan AWS, Asas Cloud &amp; Servis Teras </div><div${_scopeId5}><strong${_scopeId5}>Minggu 2:</strong> Seni Bina AWS, Amalan Keselamatan &amp; Pengurusan Identiti </div><div${_scopeId5}><strong${_scopeId5}>Minggu 3:</strong> Automasi, DevOps &amp; Deployment Cloud Sebenar </div><div${_scopeId5}><strong${_scopeId5}>Minggu 4:</strong> Projek Capstone Cloud, Latihan Persijilan &amp; Persediaan Kerjaya </div></div>`);
+                                    } else {
+                                      return [
+                                        createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Minggu 1:"),
+                                            createTextVNode(" Pengenalan AWS, Asas Cloud & Servis Teras ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Minggu 2:"),
+                                            createTextVNode(" Seni Bina AWS, Amalan Keselamatan & Pengurusan Identiti ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Minggu 3:"),
+                                            createTextVNode(" Automasi, DevOps & Deployment Cloud Sebenar ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Minggu 4:"),
+                                            createTextVNode(" Projek Capstone Cloud, Latihan Persijilan & Persediaan Kerjaya ")
+                                          ])
+                                        ])
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                              } else {
+                                return [
+                                  createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                    ]),
+                                    _: 1
+                                  }),
+                                  createVNode(unref(_sfc_main$4), null, {
+                                    default: withCtx(() => [
+                                      createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Minggu 1:"),
+                                          createTextVNode(" Pengenalan AWS, Asas Cloud & Servis Teras ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Minggu 2:"),
+                                          createTextVNode(" Seni Bina AWS, Amalan Keselamatan & Pengurusan Identiti ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Minggu 3:"),
+                                          createTextVNode(" Automasi, DevOps & Deployment Cloud Sebenar ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Minggu 4:"),
+                                          createTextVNode(" Projek Capstone Cloud, Latihan Persijilan & Persediaan Kerjaya ")
+                                        ])
+                                      ])
+                                    ]),
+                                    _: 1
+                                  })
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                        } else {
+                          return [
+                            createVNode(unref(_sfc_main$3), { value: "description" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Pengenalan Program ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                      default: withCtx(() => [
+                                        createTextVNode(" Program 4 minggu yang mempersiapkan anda dengan kemahiran cloud computing, keselamatan, automasi dan DevOps berasaskan AWS – platform awan nombor satu dunia. Dapatkan pensijilan AWS dan bersedia untuk kerjaya teknologi awan yang berdaya saing tinggi. ")
+                                      ]),
+                                      _: 1
+                                    })
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Asas & Lanjutan AWS:"),
+                                        createTextVNode(" Pengenalan mendalam AWS, seni bina awan, keselamatan dan servis teras. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Kemahiran Hands-On AWS:"),
+                                        createTextVNode(" Sediakan dan urus infrastruktur awan, laksana amalan keselamatan terbaik, serta penggunaan DevOps. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Automasi & DevOps:"),
+                                        createTextVNode(" Infrastructure as Code, CI/CD pipeline & automasi cloud. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Persediaan Pensijilan:"),
+                                        createTextVNode(" Latihan projek sebenar dan strategi peperiksaan AWS Cloud Practitioner & Solutions Architect. ")
+                                      ])
+                                    ])
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "course-outline" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 1:"),
+                                        createTextVNode(" Pengenalan AWS, Asas Cloud & Servis Teras ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 2:"),
+                                        createTextVNode(" Seni Bina AWS, Amalan Keselamatan & Pengurusan Identiti ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 3:"),
+                                        createTextVNode(" Automasi, DevOps & Deployment Cloud Sebenar ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 4:"),
+                                        createTextVNode(" Projek Capstone Cloud, Latihan Persijilan & Persediaan Kerjaya ")
+                                      ])
+                                    ])
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            })
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(`<div class="space-y-5"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$6), { class: "text-card-foreground" }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(` Intake Batch <span class="text-destructive"${_scopeId3}>*</span>`);
+                        } else {
+                          return [
+                            createTextVNode(" Intake Batch "),
+                            createVNode("span", { class: "text-destructive" }, "*")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                      modelValue: unref(form).intakeBatch,
+                      "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                      class: "space-y-2"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "aws-batch-1",
+                            value: "batch-1"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "aws-batch-1",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 1`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 1")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "aws-batch-2",
+                            value: "batch-2"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "aws-batch-2",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 2`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 2")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "aws-batch-3",
+                            value: "batch-3"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "aws-batch-3",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 3`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 3")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div>`);
+                        } else {
+                          return [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "aws-batch-1",
+                                value: "batch-1"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "aws-batch-1",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 1")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "aws-batch-2",
+                                value: "batch-2"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "aws-batch-2",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 2")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "aws-batch-3",
+                                value: "batch-3"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "aws-batch-3",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 3")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    if (unref(form).errors.intakeBatch) {
+                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.intakeBatch)}</p>`);
+                    } else {
+                      _push3(`<!---->`);
+                    }
+                    _push3(`</div></div>`);
+                  } else {
+                    return [
+                      createVNode("div", { class: "space-y-5" }, [
+                        createVNode(unref(_sfc_main$6), { class: "text-card-foreground flex items-center space-x-2" }, {
+                          default: withCtx(() => [
+                            createVNode("img", {
+                              src: unref(awsLogoUrl),
+                              alt: "AWS Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "AWS Foundational Certificate")
+                          ]),
+                          _: 1
+                        }),
+                        createVNode(unref(_sfc_main$5), {
+                          type: "single",
+                          collapsible: "",
+                          class: "w-full"
+                        }, {
+                          default: withCtx(() => [
+                            createVNode(unref(_sfc_main$3), { value: "description" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Pengenalan Program ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                      default: withCtx(() => [
+                                        createTextVNode(" Program 4 minggu yang mempersiapkan anda dengan kemahiran cloud computing, keselamatan, automasi dan DevOps berasaskan AWS – platform awan nombor satu dunia. Dapatkan pensijilan AWS dan bersedia untuk kerjaya teknologi awan yang berdaya saing tinggi. ")
+                                      ]),
+                                      _: 1
+                                    })
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Asas & Lanjutan AWS:"),
+                                        createTextVNode(" Pengenalan mendalam AWS, seni bina awan, keselamatan dan servis teras. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Kemahiran Hands-On AWS:"),
+                                        createTextVNode(" Sediakan dan urus infrastruktur awan, laksana amalan keselamatan terbaik, serta penggunaan DevOps. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Automasi & DevOps:"),
+                                        createTextVNode(" Infrastructure as Code, CI/CD pipeline & automasi cloud. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Persediaan Pensijilan:"),
+                                        createTextVNode(" Latihan projek sebenar dan strategi peperiksaan AWS Cloud Practitioner & Solutions Architect. ")
+                                      ])
+                                    ])
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "course-outline" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 1:"),
+                                        createTextVNode(" Pengenalan AWS, Asas Cloud & Servis Teras ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 2:"),
+                                        createTextVNode(" Seni Bina AWS, Amalan Keselamatan & Pengurusan Identiti ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 3:"),
+                                        createTextVNode(" Automasi, DevOps & Deployment Cloud Sebenar ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 4:"),
+                                        createTextVNode(" Projek Capstone Cloud, Latihan Persijilan & Persediaan Kerjaya ")
+                                      ])
+                                    ])
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          _: 1
+                        }),
+                        createVNode("div", { class: "space-y-5" }, [
+                          createVNode(unref(_sfc_main$6), { class: "text-card-foreground" }, {
+                            default: withCtx(() => [
+                              createTextVNode(" Intake Batch "),
+                              createVNode("span", { class: "text-destructive" }, "*")
+                            ]),
+                            _: 1
+                          }),
+                          createVNode(unref(_sfc_main$e), {
+                            modelValue: unref(form).intakeBatch,
+                            "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                            class: "space-y-2"
+                          }, {
+                            default: withCtx(() => [
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$d), {
+                                  id: "aws-batch-1",
+                                  value: "batch-1"
+                                }),
+                                createVNode(unref(_sfc_main$b), {
+                                  for: "aws-batch-1",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 1")
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$d), {
+                                  id: "aws-batch-2",
+                                  value: "batch-2"
+                                }),
+                                createVNode(unref(_sfc_main$b), {
+                                  for: "aws-batch-2",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 2")
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$d), {
+                                  id: "aws-batch-3",
+                                  value: "batch-3"
+                                }),
+                                createVNode(unref(_sfc_main$b), {
+                                  for: "aws-batch-3",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 3")
+                                  ]),
+                                  _: 1
+                                })
+                              ])
+                            ]),
+                            _: 1
+                          }, 8, ["modelValue", "onUpdate:modelValue"]),
+                          unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                            key: 0,
+                            class: "text-sm text-destructive"
+                          }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                        ])
+                      ])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+            } else {
+              return [
+                createVNode(unref(_sfc_main$8), { class: "p-6" }, {
+                  default: withCtx(() => [
+                    createVNode("div", { class: "space-y-5" }, [
+                      createVNode(unref(_sfc_main$6), { class: "text-card-foreground flex items-center space-x-2" }, {
+                        default: withCtx(() => [
+                          createVNode("img", {
+                            src: unref(awsLogoUrl),
+                            alt: "AWS Logo",
+                            class: "w-8 h-6"
+                          }, null, 8, ["src"]),
+                          createVNode("span", null, "AWS Foundational Certificate")
+                        ]),
+                        _: 1
+                      }),
+                      createVNode(unref(_sfc_main$5), {
+                        type: "single",
+                        collapsible: "",
+                        class: "w-full"
+                      }, {
+                        default: withCtx(() => [
+                          createVNode(unref(_sfc_main$3), { value: "description" }, {
+                            default: withCtx(() => [
+                              createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                default: withCtx(() => [
+                                  createTextVNode(" Pengenalan Program ")
+                                ]),
+                                _: 1
+                              }),
+                              createVNode(unref(_sfc_main$4), null, {
+                                default: withCtx(() => [
+                                  createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Program 4 minggu yang mempersiapkan anda dengan kemahiran cloud computing, keselamatan, automasi dan DevOps berasaskan AWS – platform awan nombor satu dunia. Dapatkan pensijilan AWS dan bersedia untuk kerjaya teknologi awan yang berdaya saing tinggi. ")
+                                    ]),
+                                    _: 1
+                                  })
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            _: 1
+                          }),
+                          createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                            default: withCtx(() => [
+                              createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                default: withCtx(() => [
+                                  createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                ]),
+                                _: 1
+                              }),
+                              createVNode(unref(_sfc_main$4), null, {
+                                default: withCtx(() => [
+                                  createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Asas & Lanjutan AWS:"),
+                                      createTextVNode(" Pengenalan mendalam AWS, seni bina awan, keselamatan dan servis teras. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Kemahiran Hands-On AWS:"),
+                                      createTextVNode(" Sediakan dan urus infrastruktur awan, laksana amalan keselamatan terbaik, serta penggunaan DevOps. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Automasi & DevOps:"),
+                                      createTextVNode(" Infrastructure as Code, CI/CD pipeline & automasi cloud. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Persediaan Pensijilan:"),
+                                      createTextVNode(" Latihan projek sebenar dan strategi peperiksaan AWS Cloud Practitioner & Solutions Architect. ")
+                                    ])
+                                  ])
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            _: 1
+                          }),
+                          createVNode(unref(_sfc_main$3), { value: "course-outline" }, {
+                            default: withCtx(() => [
+                              createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                default: withCtx(() => [
+                                  createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                ]),
+                                _: 1
+                              }),
+                              createVNode(unref(_sfc_main$4), null, {
+                                default: withCtx(() => [
+                                  createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Minggu 1:"),
+                                      createTextVNode(" Pengenalan AWS, Asas Cloud & Servis Teras ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Minggu 2:"),
+                                      createTextVNode(" Seni Bina AWS, Amalan Keselamatan & Pengurusan Identiti ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Minggu 3:"),
+                                      createTextVNode(" Automasi, DevOps & Deployment Cloud Sebenar ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Minggu 4:"),
+                                      createTextVNode(" Projek Capstone Cloud, Latihan Persijilan & Persediaan Kerjaya ")
+                                    ])
+                                  ])
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            _: 1
+                          })
+                        ]),
+                        _: 1
+                      }),
+                      createVNode("div", { class: "space-y-5" }, [
+                        createVNode(unref(_sfc_main$6), { class: "text-card-foreground" }, {
+                          default: withCtx(() => [
+                            createTextVNode(" Intake Batch "),
+                            createVNode("span", { class: "text-destructive" }, "*")
+                          ]),
+                          _: 1
+                        }),
+                        createVNode(unref(_sfc_main$e), {
+                          modelValue: unref(form).intakeBatch,
+                          "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                          class: "space-y-2"
+                        }, {
+                          default: withCtx(() => [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "aws-batch-1",
+                                value: "batch-1"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "aws-batch-1",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 1")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "aws-batch-2",
+                                value: "batch-2"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "aws-batch-2",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 2")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "aws-batch-3",
+                                value: "batch-3"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "aws-batch-3",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 3")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ]),
+                          _: 1
+                        }, 8, ["modelValue", "onUpdate:modelValue"]),
+                        unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                          key: 0,
+                          class: "text-sm text-destructive"
+                        }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                      ])
+                    ])
+                  ]),
+                  _: 1
+                })
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
       _push(ssrRenderComponent(unref(_sfc_main$9), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
