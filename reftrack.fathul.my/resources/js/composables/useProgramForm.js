@@ -8,6 +8,9 @@ export function useProgramForm() {
     age: '',
     registrationReasons: [],
     registrationReasonsOther: '',
+    commitmentLevel: '',
+    commitmentLevelOther: '',
+    programInterest: '',
     pahangConnection: '',
     pahangConnectionOther: '',
   })

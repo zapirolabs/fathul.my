@@ -170,6 +170,83 @@
             </p>
           </div>
 
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini?
+              <span class="text-destructive">*</span>
+            </Label>
+            <RadioGroup 
+              :default-value="form.commitmentLevel" 
+              @update:model-value="(value) => form.commitmentLevel = value"
+              class="space-y-2"
+            >
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem id="fully-committed" value="fully-committed" />
+                <Label for="fully-committed">Ya, saya komitmen sepenuhnya</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem id="need-info" value="need-info" />
+                <Label for="need-info">Saya memerlukan maklumat lanjut sebelum membuat keputusan</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem id="not-sure" value="not-sure" />
+                <Label for="not-sure">Tidak pasti</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem id="other-commitment" value="other-commitment" />
+                <Label for="other-commitment">Lain-lain:</Label>
+                <Input 
+                  v-if="form.commitmentLevel === 'other-commitment'"
+                  v-model="form.commitmentLevelOther"
+                  placeholder="Sila nyatakan..."
+                  class="max-w-md"
+                />
+              </div>
+              <div v-if="form.commitmentLevel === 'other-commitment' && form.errors.commitmentLevelOther" class="ml-6">
+                <p class="text-sm text-destructive mt-1">
+                  {{ form.errors.commitmentLevelOther }}
+                </p>
+              </div>
+            </RadioGroup>
+            
+            <p v-if="form.errors.commitmentLevel" class="text-sm text-destructive">
+              {{ form.errors.commitmentLevel }}
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Apakah program yang anda minati?
+              <span class="text-destructive">*</span>
+            </Label>
+            <RadioGroup 
+              :default-value="form.programInterest" 
+              @update:model-value="(value) => form.programInterest = value"
+              class="space-y-2"
+            >
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem id="python-basic" value="python-basic" />
+                <Label for="python-basic" class="text-sm">Python Basic Programming</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem id="genai-masterclass" value="genai-masterclass" />
+                <Label for="genai-masterclass" class="text-sm">GenAI Masterclass</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem id="aws-foundational" value="aws-foundational" />
+                <Label for="aws-foundational" class="text-sm">AWS Foundational Certificate</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem id="more-than-one" value="more-than-one" />
+                <Label for="more-than-one" class="text-sm">Lebih daripada 1 program</Label>
+              </div>
+            </RadioGroup>
+            
+            <p v-if="form.errors.programInterest" class="text-sm text-destructive">
+              {{ form.errors.programInterest }}
+            </p>
+          </div>
+
           <div class="space-y-5">
             <Label class="text-sm font-medium text-card-foreground">
               Apakah kaitan anda dengan negeri Pahang? 

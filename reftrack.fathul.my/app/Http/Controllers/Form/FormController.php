@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Form;
 
+use Carbon\Carbon;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -24,6 +25,9 @@ class FormController extends Controller
             'registrationReasons' => 'required|array|min:1',
             'registrationReasons.*' => 'in:upskill,certificate,job,other',
             'registrationReasonsOther' => 'required_if:registrationReasons.*,other|max:255',
+            'commitmentLevel' => 'required|in:fully-committed,need-info,not-sure,other-commitment',
+            'commitmentLevelOther' => 'required_if:commitmentLevel,other-commitment|max:255',
+            'programInterest' => 'required|in:python-basic,genai-masterclass,aws-foundational,more-than-one',
             'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
             'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
         ], [
@@ -45,6 +49,12 @@ class FormController extends Controller
             'registrationReasons.*.in' => 'Sila pilih sebab pendaftaran yang sah.',
             'registrationReasonsOther.required_if' => 'Sila nyatakan sebab lain untuk pendaftaran.',
             'registrationReasonsOther.max' => 'Sebab lain tidak boleh melebihi 255 aksara.',
+            'commitmentLevel.required' => 'Sila pilih tahap komitmen anda untuk latihan 1 bulan ini.',
+            'commitmentLevel.in' => 'Sila pilih tahap komitmen yang sah.',
+            'commitmentLevelOther.required_if' => 'Sila nyatakan tahap komitmen lain.',
+            'commitmentLevelOther.max' => 'Tahap komitmen lain tidak boleh melebihi 255 aksara.',
+            'programInterest.required' => 'Sila pilih program yang anda minati.',
+            'programInterest.in' => 'Sila pilih program yang sah.',
             'pahangConnection.required' => 'Sila pilih kaitan anda dengan negeri Pahang.',
             'pahangConnection.in' => 'Sila pilih salah satu pilihan yang disediakan.',
             'pahangConnectionOther.required_if' => 'Sila nyatakan kaitan anda dengan negeri Pahang.',
@@ -57,6 +67,9 @@ class FormController extends Controller
         $age = $request->input('age');
         $registrationReasons = $request->input('registrationReasons', []);
         $registrationReasonsOther = $request->input('registrationReasonsOther');
+        $commitmentLevel = $request->input('commitmentLevel');
+        $commitmentLevelOther = $request->input('commitmentLevelOther');
+        $programInterest = $request->input('programInterest');
         $pahangConnection = $request->input('pahangConnection');
         $pahangConnectionOther = $request->input('pahangConnectionOther');
 
@@ -74,6 +87,26 @@ class FormController extends Controller
         }
         $finalReasons = implode(', ', $mappedReasons);
 
+        // Map commitment level to English
+        $commitmentMapping = [
+            'fully-committed' => 'Yes, I\'m fully committed',
+            'need-info' => 'I need more information before deciding',
+            'not-sure' => 'Not sure',
+            'other-commitment' => $commitmentLevelOther ?: 'Other'
+        ];
+
+        $finalCommitmentValue = $commitmentMapping[$commitmentLevel] ?? $commitmentLevel;
+
+        // Map program interest to English
+        $programMapping = [
+            'python-basic' => 'Python Basic Programming',
+            'genai-masterclass' => 'GenAI Masterclass',
+            'aws-foundational' => 'AWS Foundational Certificate',
+            'more-than-one' => 'More than 1 program'
+        ];
+
+        $finalProgramValue = $programMapping[$programInterest] ?? $programInterest;
+
         // Map Pahang connection to English
         $pahangMapping = [
             'born-pahang' => 'Yes, I was born in Pahang',
@@ -84,8 +117,20 @@ class FormController extends Controller
 
         $finalPahangValue = $pahangMapping[$pahangConnection] ?? $pahangConnection;
 
-        // Store: A=?, B=Email, C=Full Name, D=Phone, E=Age, F=Registration Reasons, H=Pahang Connection
-        $rowData = ['', $email, $fullName, $phoneNumber, $age, $finalReasons, '', $finalPahangValue];
+        // Generate timestamp in Malaysia timezone with exact format: 08/07/2025 09:24:34
+        $timestamp = Carbon::now('Asia/Kuala_Lumpur')->format('d/m/Y H:i:s');
+
+        $rowData = [
+            $timestamp, // A - Timestamp
+            $email, // B - Email
+            $fullName, // C - Full Name
+            $phoneNumber, // D - Phone
+            $age, // E - Age
+            $finalReasons, // F - Registration Reasons
+            $finalCommitmentValue, // G - Commitment Level
+            $finalPahangValue, // H - Pahang Connection
+            $finalProgramValue // I - Program Interest
+        ];
 
         Sheets::spreadsheet(env('GOOGLE_SPREADSHEET_ID'))
             ->sheet('PJK Registration form')

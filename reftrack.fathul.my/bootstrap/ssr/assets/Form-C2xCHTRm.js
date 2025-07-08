@@ -415,6 +415,9 @@ function useProgramForm() {
     age: "",
     registrationReasons: [],
     registrationReasonsOther: "",
+    commitmentLevel: "",
+    commitmentLevelOther: "",
+    programInterest: "",
     pahangConnection: "",
     pahangConnectionOther: ""
   });
@@ -693,6 +696,358 @@ const _sfc_main$1 = {
       _push(`</div>`);
       if (unref(form).errors.registrationReasons) {
         _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.registrationReasons)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? <span class="text-destructive"${_scopeId}>*</span>`);
+          } else {
+            return [
+              createTextVNode(" Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? "),
+              createVNode("span", { class: "text-destructive" }, "*")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$6), {
+        "default-value": unref(form).commitmentLevel,
+        "onUpdate:modelValue": (value) => unref(form).commitmentLevel = value,
+        class: "space-y-2"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="flex items-center space-x-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(_sfc_main$5), {
+              id: "fully-committed",
+              value: "fully-committed"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "fully-committed" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`Ya, saya komitmen sepenuhnya`);
+                } else {
+                  return [
+                    createTextVNode("Ya, saya komitmen sepenuhnya")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(_sfc_main$5), {
+              id: "need-info",
+              value: "need-info"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "need-info" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`Saya memerlukan maklumat lanjut sebelum membuat keputusan`);
+                } else {
+                  return [
+                    createTextVNode("Saya memerlukan maklumat lanjut sebelum membuat keputusan")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(_sfc_main$5), {
+              id: "not-sure",
+              value: "not-sure"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "not-sure" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`Tidak pasti`);
+                } else {
+                  return [
+                    createTextVNode("Tidak pasti")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(_sfc_main$5), {
+              id: "other-commitment",
+              value: "other-commitment"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "other-commitment" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`Lain-lain:`);
+                } else {
+                  return [
+                    createTextVNode("Lain-lain:")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            if (unref(form).commitmentLevel === "other-commitment") {
+              _push2(ssrRenderComponent(unref(_sfc_main$2), {
+                modelValue: unref(form).commitmentLevelOther,
+                "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
+                placeholder: "Sila nyatakan...",
+                class: "max-w-md"
+              }, null, _parent2, _scopeId));
+            } else {
+              _push2(`<!---->`);
+            }
+            _push2(`</div>`);
+            if (unref(form).commitmentLevel === "other-commitment" && unref(form).errors.commitmentLevelOther) {
+              _push2(`<div class="ml-6"${_scopeId}><p class="text-sm text-destructive mt-1"${_scopeId}>${ssrInterpolate(unref(form).errors.commitmentLevelOther)}</p></div>`);
+            } else {
+              _push2(`<!---->`);
+            }
+          } else {
+            return [
+              createVNode("div", { class: "flex items-center space-x-2" }, [
+                createVNode(unref(_sfc_main$5), {
+                  id: "fully-committed",
+                  value: "fully-committed"
+                }),
+                createVNode(unref(_sfc_main$3), { for: "fully-committed" }, {
+                  default: withCtx(() => [
+                    createTextVNode("Ya, saya komitmen sepenuhnya")
+                  ]),
+                  _: 1
+                })
+              ]),
+              createVNode("div", { class: "flex items-center space-x-2" }, [
+                createVNode(unref(_sfc_main$5), {
+                  id: "need-info",
+                  value: "need-info"
+                }),
+                createVNode(unref(_sfc_main$3), { for: "need-info" }, {
+                  default: withCtx(() => [
+                    createTextVNode("Saya memerlukan maklumat lanjut sebelum membuat keputusan")
+                  ]),
+                  _: 1
+                })
+              ]),
+              createVNode("div", { class: "flex items-center space-x-2" }, [
+                createVNode(unref(_sfc_main$5), {
+                  id: "not-sure",
+                  value: "not-sure"
+                }),
+                createVNode(unref(_sfc_main$3), { for: "not-sure" }, {
+                  default: withCtx(() => [
+                    createTextVNode("Tidak pasti")
+                  ]),
+                  _: 1
+                })
+              ]),
+              createVNode("div", { class: "flex items-center space-x-2" }, [
+                createVNode(unref(_sfc_main$5), {
+                  id: "other-commitment",
+                  value: "other-commitment"
+                }),
+                createVNode(unref(_sfc_main$3), { for: "other-commitment" }, {
+                  default: withCtx(() => [
+                    createTextVNode("Lain-lain:")
+                  ]),
+                  _: 1
+                }),
+                unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$2), {
+                  key: 0,
+                  modelValue: unref(form).commitmentLevelOther,
+                  "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
+                  placeholder: "Sila nyatakan...",
+                  class: "max-w-md"
+                }, null, 8, ["modelValue", "onUpdate:modelValue"])) : createCommentVNode("", true)
+              ]),
+              unref(form).commitmentLevel === "other-commitment" && unref(form).errors.commitmentLevelOther ? (openBlock(), createBlock("div", {
+                key: 0,
+                class: "ml-6"
+              }, [
+                createVNode("p", { class: "text-sm text-destructive mt-1" }, toDisplayString(unref(form).errors.commitmentLevelOther), 1)
+              ])) : createCommentVNode("", true)
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      if (unref(form).errors.commitmentLevel) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.commitmentLevel)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Apakah program yang anda minati? <span class="text-destructive"${_scopeId}>*</span>`);
+          } else {
+            return [
+              createTextVNode(" Apakah program yang anda minati? "),
+              createVNode("span", { class: "text-destructive" }, "*")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$6), {
+        "default-value": unref(form).programInterest,
+        "onUpdate:modelValue": (value) => unref(form).programInterest = value,
+        class: "space-y-2"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="flex items-center space-x-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(_sfc_main$5), {
+              id: "python-basic",
+              value: "python-basic"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "python-basic",
+              class: "text-sm"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`Python Basic Programming`);
+                } else {
+                  return [
+                    createTextVNode("Python Basic Programming")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(_sfc_main$5), {
+              id: "genai-masterclass",
+              value: "genai-masterclass"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "genai-masterclass",
+              class: "text-sm"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`GenAI Masterclass`);
+                } else {
+                  return [
+                    createTextVNode("GenAI Masterclass")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(_sfc_main$5), {
+              id: "aws-foundational",
+              value: "aws-foundational"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "aws-foundational",
+              class: "text-sm"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`AWS Foundational Certificate`);
+                } else {
+                  return [
+                    createTextVNode("AWS Foundational Certificate")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div><div class="flex items-center space-x-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(unref(_sfc_main$5), {
+              id: "more-than-one",
+              value: "more-than-one"
+            }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "more-than-one",
+              class: "text-sm"
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`Lebih daripada 1 program`);
+                } else {
+                  return [
+                    createTextVNode("Lebih daripada 1 program")
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`</div>`);
+          } else {
+            return [
+              createVNode("div", { class: "flex items-center space-x-2" }, [
+                createVNode(unref(_sfc_main$5), {
+                  id: "python-basic",
+                  value: "python-basic"
+                }),
+                createVNode(unref(_sfc_main$3), {
+                  for: "python-basic",
+                  class: "text-sm"
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode("Python Basic Programming")
+                  ]),
+                  _: 1
+                })
+              ]),
+              createVNode("div", { class: "flex items-center space-x-2" }, [
+                createVNode(unref(_sfc_main$5), {
+                  id: "genai-masterclass",
+                  value: "genai-masterclass"
+                }),
+                createVNode(unref(_sfc_main$3), {
+                  for: "genai-masterclass",
+                  class: "text-sm"
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode("GenAI Masterclass")
+                  ]),
+                  _: 1
+                })
+              ]),
+              createVNode("div", { class: "flex items-center space-x-2" }, [
+                createVNode(unref(_sfc_main$5), {
+                  id: "aws-foundational",
+                  value: "aws-foundational"
+                }),
+                createVNode(unref(_sfc_main$3), {
+                  for: "aws-foundational",
+                  class: "text-sm"
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode("AWS Foundational Certificate")
+                  ]),
+                  _: 1
+                })
+              ]),
+              createVNode("div", { class: "flex items-center space-x-2" }, [
+                createVNode(unref(_sfc_main$5), {
+                  id: "more-than-one",
+                  value: "more-than-one"
+                }),
+                createVNode(unref(_sfc_main$3), {
+                  for: "more-than-one",
+                  class: "text-sm"
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode("Lebih daripada 1 program")
+                  ]),
+                  _: 1
+                })
+              ])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      if (unref(form).errors.programInterest) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.programInterest)}</p>`);
       } else {
         _push(`<!---->`);
       }
