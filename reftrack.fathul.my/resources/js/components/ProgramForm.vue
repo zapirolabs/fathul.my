@@ -21,7 +21,7 @@
         <form @submit.prevent="submit" class="space-y-6">
           <!-- Full Name -->
           <div class="space-y-3">
-            <Label class="text-sm font-medium text-card-foreground">
+            <Label class="leading-none font-semibold text-lg text-card-foreground">
               Nama Penuh
               <span class="text-destructive">*</span>
             </Label>
@@ -38,7 +38,7 @@
 
           <!-- Phone Number -->
           <div class="space-y-3">
-            <Label class="text-sm font-medium text-card-foreground">
+            <Label class="leading-none font-semibold text-lg text-card-foreground">
               Nombor Telefon
               <span class="text-destructive">*</span>
             </Label>
@@ -55,7 +55,7 @@
 
           <!-- Email -->
           <div class="space-y-3">
-            <Label class="text-sm font-medium text-card-foreground">
+            <Label class="leading-none font-semibold text-lg text-card-foreground">
               Alamat Emel
               <span class="text-destructive">*</span>
             </Label>
@@ -72,7 +72,7 @@
 
           <!-- Age -->
           <div class="space-y-3">
-            <Label class="text-sm font-medium text-card-foreground">
+            <Label class="leading-none font-semibold text-lg text-card-foreground">
               Umur
               <span class="text-destructive">*</span>
             </Label>
