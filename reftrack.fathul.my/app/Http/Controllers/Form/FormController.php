@@ -19,7 +19,7 @@ class FormController extends Controller
     {
         $request->validate([
             'fullName' => 'required|string|max:255',
-            'phoneNumber' => 'required|string|max:20',
+            'phoneNumber' => 'required|string|max:20|regex:/^[\+]?[0-9\s\-\(\)]+$/',
             'email' => 'required|email:rfc,dns|max:255',
             'age' => 'required|integer|min:18|max:35',
             'registrationReasons' => 'required|array|min:1',
@@ -37,6 +37,7 @@ class FormController extends Controller
             'phoneNumber.required' => 'Sila masukkan nombor telefon anda.',
             'phoneNumber.string' => 'Nombor telefon mestilah dalam format teks.',
             'phoneNumber.max' => 'Nombor telefon tidak boleh melebihi 20 aksara.',
+            'phoneNumber.regex' => 'Sila masukkan nombor telefon yang sah (contoh: 012-3456789).',
             'email.required' => 'Sila masukkan alamat emel anda.',
             'email.email' => 'Sila masukkan alamat emel yang sah dan boleh menerima emel.',
             'email.max' => 'Alamat emel tidak boleh melebihi 255 aksara.',
