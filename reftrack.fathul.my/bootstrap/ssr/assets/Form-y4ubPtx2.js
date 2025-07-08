@@ -2571,28 +2571,26 @@ const _sfc_main$1 = {
                     }, _parent3, _scopeId2));
                     _push3(`</div>`);
                   } else {
-                    _push3(`<div class="space-y-4"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
-                    _push3(ssrRenderComponent(unref(_sfc_main$d), {
-                      id: "back-to-single",
-                      value: "",
-                      onClick: ($event) => unref(form).programInterest = ""
-                    }, null, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
-                      for: "back-to-single",
+                    _push3(`<div class="space-y-4"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$l), {
+                      type: "button",
+                      variant: "outline",
+                      size: "sm",
+                      onClick: ($event) => unref(form).programInterest = "",
                       class: "text-sm"
                     }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(`Kembali ke pilihan tunggal`);
+                          _push4(` ← Kembali ke pilihan tunggal `);
                         } else {
                           return [
-                            createTextVNode("Kembali ke pilihan tunggal")
+                            createTextVNode(" ← Kembali ke pilihan tunggal ")
                           ];
                         }
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    _push3(`</div><div class="border-t pt-4 space-y-3"${_scopeId2}><p class="text-sm font-medium text-card-foreground"${_scopeId2}>Pilih program yang anda minati:</p><div class="space-y-3"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
+                    _push3(`<div class="border-t pt-4 space-y-3"${_scopeId2}><p class="text-sm font-medium text-card-foreground"${_scopeId2}>Pilih program yang anda minati:</p><div class="space-y-3"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
                     _push3(ssrRenderComponent(unref(_sfc_main$c), {
                       id: "multi-python",
                       "model-value": unref(isProgramSelected)("python-basic"),
@@ -2777,22 +2775,18 @@ const _sfc_main$1 = {
                         key: 1,
                         class: "space-y-4"
                       }, [
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
-                            id: "back-to-single",
-                            value: "",
-                            onClick: ($event) => unref(form).programInterest = ""
-                          }, null, 8, ["onClick"]),
-                          createVNode(unref(_sfc_main$b), {
-                            for: "back-to-single",
-                            class: "text-sm"
-                          }, {
-                            default: withCtx(() => [
-                              createTextVNode("Kembali ke pilihan tunggal")
-                            ]),
-                            _: 1
-                          })
-                        ]),
+                        createVNode(unref(_sfc_main$l), {
+                          type: "button",
+                          variant: "outline",
+                          size: "sm",
+                          onClick: ($event) => unref(form).programInterest = "",
+                          class: "text-sm"
+                        }, {
+                          default: withCtx(() => [
+                            createTextVNode(" ← Kembali ke pilihan tunggal ")
+                          ]),
+                          _: 1
+                        }, 8, ["onClick"]),
                         createVNode("div", { class: "border-t pt-4 space-y-3" }, [
                           createVNode("p", { class: "text-sm font-medium text-card-foreground" }, "Pilih program yang anda minati:"),
                           createVNode("div", { class: "space-y-3" }, [
@@ -2973,22 +2967,18 @@ const _sfc_main$1 = {
                       key: 1,
                       class: "space-y-4"
                     }, [
-                      createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$d), {
-                          id: "back-to-single",
-                          value: "",
-                          onClick: ($event) => unref(form).programInterest = ""
-                        }, null, 8, ["onClick"]),
-                        createVNode(unref(_sfc_main$b), {
-                          for: "back-to-single",
-                          class: "text-sm"
-                        }, {
-                          default: withCtx(() => [
-                            createTextVNode("Kembali ke pilihan tunggal")
-                          ]),
-                          _: 1
-                        })
-                      ]),
+                      createVNode(unref(_sfc_main$l), {
+                        type: "button",
+                        variant: "outline",
+                        size: "sm",
+                        onClick: ($event) => unref(form).programInterest = "",
+                        class: "text-sm"
+                      }, {
+                        default: withCtx(() => [
+                          createTextVNode(" ← Kembali ke pilihan tunggal ")
+                        ]),
+                        _: 1
+                      }, 8, ["onClick"]),
                       createVNode("div", { class: "border-t pt-4 space-y-3" }, [
                         createVNode("p", { class: "text-sm font-medium text-card-foreground" }, "Pilih program yang anda minati:"),
                         createVNode("div", { class: "space-y-3" }, [

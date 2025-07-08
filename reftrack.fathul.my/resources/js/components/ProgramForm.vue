@@ -267,10 +267,15 @@
 
                 <!-- Multiple Program Selection -->
                 <div v-else class="space-y-4">
-                  <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="back-to-single" value="" @click="form.programInterest = ''" />
-                    <Label for="back-to-single" class="text-sm">Kembali ke pilihan tunggal</Label>
-                  </div>
+                  <Button 
+                    type="button" 
+                    variant="outline" 
+                    size="sm"
+                    @click="form.programInterest = ''"
+                    class="text-sm"
+                  >
+                    ← Kembali ke pilihan tunggal
+                  </Button>
                   
                   <div class="border-t pt-4 space-y-3">
                     <p class="text-sm font-medium text-card-foreground">Pilih program yang anda minati:</p>
