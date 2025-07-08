@@ -559,7 +559,7 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(unref(_sfc_main$4), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6 mb-3" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-5"${_scopeId2}>`);
@@ -869,7 +869,7 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+              createVNode(unref(_sfc_main$3), { class: "p-6 mb-3" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {

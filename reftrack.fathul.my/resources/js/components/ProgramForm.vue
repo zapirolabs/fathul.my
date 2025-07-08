@@ -20,7 +20,7 @@
 
          <!-- Pahang Connection Card -->
          <Card>
-            <CardContent class="p-6">
+            <CardContent class="p-6 mb-3">
               <div class="space-y-5">
                 <CardTitle class="text-card-foreground">
                   Apakah kaitan anda dengan negeri Pahang? 
