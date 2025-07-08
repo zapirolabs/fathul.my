@@ -3,6 +3,7 @@ import { ref } from 'vue'
 
 export function useProgramForm() {
   const registrationReasons = ref([])
+  const selectedPrograms = ref([])
   
   const form = useForm({
     fullName: '',
@@ -45,6 +46,27 @@ export function useProgramForm() {
     return registrationReasons.value.includes(value)
   }
 
+  const updateSelectedPrograms = (value, checked) => {
+    if (checked) {
+      if (!selectedPrograms.value.includes(value)) {
+        selectedPrograms.value.push(value)
+      }
+    } else {
+      const index = selectedPrograms.value.indexOf(value)
+      if (index > -1) {
+        selectedPrograms.value.splice(index, 1)
+      }
+    }
+  }
+
+  const handleProgramChange = (value, checked) => {
+    updateSelectedPrograms(value, checked)
+  }
+
+  const isProgramSelected = (value) => {
+    return selectedPrograms.value.includes(value)
+  }
+
   const submitForm = () => {
     form.transform((data) => ({
       ...data,
@@ -63,9 +85,13 @@ export function useProgramForm() {
   return {
     form,
     registrationReasons,
+    selectedPrograms,
     updateRegistrationReasons,
     handleRegistrationReasonChange,
     isReasonSelected,
+    updateSelectedPrograms,
+    handleProgramChange,
+    isProgramSelected,
     processing: form.processing,
     submitForm
   }

@@ -233,33 +233,84 @@
                   Apakah program yang anda minati?
                   <span class="text-destructive">*</span>
                 </CardTitle>
-                <RadioGroup v-model="form.programInterest" class="space-y-2">
+                
+                <!-- Single Program Selection -->
+                <div v-if="form.programInterest !== 'more-than-one'">
+                  <RadioGroup v-model="form.programInterest" class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="python-basic" value="python-basic" />
+                      <Label for="python-basic" class="text-sm flex items-center space-x-2">
+                        <img :src="pythonLogoUrl" alt="Python Logo" class="w-8 h-6" />
+                        <span>Python Basic Programming</span>
+                      </Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="genai-masterclass" value="genai-masterclass" />
+                      <Label for="genai-masterclass" class="text-sm flex items-center space-x-2">
+                        <img :src="chatGptLogoUrl" alt="ChatGPT Logo" class="w-8 h-6" />
+                        <span>GenAI Masterclass</span>
+                      </Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="aws-foundational" value="aws-foundational" />
+                      <Label for="aws-foundational" class="text-sm flex items-center space-x-2">
+                        <img :src="awsLogoUrl" alt="AWS Logo" class="w-8 h-6" />
+                        <span>AWS Foundational Certificate</span>
+                      </Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="more-than-one" value="more-than-one" />
+                      <Label for="more-than-one" class="text-sm">Lebih daripada 1 program</Label>
+                    </div>
+                  </RadioGroup>
+                </div>
+
+                <!-- Multiple Program Selection -->
+                <div v-else class="space-y-4">
                   <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="python-basic" value="python-basic" />
-                    <Label for="python-basic" class="text-sm flex items-center space-x-2">
-                      <img :src="pythonLogoUrl" alt="Python Logo" class="w-8 h-6" />
-                      <span>Python Basic Programming</span>
-                    </Label>
+                    <RadioGroupItem id="back-to-single" value="" @click="form.programInterest = ''" />
+                    <Label for="back-to-single" class="text-sm">Kembali ke pilihan tunggal</Label>
                   </div>
-                  <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="genai-masterclass" value="genai-masterclass" />
-                    <Label for="genai-masterclass" class="text-sm flex items-center space-x-2">
-                      <img :src="chatGptLogoUrl" alt="ChatGPT Logo" class="w-8 h-6" />
-                      <span>GenAI Masterclass</span>
-                    </Label>
+                  
+                  <div class="border-t pt-4 space-y-3">
+                    <p class="text-sm font-medium text-card-foreground">Pilih program yang anda minati:</p>
+                    <div class="space-y-3">
+                      <div class="flex items-center space-x-2">
+                        <Checkbox 
+                          id="multi-python" 
+                          :model-value="isProgramSelected('python-basic')"
+                          @update:model-value="(checked) => handleProgramChange('python-basic', checked)"
+                        />
+                        <Label for="multi-python" class="text-sm flex items-center space-x-2">
+                          <img :src="pythonLogoUrl" alt="Python Logo" class="w-8 h-6" />
+                          <span>Python Basic Programming</span>
+                        </Label>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <Checkbox 
+                          id="multi-genai" 
+                          :model-value="isProgramSelected('genai-masterclass')"
+                          @update:model-value="(checked) => handleProgramChange('genai-masterclass', checked)"
+                        />
+                        <Label for="multi-genai" class="text-sm flex items-center space-x-2">
+                          <img :src="chatGptLogoUrl" alt="ChatGPT Logo" class="w-8 h-6" />
+                          <span>GenAI Masterclass</span>
+                        </Label>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <Checkbox 
+                          id="multi-aws" 
+                          :model-value="isProgramSelected('aws-foundational')"
+                          @update:model-value="(checked) => handleProgramChange('aws-foundational', checked)"
+                        />
+                        <Label for="multi-aws" class="text-sm flex items-center space-x-2">
+                          <img :src="awsLogoUrl" alt="AWS Logo" class="w-8 h-6" />
+                          <span>AWS Foundational Certificate</span>
+                        </Label>
+                      </div>
+                    </div>
                   </div>
-                  <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="aws-foundational" value="aws-foundational" />
-                    <Label for="aws-foundational" class="text-sm flex items-center space-x-2">
-                      <img :src="awsLogoUrl" alt="AWS Logo" class="w-8 h-6" />
-                      <span>AWS Foundational Certificate</span>
-                    </Label>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <RadioGroupItem id="more-than-one" value="more-than-one" />
-                    <Label for="more-than-one" class="text-sm">Lebih daripada 1 program</Label>
-                  </div>
-                </RadioGroup>
+                </div>
 
                 <p v-if="form.errors.programInterest" class="text-sm text-destructive">
                   {{ form.errors.programInterest }}
@@ -269,7 +320,7 @@
           </Card>
 
           <!-- Python Program Details Card (Dynamic) -->
-          <Card v-if="form.programInterest === 'python-basic'">
+          <Card v-if="form.programInterest === 'python-basic' || (form.programInterest === 'more-than-one' && isProgramSelected('python-basic'))">
             <CardContent class="p-6">
               <div class="space-y-5">
                 <CardTitle class="text-card-foreground flex items-center space-x-2">
@@ -367,7 +418,7 @@
           </Card>
 
           <!-- GenAI Masterclass Program Details Card (Dynamic) -->
-          <Card v-if="form.programInterest === 'genai-masterclass'">
+          <Card v-if="form.programInterest === 'genai-masterclass' || (form.programInterest === 'more-than-one' && isProgramSelected('genai-masterclass'))">
             <CardContent class="p-6">
               <div class="space-y-5">
                 <CardTitle class="text-card-foreground flex items-center space-x-2">
@@ -471,7 +522,7 @@
           </Card>
 
           <!-- AWS Foundational Certificate Program Details Card (Dynamic) -->
-          <Card v-if="form.programInterest === 'aws-foundational'">
+          <Card v-if="form.programInterest === 'aws-foundational' || (form.programInterest === 'more-than-one' && isProgramSelected('aws-foundational'))">
             <CardContent class="p-6">
               <div class="space-y-5">
                 <CardTitle class="text-card-foreground flex items-center space-x-2">
@@ -601,7 +652,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 import { useAppearance } from '@/resources/js/composables/useAppearance'
 
-const { form, handleRegistrationReasonChange, isReasonSelected, processing, submitForm } = useProgramForm()
+const { form, handleRegistrationReasonChange, isReasonSelected, handleProgramChange, isProgramSelected, processing, submitForm } = useProgramForm()
 const { awsLogoUrl, chatGptLogoUrl, pythonLogoUrl } = useAppearance()
 </script>
 

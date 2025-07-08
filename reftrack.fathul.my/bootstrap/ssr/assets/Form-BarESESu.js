@@ -697,6 +697,7 @@ _sfc_main$2.setup = (props, ctx) => {
 };
 function useProgramForm() {
   const registrationReasons = ref([]);
+  const selectedPrograms = ref([]);
   const form = useForm({
     fullName: "",
     phoneNumber: "",
@@ -733,6 +734,24 @@ function useProgramForm() {
   const isReasonSelected = (value) => {
     return registrationReasons.value.includes(value);
   };
+  const updateSelectedPrograms = (value, checked) => {
+    if (checked) {
+      if (!selectedPrograms.value.includes(value)) {
+        selectedPrograms.value.push(value);
+      }
+    } else {
+      const index = selectedPrograms.value.indexOf(value);
+      if (index > -1) {
+        selectedPrograms.value.splice(index, 1);
+      }
+    }
+  };
+  const handleProgramChange = (value, checked) => {
+    updateSelectedPrograms(value, checked);
+  };
+  const isProgramSelected = (value) => {
+    return selectedPrograms.value.includes(value);
+  };
   const submitForm = () => {
     form.transform((data) => ({
       ...data,
@@ -749,9 +768,13 @@ function useProgramForm() {
   return {
     form,
     registrationReasons,
+    selectedPrograms,
     updateRegistrationReasons,
     handleRegistrationReasonChange,
     isReasonSelected,
+    updateSelectedPrograms,
+    handleProgramChange,
+    isProgramSelected,
     processing: form.processing,
     submitForm
   };
@@ -822,7 +845,7 @@ const _sfc_main$1 = {
   __name: "ProgramForm",
   __ssrInlineRender: true,
   setup(__props) {
-    const { form, handleRegistrationReasonChange, isReasonSelected, processing } = useProgramForm();
+    const { form, handleRegistrationReasonChange, isReasonSelected, handleProgramChange, isProgramSelected, processing } = useProgramForm();
     const { awsLogoUrl, chatGptLogoUrl, pythonLogoUrl } = useAppearance();
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
@@ -2359,191 +2382,296 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$e), {
-                    modelValue: unref(form).programInterest,
-                    "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
-                    class: "space-y-2"
-                  }, {
-                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
-                      if (_push4) {
-                        _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
-                          id: "python-basic",
-                          value: "python-basic"
-                        }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
-                          for: "python-basic",
-                          class: "text-sm flex items-center space-x-2"
-                        }, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(`<img${ssrRenderAttr("src", unref(pythonLogoUrl))} alt="Python Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>Python Basic Programming</span>`);
-                            } else {
-                              return [
-                                createVNode("img", {
-                                  src: unref(pythonLogoUrl),
-                                  alt: "Python Logo",
-                                  class: "w-8 h-6"
-                                }, null, 8, ["src"]),
-                                createVNode("span", null, "Python Basic Programming")
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
-                          id: "genai-masterclass",
-                          value: "genai-masterclass"
-                        }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
-                          for: "genai-masterclass",
-                          class: "text-sm flex items-center space-x-2"
-                        }, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(`<img${ssrRenderAttr("src", unref(chatGptLogoUrl))} alt="ChatGPT Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>GenAI Masterclass</span>`);
-                            } else {
-                              return [
-                                createVNode("img", {
-                                  src: unref(chatGptLogoUrl),
-                                  alt: "ChatGPT Logo",
-                                  class: "w-8 h-6"
-                                }, null, 8, ["src"]),
-                                createVNode("span", null, "GenAI Masterclass")
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
-                          id: "aws-foundational",
-                          value: "aws-foundational"
-                        }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
-                          for: "aws-foundational",
-                          class: "text-sm flex items-center space-x-2"
-                        }, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(`<img${ssrRenderAttr("src", unref(awsLogoUrl))} alt="AWS Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>AWS Foundational Certificate</span>`);
-                            } else {
-                              return [
-                                createVNode("img", {
-                                  src: unref(awsLogoUrl),
-                                  alt: "AWS Logo",
-                                  class: "w-8 h-6"
-                                }, null, 8, ["src"]),
-                                createVNode("span", null, "AWS Foundational Certificate")
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
-                          id: "more-than-one",
-                          value: "more-than-one"
-                        }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
-                          for: "more-than-one",
-                          class: "text-sm"
-                        }, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(`Lebih daripada 1 program`);
-                            } else {
-                              return [
-                                createTextVNode("Lebih daripada 1 program")
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
-                        _push4(`</div>`);
-                      } else {
-                        return [
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
-                              id: "python-basic",
-                              value: "python-basic"
+                  if (unref(form).programInterest !== "more-than-one") {
+                    _push3(`<div${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                      modelValue: unref(form).programInterest,
+                      "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
+                      class: "space-y-2"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "python-basic",
+                            value: "python-basic"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "python-basic",
+                            class: "text-sm flex items-center space-x-2"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`<img${ssrRenderAttr("src", unref(pythonLogoUrl))} alt="Python Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>Python Basic Programming</span>`);
+                              } else {
+                                return [
+                                  createVNode("img", {
+                                    src: unref(pythonLogoUrl),
+                                    alt: "Python Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "Python Basic Programming")
+                                ];
+                              }
                             }),
-                            createVNode(unref(_sfc_main$b), {
-                              for: "python-basic",
-                              class: "text-sm flex items-center space-x-2"
-                            }, {
-                              default: withCtx(() => [
-                                createVNode("img", {
-                                  src: unref(pythonLogoUrl),
-                                  alt: "Python Logo",
-                                  class: "w-8 h-6"
-                                }, null, 8, ["src"]),
-                                createVNode("span", null, "Python Basic Programming")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
-                              id: "genai-masterclass",
-                              value: "genai-masterclass"
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "genai-masterclass",
+                            value: "genai-masterclass"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "genai-masterclass",
+                            class: "text-sm flex items-center space-x-2"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`<img${ssrRenderAttr("src", unref(chatGptLogoUrl))} alt="ChatGPT Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>GenAI Masterclass</span>`);
+                              } else {
+                                return [
+                                  createVNode("img", {
+                                    src: unref(chatGptLogoUrl),
+                                    alt: "ChatGPT Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "GenAI Masterclass")
+                                ];
+                              }
                             }),
-                            createVNode(unref(_sfc_main$b), {
-                              for: "genai-masterclass",
-                              class: "text-sm flex items-center space-x-2"
-                            }, {
-                              default: withCtx(() => [
-                                createVNode("img", {
-                                  src: unref(chatGptLogoUrl),
-                                  alt: "ChatGPT Logo",
-                                  class: "w-8 h-6"
-                                }, null, 8, ["src"]),
-                                createVNode("span", null, "GenAI Masterclass")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
-                              id: "aws-foundational",
-                              value: "aws-foundational"
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "aws-foundational",
+                            value: "aws-foundational"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "aws-foundational",
+                            class: "text-sm flex items-center space-x-2"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`<img${ssrRenderAttr("src", unref(awsLogoUrl))} alt="AWS Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>AWS Foundational Certificate</span>`);
+                              } else {
+                                return [
+                                  createVNode("img", {
+                                    src: unref(awsLogoUrl),
+                                    alt: "AWS Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "AWS Foundational Certificate")
+                                ];
+                              }
                             }),
-                            createVNode(unref(_sfc_main$b), {
-                              for: "aws-foundational",
-                              class: "text-sm flex items-center space-x-2"
-                            }, {
-                              default: withCtx(() => [
-                                createVNode("img", {
-                                  src: unref(awsLogoUrl),
-                                  alt: "AWS Logo",
-                                  class: "w-8 h-6"
-                                }, null, 8, ["src"]),
-                                createVNode("span", null, "AWS Foundational Certificate")
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
-                              id: "more-than-one",
-                              value: "more-than-one"
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "more-than-one",
+                            value: "more-than-one"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "more-than-one",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Lebih daripada 1 program`);
+                              } else {
+                                return [
+                                  createTextVNode("Lebih daripada 1 program")
+                                ];
+                              }
                             }),
-                            createVNode(unref(_sfc_main$b), {
-                              for: "more-than-one",
-                              class: "text-sm"
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode("Lebih daripada 1 program")
-                              ]),
-                              _: 1
-                            })
-                          ])
-                        ];
-                      }
-                    }),
-                    _: 1
-                  }, _parent3, _scopeId2));
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div>`);
+                        } else {
+                          return [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "python-basic",
+                                value: "python-basic"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "python-basic",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(pythonLogoUrl),
+                                    alt: "Python Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "Python Basic Programming")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "genai-masterclass",
+                                value: "genai-masterclass"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "genai-masterclass",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(chatGptLogoUrl),
+                                    alt: "ChatGPT Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "GenAI Masterclass")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "aws-foundational",
+                                value: "aws-foundational"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "aws-foundational",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(awsLogoUrl),
+                                    alt: "AWS Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "AWS Foundational Certificate")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "more-than-one",
+                                value: "more-than-one"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "more-than-one",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Lebih daripada 1 program")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(`</div>`);
+                  } else {
+                    _push3(`<div class="space-y-4"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$d), {
+                      id: "back-to-single",
+                      value: "",
+                      onClick: ($event) => unref(form).programInterest = ""
+                    }, null, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                      for: "back-to-single",
+                      class: "text-sm"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`Kembali ke pilihan tunggal`);
+                        } else {
+                          return [
+                            createTextVNode("Kembali ke pilihan tunggal")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(`</div><div class="border-t pt-4 space-y-3"${_scopeId2}><p class="text-sm font-medium text-card-foreground"${_scopeId2}>Pilih program yang anda minati:</p><div class="space-y-3"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                      id: "multi-python",
+                      "model-value": unref(isProgramSelected)("python-basic"),
+                      "onUpdate:modelValue": (checked) => unref(handleProgramChange)("python-basic", checked)
+                    }, null, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                      for: "multi-python",
+                      class: "text-sm flex items-center space-x-2"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<img${ssrRenderAttr("src", unref(pythonLogoUrl))} alt="Python Logo" class="w-8 h-6"${_scopeId3}><span${_scopeId3}>Python Basic Programming</span>`);
+                        } else {
+                          return [
+                            createVNode("img", {
+                              src: unref(pythonLogoUrl),
+                              alt: "Python Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "Python Basic Programming")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                      id: "multi-genai",
+                      "model-value": unref(isProgramSelected)("genai-masterclass"),
+                      "onUpdate:modelValue": (checked) => unref(handleProgramChange)("genai-masterclass", checked)
+                    }, null, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                      for: "multi-genai",
+                      class: "text-sm flex items-center space-x-2"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<img${ssrRenderAttr("src", unref(chatGptLogoUrl))} alt="ChatGPT Logo" class="w-8 h-6"${_scopeId3}><span${_scopeId3}>GenAI Masterclass</span>`);
+                        } else {
+                          return [
+                            createVNode("img", {
+                              src: unref(chatGptLogoUrl),
+                              alt: "ChatGPT Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "GenAI Masterclass")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                      id: "multi-aws",
+                      "model-value": unref(isProgramSelected)("aws-foundational"),
+                      "onUpdate:modelValue": (checked) => unref(handleProgramChange)("aws-foundational", checked)
+                    }, null, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                      for: "multi-aws",
+                      class: "text-sm flex items-center space-x-2"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<img${ssrRenderAttr("src", unref(awsLogoUrl))} alt="AWS Logo" class="w-8 h-6"${_scopeId3}><span${_scopeId3}>AWS Foundational Certificate</span>`);
+                        } else {
+                          return [
+                            createVNode("img", {
+                              src: unref(awsLogoUrl),
+                              alt: "AWS Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "AWS Foundational Certificate")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(`</div></div></div></div>`);
+                  }
                   if (unref(form).errors.programInterest) {
                     _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.programInterest)}</p>`);
                   } else {
@@ -2560,6 +2688,203 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
+                      unref(form).programInterest !== "more-than-one" ? (openBlock(), createBlock("div", { key: 0 }, [
+                        createVNode(unref(_sfc_main$e), {
+                          modelValue: unref(form).programInterest,
+                          "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
+                          class: "space-y-2"
+                        }, {
+                          default: withCtx(() => [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "python-basic",
+                                value: "python-basic"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "python-basic",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(pythonLogoUrl),
+                                    alt: "Python Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "Python Basic Programming")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "genai-masterclass",
+                                value: "genai-masterclass"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "genai-masterclass",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(chatGptLogoUrl),
+                                    alt: "ChatGPT Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "GenAI Masterclass")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "aws-foundational",
+                                value: "aws-foundational"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "aws-foundational",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(awsLogoUrl),
+                                    alt: "AWS Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "AWS Foundational Certificate")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "more-than-one",
+                                value: "more-than-one"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "more-than-one",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Lebih daripada 1 program")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ]),
+                          _: 1
+                        }, 8, ["modelValue", "onUpdate:modelValue"])
+                      ])) : (openBlock(), createBlock("div", {
+                        key: 1,
+                        class: "space-y-4"
+                      }, [
+                        createVNode("div", { class: "flex items-center space-x-2" }, [
+                          createVNode(unref(_sfc_main$d), {
+                            id: "back-to-single",
+                            value: "",
+                            onClick: ($event) => unref(form).programInterest = ""
+                          }, null, 8, ["onClick"]),
+                          createVNode(unref(_sfc_main$b), {
+                            for: "back-to-single",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx(() => [
+                              createTextVNode("Kembali ke pilihan tunggal")
+                            ]),
+                            _: 1
+                          })
+                        ]),
+                        createVNode("div", { class: "border-t pt-4 space-y-3" }, [
+                          createVNode("p", { class: "text-sm font-medium text-card-foreground" }, "Pilih program yang anda minati:"),
+                          createVNode("div", { class: "space-y-3" }, [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$c), {
+                                id: "multi-python",
+                                "model-value": unref(isProgramSelected)("python-basic"),
+                                "onUpdate:modelValue": (checked) => unref(handleProgramChange)("python-basic", checked)
+                              }, null, 8, ["model-value", "onUpdate:modelValue"]),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "multi-python",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(pythonLogoUrl),
+                                    alt: "Python Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "Python Basic Programming")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$c), {
+                                id: "multi-genai",
+                                "model-value": unref(isProgramSelected)("genai-masterclass"),
+                                "onUpdate:modelValue": (checked) => unref(handleProgramChange)("genai-masterclass", checked)
+                              }, null, 8, ["model-value", "onUpdate:modelValue"]),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "multi-genai",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(chatGptLogoUrl),
+                                    alt: "ChatGPT Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "GenAI Masterclass")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$c), {
+                                id: "multi-aws",
+                                "model-value": unref(isProgramSelected)("aws-foundational"),
+                                "onUpdate:modelValue": (checked) => unref(handleProgramChange)("aws-foundational", checked)
+                              }, null, 8, ["model-value", "onUpdate:modelValue"]),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "multi-aws",
+                                class: "text-sm flex items-center space-x-2"
+                              }, {
+                                default: withCtx(() => [
+                                  createVNode("img", {
+                                    src: unref(awsLogoUrl),
+                                    alt: "AWS Logo",
+                                    class: "w-8 h-6"
+                                  }, null, 8, ["src"]),
+                                  createVNode("span", null, "AWS Foundational Certificate")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ])
+                        ])
+                      ])),
+                      unref(form).errors.programInterest ? (openBlock(), createBlock("p", {
+                        key: 2,
+                        class: "text-sm text-destructive"
+                      }, toDisplayString(unref(form).errors.programInterest), 1)) : createCommentVNode("", true)
+                    ])
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+          } else {
+            return [
+              createVNode(unref(_sfc_main$8), { class: "p-6" }, {
+                default: withCtx(() => [
+                  createVNode("div", { class: "space-y-5" }, [
+                    createVNode(unref(_sfc_main$6), { class: "text-card-foreground" }, {
+                      default: withCtx(() => [
+                        createTextVNode(" Apakah program yang anda minati? "),
+                        createVNode("span", { class: "text-destructive" }, "*")
+                      ]),
+                      _: 1
+                    }),
+                    unref(form).programInterest !== "more-than-one" ? (openBlock(), createBlock("div", { key: 0 }, [
                       createVNode(unref(_sfc_main$e), {
                         modelValue: unref(form).programInterest,
                         "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
@@ -2643,115 +2968,98 @@ const _sfc_main$1 = {
                           ])
                         ]),
                         _: 1
-                      }, 8, ["modelValue", "onUpdate:modelValue"]),
-                      unref(form).errors.programInterest ? (openBlock(), createBlock("p", {
-                        key: 0,
-                        class: "text-sm text-destructive"
-                      }, toDisplayString(unref(form).errors.programInterest), 1)) : createCommentVNode("", true)
-                    ])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-          } else {
-            return [
-              createVNode(unref(_sfc_main$8), { class: "p-6" }, {
-                default: withCtx(() => [
-                  createVNode("div", { class: "space-y-5" }, [
-                    createVNode(unref(_sfc_main$6), { class: "text-card-foreground" }, {
-                      default: withCtx(() => [
-                        createTextVNode(" Apakah program yang anda minati? "),
-                        createVNode("span", { class: "text-destructive" }, "*")
+                      }, 8, ["modelValue", "onUpdate:modelValue"])
+                    ])) : (openBlock(), createBlock("div", {
+                      key: 1,
+                      class: "space-y-4"
+                    }, [
+                      createVNode("div", { class: "flex items-center space-x-2" }, [
+                        createVNode(unref(_sfc_main$d), {
+                          id: "back-to-single",
+                          value: "",
+                          onClick: ($event) => unref(form).programInterest = ""
+                        }, null, 8, ["onClick"]),
+                        createVNode(unref(_sfc_main$b), {
+                          for: "back-to-single",
+                          class: "text-sm"
+                        }, {
+                          default: withCtx(() => [
+                            createTextVNode("Kembali ke pilihan tunggal")
+                          ]),
+                          _: 1
+                        })
                       ]),
-                      _: 1
-                    }),
-                    createVNode(unref(_sfc_main$e), {
-                      modelValue: unref(form).programInterest,
-                      "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
-                      class: "space-y-2"
-                    }, {
-                      default: withCtx(() => [
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
-                            id: "python-basic",
-                            value: "python-basic"
-                          }),
-                          createVNode(unref(_sfc_main$b), {
-                            for: "python-basic",
-                            class: "text-sm flex items-center space-x-2"
-                          }, {
-                            default: withCtx(() => [
-                              createVNode("img", {
-                                src: unref(pythonLogoUrl),
-                                alt: "Python Logo",
-                                class: "w-8 h-6"
-                              }, null, 8, ["src"]),
-                              createVNode("span", null, "Python Basic Programming")
-                            ]),
-                            _: 1
-                          })
-                        ]),
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
-                            id: "genai-masterclass",
-                            value: "genai-masterclass"
-                          }),
-                          createVNode(unref(_sfc_main$b), {
-                            for: "genai-masterclass",
-                            class: "text-sm flex items-center space-x-2"
-                          }, {
-                            default: withCtx(() => [
-                              createVNode("img", {
-                                src: unref(chatGptLogoUrl),
-                                alt: "ChatGPT Logo",
-                                class: "w-8 h-6"
-                              }, null, 8, ["src"]),
-                              createVNode("span", null, "GenAI Masterclass")
-                            ]),
-                            _: 1
-                          })
-                        ]),
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
-                            id: "aws-foundational",
-                            value: "aws-foundational"
-                          }),
-                          createVNode(unref(_sfc_main$b), {
-                            for: "aws-foundational",
-                            class: "text-sm flex items-center space-x-2"
-                          }, {
-                            default: withCtx(() => [
-                              createVNode("img", {
-                                src: unref(awsLogoUrl),
-                                alt: "AWS Logo",
-                                class: "w-8 h-6"
-                              }, null, 8, ["src"]),
-                              createVNode("span", null, "AWS Foundational Certificate")
-                            ]),
-                            _: 1
-                          })
-                        ]),
-                        createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
-                            id: "more-than-one",
-                            value: "more-than-one"
-                          }),
-                          createVNode(unref(_sfc_main$b), {
-                            for: "more-than-one",
-                            class: "text-sm"
-                          }, {
-                            default: withCtx(() => [
-                              createTextVNode("Lebih daripada 1 program")
-                            ]),
-                            _: 1
-                          })
+                      createVNode("div", { class: "border-t pt-4 space-y-3" }, [
+                        createVNode("p", { class: "text-sm font-medium text-card-foreground" }, "Pilih program yang anda minati:"),
+                        createVNode("div", { class: "space-y-3" }, [
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$c), {
+                              id: "multi-python",
+                              "model-value": unref(isProgramSelected)("python-basic"),
+                              "onUpdate:modelValue": (checked) => unref(handleProgramChange)("python-basic", checked)
+                            }, null, 8, ["model-value", "onUpdate:modelValue"]),
+                            createVNode(unref(_sfc_main$b), {
+                              for: "multi-python",
+                              class: "text-sm flex items-center space-x-2"
+                            }, {
+                              default: withCtx(() => [
+                                createVNode("img", {
+                                  src: unref(pythonLogoUrl),
+                                  alt: "Python Logo",
+                                  class: "w-8 h-6"
+                                }, null, 8, ["src"]),
+                                createVNode("span", null, "Python Basic Programming")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$c), {
+                              id: "multi-genai",
+                              "model-value": unref(isProgramSelected)("genai-masterclass"),
+                              "onUpdate:modelValue": (checked) => unref(handleProgramChange)("genai-masterclass", checked)
+                            }, null, 8, ["model-value", "onUpdate:modelValue"]),
+                            createVNode(unref(_sfc_main$b), {
+                              for: "multi-genai",
+                              class: "text-sm flex items-center space-x-2"
+                            }, {
+                              default: withCtx(() => [
+                                createVNode("img", {
+                                  src: unref(chatGptLogoUrl),
+                                  alt: "ChatGPT Logo",
+                                  class: "w-8 h-6"
+                                }, null, 8, ["src"]),
+                                createVNode("span", null, "GenAI Masterclass")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$c), {
+                              id: "multi-aws",
+                              "model-value": unref(isProgramSelected)("aws-foundational"),
+                              "onUpdate:modelValue": (checked) => unref(handleProgramChange)("aws-foundational", checked)
+                            }, null, 8, ["model-value", "onUpdate:modelValue"]),
+                            createVNode(unref(_sfc_main$b), {
+                              for: "multi-aws",
+                              class: "text-sm flex items-center space-x-2"
+                            }, {
+                              default: withCtx(() => [
+                                createVNode("img", {
+                                  src: unref(awsLogoUrl),
+                                  alt: "AWS Logo",
+                                  class: "w-8 h-6"
+                                }, null, 8, ["src"]),
+                                createVNode("span", null, "AWS Foundational Certificate")
+                              ]),
+                              _: 1
+                            })
+                          ])
                         ])
-                      ]),
-                      _: 1
-                    }, 8, ["modelValue", "onUpdate:modelValue"]),
+                      ])
+                    ])),
                     unref(form).errors.programInterest ? (openBlock(), createBlock("p", {
-                      key: 0,
+                      key: 2,
                       class: "text-sm text-destructive"
                     }, toDisplayString(unref(form).errors.programInterest), 1)) : createCommentVNode("", true)
                   ])
@@ -2763,7 +3071,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      if (unref(form).programInterest === "python-basic") {
+      if (unref(form).programInterest === "python-basic" || unref(form).programInterest === "more-than-one" && unref(isProgramSelected)("python-basic")) {
         _push(ssrRenderComponent(unref(_sfc_main$9), null, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
@@ -3639,7 +3947,7 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
-      if (unref(form).programInterest === "genai-masterclass") {
+      if (unref(form).programInterest === "genai-masterclass" || unref(form).programInterest === "more-than-one" && unref(isProgramSelected)("genai-masterclass")) {
         _push(ssrRenderComponent(unref(_sfc_main$9), null, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
@@ -4535,7 +4843,7 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
-      if (unref(form).programInterest === "aws-foundational") {
+      if (unref(form).programInterest === "aws-foundational" || unref(form).programInterest === "more-than-one" && unref(isProgramSelected)("aws-foundational")) {
         _push(ssrRenderComponent(unref(_sfc_main$9), null, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
