@@ -422,26 +422,15 @@ function useProgramForm() {
     pahangConnectionOther: ""
   });
   const submit = () => {
-    console.log("Submit function called");
-    console.log("Form data:", form.data());
-    console.log("Registration reasons:", form.registrationReasons);
-    console.log("Registration reasons length:", form.registrationReasons.length);
-    console.log("Route:", route("program.store"));
-    alert("Registration reasons: " + JSON.stringify(form.registrationReasons));
     form.post(route("program.store"), {
       preserveScroll: true,
       onStart: () => {
-        console.log("Form submission started");
       },
       onSuccess: () => {
-        console.log("Form submission successful");
       },
       onError: (errors) => {
-        console.log("Form submission errors:", errors);
-        alert("Errors: " + JSON.stringify(errors));
       },
       onFinish: () => {
-        console.log("Form submission finished");
       }
     });
   };

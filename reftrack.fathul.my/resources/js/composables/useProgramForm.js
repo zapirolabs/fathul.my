@@ -16,29 +16,19 @@ export function useProgramForm() {
   })
 
   const submit = () => {
-    console.log('Submit function called')
-    console.log('Form data:', form.data())
-    console.log('Registration reasons:', form.registrationReasons)
-    console.log('Registration reasons length:', form.registrationReasons.length)
-    console.log('Route:', route('program.store'))
-    
-    // Add alert to see what's being sent
-    alert('Registration reasons: ' + JSON.stringify(form.registrationReasons))
-    
     form.post(route('program.store'), {
       preserveScroll: true,
       onStart: () => {
-        console.log('Form submission started')
+        // Form submission started
       },
       onSuccess: () => {
-        console.log('Form submission successful')
+        // Form submission successful
       },
       onError: (errors) => {
-        console.log('Form submission errors:', errors)
-        alert('Errors: ' + JSON.stringify(errors))
+        // Handle form submission errors
       },
       onFinish: () => {
-        console.log('Form submission finished')
+        // Form submission finished
       }
     })
   }
