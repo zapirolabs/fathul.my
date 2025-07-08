@@ -325,26 +325,17 @@
           <Card v-if="form.programInterest === 'python-basic'">
             <CardContent class="p-6">
               <div class="space-y-5">
-                <div class="bg-orange-500 text-white p-4 rounded-t-lg">
-                  <h3 class="font-bold text-lg">(01) Python Basic Programming</h3>
-                </div>
+                <CardTitle class="text-card-foreground flex items-center space-x-2">
+                  <img :src="pythonLogoUrl" alt="Python Logo" class="w-8 h-6" />
+                  <span>Python Basic Programming</span>
+                </CardTitle>
                 
-                <div class="bg-gray-50 p-4 rounded-b-lg space-y-4">
-                  <h4 class="font-semibold text-gray-800">Python Programming Talent Development & Job Placement Initiative</h4>
-                  
-                  <p class="text-gray-700">Unlock your future with in-demand Python skills.</p>
-                  
-                  <p class="text-gray-700">
-                    Brought to you by Yayasan Pahang and industry partners, this program equips fresh 
-                    graduates and job seekers with essential Python skills and prepares them for real job 
-                    placements in tech and engineering.
-                  </p>
-                  
-                  <p class="text-gray-700">
-                    Gain hands-on training and access career opportunities in data science, AI, software 
-                    development, and automation.
-                  </p>
-                </div>
+                <CardDescription class="text-muted-foreground">
+                  Python Programming Talent Development & Job Placement Initiative. Unlock your future with in-demand Python skills. 
+                  Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with 
+                  essential Python skills and prepares them for real job placements in tech and engineering. Gain hands-on training 
+                  and access career opportunities in data science, AI, software development, and automation.
+                </CardDescription>
 
                 <div class="space-y-3">
                   <CardTitle class="text-card-foreground">
@@ -408,7 +399,7 @@ import { Checkbox } from '@/resources/js/components/ui/checkbox'
 import { Label } from '@/resources/js/components/ui/label'
 import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'
-import { Card, CardContent, CardTitle } from '@/resources/js/components/ui/card'
+import { Card, CardContent, CardTitle, CardDescription } from '@/resources/js/components/ui/card'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 import { useAppearance } from '@/resources/js/composables/useAppearance'
 

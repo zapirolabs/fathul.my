@@ -4,7 +4,7 @@ import { useForm, Head } from "@inertiajs/vue3";
 import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon, Check } from "lucide-vue-next";
 import { reactiveOmit, useVModel } from "@vueuse/core";
 import { useForwardPropsEmits, RadioGroupRoot, useForwardProps, RadioGroupItem, RadioGroupIndicator, CheckboxRoot, CheckboxIndicator, Label } from "reka-ui";
-import { c as cn, _ as _sfc_main$g } from "./index-BRQTVL0F.js";
+import { c as cn, _ as _sfc_main$h } from "./index-BRQTVL0F.js";
 import "clsx";
 import "class-variance-authority";
 import "tailwind-merge";
@@ -15,25 +15,25 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$f = {};
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
+const _sfc_main$g = {};
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Banner.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
-const _sfc_main$e = {};
+const _sfc_main$f = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white" }, _attrs))} data-v-1da9ed77><div class="absolute inset-0 opacity-10" data-v-1da9ed77><div class="absolute inset-0 bg-dot-pattern animate-pulse" data-v-1da9ed77></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" data-v-1da9ed77><div class="text-center" data-v-1da9ed77><div class="mb-8 animate-fade-in-up" data-v-1da9ed77><img src="https://cdn.fathul.my/assets/logo/ypadvancedskills-logo-whiteondark.svg" alt="YPAdvancedSkills Logo" class="h-16 mx-auto" data-v-1da9ed77></div><h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up animation-delay-200" data-v-1da9ed77><span class="block text-white" data-v-1da9ed77>Program</span><span class="block bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x" data-v-1da9ed77> Jaminan Kerjaya </span><span class="block text-white" data-v-1da9ed77>2025</span></h1></div></div></div>`);
 }
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramHeader.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
-const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-1da9ed77"]]);
-const _sfc_main$d = {
+const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-1da9ed77"]]);
+const _sfc_main$e = {
   __name: "KriteriaPemohon",
   __ssrInlineRender: true,
   setup(__props) {
@@ -54,13 +54,13 @@ const _sfc_main$d = {
     };
   }
 };
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/KriteriaPemohon.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-const _sfc_main$c = {
+const _sfc_main$d = {
   __name: "ApaYangAndaPerolehi",
   __ssrInlineRender: true,
   setup(__props) {
@@ -75,13 +75,13 @@ const _sfc_main$c = {
     };
   }
 };
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ApaYangAndaPerolehi.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const _sfc_main$b = {
+const _sfc_main$c = {
   __name: "ProgramYangDitawarkan",
   __ssrInlineRender: true,
   setup(__props) {
@@ -116,13 +116,13 @@ const _sfc_main$b = {
     };
   }
 };
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramYangDitawarkan.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const _sfc_main$a = {
+const _sfc_main$b = {
   __name: "SiapaPatutMemohon",
   __ssrInlineRender: true,
   setup(__props) {
@@ -137,13 +137,13 @@ const _sfc_main$a = {
     };
   }
 };
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/SiapaPatutMemohon.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const _sfc_main$9 = {
+const _sfc_main$a = {
   __name: "RadioGroup",
   __ssrInlineRender: true,
   props: {
@@ -184,13 +184,13 @@ const _sfc_main$9 = {
     };
   }
 };
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/radio-group/RadioGroup.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const _sfc_main$8 = {
+const _sfc_main$9 = {
   __name: "RadioGroupItem",
   __ssrInlineRender: true,
   props: {
@@ -250,13 +250,13 @@ const _sfc_main$8 = {
     };
   }
 };
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/radio-group/RadioGroupItem.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-const _sfc_main$7 = {
+const _sfc_main$8 = {
   __name: "Checkbox",
   __ssrInlineRender: true,
   props: {
@@ -326,13 +326,13 @@ const _sfc_main$7 = {
     };
   }
 };
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/checkbox/Checkbox.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-const _sfc_main$6 = {
+const _sfc_main$7 = {
   __name: "Label",
   __ssrInlineRender: true,
   props: {
@@ -365,13 +365,13 @@ const _sfc_main$6 = {
     };
   }
 };
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/label/Label.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const _sfc_main$5 = {
+const _sfc_main$6 = {
   __name: "Input",
   __ssrInlineRender: true,
   props: {
@@ -401,13 +401,13 @@ const _sfc_main$5 = {
     };
   }
 };
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/input/Input.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const _sfc_main$4 = {
+const _sfc_main$5 = {
   __name: "Card",
   __ssrInlineRender: true,
   props: {
@@ -428,13 +428,13 @@ const _sfc_main$4 = {
     };
   }
 };
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/card/Card.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const _sfc_main$3 = {
+const _sfc_main$4 = {
   __name: "CardContent",
   __ssrInlineRender: true,
   props: {
@@ -452,10 +452,34 @@ const _sfc_main$3 = {
     };
   }
 };
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/card/CardContent.vue");
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+};
+const _sfc_main$3 = {
+  __name: "CardDescription",
+  __ssrInlineRender: true,
+  props: {
+    class: { type: null, required: false }
+  },
+  setup(__props) {
+    const props = __props;
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<p${ssrRenderAttrs(mergeProps({
+        "data-slot": "card-description",
+        class: unref(cn)("text-muted-foreground text-sm", props.class)
+      }, _attrs))}>`);
+      ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
+      _push(`</p>`);
+    };
+  }
+};
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/card/CardContent.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/card/CardDescription.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
 const _sfc_main$2 = {
@@ -611,15 +635,15 @@ const _sfc_main$1 = {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$e, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$d, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$c, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$b, null, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$a, null, null, _parent));
       _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6">`);
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-5"${_scopeId2}>`);
@@ -636,7 +660,7 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$9), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$a), {
                     modelValue: unref(form).pahangConnection,
                     "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
                     class: "space-y-2"
@@ -644,11 +668,11 @@ const _sfc_main$1 = {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "born-pahang",
                           value: "born-pahang"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "born-pahang",
                           class: "text-sm"
                         }, {
@@ -664,11 +688,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "living-pahang",
                           value: "living-pahang"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "living-pahang",
                           class: "text-sm"
                         }, {
@@ -684,11 +708,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "parents-pahang",
                           value: "parents-pahang"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "parents-pahang",
                           class: "text-sm"
                         }, {
@@ -704,11 +728,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "other-pahang",
                           value: "other-pahang"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "other-pahang",
                           class: "text-sm"
                         }, {
@@ -724,7 +748,7 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         if (unref(form).pahangConnection === "other-pahang") {
-                          _push4(ssrRenderComponent(unref(_sfc_main$5), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$6), {
                             modelValue: unref(form).pahangConnectionOther,
                             "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
                             placeholder: "Sila nyatakan...",
@@ -742,11 +766,11 @@ const _sfc_main$1 = {
                       } else {
                         return [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "born-pahang",
                               value: "born-pahang"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "born-pahang",
                               class: "text-sm"
                             }, {
@@ -757,11 +781,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "living-pahang",
                               value: "living-pahang"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "living-pahang",
                               class: "text-sm"
                             }, {
@@ -772,11 +796,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "parents-pahang",
                               value: "parents-pahang"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "parents-pahang",
                               class: "text-sm"
                             }, {
@@ -787,11 +811,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "other-pahang",
                               value: "other-pahang"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "other-pahang",
                               class: "text-sm"
                             }, {
@@ -800,7 +824,7 @@ const _sfc_main$1 = {
                               ]),
                               _: 1
                             }),
-                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$6), {
                               key: 0,
                               modelValue: unref(form).pahangConnectionOther,
                               "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
@@ -835,18 +859,18 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode(unref(_sfc_main$9), {
+                      createVNode(unref(_sfc_main$a), {
                         modelValue: unref(form).pahangConnection,
                         "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
                         class: "space-y-2"
                       }, {
                         default: withCtx(() => [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "born-pahang",
                               value: "born-pahang"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "born-pahang",
                               class: "text-sm"
                             }, {
@@ -857,11 +881,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "living-pahang",
                               value: "living-pahang"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "living-pahang",
                               class: "text-sm"
                             }, {
@@ -872,11 +896,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "parents-pahang",
                               value: "parents-pahang"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "parents-pahang",
                               class: "text-sm"
                             }, {
@@ -887,11 +911,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "other-pahang",
                               value: "other-pahang"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "other-pahang",
                               class: "text-sm"
                             }, {
@@ -900,7 +924,7 @@ const _sfc_main$1 = {
                               ]),
                               _: 1
                             }),
-                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$6), {
                               key: 0,
                               modelValue: unref(form).pahangConnectionOther,
                               "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
@@ -929,7 +953,7 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+              createVNode(unref(_sfc_main$4), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
@@ -939,18 +963,18 @@ const _sfc_main$1 = {
                       ]),
                       _: 1
                     }),
-                    createVNode(unref(_sfc_main$9), {
+                    createVNode(unref(_sfc_main$a), {
                       modelValue: unref(form).pahangConnection,
                       "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx(() => [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "born-pahang",
                             value: "born-pahang"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "born-pahang",
                             class: "text-sm"
                           }, {
@@ -961,11 +985,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "living-pahang",
                             value: "living-pahang"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "living-pahang",
                             class: "text-sm"
                           }, {
@@ -976,11 +1000,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "parents-pahang",
                             value: "parents-pahang"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "parents-pahang",
                             class: "text-sm"
                           }, {
@@ -991,11 +1015,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "other-pahang",
                             value: "other-pahang"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "other-pahang",
                             class: "text-sm"
                           }, {
@@ -1004,7 +1028,7 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                          unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$6), {
                             key: 0,
                             modelValue: unref(form).pahangConnectionOther,
                             "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
@@ -1048,7 +1072,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$5), {
+      _push(ssrRenderComponent(unref(_sfc_main$6), {
         modelValue: unref(form).fullName,
         "onUpdate:modelValue": ($event) => unref(form).fullName = $event,
         type: "text",
@@ -1074,7 +1098,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$5), {
+      _push(ssrRenderComponent(unref(_sfc_main$6), {
         modelValue: unref(form).phoneNumber,
         "onUpdate:modelValue": ($event) => unref(form).phoneNumber = $event,
         type: "tel",
@@ -1100,7 +1124,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$5), {
+      _push(ssrRenderComponent(unref(_sfc_main$6), {
         modelValue: unref(form).email,
         "onUpdate:modelValue": ($event) => unref(form).email = $event,
         type: "email",
@@ -1126,7 +1150,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$5), {
+      _push(ssrRenderComponent(unref(_sfc_main$6), {
         modelValue: unref(form).age,
         "onUpdate:modelValue": ($event) => unref(form).age = $event,
         type: "number",
@@ -1141,10 +1165,10 @@ const _sfc_main$1 = {
         _push(`<!---->`);
       }
       _push(`</div>`);
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-5"${_scopeId2}>`);
@@ -1161,7 +1185,7 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$9), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$a), {
                     modelValue: unref(form).interviewWillingness,
                     "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
                     class: "space-y-2"
@@ -1169,11 +1193,11 @@ const _sfc_main$1 = {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "interview-yes",
                           value: "yes"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "interview-yes",
                           class: "text-sm"
                         }, {
@@ -1189,11 +1213,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "interview-no",
                           value: "no"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "interview-no",
                           class: "text-sm"
                         }, {
@@ -1212,11 +1236,11 @@ const _sfc_main$1 = {
                       } else {
                         return [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "interview-yes",
                               value: "yes"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "interview-yes",
                               class: "text-sm"
                             }, {
@@ -1227,11 +1251,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "interview-no",
                               value: "no"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "interview-no",
                               class: "text-sm"
                             }, {
@@ -1262,18 +1286,18 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode(unref(_sfc_main$9), {
+                      createVNode(unref(_sfc_main$a), {
                         modelValue: unref(form).interviewWillingness,
                         "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
                         class: "space-y-2"
                       }, {
                         default: withCtx(() => [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "interview-yes",
                               value: "yes"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "interview-yes",
                               class: "text-sm"
                             }, {
@@ -1284,11 +1308,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "interview-no",
                               value: "no"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "interview-no",
                               class: "text-sm"
                             }, {
@@ -1313,7 +1337,7 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+              createVNode(unref(_sfc_main$4), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
@@ -1323,18 +1347,18 @@ const _sfc_main$1 = {
                       ]),
                       _: 1
                     }),
-                    createVNode(unref(_sfc_main$9), {
+                    createVNode(unref(_sfc_main$a), {
                       modelValue: unref(form).interviewWillingness,
                       "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx(() => [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "interview-yes",
                             value: "yes"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "interview-yes",
                             class: "text-sm"
                           }, {
@@ -1345,11 +1369,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "interview-no",
                             value: "no"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "interview-no",
                             class: "text-sm"
                           }, {
@@ -1375,10 +1399,10 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-5"${_scopeId2}>`);
@@ -1396,12 +1420,12 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   _push3(`<div class="space-y-5"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$7), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$8), {
                     id: "upskill",
                     "model-value": unref(isReasonSelected)("upskill"),
                     "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("upskill", checked)
                   }, null, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$6), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$7), {
                     for: "upskill",
                     class: "text-sm"
                   }, {
@@ -1417,12 +1441,12 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$7), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$8), {
                     id: "certificate",
                     "model-value": unref(isReasonSelected)("certificate"),
                     "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("certificate", checked)
                   }, null, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$6), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$7), {
                     for: "certificate",
                     class: "text-sm"
                   }, {
@@ -1438,12 +1462,12 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$7), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$8), {
                     id: "job",
                     "model-value": unref(isReasonSelected)("job"),
                     "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("job", checked)
                   }, null, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$6), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$7), {
                     for: "job",
                     class: "text-sm"
                   }, {
@@ -1459,12 +1483,12 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$7), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$8), {
                     id: "other-reason",
                     "model-value": unref(isReasonSelected)("other"),
                     "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("other", checked)
                   }, null, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$6), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$7), {
                     for: "other-reason",
                     class: "text-sm"
                   }, {
@@ -1480,7 +1504,7 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   if (unref(isReasonSelected)("other")) {
-                    _push3(ssrRenderComponent(unref(_sfc_main$5), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$6), {
                       modelValue: unref(form).registrationReasonsOther,
                       "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
                       placeholder: "Sila nyatakan...",
@@ -1514,12 +1538,12 @@ const _sfc_main$1 = {
                       }),
                       createVNode("div", { class: "space-y-5" }, [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$7), {
+                          createVNode(unref(_sfc_main$8), {
                             id: "upskill",
                             "model-value": unref(isReasonSelected)("upskill"),
                             "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("upskill", checked)
                           }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "upskill",
                             class: "text-sm"
                           }, {
@@ -1530,12 +1554,12 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$7), {
+                          createVNode(unref(_sfc_main$8), {
                             id: "certificate",
                             "model-value": unref(isReasonSelected)("certificate"),
                             "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("certificate", checked)
                           }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "certificate",
                             class: "text-sm"
                           }, {
@@ -1546,12 +1570,12 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$7), {
+                          createVNode(unref(_sfc_main$8), {
                             id: "job",
                             "model-value": unref(isReasonSelected)("job"),
                             "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("job", checked)
                           }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "job",
                             class: "text-sm"
                           }, {
@@ -1562,12 +1586,12 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$7), {
+                          createVNode(unref(_sfc_main$8), {
                             id: "other-reason",
                             "model-value": unref(isReasonSelected)("other"),
                             "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("other", checked)
                           }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "other-reason",
                             class: "text-sm"
                           }, {
@@ -1576,7 +1600,7 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          unref(isReasonSelected)("other") ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                          unref(isReasonSelected)("other") ? (openBlock(), createBlock(unref(_sfc_main$6), {
                             key: 0,
                             modelValue: unref(form).registrationReasonsOther,
                             "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
@@ -1603,7 +1627,7 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+              createVNode(unref(_sfc_main$4), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
@@ -1615,12 +1639,12 @@ const _sfc_main$1 = {
                     }),
                     createVNode("div", { class: "space-y-5" }, [
                       createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$7), {
+                        createVNode(unref(_sfc_main$8), {
                           id: "upskill",
                           "model-value": unref(isReasonSelected)("upskill"),
                           "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("upskill", checked)
                         }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                        createVNode(unref(_sfc_main$6), {
+                        createVNode(unref(_sfc_main$7), {
                           for: "upskill",
                           class: "text-sm"
                         }, {
@@ -1631,12 +1655,12 @@ const _sfc_main$1 = {
                         })
                       ]),
                       createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$7), {
+                        createVNode(unref(_sfc_main$8), {
                           id: "certificate",
                           "model-value": unref(isReasonSelected)("certificate"),
                           "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("certificate", checked)
                         }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                        createVNode(unref(_sfc_main$6), {
+                        createVNode(unref(_sfc_main$7), {
                           for: "certificate",
                           class: "text-sm"
                         }, {
@@ -1647,12 +1671,12 @@ const _sfc_main$1 = {
                         })
                       ]),
                       createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$7), {
+                        createVNode(unref(_sfc_main$8), {
                           id: "job",
                           "model-value": unref(isReasonSelected)("job"),
                           "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("job", checked)
                         }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                        createVNode(unref(_sfc_main$6), {
+                        createVNode(unref(_sfc_main$7), {
                           for: "job",
                           class: "text-sm"
                         }, {
@@ -1663,12 +1687,12 @@ const _sfc_main$1 = {
                         })
                       ]),
                       createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$7), {
+                        createVNode(unref(_sfc_main$8), {
                           id: "other-reason",
                           "model-value": unref(isReasonSelected)("other"),
                           "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("other", checked)
                         }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                        createVNode(unref(_sfc_main$6), {
+                        createVNode(unref(_sfc_main$7), {
                           for: "other-reason",
                           class: "text-sm"
                         }, {
@@ -1677,7 +1701,7 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }),
-                        unref(isReasonSelected)("other") ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                        unref(isReasonSelected)("other") ? (openBlock(), createBlock(unref(_sfc_main$6), {
                           key: 0,
                           modelValue: unref(form).registrationReasonsOther,
                           "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
@@ -1705,10 +1729,10 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-5"${_scopeId2}>`);
@@ -1725,7 +1749,7 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$9), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$a), {
                     modelValue: unref(form).commitmentLevel,
                     "onUpdate:modelValue": ($event) => unref(form).commitmentLevel = $event,
                     class: "space-y-2"
@@ -1733,11 +1757,11 @@ const _sfc_main$1 = {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "fully-committed",
                           value: "fully-committed"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "fully-committed",
                           class: "text-sm"
                         }, {
@@ -1753,11 +1777,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "need-info",
                           value: "need-info"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "need-info",
                           class: "text-sm"
                         }, {
@@ -1773,11 +1797,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "not-sure",
                           value: "not-sure"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "not-sure",
                           class: "text-sm"
                         }, {
@@ -1793,11 +1817,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "other-commitment",
                           value: "other-commitment"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "other-commitment",
                           class: "text-sm"
                         }, {
@@ -1813,7 +1837,7 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         if (unref(form).commitmentLevel === "other-commitment") {
-                          _push4(ssrRenderComponent(unref(_sfc_main$5), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$6), {
                             modelValue: unref(form).commitmentLevelOther,
                             "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
                             placeholder: "Sila nyatakan...",
@@ -1831,11 +1855,11 @@ const _sfc_main$1 = {
                       } else {
                         return [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "fully-committed",
                               value: "fully-committed"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "fully-committed",
                               class: "text-sm"
                             }, {
@@ -1846,11 +1870,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "need-info",
                               value: "need-info"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "need-info",
                               class: "text-sm"
                             }, {
@@ -1861,11 +1885,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "not-sure",
                               value: "not-sure"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "not-sure",
                               class: "text-sm"
                             }, {
@@ -1876,11 +1900,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "other-commitment",
                               value: "other-commitment"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "other-commitment",
                               class: "text-sm"
                             }, {
@@ -1889,7 +1913,7 @@ const _sfc_main$1 = {
                               ]),
                               _: 1
                             }),
-                            unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                            unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$6), {
                               key: 0,
                               modelValue: unref(form).commitmentLevelOther,
                               "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
@@ -1924,18 +1948,18 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode(unref(_sfc_main$9), {
+                      createVNode(unref(_sfc_main$a), {
                         modelValue: unref(form).commitmentLevel,
                         "onUpdate:modelValue": ($event) => unref(form).commitmentLevel = $event,
                         class: "space-y-2"
                       }, {
                         default: withCtx(() => [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "fully-committed",
                               value: "fully-committed"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "fully-committed",
                               class: "text-sm"
                             }, {
@@ -1946,11 +1970,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "need-info",
                               value: "need-info"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "need-info",
                               class: "text-sm"
                             }, {
@@ -1961,11 +1985,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "not-sure",
                               value: "not-sure"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "not-sure",
                               class: "text-sm"
                             }, {
@@ -1976,11 +2000,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "other-commitment",
                               value: "other-commitment"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "other-commitment",
                               class: "text-sm"
                             }, {
@@ -1989,7 +2013,7 @@ const _sfc_main$1 = {
                               ]),
                               _: 1
                             }),
-                            unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                            unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$6), {
                               key: 0,
                               modelValue: unref(form).commitmentLevelOther,
                               "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
@@ -2018,7 +2042,7 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+              createVNode(unref(_sfc_main$4), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
@@ -2028,18 +2052,18 @@ const _sfc_main$1 = {
                       ]),
                       _: 1
                     }),
-                    createVNode(unref(_sfc_main$9), {
+                    createVNode(unref(_sfc_main$a), {
                       modelValue: unref(form).commitmentLevel,
                       "onUpdate:modelValue": ($event) => unref(form).commitmentLevel = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx(() => [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "fully-committed",
                             value: "fully-committed"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "fully-committed",
                             class: "text-sm"
                           }, {
@@ -2050,11 +2074,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "need-info",
                             value: "need-info"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "need-info",
                             class: "text-sm"
                           }, {
@@ -2065,11 +2089,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "not-sure",
                             value: "not-sure"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "not-sure",
                             class: "text-sm"
                           }, {
@@ -2080,11 +2104,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "other-commitment",
                             value: "other-commitment"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "other-commitment",
                             class: "text-sm"
                           }, {
@@ -2093,7 +2117,7 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$5), {
+                          unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$6), {
                             key: 0,
                             modelValue: unref(form).commitmentLevelOther,
                             "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
@@ -2123,10 +2147,10 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-5"${_scopeId2}>`);
@@ -2143,7 +2167,7 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$9), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$a), {
                     modelValue: unref(form).programInterest,
                     "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
                     class: "space-y-2"
@@ -2151,11 +2175,11 @@ const _sfc_main$1 = {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "python-basic",
                           value: "python-basic"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "python-basic",
                           class: "text-sm flex items-center space-x-2"
                         }, {
@@ -2176,11 +2200,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "genai-masterclass",
                           value: "genai-masterclass"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "genai-masterclass",
                           class: "text-sm flex items-center space-x-2"
                         }, {
@@ -2201,11 +2225,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "aws-foundational",
                           value: "aws-foundational"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "aws-foundational",
                           class: "text-sm flex items-center space-x-2"
                         }, {
@@ -2226,11 +2250,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$9), {
                           id: "more-than-one",
                           value: "more-than-one"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$7), {
                           for: "more-than-one",
                           class: "text-sm"
                         }, {
@@ -2249,11 +2273,11 @@ const _sfc_main$1 = {
                       } else {
                         return [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "python-basic",
                               value: "python-basic"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "python-basic",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2269,11 +2293,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "genai-masterclass",
                               value: "genai-masterclass"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "genai-masterclass",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2289,11 +2313,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "aws-foundational",
                               value: "aws-foundational"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "aws-foundational",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2309,11 +2333,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "more-than-one",
                               value: "more-than-one"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "more-than-one",
                               class: "text-sm"
                             }, {
@@ -2344,18 +2368,18 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode(unref(_sfc_main$9), {
+                      createVNode(unref(_sfc_main$a), {
                         modelValue: unref(form).programInterest,
                         "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
                         class: "space-y-2"
                       }, {
                         default: withCtx(() => [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "python-basic",
                               value: "python-basic"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "python-basic",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2371,11 +2395,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "genai-masterclass",
                               value: "genai-masterclass"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "genai-masterclass",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2391,11 +2415,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "aws-foundational",
                               value: "aws-foundational"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "aws-foundational",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2411,11 +2435,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$8), {
+                            createVNode(unref(_sfc_main$9), {
                               id: "more-than-one",
                               value: "more-than-one"
                             }),
-                            createVNode(unref(_sfc_main$6), {
+                            createVNode(unref(_sfc_main$7), {
                               for: "more-than-one",
                               class: "text-sm"
                             }, {
@@ -2440,7 +2464,7 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+              createVNode(unref(_sfc_main$4), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-5" }, [
                     createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
@@ -2450,18 +2474,18 @@ const _sfc_main$1 = {
                       ]),
                       _: 1
                     }),
-                    createVNode(unref(_sfc_main$9), {
+                    createVNode(unref(_sfc_main$a), {
                       modelValue: unref(form).programInterest,
                       "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx(() => [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "python-basic",
                             value: "python-basic"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "python-basic",
                             class: "text-sm flex items-center space-x-2"
                           }, {
@@ -2477,11 +2501,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "genai-masterclass",
                             value: "genai-masterclass"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "genai-masterclass",
                             class: "text-sm flex items-center space-x-2"
                           }, {
@@ -2497,11 +2521,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "aws-foundational",
                             value: "aws-foundational"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "aws-foundational",
                             class: "text-sm flex items-center space-x-2"
                           }, {
@@ -2517,11 +2541,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$8), {
+                          createVNode(unref(_sfc_main$9), {
                             id: "more-than-one",
                             value: "more-than-one"
                           }),
-                          createVNode(unref(_sfc_main$6), {
+                          createVNode(unref(_sfc_main$7), {
                             for: "more-than-one",
                             class: "text-sm"
                           }, {
@@ -2548,13 +2572,43 @@ const _sfc_main$1 = {
         _: 1
       }, _parent));
       if (unref(form).programInterest === "python-basic") {
-        _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+        _push(ssrRenderComponent(unref(_sfc_main$5), null, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+              _push2(ssrRenderComponent(unref(_sfc_main$4), { class: "p-6" }, {
                 default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(`<div class="space-y-5"${_scopeId2}><div class="bg-orange-500 text-white p-4 rounded-t-lg"${_scopeId2}><h3 class="font-bold text-lg"${_scopeId2}>(01) Python Basic Programming</h3></div><div class="bg-gray-50 p-4 rounded-b-lg space-y-4"${_scopeId2}><h4 class="font-semibold text-gray-800"${_scopeId2}>Python Programming Talent Development &amp; Job Placement Initiative</h4><p class="text-gray-700"${_scopeId2}>Unlock your future with in-demand Python skills.</p><p class="text-gray-700"${_scopeId2}> Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. </p><p class="text-gray-700"${_scopeId2}> Gain hands-on training and access career opportunities in data science, AI, software development, and automation. </p></div><div class="space-y-3"${_scopeId2}>`);
+                    _push3(`<div class="space-y-5"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground flex items-center space-x-2" }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<img${ssrRenderAttr("src", unref(pythonLogoUrl))} alt="Python Logo" class="w-8 h-6"${_scopeId3}><span${_scopeId3}>Python Basic Programming</span>`);
+                        } else {
+                          return [
+                            createVNode("img", {
+                              src: unref(pythonLogoUrl),
+                              alt: "Python Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "Python Basic Programming")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$3), { class: "text-muted-foreground" }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(` Python Programming Talent Development &amp; Job Placement Initiative. Unlock your future with in-demand Python skills. Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. Gain hands-on training and access career opportunities in data science, AI, software development, and automation. `);
+                        } else {
+                          return [
+                            createTextVNode(" Python Programming Talent Development & Job Placement Initiative. Unlock your future with in-demand Python skills. Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. Gain hands-on training and access career opportunities in data science, AI, software development, and automation. ")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(`<div class="space-y-3"${_scopeId2}>`);
                     _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
@@ -2568,7 +2622,7 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$9), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$a), {
                       modelValue: unref(form).intakeBatch,
                       "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                       class: "space-y-2"
@@ -2576,11 +2630,11 @@ const _sfc_main$1 = {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$9), {
                             id: "batch-1",
                             value: "batch-1"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$7), {
                             for: "batch-1",
                             class: "text-sm"
                           }, {
@@ -2596,11 +2650,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$9), {
                             id: "batch-2",
                             value: "batch-2"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$7), {
                             for: "batch-2",
                             class: "text-sm"
                           }, {
@@ -2616,11 +2670,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$9), {
                             id: "batch-3",
                             value: "batch-3"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$7), {
                             for: "batch-3",
                             class: "text-sm"
                           }, {
@@ -2639,11 +2693,11 @@ const _sfc_main$1 = {
                         } else {
                           return [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$8), {
+                              createVNode(unref(_sfc_main$9), {
                                 id: "batch-1",
                                 value: "batch-1"
                               }),
-                              createVNode(unref(_sfc_main$6), {
+                              createVNode(unref(_sfc_main$7), {
                                 for: "batch-1",
                                 class: "text-sm"
                               }, {
@@ -2654,11 +2708,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$8), {
+                              createVNode(unref(_sfc_main$9), {
                                 id: "batch-2",
                                 value: "batch-2"
                               }),
-                              createVNode(unref(_sfc_main$6), {
+                              createVNode(unref(_sfc_main$7), {
                                 for: "batch-2",
                                 class: "text-sm"
                               }, {
@@ -2669,11 +2723,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$8), {
+                              createVNode(unref(_sfc_main$9), {
                                 id: "batch-3",
                                 value: "batch-3"
                               }),
-                              createVNode(unref(_sfc_main$6), {
+                              createVNode(unref(_sfc_main$7), {
                                 for: "batch-3",
                                 class: "text-sm"
                               }, {
@@ -2697,15 +2751,23 @@ const _sfc_main$1 = {
                   } else {
                     return [
                       createVNode("div", { class: "space-y-5" }, [
-                        createVNode("div", { class: "bg-orange-500 text-white p-4 rounded-t-lg" }, [
-                          createVNode("h3", { class: "font-bold text-lg" }, "(01) Python Basic Programming")
-                        ]),
-                        createVNode("div", { class: "bg-gray-50 p-4 rounded-b-lg space-y-4" }, [
-                          createVNode("h4", { class: "font-semibold text-gray-800" }, "Python Programming Talent Development & Job Placement Initiative"),
-                          createVNode("p", { class: "text-gray-700" }, "Unlock your future with in-demand Python skills."),
-                          createVNode("p", { class: "text-gray-700" }, " Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. "),
-                          createVNode("p", { class: "text-gray-700" }, " Gain hands-on training and access career opportunities in data science, AI, software development, and automation. ")
-                        ]),
+                        createVNode(unref(_sfc_main$2), { class: "text-card-foreground flex items-center space-x-2" }, {
+                          default: withCtx(() => [
+                            createVNode("img", {
+                              src: unref(pythonLogoUrl),
+                              alt: "Python Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "Python Basic Programming")
+                          ]),
+                          _: 1
+                        }),
+                        createVNode(unref(_sfc_main$3), { class: "text-muted-foreground" }, {
+                          default: withCtx(() => [
+                            createTextVNode(" Python Programming Talent Development & Job Placement Initiative. Unlock your future with in-demand Python skills. Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. Gain hands-on training and access career opportunities in data science, AI, software development, and automation. ")
+                          ]),
+                          _: 1
+                        }),
                         createVNode("div", { class: "space-y-3" }, [
                           createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                             default: withCtx(() => [
@@ -2714,18 +2776,18 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          createVNode(unref(_sfc_main$9), {
+                          createVNode(unref(_sfc_main$a), {
                             modelValue: unref(form).intakeBatch,
                             "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                             class: "space-y-2"
                           }, {
                             default: withCtx(() => [
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$8), {
+                                createVNode(unref(_sfc_main$9), {
                                   id: "batch-1",
                                   value: "batch-1"
                                 }),
-                                createVNode(unref(_sfc_main$6), {
+                                createVNode(unref(_sfc_main$7), {
                                   for: "batch-1",
                                   class: "text-sm"
                                 }, {
@@ -2736,11 +2798,11 @@ const _sfc_main$1 = {
                                 })
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$8), {
+                                createVNode(unref(_sfc_main$9), {
                                   id: "batch-2",
                                   value: "batch-2"
                                 }),
-                                createVNode(unref(_sfc_main$6), {
+                                createVNode(unref(_sfc_main$7), {
                                   for: "batch-2",
                                   class: "text-sm"
                                 }, {
@@ -2751,11 +2813,11 @@ const _sfc_main$1 = {
                                 })
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$8), {
+                                createVNode(unref(_sfc_main$9), {
                                   id: "batch-3",
                                   value: "batch-3"
                                 }),
-                                createVNode(unref(_sfc_main$6), {
+                                createVNode(unref(_sfc_main$7), {
                                   for: "batch-3",
                                   class: "text-sm"
                                 }, {
@@ -2781,18 +2843,26 @@ const _sfc_main$1 = {
               }, _parent2, _scopeId));
             } else {
               return [
-                createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+                createVNode(unref(_sfc_main$4), { class: "p-6" }, {
                   default: withCtx(() => [
                     createVNode("div", { class: "space-y-5" }, [
-                      createVNode("div", { class: "bg-orange-500 text-white p-4 rounded-t-lg" }, [
-                        createVNode("h3", { class: "font-bold text-lg" }, "(01) Python Basic Programming")
-                      ]),
-                      createVNode("div", { class: "bg-gray-50 p-4 rounded-b-lg space-y-4" }, [
-                        createVNode("h4", { class: "font-semibold text-gray-800" }, "Python Programming Talent Development & Job Placement Initiative"),
-                        createVNode("p", { class: "text-gray-700" }, "Unlock your future with in-demand Python skills."),
-                        createVNode("p", { class: "text-gray-700" }, " Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. "),
-                        createVNode("p", { class: "text-gray-700" }, " Gain hands-on training and access career opportunities in data science, AI, software development, and automation. ")
-                      ]),
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground flex items-center space-x-2" }, {
+                        default: withCtx(() => [
+                          createVNode("img", {
+                            src: unref(pythonLogoUrl),
+                            alt: "Python Logo",
+                            class: "w-8 h-6"
+                          }, null, 8, ["src"]),
+                          createVNode("span", null, "Python Basic Programming")
+                        ]),
+                        _: 1
+                      }),
+                      createVNode(unref(_sfc_main$3), { class: "text-muted-foreground" }, {
+                        default: withCtx(() => [
+                          createTextVNode(" Python Programming Talent Development & Job Placement Initiative. Unlock your future with in-demand Python skills. Brought to you by Yayasan Pahang and industry partners, this program equips fresh graduates and job seekers with essential Python skills and prepares them for real job placements in tech and engineering. Gain hands-on training and access career opportunities in data science, AI, software development, and automation. ")
+                        ]),
+                        _: 1
+                      }),
                       createVNode("div", { class: "space-y-3" }, [
                         createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                           default: withCtx(() => [
@@ -2801,18 +2871,18 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }),
-                        createVNode(unref(_sfc_main$9), {
+                        createVNode(unref(_sfc_main$a), {
                           modelValue: unref(form).intakeBatch,
                           "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                           class: "space-y-2"
                         }, {
                           default: withCtx(() => [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$8), {
+                              createVNode(unref(_sfc_main$9), {
                                 id: "batch-1",
                                 value: "batch-1"
                               }),
-                              createVNode(unref(_sfc_main$6), {
+                              createVNode(unref(_sfc_main$7), {
                                 for: "batch-1",
                                 class: "text-sm"
                               }, {
@@ -2823,11 +2893,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$8), {
+                              createVNode(unref(_sfc_main$9), {
                                 id: "batch-2",
                                 value: "batch-2"
                               }),
-                              createVNode(unref(_sfc_main$6), {
+                              createVNode(unref(_sfc_main$7), {
                                 for: "batch-2",
                                 class: "text-sm"
                               }, {
@@ -2838,11 +2908,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$8), {
+                              createVNode(unref(_sfc_main$9), {
                                 id: "batch-3",
                                 value: "batch-3"
                               }),
-                              createVNode(unref(_sfc_main$6), {
+                              createVNode(unref(_sfc_main$7), {
                                 for: "batch-3",
                                 class: "text-sm"
                               }, {
@@ -2872,14 +2942,14 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$4), { class: "p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="flex justify-end"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$g), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$h), {
                     type: "submit",
                     disabled: unref(processing),
                     class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
@@ -2899,7 +2969,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "flex justify-end" }, [
-                      createVNode(unref(_sfc_main$g), {
+                      createVNode(unref(_sfc_main$h), {
                         type: "submit",
                         disabled: unref(processing),
                         class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
@@ -2917,10 +2987,10 @@ const _sfc_main$1 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+              createVNode(unref(_sfc_main$4), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "flex justify-end" }, [
-                    createVNode(unref(_sfc_main$g), {
+                    createVNode(unref(_sfc_main$h), {
                       type: "submit",
                       disabled: unref(processing),
                       class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
