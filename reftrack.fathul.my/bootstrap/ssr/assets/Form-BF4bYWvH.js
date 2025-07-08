@@ -555,381 +555,113 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(_sfc_main$c, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$b, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$a, null, null, _parent));
-      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6">`);
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$6), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
-                      if (_push4) {
-                        _push4(` Nama Penuh <span class="text-destructive"${_scopeId3}>*</span>`);
-                      } else {
-                        return [
-                          createTextVNode(" Nama Penuh "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ];
-                      }
-                    }),
-                    _: 1
-                  }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$5), {
-                    modelValue: unref(form).fullName,
-                    "onUpdate:modelValue": ($event) => unref(form).fullName = $event,
-                    type: "text",
-                    placeholder: "Masukkan nama penuh anda",
-                    class: "w-full"
-                  }, null, _parent3, _scopeId2));
-                  if (unref(form).errors.fullName) {
-                    _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.fullName)}</p>`);
-                  } else {
-                    _push3(`<!---->`);
-                  }
-                  _push3(`</div>`);
-                } else {
-                  return [
-                    createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                        default: withCtx(() => [
-                          createTextVNode(" Nama Penuh "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ]),
-                        _: 1
-                      }),
-                      createVNode(unref(_sfc_main$5), {
-                        modelValue: unref(form).fullName,
-                        "onUpdate:modelValue": ($event) => unref(form).fullName = $event,
-                        type: "text",
-                        placeholder: "Masukkan nama penuh anda",
-                        class: "w-full"
-                      }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                      unref(form).errors.fullName ? (openBlock(), createBlock("p", {
-                        key: 0,
-                        class: "text-sm text-destructive"
-                      }, toDisplayString(unref(form).errors.fullName), 1)) : createCommentVNode("", true)
-                    ])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
+            _push2(` Nama Penuh <span class="text-destructive"${_scopeId}>*</span>`);
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
-                default: withCtx(() => [
-                  createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                      default: withCtx(() => [
-                        createTextVNode(" Nama Penuh "),
-                        createVNode("span", { class: "text-destructive" }, "*")
-                      ]),
-                      _: 1
-                    }),
-                    createVNode(unref(_sfc_main$5), {
-                      modelValue: unref(form).fullName,
-                      "onUpdate:modelValue": ($event) => unref(form).fullName = $event,
-                      type: "text",
-                      placeholder: "Masukkan nama penuh anda",
-                      class: "w-full"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    unref(form).errors.fullName ? (openBlock(), createBlock("p", {
-                      key: 0,
-                      class: "text-sm text-destructive"
-                    }, toDisplayString(unref(form).errors.fullName), 1)) : createCommentVNode("", true)
-                  ])
-                ]),
-                _: 1
-              })
+              createTextVNode(" Nama Penuh "),
+              createVNode("span", { class: "text-destructive" }, "*")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), {
+        modelValue: unref(form).fullName,
+        "onUpdate:modelValue": ($event) => unref(form).fullName = $event,
+        type: "text",
+        placeholder: "Masukkan nama penuh anda",
+        class: "w-full"
+      }, null, _parent));
+      if (unref(form).errors.fullName) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.fullName)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$6), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
-                      if (_push4) {
-                        _push4(` Nombor Telefon <span class="text-destructive"${_scopeId3}>*</span>`);
-                      } else {
-                        return [
-                          createTextVNode(" Nombor Telefon "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ];
-                      }
-                    }),
-                    _: 1
-                  }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$5), {
-                    modelValue: unref(form).phoneNumber,
-                    "onUpdate:modelValue": ($event) => unref(form).phoneNumber = $event,
-                    type: "tel",
-                    placeholder: "Contoh: 012-3456789",
-                    class: "w-full"
-                  }, null, _parent3, _scopeId2));
-                  if (unref(form).errors.phoneNumber) {
-                    _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.phoneNumber)}</p>`);
-                  } else {
-                    _push3(`<!---->`);
-                  }
-                  _push3(`</div>`);
-                } else {
-                  return [
-                    createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                        default: withCtx(() => [
-                          createTextVNode(" Nombor Telefon "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ]),
-                        _: 1
-                      }),
-                      createVNode(unref(_sfc_main$5), {
-                        modelValue: unref(form).phoneNumber,
-                        "onUpdate:modelValue": ($event) => unref(form).phoneNumber = $event,
-                        type: "tel",
-                        placeholder: "Contoh: 012-3456789",
-                        class: "w-full"
-                      }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                      unref(form).errors.phoneNumber ? (openBlock(), createBlock("p", {
-                        key: 0,
-                        class: "text-sm text-destructive"
-                      }, toDisplayString(unref(form).errors.phoneNumber), 1)) : createCommentVNode("", true)
-                    ])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
+            _push2(` Nombor Telefon <span class="text-destructive"${_scopeId}>*</span>`);
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
-                default: withCtx(() => [
-                  createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                      default: withCtx(() => [
-                        createTextVNode(" Nombor Telefon "),
-                        createVNode("span", { class: "text-destructive" }, "*")
-                      ]),
-                      _: 1
-                    }),
-                    createVNode(unref(_sfc_main$5), {
-                      modelValue: unref(form).phoneNumber,
-                      "onUpdate:modelValue": ($event) => unref(form).phoneNumber = $event,
-                      type: "tel",
-                      placeholder: "Contoh: 012-3456789",
-                      class: "w-full"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    unref(form).errors.phoneNumber ? (openBlock(), createBlock("p", {
-                      key: 0,
-                      class: "text-sm text-destructive"
-                    }, toDisplayString(unref(form).errors.phoneNumber), 1)) : createCommentVNode("", true)
-                  ])
-                ]),
-                _: 1
-              })
+              createTextVNode(" Nombor Telefon "),
+              createVNode("span", { class: "text-destructive" }, "*")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), {
+        modelValue: unref(form).phoneNumber,
+        "onUpdate:modelValue": ($event) => unref(form).phoneNumber = $event,
+        type: "tel",
+        placeholder: "Contoh: 012-3456789",
+        class: "w-full"
+      }, null, _parent));
+      if (unref(form).errors.phoneNumber) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.phoneNumber)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$6), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
-                      if (_push4) {
-                        _push4(` Alamat Emel <span class="text-destructive"${_scopeId3}>*</span>`);
-                      } else {
-                        return [
-                          createTextVNode(" Alamat Emel "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ];
-                      }
-                    }),
-                    _: 1
-                  }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$5), {
-                    modelValue: unref(form).email,
-                    "onUpdate:modelValue": ($event) => unref(form).email = $event,
-                    type: "email",
-                    placeholder: "contoh@email.com",
-                    class: "w-full"
-                  }, null, _parent3, _scopeId2));
-                  if (unref(form).errors.email) {
-                    _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.email)}</p>`);
-                  } else {
-                    _push3(`<!---->`);
-                  }
-                  _push3(`</div>`);
-                } else {
-                  return [
-                    createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                        default: withCtx(() => [
-                          createTextVNode(" Alamat Emel "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ]),
-                        _: 1
-                      }),
-                      createVNode(unref(_sfc_main$5), {
-                        modelValue: unref(form).email,
-                        "onUpdate:modelValue": ($event) => unref(form).email = $event,
-                        type: "email",
-                        placeholder: "contoh@email.com",
-                        class: "w-full"
-                      }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                      unref(form).errors.email ? (openBlock(), createBlock("p", {
-                        key: 0,
-                        class: "text-sm text-destructive"
-                      }, toDisplayString(unref(form).errors.email), 1)) : createCommentVNode("", true)
-                    ])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
+            _push2(` Alamat Emel <span class="text-destructive"${_scopeId}>*</span>`);
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
-                default: withCtx(() => [
-                  createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                      default: withCtx(() => [
-                        createTextVNode(" Alamat Emel "),
-                        createVNode("span", { class: "text-destructive" }, "*")
-                      ]),
-                      _: 1
-                    }),
-                    createVNode(unref(_sfc_main$5), {
-                      modelValue: unref(form).email,
-                      "onUpdate:modelValue": ($event) => unref(form).email = $event,
-                      type: "email",
-                      placeholder: "contoh@email.com",
-                      class: "w-full"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    unref(form).errors.email ? (openBlock(), createBlock("p", {
-                      key: 0,
-                      class: "text-sm text-destructive"
-                    }, toDisplayString(unref(form).errors.email), 1)) : createCommentVNode("", true)
-                  ])
-                ]),
-                _: 1
-              })
+              createTextVNode(" Alamat Emel "),
+              createVNode("span", { class: "text-destructive" }, "*")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+      _push(ssrRenderComponent(unref(_sfc_main$5), {
+        modelValue: unref(form).email,
+        "onUpdate:modelValue": ($event) => unref(form).email = $event,
+        type: "email",
+        placeholder: "contoh@email.com",
+        class: "w-full"
+      }, null, _parent));
+      if (unref(form).errors.email) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.email)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$6), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
-                      if (_push4) {
-                        _push4(` Umur <span class="text-destructive"${_scopeId3}>*</span>`);
-                      } else {
-                        return [
-                          createTextVNode(" Umur "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ];
-                      }
-                    }),
-                    _: 1
-                  }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$5), {
-                    modelValue: unref(form).age,
-                    "onUpdate:modelValue": ($event) => unref(form).age = $event,
-                    type: "number",
-                    placeholder: "Masukkan umur anda (18-35 tahun)",
-                    min: "18",
-                    max: "35",
-                    class: "w-full"
-                  }, null, _parent3, _scopeId2));
-                  if (unref(form).errors.age) {
-                    _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.age)}</p>`);
-                  } else {
-                    _push3(`<!---->`);
-                  }
-                  _push3(`</div>`);
-                } else {
-                  return [
-                    createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                        default: withCtx(() => [
-                          createTextVNode(" Umur "),
-                          createVNode("span", { class: "text-destructive" }, "*")
-                        ]),
-                        _: 1
-                      }),
-                      createVNode(unref(_sfc_main$5), {
-                        modelValue: unref(form).age,
-                        "onUpdate:modelValue": ($event) => unref(form).age = $event,
-                        type: "number",
-                        placeholder: "Masukkan umur anda (18-35 tahun)",
-                        min: "18",
-                        max: "35",
-                        class: "w-full"
-                      }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                      unref(form).errors.age ? (openBlock(), createBlock("p", {
-                        key: 0,
-                        class: "text-sm text-destructive"
-                      }, toDisplayString(unref(form).errors.age), 1)) : createCommentVNode("", true)
-                    ])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
+            _push2(` Umur <span class="text-destructive"${_scopeId}>*</span>`);
           } else {
             return [
-              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
-                default: withCtx(() => [
-                  createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
-                      default: withCtx(() => [
-                        createTextVNode(" Umur "),
-                        createVNode("span", { class: "text-destructive" }, "*")
-                      ]),
-                      _: 1
-                    }),
-                    createVNode(unref(_sfc_main$5), {
-                      modelValue: unref(form).age,
-                      "onUpdate:modelValue": ($event) => unref(form).age = $event,
-                      type: "number",
-                      placeholder: "Masukkan umur anda (18-35 tahun)",
-                      min: "18",
-                      max: "35",
-                      class: "w-full"
-                    }, null, 8, ["modelValue", "onUpdate:modelValue"]),
-                    unref(form).errors.age ? (openBlock(), createBlock("p", {
-                      key: 0,
-                      class: "text-sm text-destructive"
-                    }, toDisplayString(unref(form).errors.age), 1)) : createCommentVNode("", true)
-                  ])
-                ]),
-                _: 1
-              })
+              createTextVNode(" Umur "),
+              createVNode("span", { class: "text-destructive" }, "*")
             ];
           }
         }),
         _: 1
       }, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$5), {
+        modelValue: unref(form).age,
+        "onUpdate:modelValue": ($event) => unref(form).age = $event,
+        type: "number",
+        placeholder: "Masukkan umur anda (18-35 tahun)",
+        min: "18",
+        max: "35",
+        class: "w-full"
+      }, null, _parent));
+      if (unref(form).errors.age) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.age)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div>`);
       _push(ssrRenderComponent(unref(_sfc_main$4), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

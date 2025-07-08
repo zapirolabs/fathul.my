@@ -19,91 +19,75 @@
         </div>
 
         <form @submit.prevent="submit" class="space-y-6">
-          <!-- Full Name Card -->
-          <Card>
-            <CardContent class="p-6">
-              <div class="space-y-3">
-                <CardTitle class="text-card-foreground">
-                  Nama Penuh
-                  <span class="text-destructive">*</span>
-                </CardTitle>
-                <Input 
-                  v-model="form.fullName"
-                  type="text"
-                  placeholder="Masukkan nama penuh anda"
-                  class="w-full"
-                />
-                <p v-if="form.errors.fullName" class="text-sm text-destructive">
-                  {{ form.errors.fullName }}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <!-- Full Name -->
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Nama Penuh
+              <span class="text-destructive">*</span>
+            </Label>
+            <Input 
+              v-model="form.fullName"
+              type="text"
+              placeholder="Masukkan nama penuh anda"
+              class="w-full"
+            />
+            <p v-if="form.errors.fullName" class="text-sm text-destructive">
+              {{ form.errors.fullName }}
+            </p>
+          </div>
 
-          <!-- Phone Number Card -->
-          <Card>
-            <CardContent class="p-6">
-              <div class="space-y-3">
-                <CardTitle class="text-card-foreground">
-                  Nombor Telefon
-                  <span class="text-destructive">*</span>
-                </CardTitle>
-                <Input 
-                  v-model="form.phoneNumber"
-                  type="tel"
-                  placeholder="Contoh: 012-3456789"
-                  class="w-full"
-                />
-                <p v-if="form.errors.phoneNumber" class="text-sm text-destructive">
-                  {{ form.errors.phoneNumber }}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <!-- Phone Number -->
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Nombor Telefon
+              <span class="text-destructive">*</span>
+            </Label>
+            <Input 
+              v-model="form.phoneNumber"
+              type="tel"
+              placeholder="Contoh: 012-3456789"
+              class="w-full"
+            />
+            <p v-if="form.errors.phoneNumber" class="text-sm text-destructive">
+              {{ form.errors.phoneNumber }}
+            </p>
+          </div>
 
-          <!-- Email Card -->
-          <Card>
-            <CardContent class="p-6">
-              <div class="space-y-3">
-                <CardTitle class="text-card-foreground">
-                  Alamat Emel
-                  <span class="text-destructive">*</span>
-                </CardTitle>
-                <Input 
-                  v-model="form.email"
-                  type="email"
-                  placeholder="contoh@email.com"
-                  class="w-full"
-                />
-                <p v-if="form.errors.email" class="text-sm text-destructive">
-                  {{ form.errors.email }}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <!-- Email -->
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Alamat Emel
+              <span class="text-destructive">*</span>
+            </Label>
+            <Input 
+              v-model="form.email"
+              type="email"
+              placeholder="contoh@email.com"
+              class="w-full"
+            />
+            <p v-if="form.errors.email" class="text-sm text-destructive">
+              {{ form.errors.email }}
+            </p>
+          </div>
 
-          <!-- Age Card -->
-          <Card>
-            <CardContent class="p-6">
-              <div class="space-y-3">
-                <CardTitle class="text-card-foreground">
-                  Umur
-                  <span class="text-destructive">*</span>
-                </CardTitle>
-                <Input 
-                  v-model="form.age"
-                  type="number"
-                  placeholder="Masukkan umur anda (18-35 tahun)"
-                  min="18"
-                  max="35"
-                  class="w-full"
-                />
-                <p v-if="form.errors.age" class="text-sm text-destructive">
-                  {{ form.errors.age }}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <!-- Age -->
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Umur
+              <span class="text-destructive">*</span>
+            </Label>
+            <Input 
+              v-model="form.age"
+              type="number"
+              placeholder="Masukkan umur anda (18-35 tahun)"
+              min="18"
+              max="35"
+              class="w-full"
+            />
+            <p v-if="form.errors.age" class="text-sm text-destructive">
+              {{ form.errors.age }}
+            </p>
+          </div>
 
           <!-- Registration Reasons Card -->
           <Card>
