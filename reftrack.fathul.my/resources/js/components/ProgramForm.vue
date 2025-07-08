@@ -19,7 +19,7 @@
         </div>
 
 
-        <form @submit.prevent="submit" class="space-y-6">
+        <form @submit.prevent="submitForm" class="space-y-6">
           <!-- Pahang Connection Card -->
           <Card>
             <CardContent class="p-6">
@@ -399,7 +399,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
 import { useAppearance } from '@/resources/js/composables/useAppearance'
 
-const { form, handleRegistrationReasonChange, isReasonSelected, processing, submit } = useProgramForm()
+const { form, handleRegistrationReasonChange, isReasonSelected, processing, submitForm } = useProgramForm()
 const { awsLogoUrl, chatGptLogoUrl, pythonLogoUrl } = useAppearance()
 </script>
 

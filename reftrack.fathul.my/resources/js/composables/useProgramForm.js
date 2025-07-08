@@ -46,7 +46,10 @@ export function useProgramForm() {
   }
 
   const submitForm = () => {
-    form.post('/program', {
+    form.transform((data) => ({
+      ...data,
+      registrationReasons: registrationReasons.value
+    })).post('/program', {
       preserveScroll: true,
       onSuccess: () => {
         // Success handling is done by the controller redirect

@@ -734,7 +734,10 @@ function useProgramForm() {
     return registrationReasons.value.includes(value);
   };
   const submitForm = () => {
-    form.post("/program", {
+    form.transform((data) => ({
+      ...data,
+      registrationReasons: registrationReasons.value
+    })).post("/program", {
       preserveScroll: true,
       onSuccess: () => {
       },
