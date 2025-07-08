@@ -5,7 +5,7 @@
     <ApaYangAndaPerolehi />
     <ProgramYangDitawarkan />
     <SiapaPatutMemohon />
-    
+
     <!-- Form Section -->
     <div class="bg-card py-16 sm:py-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,17 +21,14 @@
 
         <form @submit.prevent="submit" class="space-y-6">
           <!-- Pahang Connection Card -->
-         <Card>
+          <Card>
             <CardContent class="p-6">
               <div class="space-y-5">
                 <CardTitle class="text-card-foreground">
-                  Apakah kaitan anda dengan negeri Pahang? 
+                  Apakah kaitan anda dengan negeri Pahang?
                   <span class="text-destructive">*</span>
                 </CardTitle>
-                <RadioGroup 
-                  v-model="form.pahangConnection"
-                  class="space-y-2"
-                >
+                <RadioGroup v-model="form.pahangConnection" class="space-y-2">
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="born-pahang" value="born-pahang" />
                     <Label for="born-pahang" class="text-sm">Saya dilahirkan di Pahang</Label>
@@ -47,20 +44,17 @@
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="other-pahang" value="other-pahang" />
                     <Label for="other-pahang" class="text-sm">Lain-lain:</Label>
-                    <Input 
-                      v-if="form.pahangConnection === 'other-pahang'"
-                      v-model="form.pahangConnectionOther"
-                      placeholder="Sila nyatakan..."
-                      class="max-w-md"
-                    />
+                    <Input v-if="form.pahangConnection === 'other-pahang'" v-model="form.pahangConnectionOther"
+                      placeholder="Sila nyatakan..." class="max-w-md" />
                   </div>
-                  <div v-if="form.pahangConnection === 'other-pahang' && form.errors.pahangConnectionOther" class="ml-6">
+                  <div v-if="form.pahangConnection === 'other-pahang' && form.errors.pahangConnectionOther"
+                    class="ml-6">
                     <p class="text-sm text-destructive mt-1">
                       {{ form.errors.pahangConnectionOther }}
                     </p>
                   </div>
                 </RadioGroup>
-                
+
                 <p v-if="form.errors.pahangConnection" class="text-sm text-destructive">
                   {{ form.errors.pahangConnection }}
                 </p>
@@ -73,12 +67,7 @@
               Nama Penuh
               <span class="text-destructive">*</span>
             </CardTitle>
-            <Input 
-              v-model="form.fullName"
-              type="text"
-              placeholder="Masukkan nama penuh anda"
-              class="w-full"
-            />
+            <Input v-model="form.fullName" type="text" placeholder="Masukkan nama penuh anda" class="w-full" />
             <p v-if="form.errors.fullName" class="text-sm text-destructive">
               {{ form.errors.fullName }}
             </p>
@@ -90,12 +79,7 @@
               Nombor Telefon
               <span class="text-destructive">*</span>
             </CardTitle>
-            <Input 
-              v-model="form.phoneNumber"
-              type="tel"
-              placeholder="Contoh: 012-3456789"
-              class="w-full"
-            />
+            <Input v-model="form.phoneNumber" type="tel" placeholder="Contoh: 012-3456789" class="w-full" />
             <p v-if="form.errors.phoneNumber" class="text-sm text-destructive">
               {{ form.errors.phoneNumber }}
             </p>
@@ -107,12 +91,7 @@
               Alamat Emel
               <span class="text-destructive">*</span>
             </CardTitle>
-            <Input 
-              v-model="form.email"
-              type="email"
-              placeholder="contoh@email.com"
-              class="w-full"
-            />
+            <Input v-model="form.email" type="email" placeholder="contoh@email.com" class="w-full" />
             <p v-if="form.errors.email" class="text-sm text-destructive">
               {{ form.errors.email }}
             </p>
@@ -124,14 +103,8 @@
               Umur
               <span class="text-destructive">*</span>
             </CardTitle>
-            <Input 
-              v-model="form.age"
-              type="number"
-              placeholder="Masukkan umur anda (18-35 tahun)"
-              min="18"
-              max="35"
-              class="w-full"
-            />
+            <Input v-model="form.age" type="number" placeholder="Masukkan umur anda (18-35 tahun)" min="18" max="35"
+              class="w-full" />
             <p v-if="form.errors.age" class="text-sm text-destructive">
               {{ form.errors.age }}
             </p>
@@ -145,10 +118,7 @@
                   Adakah anda bersedia untuk ditemuduga terlebih dahulu sebelum diterima ke dalam program?
                   <span class="text-destructive">*</span>
                 </CardTitle>
-                <RadioGroup 
-                  v-model="form.interviewWillingness"
-                  class="space-y-2"
-                >
+                <RadioGroup v-model="form.interviewWillingness" class="space-y-2">
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="interview-yes" value="yes" />
                     <Label for="interview-yes" class="text-sm">Ya</Label>
@@ -158,7 +128,7 @@
                     <Label for="interview-no" class="text-sm">Tidak</Label>
                   </div>
                 </RadioGroup>
-                
+
                 <p v-if="form.errors.interviewWillingness" class="text-sm text-destructive">
                   {{ form.errors.interviewWillingness }}
                 </p>
@@ -176,42 +146,27 @@
                 </CardTitle>
                 <div class="space-y-5">
                   <div class="flex items-center space-x-2">
-                    <Checkbox 
-                      id="upskill"
-                      :model-value="isReasonSelected('upskill')"
-                      @update:model-value="(checked) => handleRegistrationReasonChange('upskill', checked)"
-                    />
-                    <Label for="upskill" class="text-sm">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
+                    <Checkbox id="upskill" :model-value="isReasonSelected('upskill')"
+                      @update:model-value="(checked) => handleRegistrationReasonChange('upskill', checked)" />
+                    <Label for="upskill" class="text-sm">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang
+                      baru</Label>
                   </div>
                   <div class="flex items-center space-x-2">
-                    <Checkbox 
-                      id="certificate"
-                      :model-value="isReasonSelected('certificate')"
-                      @update:model-value="(checked) => handleRegistrationReasonChange('certificate', checked)"
-                    />
+                    <Checkbox id="certificate" :model-value="isReasonSelected('certificate')"
+                      @update:model-value="(checked) => handleRegistrationReasonChange('certificate', checked)" />
                     <Label for="certificate" class="text-sm">Untuk mendapatkan sijil yang diiktiraf</Label>
                   </div>
                   <div class="flex items-center space-x-2">
-                    <Checkbox 
-                      id="job"
-                      :model-value="isReasonSelected('job')"
-                      @update:model-value="(checked) => handleRegistrationReasonChange('job', checked)"
-                    />
+                    <Checkbox id="job" :model-value="isReasonSelected('job')"
+                      @update:model-value="(checked) => handleRegistrationReasonChange('job', checked)" />
                     <Label for="job" class="text-sm">Untuk meningkatkan peluang mendapat pekerjaan</Label>
                   </div>
                   <div class="flex items-center space-x-2">
-                    <Checkbox 
-                      id="other-reason"
-                      :model-value="isReasonSelected('other')"
-                      @update:model-value="(checked) => handleRegistrationReasonChange('other', checked)"
-                    />
+                    <Checkbox id="other-reason" :model-value="isReasonSelected('other')"
+                      @update:model-value="(checked) => handleRegistrationReasonChange('other', checked)" />
                     <Label for="other-reason" class="text-sm">Lain-lain:</Label>
-                    <Input 
-                      v-if="isReasonSelected('other')"
-                      v-model="form.registrationReasonsOther"
-                      placeholder="Sila nyatakan..."
-                      class="max-w-md"
-                    />
+                    <Input v-if="isReasonSelected('other')" v-model="form.registrationReasonsOther"
+                      placeholder="Sila nyatakan..." class="max-w-md" />
                   </div>
                   <div v-if="isReasonSelected('other') && form.errors.registrationReasonsOther" class="ml-6">
                     <p class="text-sm text-destructive mt-1">
@@ -219,7 +174,7 @@
                     </p>
                   </div>
                 </div>
-                
+
                 <p v-if="form.errors.registrationReasons" class="text-sm text-destructive">
                   {{ form.errors.registrationReasons }}
                 </p>
@@ -235,17 +190,15 @@
                   Adakah anda bersedia untuk komited dengan latihan selama 1 bulan ini?
                   <span class="text-destructive">*</span>
                 </CardTitle>
-                <RadioGroup 
-                  v-model="form.commitmentLevel"
-                  class="space-y-2"
-                >
+                <RadioGroup v-model="form.commitmentLevel" class="space-y-2">
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="fully-committed" value="fully-committed" />
                     <Label for="fully-committed" class="text-sm">Ya, saya komited sepenuhnya</Label>
                   </div>
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="need-info" value="need-info" />
-                    <Label for="need-info" class="text-sm">Saya memerlukan lebih banyak maklumat sebelum membuat keputusan</Label>
+                    <Label for="need-info" class="text-sm">Saya memerlukan lebih banyak maklumat sebelum membuat
+                      keputusan</Label>
                   </div>
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="not-sure" value="not-sure" />
@@ -254,20 +207,17 @@
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="other-commitment" value="other-commitment" />
                     <Label for="other-commitment" class="text-sm">Lain-lain:</Label>
-                    <Input 
-                      v-if="form.commitmentLevel === 'other-commitment'"
-                      v-model="form.commitmentLevelOther"
-                      placeholder="Sila nyatakan..."
-                      class="max-w-md"
-                    />
+                    <Input v-if="form.commitmentLevel === 'other-commitment'" v-model="form.commitmentLevelOther"
+                      placeholder="Sila nyatakan..." class="max-w-md" />
                   </div>
-                  <div v-if="form.commitmentLevel === 'other-commitment' && form.errors.commitmentLevelOther" class="ml-6">
+                  <div v-if="form.commitmentLevel === 'other-commitment' && form.errors.commitmentLevelOther"
+                    class="ml-6">
                     <p class="text-sm text-destructive mt-1">
                       {{ form.errors.commitmentLevelOther }}
                     </p>
                   </div>
                 </RadioGroup>
-                
+
                 <p v-if="form.errors.commitmentLevel" class="text-sm text-destructive">
                   {{ form.errors.commitmentLevel }}
                 </p>
@@ -283,10 +233,7 @@
                   Apakah program yang anda minati?
                   <span class="text-destructive">*</span>
                 </CardTitle>
-                <RadioGroup 
-                  v-model="form.programInterest"
-                  class="space-y-2"
-                >
+                <RadioGroup v-model="form.programInterest" class="space-y-2">
                   <div class="flex items-center space-x-2">
                     <RadioGroupItem id="python-basic" value="python-basic" />
                     <Label for="python-basic" class="text-sm flex items-center space-x-2">
@@ -313,7 +260,7 @@
                     <Label for="more-than-one" class="text-sm">Lebih daripada 1 program</Label>
                   </div>
                 </RadioGroup>
-                
+
                 <p v-if="form.errors.programInterest" class="text-sm text-destructive">
                   {{ form.errors.programInterest }}
                 </p>
@@ -329,17 +276,17 @@
                   <img :src="pythonLogoUrl" alt="Python Logo" class="w-8 h-6" />
                   <span>Python Basic Programming</span>
                 </CardTitle>
-                
+
                 <Accordion type="single" collapsible class="w-full">
                   <AccordionItem value="description">
                     <AccordionTrigger class="text-left text-sm">
-                      Description
+                      Pengenalan Program
                     </AccordionTrigger>
                     <AccordionContent>
                       <CardDescription class="text-muted-foreground">
-                        Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran 
-                        pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri 
-                        teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar 
+                        Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran
+                        pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri
+                        teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar
                         kerjaya ke bidang teknologi.
                       </CardDescription>
                     </AccordionContent>
@@ -351,16 +298,40 @@
                     <AccordionContent>
                       <div class="space-y-3 text-muted-foreground">
                         <div>
-                          <strong>Asas & Lanjutan Python:</strong> Pengaturcaraan berorientasikan objek, penyahpepijatan, dan pengoptimuman.
+                          <strong>Asas & Lanjutan Python:</strong> Programming berorientasikan object, debugging, dan
+                          optimization.
                         </div>
                         <div>
-                          <strong>Pembangunan API & Integrasi Pangkalan Data:</strong> Membina RESTful API, web scraping, dan bekerja dengan pelbagai pangkalan data.
+                          <strong>Pembangunan API & Database Integration:</strong> Membina RESTful API, web scraping,
+                          dan bekerja dengan pelbagai database.
                         </div>
                         <div>
-                          <strong>Automasi Perniagaan:</strong> Scripting untuk proses sebenar.
+                          <strong>Business Automation:</strong> Scripting untuk proses sebenar.
                         </div>
                         <div>
-                          <strong>Portfolio Projek Industri:</strong> Cabaran kod sebenar & projek untuk paparan kerjaya.
+                          <strong>Portfolio Project Industry:</strong> Real-world coding challenges & projects for
+                          career showcase.
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="course-outline">
+                    <AccordionTrigger class="text-left text-sm">
+                      Rangka Kursus (4 Minggu)
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div class="space-y-3 text-muted-foreground">
+                        <div>
+                          <strong>Minggu 1:</strong> Asas Python, OOP & Debugging
+                        </div>
+                        <div>
+                          <strong>Minggu 2:</strong> Pembangunan API, Integrasi Pangkalan Data, Web Scraping
+                        </div>
+                        <div>
+                          <strong>Minggu 3:</strong> Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan
+                        </div>
+                        <div>
+                          <strong>Minggu 4:</strong> Projek Capstone, Bengkel Portfolio & Persediaan Temuduga
                         </div>
                       </div>
                     </AccordionContent>
@@ -372,10 +343,7 @@
                     Intake Batch
                     <span class="text-destructive">*</span>
                   </CardTitle>
-                  <RadioGroup 
-                    v-model="form.intakeBatch"
-                    class="space-y-2"
-                  >
+                  <RadioGroup v-model="form.intakeBatch" class="space-y-2">
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="batch-1" value="batch-1" />
                       <Label for="batch-1" class="text-sm">Batch 1</Label>
@@ -389,7 +357,7 @@
                       <Label for="batch-3" class="text-sm">Batch 3</Label>
                     </div>
                   </RadioGroup>
-                  
+
                   <p v-if="form.errors.intakeBatch" class="text-sm text-destructive">
                     {{ form.errors.intakeBatch }}
                   </p>
@@ -402,11 +370,8 @@
           <Card>
             <CardContent class="p-6">
               <div class="flex justify-end">
-                <Button 
-                  type="submit" 
-                  :disabled="processing"
-                  class="px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
-                >
+                <Button type="submit" :disabled="processing"
+                  class="px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors">
                   {{ processing ? 'Menghantar...' : 'Hantar Permohonan' }}
                 </Button>
               </div>
@@ -438,5 +403,4 @@ const { form, handleRegistrationReasonChange, isReasonSelected, processing, subm
 const { awsLogoUrl, chatGptLogoUrl, pythonLogoUrl } = useAppearance()
 </script>
 
-<style scoped>
-</style> 
+<style scoped></style>

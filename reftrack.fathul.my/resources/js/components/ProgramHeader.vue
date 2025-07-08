@@ -28,6 +28,18 @@
           <span class="block text-white">2025</span>
         </h1>
 
+        <!-- Collaboration Description -->
+        <div class="animate-fade-in-up animation-delay-400">
+          <p class="text-lg text-white/90 flex items-center justify-center space-x-2">
+            <span>A collaboration and education product of</span>
+            <img 
+              src="https://cdn.fathul.my/assets/logo/nematix-logo-fullcolor.svg" 
+              alt="Nematix Logo" 
+              class="h-8"
+            />
+          </p>
+        </div>
+
 
 
 
