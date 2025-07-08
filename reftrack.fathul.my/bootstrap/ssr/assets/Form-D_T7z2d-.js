@@ -443,6 +443,7 @@ function useProgramForm() {
     return registrationReasons.value.includes(value);
   };
   const submit = () => {
+    alert("Submit function called!");
     form.transform((data) => ({
       ...data,
       registrationReasons: registrationReasons.value
@@ -663,7 +664,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(`</div><div class="space-y-2"><div class="flex items-center space-x-2">`);
+      _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "other-reason",
         "model-value": unref(isReasonSelected)("Other"),
@@ -684,13 +685,12 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(`</div>`);
       if (unref(isReasonSelected)("Other")) {
         _push(ssrRenderComponent(unref(_sfc_main$2), {
           modelValue: unref(form).registrationReasonsOther,
           "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
           placeholder: "Sila nyatakan...",
-          class: "ml-6 max-w-md"
+          class: "max-w-md"
         }, null, _parent));
       } else {
         _push(`<!---->`);

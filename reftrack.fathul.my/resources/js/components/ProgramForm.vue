@@ -115,22 +115,20 @@
                   />
                   <Label for="job" class="text-sm">Untuk meningkatkan peluang mendapat pekerjaan</Label>
                 </div>
-                <div class="space-y-2">
-                  <div class="flex items-center space-x-2">
-                    <Checkbox 
-                      id="other-reason"
-                      :model-value="isReasonSelected('Other')"
-                      @update:model-value="(checked) => handleRegistrationReasonChange('Other', checked)"
-                    />
-                    <Label for="other-reason" class="text-sm">Lain-lain:</Label>
+                <div class="flex items-center space-x-2">
+                  <Checkbox 
+                    id="other-reason"
+                    :model-value="isReasonSelected('Other')"
+                    @update:model-value="(checked) => handleRegistrationReasonChange('Other', checked)"
+                  />
+                  <Label for="other-reason" class="text-sm">Lain-lain:</Label>
+                  <Input 
+                    v-if="isReasonSelected('Other')"
+                    v-model="form.registrationReasonsOther"
+                    placeholder="Sila nyatakan..."
+                    class="max-w-md"
+                  />
                 </div>
-                <Input 
-                  v-if="isReasonSelected('Other')"
-                  v-model="form.registrationReasonsOther"
-                  placeholder="Sila nyatakan..."
-                  class="ml-6 max-w-md"
-                />
-              </div>
               <div v-if="isReasonSelected('Other') && form.errors.registrationReasonsOther" class="ml-6">
                 <p class="text-sm text-destructive mt-1">
                   {{ form.errors.registrationReasonsOther }}

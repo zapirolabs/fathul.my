@@ -43,6 +43,7 @@ export function useProgramForm() {
   }
 
   const submit = () => {
+    alert('Submit function called!')
     form.transform((data) => ({
       ...data,
       registrationReasons: registrationReasons.value
