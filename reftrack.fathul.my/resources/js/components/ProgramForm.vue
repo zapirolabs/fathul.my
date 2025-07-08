@@ -382,10 +382,11 @@
                     </AccordionTrigger>
                     <AccordionContent>
                       <CardDescription class="text-muted-foreground">
-                        Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran
-                        pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri
-                        teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar
-                        kerjaya ke bidang teknologi.
+                        GEN AI Masterclass ialah program intensif selama 4 minggu yang direka untuk 
+                        melengkapkan peserta dengan kemahiran AI automasi, kejuruteraan prompt, dan 
+                        pengoptimuman aliran kerja yang sangat diperlukan oleh industri moden. Sesuai untuk 
+                        mereka yang ingin menembusi atau melonjak kerjaya dalam bidang AI yang pesat 
+                        berkembang.
                       </CardDescription>
                     </AccordionContent>
                   </AccordionItem>
@@ -396,19 +397,24 @@
                     <AccordionContent>
                       <div class="space-y-3 text-muted-foreground">
                         <div>
-                          <strong>Asas & Lanjutan Python:</strong> Programming berorientasikan object, debugging, dan
-                          optimization.
+                          <strong>Kemahiran AI Praktikal:</strong> Latihan langsung dengan alat Generative AI seperti 
+                          ChatGPT dan Stable Diffusion.
                         </div>
                         <div>
-                          <strong>Pembangunan API & Database Integration:</strong> Membina RESTful API, web scraping,
-                          dan bekerja dengan pelbagai database.
+                          <strong>Kejuruteraan Prompt:</strong> Teknik membina prompt yang berkesan dan automasi 
+                          kandungan perniagaan.
                         </div>
                         <div>
-                          <strong>Business Automation:</strong> Scripting untuk proses sebenar.
+                          <strong>Automasi Aliran Kerja:</strong> Aplikasi AI untuk pemasaran, sumber manusia, kewangan 
+                          dan pelbagai sektor lain.
                         </div>
                         <div>
-                          <strong>Portfolio Project Industry:</strong> Real-world coding challenges & projects for
-                          career showcase.
+                          <strong>Etika & AI Bertanggungjawab:</strong> Cara melaksanakan AI secara beretika dan patuh 
+                          peraturan.
+                        </div>
+                        <div>
+                          <strong>Projek Capstone:</strong> Selesaikan cabaran perniagaan sebenar dengan bimbingan 
+                          portfolio dan kerjaya.
                         </div>
                       </div>
                     </AccordionContent>
@@ -420,16 +426,16 @@
                     <AccordionContent>
                       <div class="space-y-3 text-muted-foreground">
                         <div>
-                          <strong>Minggu 1:</strong> Asas Python, OOP & Debugging
+                          <strong>Minggu 1:</strong> Asas Generative AI & Pengenalan Alat Industri
                         </div>
                         <div>
-                          <strong>Minggu 2:</strong> Pembangunan API, Integrasi Pangkalan Data, Web Scraping
+                          <strong>Minggu 2:</strong> Kejuruteraan Prompt, Penjanaan Kandungan & Automasi
                         </div>
                         <div>
-                          <strong>Minggu 3:</strong> Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan
+                          <strong>Minggu 3:</strong> Kajian Kes, Penggunaan AI dalam Proses Perniagaan, Etika AI
                         </div>
                         <div>
-                          <strong>Minggu 4:</strong> Projek Capstone, Bengkel Portfolio & Persediaan Temuduga
+                          <strong>Minggu 4:</strong> Projek Capstone, Penilaian Portfolio & Persediaan Kerjaya
                         </div>
                       </div>
                     </AccordionContent>

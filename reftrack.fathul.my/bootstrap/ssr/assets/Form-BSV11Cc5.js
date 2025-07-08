@@ -3692,10 +3692,10 @@ const _sfc_main$1 = {
                                       _push6(ssrRenderComponent(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
                                         default: withCtx((_6, _push7, _parent7, _scopeId6) => {
                                           if (_push7) {
-                                            _push7(` Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. `);
+                                            _push7(` GEN AI Masterclass ialah program intensif selama 4 minggu yang direka untuk melengkapkan peserta dengan kemahiran AI automasi, kejuruteraan prompt, dan pengoptimuman aliran kerja yang sangat diperlukan oleh industri moden. Sesuai untuk mereka yang ingin menembusi atau melonjak kerjaya dalam bidang AI yang pesat berkembang. `);
                                           } else {
                                             return [
-                                              createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                              createTextVNode(" GEN AI Masterclass ialah program intensif selama 4 minggu yang direka untuk melengkapkan peserta dengan kemahiran AI automasi, kejuruteraan prompt, dan pengoptimuman aliran kerja yang sangat diperlukan oleh industri moden. Sesuai untuk mereka yang ingin menembusi atau melonjak kerjaya dalam bidang AI yang pesat berkembang. ")
                                             ];
                                           }
                                         }),
@@ -3705,7 +3705,7 @@ const _sfc_main$1 = {
                                       return [
                                         createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
                                           default: withCtx(() => [
-                                            createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                            createTextVNode(" GEN AI Masterclass ialah program intensif selama 4 minggu yang direka untuk melengkapkan peserta dengan kemahiran AI automasi, kejuruteraan prompt, dan pengoptimuman aliran kerja yang sangat diperlukan oleh industri moden. Sesuai untuk mereka yang ingin menembusi atau melonjak kerjaya dalam bidang AI yang pesat berkembang. ")
                                           ]),
                                           _: 1
                                         })
@@ -3726,7 +3726,7 @@ const _sfc_main$1 = {
                                     default: withCtx(() => [
                                       createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
                                         default: withCtx(() => [
-                                          createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                          createTextVNode(" GEN AI Masterclass ialah program intensif selama 4 minggu yang direka untuk melengkapkan peserta dengan kemahiran AI automasi, kejuruteraan prompt, dan pengoptimuman aliran kerja yang sangat diperlukan oleh industri moden. Sesuai untuk mereka yang ingin menembusi atau melonjak kerjaya dalam bidang AI yang pesat berkembang. ")
                                         ]),
                                         _: 1
                                       })
@@ -3756,25 +3756,29 @@ const _sfc_main$1 = {
                                 _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
                                   default: withCtx((_5, _push6, _parent6, _scopeId5) => {
                                     if (_push6) {
-                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Asas &amp; Lanjutan Python:</strong> Programming berorientasikan object, debugging, dan optimization. </div><div${_scopeId5}><strong${_scopeId5}>Pembangunan API &amp; Database Integration:</strong> Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. </div><div${_scopeId5}><strong${_scopeId5}>Business Automation:</strong> Scripting untuk proses sebenar. </div><div${_scopeId5}><strong${_scopeId5}>Portfolio Project Industry:</strong> Real-world coding challenges &amp; projects for career showcase. </div></div>`);
+                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Kemahiran AI Praktikal:</strong> Latihan langsung dengan alat Generative AI seperti ChatGPT dan Stable Diffusion. </div><div${_scopeId5}><strong${_scopeId5}>Kejuruteraan Prompt:</strong> Teknik membina prompt yang berkesan dan automasi kandungan perniagaan. </div><div${_scopeId5}><strong${_scopeId5}>Automasi Aliran Kerja:</strong> Aplikasi AI untuk pemasaran, sumber manusia, kewangan dan pelbagai sektor lain. </div><div${_scopeId5}><strong${_scopeId5}>Etika &amp; AI Bertanggungjawab:</strong> Cara melaksanakan AI secara beretika dan patuh peraturan. </div><div${_scopeId5}><strong${_scopeId5}>Projek Capstone:</strong> Selesaikan cabaran perniagaan sebenar dengan bimbingan portfolio dan kerjaya. </div></div>`);
                                     } else {
                                       return [
                                         createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                           createVNode("div", null, [
-                                            createVNode("strong", null, "Asas & Lanjutan Python:"),
-                                            createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                            createVNode("strong", null, "Kemahiran AI Praktikal:"),
+                                            createTextVNode(" Latihan langsung dengan alat Generative AI seperti ChatGPT dan Stable Diffusion. ")
                                           ]),
                                           createVNode("div", null, [
-                                            createVNode("strong", null, "Pembangunan API & Database Integration:"),
-                                            createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                            createVNode("strong", null, "Kejuruteraan Prompt:"),
+                                            createTextVNode(" Teknik membina prompt yang berkesan dan automasi kandungan perniagaan. ")
                                           ]),
                                           createVNode("div", null, [
-                                            createVNode("strong", null, "Business Automation:"),
-                                            createTextVNode(" Scripting untuk proses sebenar. ")
+                                            createVNode("strong", null, "Automasi Aliran Kerja:"),
+                                            createTextVNode(" Aplikasi AI untuk pemasaran, sumber manusia, kewangan dan pelbagai sektor lain. ")
                                           ]),
                                           createVNode("div", null, [
-                                            createVNode("strong", null, "Portfolio Project Industry:"),
-                                            createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                            createVNode("strong", null, "Etika & AI Bertanggungjawab:"),
+                                            createTextVNode(" Cara melaksanakan AI secara beretika dan patuh peraturan. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Projek Capstone:"),
+                                            createTextVNode(" Selesaikan cabaran perniagaan sebenar dengan bimbingan portfolio dan kerjaya. ")
                                           ])
                                         ])
                                       ];
@@ -3794,20 +3798,24 @@ const _sfc_main$1 = {
                                     default: withCtx(() => [
                                       createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                         createVNode("div", null, [
-                                          createVNode("strong", null, "Asas & Lanjutan Python:"),
-                                          createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                          createVNode("strong", null, "Kemahiran AI Praktikal:"),
+                                          createTextVNode(" Latihan langsung dengan alat Generative AI seperti ChatGPT dan Stable Diffusion. ")
                                         ]),
                                         createVNode("div", null, [
-                                          createVNode("strong", null, "Pembangunan API & Database Integration:"),
-                                          createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                          createVNode("strong", null, "Kejuruteraan Prompt:"),
+                                          createTextVNode(" Teknik membina prompt yang berkesan dan automasi kandungan perniagaan. ")
                                         ]),
                                         createVNode("div", null, [
-                                          createVNode("strong", null, "Business Automation:"),
-                                          createTextVNode(" Scripting untuk proses sebenar. ")
+                                          createVNode("strong", null, "Automasi Aliran Kerja:"),
+                                          createTextVNode(" Aplikasi AI untuk pemasaran, sumber manusia, kewangan dan pelbagai sektor lain. ")
                                         ]),
                                         createVNode("div", null, [
-                                          createVNode("strong", null, "Portfolio Project Industry:"),
-                                          createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                          createVNode("strong", null, "Etika & AI Bertanggungjawab:"),
+                                          createTextVNode(" Cara melaksanakan AI secara beretika dan patuh peraturan. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Projek Capstone:"),
+                                          createTextVNode(" Selesaikan cabaran perniagaan sebenar dengan bimbingan portfolio dan kerjaya. ")
                                         ])
                                       ])
                                     ]),
@@ -3836,25 +3844,25 @@ const _sfc_main$1 = {
                                 _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
                                   default: withCtx((_5, _push6, _parent6, _scopeId5) => {
                                     if (_push6) {
-                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Minggu 1:</strong> Asas Python, OOP &amp; Debugging </div><div${_scopeId5}><strong${_scopeId5}>Minggu 2:</strong> Pembangunan API, Integrasi Pangkalan Data, Web Scraping </div><div${_scopeId5}><strong${_scopeId5}>Minggu 3:</strong> Struktur Data Lanjutan, Automasi &amp; Cabaran Pengaturcaraan </div><div${_scopeId5}><strong${_scopeId5}>Minggu 4:</strong> Projek Capstone, Bengkel Portfolio &amp; Persediaan Temuduga </div></div>`);
+                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Minggu 1:</strong> Asas Generative AI &amp; Pengenalan Alat Industri </div><div${_scopeId5}><strong${_scopeId5}>Minggu 2:</strong> Kejuruteraan Prompt, Penjanaan Kandungan &amp; Automasi </div><div${_scopeId5}><strong${_scopeId5}>Minggu 3:</strong> Kajian Kes, Penggunaan AI dalam Proses Perniagaan, Etika AI </div><div${_scopeId5}><strong${_scopeId5}>Minggu 4:</strong> Projek Capstone, Penilaian Portfolio &amp; Persediaan Kerjaya </div></div>`);
                                     } else {
                                       return [
                                         createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                           createVNode("div", null, [
                                             createVNode("strong", null, "Minggu 1:"),
-                                            createTextVNode(" Asas Python, OOP & Debugging ")
+                                            createTextVNode(" Asas Generative AI & Pengenalan Alat Industri ")
                                           ]),
                                           createVNode("div", null, [
                                             createVNode("strong", null, "Minggu 2:"),
-                                            createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                            createTextVNode(" Kejuruteraan Prompt, Penjanaan Kandungan & Automasi ")
                                           ]),
                                           createVNode("div", null, [
                                             createVNode("strong", null, "Minggu 3:"),
-                                            createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                            createTextVNode(" Kajian Kes, Penggunaan AI dalam Proses Perniagaan, Etika AI ")
                                           ]),
                                           createVNode("div", null, [
                                             createVNode("strong", null, "Minggu 4:"),
-                                            createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                            createTextVNode(" Projek Capstone, Penilaian Portfolio & Persediaan Kerjaya ")
                                           ])
                                         ])
                                       ];
@@ -3875,19 +3883,19 @@ const _sfc_main$1 = {
                                       createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                         createVNode("div", null, [
                                           createVNode("strong", null, "Minggu 1:"),
-                                          createTextVNode(" Asas Python, OOP & Debugging ")
+                                          createTextVNode(" Asas Generative AI & Pengenalan Alat Industri ")
                                         ]),
                                         createVNode("div", null, [
                                           createVNode("strong", null, "Minggu 2:"),
-                                          createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                          createTextVNode(" Kejuruteraan Prompt, Penjanaan Kandungan & Automasi ")
                                         ]),
                                         createVNode("div", null, [
                                           createVNode("strong", null, "Minggu 3:"),
-                                          createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                          createTextVNode(" Kajian Kes, Penggunaan AI dalam Proses Perniagaan, Etika AI ")
                                         ]),
                                         createVNode("div", null, [
                                           createVNode("strong", null, "Minggu 4:"),
-                                          createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                          createTextVNode(" Projek Capstone, Penilaian Portfolio & Persediaan Kerjaya ")
                                         ])
                                       ])
                                     ]),
@@ -3912,7 +3920,7 @@ const _sfc_main$1 = {
                                   default: withCtx(() => [
                                     createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
                                       default: withCtx(() => [
-                                        createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                        createTextVNode(" GEN AI Masterclass ialah program intensif selama 4 minggu yang direka untuk melengkapkan peserta dengan kemahiran AI automasi, kejuruteraan prompt, dan pengoptimuman aliran kerja yang sangat diperlukan oleh industri moden. Sesuai untuk mereka yang ingin menembusi atau melonjak kerjaya dalam bidang AI yang pesat berkembang. ")
                                       ]),
                                       _: 1
                                     })
@@ -3934,20 +3942,24 @@ const _sfc_main$1 = {
                                   default: withCtx(() => [
                                     createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                       createVNode("div", null, [
-                                        createVNode("strong", null, "Asas & Lanjutan Python:"),
-                                        createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                        createVNode("strong", null, "Kemahiran AI Praktikal:"),
+                                        createTextVNode(" Latihan langsung dengan alat Generative AI seperti ChatGPT dan Stable Diffusion. ")
                                       ]),
                                       createVNode("div", null, [
-                                        createVNode("strong", null, "Pembangunan API & Database Integration:"),
-                                        createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                        createVNode("strong", null, "Kejuruteraan Prompt:"),
+                                        createTextVNode(" Teknik membina prompt yang berkesan dan automasi kandungan perniagaan. ")
                                       ]),
                                       createVNode("div", null, [
-                                        createVNode("strong", null, "Business Automation:"),
-                                        createTextVNode(" Scripting untuk proses sebenar. ")
+                                        createVNode("strong", null, "Automasi Aliran Kerja:"),
+                                        createTextVNode(" Aplikasi AI untuk pemasaran, sumber manusia, kewangan dan pelbagai sektor lain. ")
                                       ]),
                                       createVNode("div", null, [
-                                        createVNode("strong", null, "Portfolio Project Industry:"),
-                                        createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                        createVNode("strong", null, "Etika & AI Bertanggungjawab:"),
+                                        createTextVNode(" Cara melaksanakan AI secara beretika dan patuh peraturan. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Projek Capstone:"),
+                                        createTextVNode(" Selesaikan cabaran perniagaan sebenar dengan bimbingan portfolio dan kerjaya. ")
                                       ])
                                     ])
                                   ]),
@@ -3969,19 +3981,19 @@ const _sfc_main$1 = {
                                     createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                       createVNode("div", null, [
                                         createVNode("strong", null, "Minggu 1:"),
-                                        createTextVNode(" Asas Python, OOP & Debugging ")
+                                        createTextVNode(" Asas Generative AI & Pengenalan Alat Industri ")
                                       ]),
                                       createVNode("div", null, [
                                         createVNode("strong", null, "Minggu 2:"),
-                                        createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                        createTextVNode(" Kejuruteraan Prompt, Penjanaan Kandungan & Automasi ")
                                       ]),
                                       createVNode("div", null, [
                                         createVNode("strong", null, "Minggu 3:"),
-                                        createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                        createTextVNode(" Kajian Kes, Penggunaan AI dalam Proses Perniagaan, Etika AI ")
                                       ]),
                                       createVNode("div", null, [
                                         createVNode("strong", null, "Minggu 4:"),
-                                        createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                        createTextVNode(" Projek Capstone, Penilaian Portfolio & Persediaan Kerjaya ")
                                       ])
                                     ])
                                   ]),
@@ -4167,7 +4179,7 @@ const _sfc_main$1 = {
                                   default: withCtx(() => [
                                     createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
                                       default: withCtx(() => [
-                                        createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                        createTextVNode(" GEN AI Masterclass ialah program intensif selama 4 minggu yang direka untuk melengkapkan peserta dengan kemahiran AI automasi, kejuruteraan prompt, dan pengoptimuman aliran kerja yang sangat diperlukan oleh industri moden. Sesuai untuk mereka yang ingin menembusi atau melonjak kerjaya dalam bidang AI yang pesat berkembang. ")
                                       ]),
                                       _: 1
                                     })
@@ -4189,20 +4201,24 @@ const _sfc_main$1 = {
                                   default: withCtx(() => [
                                     createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                       createVNode("div", null, [
-                                        createVNode("strong", null, "Asas & Lanjutan Python:"),
-                                        createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                        createVNode("strong", null, "Kemahiran AI Praktikal:"),
+                                        createTextVNode(" Latihan langsung dengan alat Generative AI seperti ChatGPT dan Stable Diffusion. ")
                                       ]),
                                       createVNode("div", null, [
-                                        createVNode("strong", null, "Pembangunan API & Database Integration:"),
-                                        createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                        createVNode("strong", null, "Kejuruteraan Prompt:"),
+                                        createTextVNode(" Teknik membina prompt yang berkesan dan automasi kandungan perniagaan. ")
                                       ]),
                                       createVNode("div", null, [
-                                        createVNode("strong", null, "Business Automation:"),
-                                        createTextVNode(" Scripting untuk proses sebenar. ")
+                                        createVNode("strong", null, "Automasi Aliran Kerja:"),
+                                        createTextVNode(" Aplikasi AI untuk pemasaran, sumber manusia, kewangan dan pelbagai sektor lain. ")
                                       ]),
                                       createVNode("div", null, [
-                                        createVNode("strong", null, "Portfolio Project Industry:"),
-                                        createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                        createVNode("strong", null, "Etika & AI Bertanggungjawab:"),
+                                        createTextVNode(" Cara melaksanakan AI secara beretika dan patuh peraturan. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Projek Capstone:"),
+                                        createTextVNode(" Selesaikan cabaran perniagaan sebenar dengan bimbingan portfolio dan kerjaya. ")
                                       ])
                                     ])
                                   ]),
@@ -4224,19 +4240,19 @@ const _sfc_main$1 = {
                                     createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                       createVNode("div", null, [
                                         createVNode("strong", null, "Minggu 1:"),
-                                        createTextVNode(" Asas Python, OOP & Debugging ")
+                                        createTextVNode(" Asas Generative AI & Pengenalan Alat Industri ")
                                       ]),
                                       createVNode("div", null, [
                                         createVNode("strong", null, "Minggu 2:"),
-                                        createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                        createTextVNode(" Kejuruteraan Prompt, Penjanaan Kandungan & Automasi ")
                                       ]),
                                       createVNode("div", null, [
                                         createVNode("strong", null, "Minggu 3:"),
-                                        createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                        createTextVNode(" Kajian Kes, Penggunaan AI dalam Proses Perniagaan, Etika AI ")
                                       ]),
                                       createVNode("div", null, [
                                         createVNode("strong", null, "Minggu 4:"),
-                                        createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                        createTextVNode(" Projek Capstone, Penilaian Portfolio & Persediaan Kerjaya ")
                                       ])
                                     ])
                                   ]),
@@ -4355,7 +4371,7 @@ const _sfc_main$1 = {
                                 default: withCtx(() => [
                                   createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
                                     default: withCtx(() => [
-                                      createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                      createTextVNode(" GEN AI Masterclass ialah program intensif selama 4 minggu yang direka untuk melengkapkan peserta dengan kemahiran AI automasi, kejuruteraan prompt, dan pengoptimuman aliran kerja yang sangat diperlukan oleh industri moden. Sesuai untuk mereka yang ingin menembusi atau melonjak kerjaya dalam bidang AI yang pesat berkembang. ")
                                     ]),
                                     _: 1
                                   })
@@ -4377,20 +4393,24 @@ const _sfc_main$1 = {
                                 default: withCtx(() => [
                                   createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                     createVNode("div", null, [
-                                      createVNode("strong", null, "Asas & Lanjutan Python:"),
-                                      createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                      createVNode("strong", null, "Kemahiran AI Praktikal:"),
+                                      createTextVNode(" Latihan langsung dengan alat Generative AI seperti ChatGPT dan Stable Diffusion. ")
                                     ]),
                                     createVNode("div", null, [
-                                      createVNode("strong", null, "Pembangunan API & Database Integration:"),
-                                      createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                      createVNode("strong", null, "Kejuruteraan Prompt:"),
+                                      createTextVNode(" Teknik membina prompt yang berkesan dan automasi kandungan perniagaan. ")
                                     ]),
                                     createVNode("div", null, [
-                                      createVNode("strong", null, "Business Automation:"),
-                                      createTextVNode(" Scripting untuk proses sebenar. ")
+                                      createVNode("strong", null, "Automasi Aliran Kerja:"),
+                                      createTextVNode(" Aplikasi AI untuk pemasaran, sumber manusia, kewangan dan pelbagai sektor lain. ")
                                     ]),
                                     createVNode("div", null, [
-                                      createVNode("strong", null, "Portfolio Project Industry:"),
-                                      createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                      createVNode("strong", null, "Etika & AI Bertanggungjawab:"),
+                                      createTextVNode(" Cara melaksanakan AI secara beretika dan patuh peraturan. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Projek Capstone:"),
+                                      createTextVNode(" Selesaikan cabaran perniagaan sebenar dengan bimbingan portfolio dan kerjaya. ")
                                     ])
                                   ])
                                 ]),
@@ -4412,19 +4432,19 @@ const _sfc_main$1 = {
                                   createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
                                     createVNode("div", null, [
                                       createVNode("strong", null, "Minggu 1:"),
-                                      createTextVNode(" Asas Python, OOP & Debugging ")
+                                      createTextVNode(" Asas Generative AI & Pengenalan Alat Industri ")
                                     ]),
                                     createVNode("div", null, [
                                       createVNode("strong", null, "Minggu 2:"),
-                                      createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                      createTextVNode(" Kejuruteraan Prompt, Penjanaan Kandungan & Automasi ")
                                     ]),
                                     createVNode("div", null, [
                                       createVNode("strong", null, "Minggu 3:"),
-                                      createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                      createTextVNode(" Kajian Kes, Penggunaan AI dalam Proses Perniagaan, Etika AI ")
                                     ]),
                                     createVNode("div", null, [
                                       createVNode("strong", null, "Minggu 4:"),
-                                      createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                      createTextVNode(" Projek Capstone, Penilaian Portfolio & Persediaan Kerjaya ")
                                     ])
                                   ])
                                 ]),
