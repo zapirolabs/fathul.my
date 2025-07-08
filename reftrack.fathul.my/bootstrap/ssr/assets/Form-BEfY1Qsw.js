@@ -401,7 +401,7 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
-      _push(`</div><div class="space-y-3">`);
+      _push(`</div><div class="space-y-5">`);
       _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

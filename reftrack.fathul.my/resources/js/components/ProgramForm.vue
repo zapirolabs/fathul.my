@@ -37,7 +37,7 @@
             </p>
           </div>
 
-          <div class="space-y-3">
+          <div class="space-y-5">
             <Label class="text-sm font-medium text-card-foreground">
               Apakah kaitan anda dengan negeri Pahang? 
               <span class="text-destructive">*</span>
