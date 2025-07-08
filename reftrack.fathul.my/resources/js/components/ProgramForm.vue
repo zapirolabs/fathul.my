@@ -23,6 +23,38 @@
           {{ console.log('Errors:', errors) }}
           <div class="space-y-3">
             <Label class="text-sm font-medium text-card-foreground">
+              Nama Penuh
+              <span class="text-destructive">*</span>
+            </Label>
+            <Input 
+              v-model="form.fullName"
+              type="text"
+              placeholder="Masukkan nama penuh anda"
+              class="w-full"
+            />
+            <p v-if="form.errors.fullName" class="text-sm text-destructive">
+              {{ form.errors.fullName }}
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Nombor Telefon
+              <span class="text-destructive">*</span>
+            </Label>
+            <Input 
+              v-model="form.phoneNumber"
+              type="tel"
+              placeholder="Contoh: 012-3456789"
+              class="w-full"
+            />
+            <p v-if="form.errors.phoneNumber" class="text-sm text-destructive">
+              {{ form.errors.phoneNumber }}
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
               Alamat Emel
               <span class="text-destructive">*</span>
             </Label>
@@ -34,6 +66,24 @@
             />
             <p v-if="form.errors.email" class="text-sm text-destructive">
               {{ form.errors.email }}
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <Label class="text-sm font-medium text-card-foreground">
+              Umur
+              <span class="text-destructive">*</span>
+            </Label>
+            <Input 
+              v-model="form.age"
+              type="number"
+              placeholder="Masukkan umur anda (18-35 tahun)"
+              min="18"
+              max="35"
+              class="w-full"
+            />
+            <p v-if="form.errors.age" class="text-sm text-destructive">
+              {{ form.errors.age }}
             </p>
           </div>
 

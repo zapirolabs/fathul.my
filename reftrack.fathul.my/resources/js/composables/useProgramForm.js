@@ -2,7 +2,10 @@ import { useForm } from '@inertiajs/vue3'
 
 export function useProgramForm() {
   const form = useForm({
+    fullName: '',
+    phoneNumber: '',
     email: '',
+    age: '',
     pahangConnection: '',
     pahangConnectionOther: '',
   })

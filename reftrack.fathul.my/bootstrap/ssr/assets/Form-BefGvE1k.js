@@ -333,7 +333,10 @@ _sfc_main$2.setup = (props, ctx) => {
 };
 function useProgramForm() {
   const form = useForm({
+    fullName: "",
+    phoneNumber: "",
     email: "",
+    age: "",
     pahangConnection: "",
     pahangConnectionOther: ""
   });
@@ -379,6 +382,58 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
+            _push2(` Nama Penuh <span class="text-destructive"${_scopeId}>*</span>`);
+          } else {
+            return [
+              createTextVNode(" Nama Penuh "),
+              createVNode("span", { class: "text-destructive" }, "*")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$2), {
+        modelValue: unref(form).fullName,
+        "onUpdate:modelValue": ($event) => unref(form).fullName = $event,
+        type: "text",
+        placeholder: "Masukkan nama penuh anda",
+        class: "w-full"
+      }, null, _parent));
+      if (unref(form).errors.fullName) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.fullName)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Nombor Telefon <span class="text-destructive"${_scopeId}>*</span>`);
+          } else {
+            return [
+              createTextVNode(" Nombor Telefon "),
+              createVNode("span", { class: "text-destructive" }, "*")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$2), {
+        modelValue: unref(form).phoneNumber,
+        "onUpdate:modelValue": ($event) => unref(form).phoneNumber = $event,
+        type: "tel",
+        placeholder: "Contoh: 012-3456789",
+        class: "w-full"
+      }, null, _parent));
+      if (unref(form).errors.phoneNumber) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.phoneNumber)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
             _push2(` Alamat Emel <span class="text-destructive"${_scopeId}>*</span>`);
           } else {
             return [
@@ -398,6 +453,34 @@ const _sfc_main$1 = {
       }, null, _parent));
       if (unref(form).errors.email) {
         _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.email)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="space-y-3">`);
+      _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Umur <span class="text-destructive"${_scopeId}>*</span>`);
+          } else {
+            return [
+              createTextVNode(" Umur "),
+              createVNode("span", { class: "text-destructive" }, "*")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(unref(_sfc_main$2), {
+        modelValue: unref(form).age,
+        "onUpdate:modelValue": ($event) => unref(form).age = $event,
+        type: "number",
+        placeholder: "Masukkan umur anda (18-35 tahun)",
+        min: "18",
+        max: "35",
+        class: "w-full"
+      }, null, _parent));
+      if (unref(form).errors.age) {
+        _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.age)}</p>`);
       } else {
         _push(`<!---->`);
       }
