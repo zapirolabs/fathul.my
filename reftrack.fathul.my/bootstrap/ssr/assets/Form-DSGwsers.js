@@ -2608,14 +2608,14 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    _push3(`<div class="space-y-3"${_scopeId2}>`);
+                    _push3(`<div class="space-y-5"${_scopeId2}>`);
                     _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(` Intake batch <span class="text-destructive"${_scopeId3}>*</span>`);
+                          _push4(` Intake Batch <span class="text-destructive"${_scopeId3}>*</span>`);
                         } else {
                           return [
-                            createTextVNode(" Intake batch "),
+                            createTextVNode(" Intake Batch "),
                             createVNode("span", { class: "text-destructive" }, "*")
                           ];
                         }
@@ -2768,10 +2768,10 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }),
-                        createVNode("div", { class: "space-y-3" }, [
+                        createVNode("div", { class: "space-y-5" }, [
                           createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                             default: withCtx(() => [
-                              createTextVNode(" Intake batch "),
+                              createTextVNode(" Intake Batch "),
                               createVNode("span", { class: "text-destructive" }, "*")
                             ]),
                             _: 1
@@ -2863,10 +2863,10 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode("div", { class: "space-y-3" }, [
+                      createVNode("div", { class: "space-y-5" }, [
                         createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                           default: withCtx(() => [
-                            createTextVNode(" Intake batch "),
+                            createTextVNode(" Intake Batch "),
                             createVNode("span", { class: "text-destructive" }, "*")
                           ]),
                           _: 1

@@ -337,9 +337,9 @@
                   and access career opportunities in data science, AI, software development, and automation.
                 </CardDescription>
 
-                <div class="space-y-3">
+                <div class="space-y-5">
                   <CardTitle class="text-card-foreground">
-                    Intake batch
+                    Intake Batch
                     <span class="text-destructive">*</span>
                   </CardTitle>
                   <RadioGroup 
