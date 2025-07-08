@@ -366,6 +366,104 @@
             </CardContent>
           </Card>
 
+          <!-- GenAI Masterclass Program Details Card (Dynamic) -->
+          <Card v-if="form.programInterest === 'genai-masterclass'">
+            <CardContent class="p-6">
+              <div class="space-y-5">
+                <CardTitle class="text-card-foreground flex items-center space-x-2">
+                  <img :src="chatGptLogoUrl" alt="ChatGPT Logo" class="w-8 h-6" />
+                  <span>GenAI Masterclass</span>
+                </CardTitle>
+
+                <Accordion type="single" collapsible class="w-full">
+                  <AccordionItem value="description">
+                    <AccordionTrigger class="text-left text-sm">
+                      Pengenalan Program
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <CardDescription class="text-muted-foreground">
+                        Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran
+                        pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri
+                        teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar
+                        kerjaya ke bidang teknologi.
+                      </CardDescription>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="what-you-get">
+                    <AccordionTrigger class="text-left text-sm">
+                      Apa Yang Anda Akan Perolehi
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div class="space-y-3 text-muted-foreground">
+                        <div>
+                          <strong>Asas & Lanjutan Python:</strong> Programming berorientasikan object, debugging, dan
+                          optimization.
+                        </div>
+                        <div>
+                          <strong>Pembangunan API & Database Integration:</strong> Membina RESTful API, web scraping,
+                          dan bekerja dengan pelbagai database.
+                        </div>
+                        <div>
+                          <strong>Business Automation:</strong> Scripting untuk proses sebenar.
+                        </div>
+                        <div>
+                          <strong>Portfolio Project Industry:</strong> Real-world coding challenges & projects for
+                          career showcase.
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="course-outline">
+                    <AccordionTrigger class="text-left text-sm">
+                      Rangka Kursus (4 Minggu)
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div class="space-y-3 text-muted-foreground">
+                        <div>
+                          <strong>Minggu 1:</strong> Asas Python, OOP & Debugging
+                        </div>
+                        <div>
+                          <strong>Minggu 2:</strong> Pembangunan API, Integrasi Pangkalan Data, Web Scraping
+                        </div>
+                        <div>
+                          <strong>Minggu 3:</strong> Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan
+                        </div>
+                        <div>
+                          <strong>Minggu 4:</strong> Projek Capstone, Bengkel Portfolio & Persediaan Temuduga
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <div class="space-y-5">
+                  <CardTitle class="text-card-foreground">
+                    Intake Batch
+                    <span class="text-destructive">*</span>
+                  </CardTitle>
+                  <RadioGroup v-model="form.intakeBatch" class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="genai-batch-2" value="batch-2" />
+                      <Label for="genai-batch-2" class="text-sm">Batch 2</Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="genai-batch-3" value="batch-3" />
+                      <Label for="genai-batch-3" class="text-sm">Batch 3</Label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <RadioGroupItem id="genai-batch-4" value="batch-4" />
+                      <Label for="genai-batch-4" class="text-sm">Batch 4</Label>
+                    </div>
+                  </RadioGroup>
+
+                  <p v-if="form.errors.intakeBatch" class="text-sm text-destructive">
+                    {{ form.errors.intakeBatch }}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <!-- Submit Button Card -->
           <Card>
             <CardContent class="p-6">

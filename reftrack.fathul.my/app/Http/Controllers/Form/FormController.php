@@ -29,7 +29,7 @@ class FormController extends Controller
             'commitmentLevel' => 'required|in:fully-committed,need-info,not-sure,other-commitment',
             'commitmentLevelOther' => 'required_if:commitmentLevel,other-commitment|max:255',
             'programInterest' => 'required|in:python-basic,genai-masterclass,aws-foundational,more-than-one',
-            'intakeBatch' => 'required_if:programInterest,python-basic|in:batch-1,batch-2,batch-3',
+            'intakeBatch' => 'required_if:programInterest,python-basic,genai-masterclass|in:batch-1,batch-2,batch-3,batch-4',
             'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
             'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
         ], [
@@ -139,6 +139,7 @@ class FormController extends Controller
             'batch-1' => 'Batch 1',
             'batch-2' => 'Batch 2', 
             'batch-3' => 'Batch 3',
+            'batch-4' => 'Batch 4',
             'none-above' => 'None above/Other Program'
         ];
 

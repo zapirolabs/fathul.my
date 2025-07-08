@@ -3639,6 +3639,882 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
+      if (unref(form).programInterest === "genai-masterclass") {
+        _push(ssrRenderComponent(unref(_sfc_main$9), null, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(ssrRenderComponent(unref(_sfc_main$8), { class: "p-6" }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(`<div class="space-y-5"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$6), { class: "text-card-foreground flex items-center space-x-2" }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<img${ssrRenderAttr("src", unref(chatGptLogoUrl))} alt="ChatGPT Logo" class="w-8 h-6"${_scopeId3}><span${_scopeId3}>GenAI Masterclass</span>`);
+                        } else {
+                          return [
+                            createVNode("img", {
+                              src: unref(chatGptLogoUrl),
+                              alt: "ChatGPT Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "GenAI Masterclass")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$5), {
+                      type: "single",
+                      collapsible: "",
+                      class: "w-full"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(ssrRenderComponent(unref(_sfc_main$3), { value: "description" }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(ssrRenderComponent(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(` Pengenalan Program `);
+                                    } else {
+                                      return [
+                                        createTextVNode(" Pengenalan Program ")
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                                _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(ssrRenderComponent(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                        default: withCtx((_6, _push7, _parent7, _scopeId6) => {
+                                          if (_push7) {
+                                            _push7(` Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. `);
+                                          } else {
+                                            return [
+                                              createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                            ];
+                                          }
+                                        }),
+                                        _: 1
+                                      }, _parent6, _scopeId5));
+                                    } else {
+                                      return [
+                                        createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                          default: withCtx(() => [
+                                            createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                          ]),
+                                          _: 1
+                                        })
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                              } else {
+                                return [
+                                  createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Pengenalan Program ")
+                                    ]),
+                                    _: 1
+                                  }),
+                                  createVNode(unref(_sfc_main$4), null, {
+                                    default: withCtx(() => [
+                                      createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                        default: withCtx(() => [
+                                          createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                        ]),
+                                        _: 1
+                                      })
+                                    ]),
+                                    _: 1
+                                  })
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$3), { value: "what-you-get" }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(ssrRenderComponent(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(` Apa Yang Anda Akan Perolehi `);
+                                    } else {
+                                      return [
+                                        createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                                _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Asas &amp; Lanjutan Python:</strong> Programming berorientasikan object, debugging, dan optimization. </div><div${_scopeId5}><strong${_scopeId5}>Pembangunan API &amp; Database Integration:</strong> Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. </div><div${_scopeId5}><strong${_scopeId5}>Business Automation:</strong> Scripting untuk proses sebenar. </div><div${_scopeId5}><strong${_scopeId5}>Portfolio Project Industry:</strong> Real-world coding challenges &amp; projects for career showcase. </div></div>`);
+                                    } else {
+                                      return [
+                                        createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                            createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Pembangunan API & Database Integration:"),
+                                            createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Business Automation:"),
+                                            createTextVNode(" Scripting untuk proses sebenar. ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Portfolio Project Industry:"),
+                                            createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                          ])
+                                        ])
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                              } else {
+                                return [
+                                  createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                    ]),
+                                    _: 1
+                                  }),
+                                  createVNode(unref(_sfc_main$4), null, {
+                                    default: withCtx(() => [
+                                      createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                          createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Pembangunan API & Database Integration:"),
+                                          createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Business Automation:"),
+                                          createTextVNode(" Scripting untuk proses sebenar. ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Portfolio Project Industry:"),
+                                          createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                        ])
+                                      ])
+                                    ]),
+                                    _: 1
+                                  })
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$3), { value: "course-outline" }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(ssrRenderComponent(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(` Rangka Kursus (4 Minggu) `);
+                                    } else {
+                                      return [
+                                        createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                                _push5(ssrRenderComponent(unref(_sfc_main$4), null, {
+                                  default: withCtx((_5, _push6, _parent6, _scopeId5) => {
+                                    if (_push6) {
+                                      _push6(`<div class="space-y-3 text-muted-foreground"${_scopeId5}><div${_scopeId5}><strong${_scopeId5}>Minggu 1:</strong> Asas Python, OOP &amp; Debugging </div><div${_scopeId5}><strong${_scopeId5}>Minggu 2:</strong> Pembangunan API, Integrasi Pangkalan Data, Web Scraping </div><div${_scopeId5}><strong${_scopeId5}>Minggu 3:</strong> Struktur Data Lanjutan, Automasi &amp; Cabaran Pengaturcaraan </div><div${_scopeId5}><strong${_scopeId5}>Minggu 4:</strong> Projek Capstone, Bengkel Portfolio &amp; Persediaan Temuduga </div></div>`);
+                                    } else {
+                                      return [
+                                        createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Minggu 1:"),
+                                            createTextVNode(" Asas Python, OOP & Debugging ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Minggu 2:"),
+                                            createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Minggu 3:"),
+                                            createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                          ]),
+                                          createVNode("div", null, [
+                                            createVNode("strong", null, "Minggu 4:"),
+                                            createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                          ])
+                                        ])
+                                      ];
+                                    }
+                                  }),
+                                  _: 1
+                                }, _parent5, _scopeId4));
+                              } else {
+                                return [
+                                  createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                    ]),
+                                    _: 1
+                                  }),
+                                  createVNode(unref(_sfc_main$4), null, {
+                                    default: withCtx(() => [
+                                      createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Minggu 1:"),
+                                          createTextVNode(" Asas Python, OOP & Debugging ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Minggu 2:"),
+                                          createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Minggu 3:"),
+                                          createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                        ]),
+                                        createVNode("div", null, [
+                                          createVNode("strong", null, "Minggu 4:"),
+                                          createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                        ])
+                                      ])
+                                    ]),
+                                    _: 1
+                                  })
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                        } else {
+                          return [
+                            createVNode(unref(_sfc_main$3), { value: "description" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Pengenalan Program ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                      default: withCtx(() => [
+                                        createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                      ]),
+                                      _: 1
+                                    })
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                        createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Pembangunan API & Database Integration:"),
+                                        createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Business Automation:"),
+                                        createTextVNode(" Scripting untuk proses sebenar. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Portfolio Project Industry:"),
+                                        createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                      ])
+                                    ])
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "course-outline" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 1:"),
+                                        createTextVNode(" Asas Python, OOP & Debugging ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 2:"),
+                                        createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 3:"),
+                                        createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 4:"),
+                                        createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                      ])
+                                    ])
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            })
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(`<div class="space-y-5"${_scopeId2}>`);
+                    _push3(ssrRenderComponent(unref(_sfc_main$6), { class: "text-card-foreground" }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(` Intake Batch <span class="text-destructive"${_scopeId3}>*</span>`);
+                        } else {
+                          return [
+                            createTextVNode(" Intake Batch "),
+                            createVNode("span", { class: "text-destructive" }, "*")
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                      modelValue: unref(form).intakeBatch,
+                      "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                      class: "space-y-2"
+                    }, {
+                      default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "genai-batch-2",
+                            value: "batch-2"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "genai-batch-2",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 2`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 2")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "genai-batch-3",
+                            value: "batch-3"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "genai-batch-3",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 3`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 3")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                            id: "genai-batch-4",
+                            value: "batch-4"
+                          }, null, _parent4, _scopeId3));
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                            for: "genai-batch-4",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                              if (_push5) {
+                                _push5(`Batch 4`);
+                              } else {
+                                return [
+                                  createTextVNode("Batch 4")
+                                ];
+                              }
+                            }),
+                            _: 1
+                          }, _parent4, _scopeId3));
+                          _push4(`</div>`);
+                        } else {
+                          return [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "genai-batch-2",
+                                value: "batch-2"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "genai-batch-2",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 2")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "genai-batch-3",
+                                value: "batch-3"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "genai-batch-3",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 3")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "genai-batch-4",
+                                value: "batch-4"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "genai-batch-4",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 4")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ];
+                        }
+                      }),
+                      _: 1
+                    }, _parent3, _scopeId2));
+                    if (unref(form).errors.intakeBatch) {
+                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.intakeBatch)}</p>`);
+                    } else {
+                      _push3(`<!---->`);
+                    }
+                    _push3(`</div></div>`);
+                  } else {
+                    return [
+                      createVNode("div", { class: "space-y-5" }, [
+                        createVNode(unref(_sfc_main$6), { class: "text-card-foreground flex items-center space-x-2" }, {
+                          default: withCtx(() => [
+                            createVNode("img", {
+                              src: unref(chatGptLogoUrl),
+                              alt: "ChatGPT Logo",
+                              class: "w-8 h-6"
+                            }, null, 8, ["src"]),
+                            createVNode("span", null, "GenAI Masterclass")
+                          ]),
+                          _: 1
+                        }),
+                        createVNode(unref(_sfc_main$5), {
+                          type: "single",
+                          collapsible: "",
+                          class: "w-full"
+                        }, {
+                          default: withCtx(() => [
+                            createVNode(unref(_sfc_main$3), { value: "description" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Pengenalan Program ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                      default: withCtx(() => [
+                                        createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                      ]),
+                                      _: 1
+                                    })
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                        createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Pembangunan API & Database Integration:"),
+                                        createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Business Automation:"),
+                                        createTextVNode(" Scripting untuk proses sebenar. ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Portfolio Project Industry:"),
+                                        createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                      ])
+                                    ])
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            }),
+                            createVNode(unref(_sfc_main$3), { value: "course-outline" }, {
+                              default: withCtx(() => [
+                                createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                  default: withCtx(() => [
+                                    createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                  ]),
+                                  _: 1
+                                }),
+                                createVNode(unref(_sfc_main$4), null, {
+                                  default: withCtx(() => [
+                                    createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 1:"),
+                                        createTextVNode(" Asas Python, OOP & Debugging ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 2:"),
+                                        createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 3:"),
+                                        createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                      ]),
+                                      createVNode("div", null, [
+                                        createVNode("strong", null, "Minggu 4:"),
+                                        createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                      ])
+                                    ])
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          _: 1
+                        }),
+                        createVNode("div", { class: "space-y-5" }, [
+                          createVNode(unref(_sfc_main$6), { class: "text-card-foreground" }, {
+                            default: withCtx(() => [
+                              createTextVNode(" Intake Batch "),
+                              createVNode("span", { class: "text-destructive" }, "*")
+                            ]),
+                            _: 1
+                          }),
+                          createVNode(unref(_sfc_main$e), {
+                            modelValue: unref(form).intakeBatch,
+                            "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                            class: "space-y-2"
+                          }, {
+                            default: withCtx(() => [
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$d), {
+                                  id: "genai-batch-2",
+                                  value: "batch-2"
+                                }),
+                                createVNode(unref(_sfc_main$b), {
+                                  for: "genai-batch-2",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 2")
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$d), {
+                                  id: "genai-batch-3",
+                                  value: "batch-3"
+                                }),
+                                createVNode(unref(_sfc_main$b), {
+                                  for: "genai-batch-3",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 3")
+                                  ]),
+                                  _: 1
+                                })
+                              ]),
+                              createVNode("div", { class: "flex items-center space-x-2" }, [
+                                createVNode(unref(_sfc_main$d), {
+                                  id: "genai-batch-4",
+                                  value: "batch-4"
+                                }),
+                                createVNode(unref(_sfc_main$b), {
+                                  for: "genai-batch-4",
+                                  class: "text-sm"
+                                }, {
+                                  default: withCtx(() => [
+                                    createTextVNode("Batch 4")
+                                  ]),
+                                  _: 1
+                                })
+                              ])
+                            ]),
+                            _: 1
+                          }, 8, ["modelValue", "onUpdate:modelValue"]),
+                          unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                            key: 0,
+                            class: "text-sm text-destructive"
+                          }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                        ])
+                      ])
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+            } else {
+              return [
+                createVNode(unref(_sfc_main$8), { class: "p-6" }, {
+                  default: withCtx(() => [
+                    createVNode("div", { class: "space-y-5" }, [
+                      createVNode(unref(_sfc_main$6), { class: "text-card-foreground flex items-center space-x-2" }, {
+                        default: withCtx(() => [
+                          createVNode("img", {
+                            src: unref(chatGptLogoUrl),
+                            alt: "ChatGPT Logo",
+                            class: "w-8 h-6"
+                          }, null, 8, ["src"]),
+                          createVNode("span", null, "GenAI Masterclass")
+                        ]),
+                        _: 1
+                      }),
+                      createVNode(unref(_sfc_main$5), {
+                        type: "single",
+                        collapsible: "",
+                        class: "w-full"
+                      }, {
+                        default: withCtx(() => [
+                          createVNode(unref(_sfc_main$3), { value: "description" }, {
+                            default: withCtx(() => [
+                              createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                default: withCtx(() => [
+                                  createTextVNode(" Pengenalan Program ")
+                                ]),
+                                _: 1
+                              }),
+                              createVNode(unref(_sfc_main$4), null, {
+                                default: withCtx(() => [
+                                  createVNode(unref(_sfc_main$7), { class: "text-muted-foreground" }, {
+                                    default: withCtx(() => [
+                                      createTextVNode(" Bootcamp intensif selama 4 minggu ini membolehkan anda menguasai kemahiran pemprograman Python, automasi, dan pembangunan API yang diperlukan oleh industri teknologi masa kini. Disusun khas untuk mereka yang ingin memulakan atau menukar kerjaya ke bidang teknologi. ")
+                                    ]),
+                                    _: 1
+                                  })
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            _: 1
+                          }),
+                          createVNode(unref(_sfc_main$3), { value: "what-you-get" }, {
+                            default: withCtx(() => [
+                              createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                default: withCtx(() => [
+                                  createTextVNode(" Apa Yang Anda Akan Perolehi ")
+                                ]),
+                                _: 1
+                              }),
+                              createVNode(unref(_sfc_main$4), null, {
+                                default: withCtx(() => [
+                                  createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Asas & Lanjutan Python:"),
+                                      createTextVNode(" Programming berorientasikan object, debugging, dan optimization. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Pembangunan API & Database Integration:"),
+                                      createTextVNode(" Membina RESTful API, web scraping, dan bekerja dengan pelbagai database. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Business Automation:"),
+                                      createTextVNode(" Scripting untuk proses sebenar. ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Portfolio Project Industry:"),
+                                      createTextVNode(" Real-world coding challenges & projects for career showcase. ")
+                                    ])
+                                  ])
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            _: 1
+                          }),
+                          createVNode(unref(_sfc_main$3), { value: "course-outline" }, {
+                            default: withCtx(() => [
+                              createVNode(unref(_sfc_main$2), { class: "text-left text-sm" }, {
+                                default: withCtx(() => [
+                                  createTextVNode(" Rangka Kursus (4 Minggu) ")
+                                ]),
+                                _: 1
+                              }),
+                              createVNode(unref(_sfc_main$4), null, {
+                                default: withCtx(() => [
+                                  createVNode("div", { class: "space-y-3 text-muted-foreground" }, [
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Minggu 1:"),
+                                      createTextVNode(" Asas Python, OOP & Debugging ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Minggu 2:"),
+                                      createTextVNode(" Pembangunan API, Integrasi Pangkalan Data, Web Scraping ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Minggu 3:"),
+                                      createTextVNode(" Struktur Data Lanjutan, Automasi & Cabaran Pengaturcaraan ")
+                                    ]),
+                                    createVNode("div", null, [
+                                      createVNode("strong", null, "Minggu 4:"),
+                                      createTextVNode(" Projek Capstone, Bengkel Portfolio & Persediaan Temuduga ")
+                                    ])
+                                  ])
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            _: 1
+                          })
+                        ]),
+                        _: 1
+                      }),
+                      createVNode("div", { class: "space-y-5" }, [
+                        createVNode(unref(_sfc_main$6), { class: "text-card-foreground" }, {
+                          default: withCtx(() => [
+                            createTextVNode(" Intake Batch "),
+                            createVNode("span", { class: "text-destructive" }, "*")
+                          ]),
+                          _: 1
+                        }),
+                        createVNode(unref(_sfc_main$e), {
+                          modelValue: unref(form).intakeBatch,
+                          "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                          class: "space-y-2"
+                        }, {
+                          default: withCtx(() => [
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "genai-batch-2",
+                                value: "batch-2"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "genai-batch-2",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 2")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "genai-batch-3",
+                                value: "batch-3"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "genai-batch-3",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 3")
+                                ]),
+                                _: 1
+                              })
+                            ]),
+                            createVNode("div", { class: "flex items-center space-x-2" }, [
+                              createVNode(unref(_sfc_main$d), {
+                                id: "genai-batch-4",
+                                value: "batch-4"
+                              }),
+                              createVNode(unref(_sfc_main$b), {
+                                for: "genai-batch-4",
+                                class: "text-sm"
+                              }, {
+                                default: withCtx(() => [
+                                  createTextVNode("Batch 4")
+                                ]),
+                                _: 1
+                              })
+                            ])
+                          ]),
+                          _: 1
+                        }, 8, ["modelValue", "onUpdate:modelValue"]),
+                        unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                          key: 0,
+                          class: "text-sm text-destructive"
+                        }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                      ])
+                    ])
+                  ]),
+                  _: 1
+                })
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+      } else {
+        _push(`<!---->`);
+      }
       _push(ssrRenderComponent(unref(_sfc_main$9), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
