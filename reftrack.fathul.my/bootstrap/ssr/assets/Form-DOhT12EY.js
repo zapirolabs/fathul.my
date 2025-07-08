@@ -563,7 +563,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(` Nama Penuh <span class="text-destructive"${_scopeId3}>*</span>`);
@@ -592,7 +592,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Nama Penuh "),
                           createVNode("span", { class: "text-destructive" }, "*")
@@ -621,7 +621,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Nama Penuh "),
                         createVNode("span", { class: "text-destructive" }, "*")
@@ -655,7 +655,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(` Nombor Telefon <span class="text-destructive"${_scopeId3}>*</span>`);
@@ -684,7 +684,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Nombor Telefon "),
                           createVNode("span", { class: "text-destructive" }, "*")
@@ -713,7 +713,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Nombor Telefon "),
                         createVNode("span", { class: "text-destructive" }, "*")
@@ -747,7 +747,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(` Alamat Emel <span class="text-destructive"${_scopeId3}>*</span>`);
@@ -776,7 +776,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Alamat Emel "),
                           createVNode("span", { class: "text-destructive" }, "*")
@@ -805,7 +805,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Alamat Emel "),
                         createVNode("span", { class: "text-destructive" }, "*")
@@ -839,7 +839,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(` Umur <span class="text-destructive"${_scopeId3}>*</span>`);
@@ -870,7 +870,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Umur "),
                           createVNode("span", { class: "text-destructive" }, "*")
@@ -901,7 +901,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Umur "),
                         createVNode("span", { class: "text-destructive" }, "*")
@@ -937,7 +937,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(` Apakah sebab utama anda mendaftar? <span class="text-destructive"${_scopeId3}>*</span>`);
@@ -1060,7 +1060,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Apakah sebab utama anda mendaftar? "),
                           createVNode("span", { class: "text-destructive" }, "*")
@@ -1161,7 +1161,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Apakah sebab utama anda mendaftar? "),
                         createVNode("span", { class: "text-destructive" }, "*")
@@ -1267,7 +1267,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(` Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? <span class="text-destructive"${_scopeId3}>*</span>`);
@@ -1472,7 +1472,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? "),
                           createVNode("span", { class: "text-destructive" }, "*")
@@ -1576,7 +1576,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini? "),
                         createVNode("span", { class: "text-destructive" }, "*")
@@ -1685,7 +1685,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-3"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(` Apakah program yang anda minati? <span class="text-destructive"${_scopeId3}>*</span>`);
@@ -1862,7 +1862,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "space-y-3" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Apakah program yang anda minati? "),
                           createVNode("span", { class: "text-destructive" }, "*")
@@ -1953,7 +1953,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-3" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Apakah program yang anda minati? "),
                         createVNode("span", { class: "text-destructive" }, "*")
@@ -2049,7 +2049,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="space-y-5"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(` Apakah kaitan anda dengan negeri Pahang? <span class="text-destructive"${_scopeId3}>*</span>`);
@@ -2254,7 +2254,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "space-y-5" }, [
-                      createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                         default: withCtx(() => [
                           createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
                           createVNode("span", { class: "text-destructive" }, "*")
@@ -2358,7 +2358,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$3), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "space-y-5" }, [
-                    createVNode(unref(_sfc_main$2), { class: "text-sm font-medium text-card-foreground" }, {
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
                       default: withCtx(() => [
                         createTextVNode(" Apakah kaitan anda dengan negeri Pahang? "),
                         createVNode("span", { class: "text-destructive" }, "*")

@@ -23,7 +23,7 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <CardTitle class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-card-foreground">
                   Nama Penuh
                   <span class="text-destructive">*</span>
                 </CardTitle>
@@ -44,7 +44,7 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <CardTitle class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-card-foreground">
                   Nombor Telefon
                   <span class="text-destructive">*</span>
                 </CardTitle>
@@ -65,7 +65,7 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <CardTitle class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-card-foreground">
                   Alamat Emel
                   <span class="text-destructive">*</span>
                 </CardTitle>
@@ -86,7 +86,7 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <CardTitle class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-card-foreground">
                   Umur
                   <span class="text-destructive">*</span>
                 </CardTitle>
@@ -109,7 +109,7 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <CardTitle class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-card-foreground">
                   Apakah sebab utama anda mendaftar?
                   <span class="text-destructive">*</span>
                 </CardTitle>
@@ -170,7 +170,7 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <CardTitle class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-card-foreground">
                   Adakah anda bersedia untuk komitmen kepada latihan 1 bulan ini?
                   <span class="text-destructive">*</span>
                 </CardTitle>
@@ -218,7 +218,7 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-3">
-                <CardTitle class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-card-foreground">
                   Apakah program yang anda minati?
                   <span class="text-destructive">*</span>
                 </CardTitle>
@@ -255,7 +255,7 @@
           <Card>
             <CardContent class="p-6">
               <div class="space-y-5">
-                <CardTitle class="text-sm font-medium text-card-foreground">
+                <CardTitle class="text-card-foreground">
                   Apakah kaitan anda dengan negeri Pahang? 
                   <span class="text-destructive">*</span>
                 </CardTitle>
