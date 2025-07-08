@@ -1,10 +1,10 @@
 import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, onMounted, computed, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrRenderClass, ssrInterpolate, ssrRenderAttr } from "vue/server-renderer";
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate, ssrRenderClass, ssrRenderAttr } from "vue/server-renderer";
 import { useForm, Head } from "@inertiajs/vue3";
 import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon, Check, ChevronDown } from "lucide-vue-next";
 import { reactiveOmit, useVModel } from "@vueuse/core";
 import { useForwardPropsEmits, RadioGroupRoot, useForwardProps, RadioGroupItem, RadioGroupIndicator, CheckboxRoot, CheckboxIndicator, Label, AccordionRoot, AccordionContent, AccordionItem, AccordionHeader, AccordionTrigger } from "reka-ui";
-import { c as cn, _ as _sfc_main$l } from "./index-CBusBGn5.js";
+import { c as cn, _ as _sfc_main$m } from "./index-CBusBGn5.js";
 import "clsx";
 import "class-variance-authority";
 import "tailwind-merge";
@@ -15,25 +15,25 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$k = {};
-const _sfc_setup$k = _sfc_main$k.setup;
-_sfc_main$k.setup = (props, ctx) => {
+const _sfc_main$l = {};
+const _sfc_setup$l = _sfc_main$l.setup;
+_sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/Banner.vue");
-  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const _sfc_main$j = {};
+const _sfc_main$k = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white" }, _attrs))} data-v-c7164035><div class="absolute inset-0 opacity-10" data-v-c7164035><div class="absolute inset-0 bg-dot-pattern animate-pulse" data-v-c7164035></div></div><div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" data-v-c7164035><div class="text-center" data-v-c7164035><div class="mb-8 animate-fade-in-up" data-v-c7164035><img src="https://cdn.fathul.my/assets/logo/ypadvancedskills-logo-whiteondark.svg" alt="YPAdvancedSkills Logo" class="h-16 mx-auto" data-v-c7164035></div><h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-10 animate-fade-in-up animation-delay-200" data-v-c7164035><span class="block text-white" data-v-c7164035>Program</span><span class="block bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x" data-v-c7164035> Jaminan Kerjaya </span><span class="block text-white" data-v-c7164035>2025</span></h1></div></div></div>`);
 }
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramHeader.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
-const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-c7164035"]]);
-const _sfc_main$i = {
+const ProgramHeader = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-c7164035"]]);
+const _sfc_main$j = {
   __name: "KriteriaPemohon",
   __ssrInlineRender: true,
   setup(__props) {
@@ -54,13 +54,13 @@ const _sfc_main$i = {
     };
   }
 };
-const _sfc_setup$i = _sfc_main$i.setup;
-_sfc_main$i.setup = (props, ctx) => {
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/KriteriaPemohon.vue");
-  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
-const _sfc_main$h = {
+const _sfc_main$i = {
   __name: "ApaYangAndaPerolehi",
   __ssrInlineRender: true,
   setup(__props) {
@@ -75,13 +75,13 @@ const _sfc_main$h = {
     };
   }
 };
-const _sfc_setup$h = _sfc_main$h.setup;
-_sfc_main$h.setup = (props, ctx) => {
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ApaYangAndaPerolehi.vue");
-  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
-const _sfc_main$g = {
+const _sfc_main$h = {
   __name: "ProgramYangDitawarkan",
   __ssrInlineRender: true,
   setup(__props) {
@@ -116,13 +116,13 @@ const _sfc_main$g = {
     };
   }
 };
-const _sfc_setup$g = _sfc_main$g.setup;
-_sfc_main$g.setup = (props, ctx) => {
+const _sfc_setup$h = _sfc_main$h.setup;
+_sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ProgramYangDitawarkan.vue");
-  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
+  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
-const _sfc_main$f = {
+const _sfc_main$g = {
   __name: "SiapaPatutMemohon",
   __ssrInlineRender: true,
   setup(__props) {
@@ -137,13 +137,13 @@ const _sfc_main$f = {
     };
   }
 };
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/SiapaPatutMemohon.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
-const _sfc_main$e = {
+const _sfc_main$f = {
   __name: "RadioGroup",
   __ssrInlineRender: true,
   props: {
@@ -184,13 +184,13 @@ const _sfc_main$e = {
     };
   }
 };
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/radio-group/RadioGroup.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
-const _sfc_main$d = {
+const _sfc_main$e = {
   __name: "RadioGroupItem",
   __ssrInlineRender: true,
   props: {
@@ -250,13 +250,13 @@ const _sfc_main$d = {
     };
   }
 };
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/radio-group/RadioGroupItem.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-const _sfc_main$c = {
+const _sfc_main$d = {
   __name: "Checkbox",
   __ssrInlineRender: true,
   props: {
@@ -326,13 +326,13 @@ const _sfc_main$c = {
     };
   }
 };
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/checkbox/Checkbox.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const _sfc_main$b = {
+const _sfc_main$c = {
   __name: "Label",
   __ssrInlineRender: true,
   props: {
@@ -365,13 +365,13 @@ const _sfc_main$b = {
     };
   }
 };
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/label/Label.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const _sfc_main$a = {
+const _sfc_main$b = {
   __name: "Input",
   __ssrInlineRender: true,
   props: {
@@ -401,10 +401,43 @@ const _sfc_main$a = {
     };
   }
 };
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/input/Input.vue");
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+};
+const _sfc_main$a = {
+  __name: "Textarea",
+  __ssrInlineRender: true,
+  props: {
+    class: { type: null, required: false },
+    defaultValue: { type: [String, Number], required: false },
+    modelValue: { type: [String, Number], required: false }
+  },
+  emits: ["update:modelValue"],
+  setup(__props, { emit: __emit }) {
+    const props = __props;
+    const emits = __emit;
+    const modelValue = useVModel(props, "modelValue", emits, {
+      passive: true,
+      defaultValue: props.defaultValue
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<textarea${ssrRenderAttrs(mergeProps({
+        "data-slot": "textarea",
+        class: unref(cn)(
+          "border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          props.class
+        )
+      }, _attrs), "textarea")}>${ssrInterpolate(unref(modelValue))}</textarea>`);
+    };
+  }
+};
 const _sfc_setup$a = _sfc_main$a.setup;
 _sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/input/Input.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ui/textarea/Textarea.vue");
   return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
 const _sfc_main$9 = {
@@ -852,10 +885,10 @@ const _sfc_main$1 = {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$j, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$i, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$h, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$g, null, null, _parent));
-      _push(ssrRenderComponent(_sfc_main$f, null, null, _parent));
       _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6">`);
       _push(ssrRenderComponent(unref(_sfc_main$9), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -877,7 +910,7 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$f), {
                     modelValue: unref(form).pahangConnection,
                     "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
                     class: "space-y-2"
@@ -885,11 +918,11 @@ const _sfc_main$1 = {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "born-pahang",
                           value: "born-pahang"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "born-pahang",
                           class: "text-sm"
                         }, {
@@ -905,11 +938,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "living-pahang",
                           value: "living-pahang"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "living-pahang",
                           class: "text-sm"
                         }, {
@@ -925,11 +958,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "parents-pahang",
                           value: "parents-pahang"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "parents-pahang",
                           class: "text-sm"
                         }, {
@@ -945,11 +978,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "other-pahang",
                           value: "other-pahang"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "other-pahang",
                           class: "text-sm"
                         }, {
@@ -965,7 +998,7 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         if (unref(form).pahangConnection === "other-pahang") {
-                          _push4(ssrRenderComponent(unref(_sfc_main$a), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
                             modelValue: unref(form).pahangConnectionOther,
                             "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
                             placeholder: "Sila nyatakan...",
@@ -983,11 +1016,11 @@ const _sfc_main$1 = {
                       } else {
                         return [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "born-pahang",
                               value: "born-pahang"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "born-pahang",
                               class: "text-sm"
                             }, {
@@ -998,11 +1031,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "living-pahang",
                               value: "living-pahang"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "living-pahang",
                               class: "text-sm"
                             }, {
@@ -1013,11 +1046,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "parents-pahang",
                               value: "parents-pahang"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "parents-pahang",
                               class: "text-sm"
                             }, {
@@ -1028,11 +1061,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "other-pahang",
                               value: "other-pahang"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "other-pahang",
                               class: "text-sm"
                             }, {
@@ -1041,7 +1074,7 @@ const _sfc_main$1 = {
                               ]),
                               _: 1
                             }),
-                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$a), {
+                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$b), {
                               key: 0,
                               modelValue: unref(form).pahangConnectionOther,
                               "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
@@ -1076,18 +1109,18 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode(unref(_sfc_main$e), {
+                      createVNode(unref(_sfc_main$f), {
                         modelValue: unref(form).pahangConnection,
                         "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
                         class: "space-y-2"
                       }, {
                         default: withCtx(() => [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "born-pahang",
                               value: "born-pahang"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "born-pahang",
                               class: "text-sm"
                             }, {
@@ -1098,11 +1131,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "living-pahang",
                               value: "living-pahang"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "living-pahang",
                               class: "text-sm"
                             }, {
@@ -1113,11 +1146,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "parents-pahang",
                               value: "parents-pahang"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "parents-pahang",
                               class: "text-sm"
                             }, {
@@ -1128,11 +1161,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "other-pahang",
                               value: "other-pahang"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "other-pahang",
                               class: "text-sm"
                             }, {
@@ -1141,7 +1174,7 @@ const _sfc_main$1 = {
                               ]),
                               _: 1
                             }),
-                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$a), {
+                            unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$b), {
                               key: 0,
                               modelValue: unref(form).pahangConnectionOther,
                               "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
@@ -1180,18 +1213,18 @@ const _sfc_main$1 = {
                       ]),
                       _: 1
                     }),
-                    createVNode(unref(_sfc_main$e), {
+                    createVNode(unref(_sfc_main$f), {
                       modelValue: unref(form).pahangConnection,
                       "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx(() => [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "born-pahang",
                             value: "born-pahang"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "born-pahang",
                             class: "text-sm"
                           }, {
@@ -1202,11 +1235,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "living-pahang",
                             value: "living-pahang"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "living-pahang",
                             class: "text-sm"
                           }, {
@@ -1217,11 +1250,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "parents-pahang",
                             value: "parents-pahang"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "parents-pahang",
                             class: "text-sm"
                           }, {
@@ -1232,11 +1265,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "other-pahang",
                             value: "other-pahang"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "other-pahang",
                             class: "text-sm"
                           }, {
@@ -1245,7 +1278,7 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$a), {
+                          unref(form).pahangConnection === "other-pahang" ? (openBlock(), createBlock(unref(_sfc_main$b), {
                             key: 0,
                             modelValue: unref(form).pahangConnectionOther,
                             "onUpdate:modelValue": ($event) => unref(form).pahangConnectionOther = $event,
@@ -1289,7 +1322,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$a), {
+      _push(ssrRenderComponent(unref(_sfc_main$b), {
         modelValue: unref(form).fullName,
         "onUpdate:modelValue": ($event) => unref(form).fullName = $event,
         type: "text",
@@ -1315,7 +1348,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$a), {
+      _push(ssrRenderComponent(unref(_sfc_main$b), {
         modelValue: unref(form).phoneNumber,
         "onUpdate:modelValue": ($event) => unref(form).phoneNumber = $event,
         type: "tel",
@@ -1341,7 +1374,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$a), {
+      _push(ssrRenderComponent(unref(_sfc_main$b), {
         modelValue: unref(form).email,
         "onUpdate:modelValue": ($event) => unref(form).email = $event,
         type: "email",
@@ -1367,7 +1400,7 @@ const _sfc_main$1 = {
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$a), {
+      _push(ssrRenderComponent(unref(_sfc_main$b), {
         modelValue: unref(form).age,
         "onUpdate:modelValue": ($event) => unref(form).age = $event,
         type: "number",
@@ -1402,7 +1435,7 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$f), {
                     modelValue: unref(form).interviewWillingness,
                     "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
                     class: "space-y-2"
@@ -1410,11 +1443,11 @@ const _sfc_main$1 = {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "interview-yes",
                           value: "yes"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "interview-yes",
                           class: "text-sm"
                         }, {
@@ -1430,11 +1463,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "interview-no",
                           value: "no"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "interview-no",
                           class: "text-sm"
                         }, {
@@ -1453,11 +1486,11 @@ const _sfc_main$1 = {
                       } else {
                         return [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "interview-yes",
                               value: "yes"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "interview-yes",
                               class: "text-sm"
                             }, {
@@ -1468,11 +1501,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "interview-no",
                               value: "no"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "interview-no",
                               class: "text-sm"
                             }, {
@@ -1503,18 +1536,18 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode(unref(_sfc_main$e), {
+                      createVNode(unref(_sfc_main$f), {
                         modelValue: unref(form).interviewWillingness,
                         "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
                         class: "space-y-2"
                       }, {
                         default: withCtx(() => [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "interview-yes",
                               value: "yes"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "interview-yes",
                               class: "text-sm"
                             }, {
@@ -1525,11 +1558,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "interview-no",
                               value: "no"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "interview-no",
                               class: "text-sm"
                             }, {
@@ -1564,18 +1597,18 @@ const _sfc_main$1 = {
                       ]),
                       _: 1
                     }),
-                    createVNode(unref(_sfc_main$e), {
+                    createVNode(unref(_sfc_main$f), {
                       modelValue: unref(form).interviewWillingness,
                       "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx(() => [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "interview-yes",
                             value: "yes"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "interview-yes",
                             class: "text-sm"
                           }, {
@@ -1586,11 +1619,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "interview-no",
                             value: "no"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "interview-no",
                             class: "text-sm"
                           }, {
@@ -1637,12 +1670,12 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   _push3(`<div class="space-y-5"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$d), {
                     id: "upskill",
                     "model-value": unref(isReasonSelected)("upskill"),
                     "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("upskill", checked)
                   }, null, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$c), {
                     for: "upskill",
                     class: "text-sm"
                   }, {
@@ -1658,12 +1691,12 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$d), {
                     id: "certificate",
                     "model-value": unref(isReasonSelected)("certificate"),
                     "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("certificate", checked)
                   }, null, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$c), {
                     for: "certificate",
                     class: "text-sm"
                   }, {
@@ -1679,12 +1712,12 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$d), {
                     id: "job",
                     "model-value": unref(isReasonSelected)("job"),
                     "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("job", checked)
                   }, null, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$c), {
                     for: "job",
                     class: "text-sm"
                   }, {
@@ -1700,12 +1733,12 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$d), {
                     id: "other-reason",
                     "model-value": unref(isReasonSelected)("other"),
                     "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("other", checked)
                   }, null, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$c), {
                     for: "other-reason",
                     class: "text-sm"
                   }, {
@@ -1721,7 +1754,7 @@ const _sfc_main$1 = {
                     _: 1
                   }, _parent3, _scopeId2));
                   if (unref(isReasonSelected)("other")) {
-                    _push3(ssrRenderComponent(unref(_sfc_main$a), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
                       modelValue: unref(form).registrationReasonsOther,
                       "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
                       placeholder: "Sila nyatakan...",
@@ -1755,12 +1788,12 @@ const _sfc_main$1 = {
                       }),
                       createVNode("div", { class: "space-y-5" }, [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$c), {
+                          createVNode(unref(_sfc_main$d), {
                             id: "upskill",
                             "model-value": unref(isReasonSelected)("upskill"),
                             "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("upskill", checked)
                           }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "upskill",
                             class: "text-sm"
                           }, {
@@ -1771,12 +1804,12 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$c), {
+                          createVNode(unref(_sfc_main$d), {
                             id: "certificate",
                             "model-value": unref(isReasonSelected)("certificate"),
                             "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("certificate", checked)
                           }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "certificate",
                             class: "text-sm"
                           }, {
@@ -1787,12 +1820,12 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$c), {
+                          createVNode(unref(_sfc_main$d), {
                             id: "job",
                             "model-value": unref(isReasonSelected)("job"),
                             "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("job", checked)
                           }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "job",
                             class: "text-sm"
                           }, {
@@ -1803,12 +1836,12 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$c), {
+                          createVNode(unref(_sfc_main$d), {
                             id: "other-reason",
                             "model-value": unref(isReasonSelected)("other"),
                             "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("other", checked)
                           }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "other-reason",
                             class: "text-sm"
                           }, {
@@ -1817,7 +1850,7 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          unref(isReasonSelected)("other") ? (openBlock(), createBlock(unref(_sfc_main$a), {
+                          unref(isReasonSelected)("other") ? (openBlock(), createBlock(unref(_sfc_main$b), {
                             key: 0,
                             modelValue: unref(form).registrationReasonsOther,
                             "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
@@ -1856,12 +1889,12 @@ const _sfc_main$1 = {
                     }),
                     createVNode("div", { class: "space-y-5" }, [
                       createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$c), {
+                        createVNode(unref(_sfc_main$d), {
                           id: "upskill",
                           "model-value": unref(isReasonSelected)("upskill"),
                           "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("upskill", checked)
                         }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                        createVNode(unref(_sfc_main$b), {
+                        createVNode(unref(_sfc_main$c), {
                           for: "upskill",
                           class: "text-sm"
                         }, {
@@ -1872,12 +1905,12 @@ const _sfc_main$1 = {
                         })
                       ]),
                       createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$c), {
+                        createVNode(unref(_sfc_main$d), {
                           id: "certificate",
                           "model-value": unref(isReasonSelected)("certificate"),
                           "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("certificate", checked)
                         }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                        createVNode(unref(_sfc_main$b), {
+                        createVNode(unref(_sfc_main$c), {
                           for: "certificate",
                           class: "text-sm"
                         }, {
@@ -1888,12 +1921,12 @@ const _sfc_main$1 = {
                         })
                       ]),
                       createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$c), {
+                        createVNode(unref(_sfc_main$d), {
                           id: "job",
                           "model-value": unref(isReasonSelected)("job"),
                           "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("job", checked)
                         }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                        createVNode(unref(_sfc_main$b), {
+                        createVNode(unref(_sfc_main$c), {
                           for: "job",
                           class: "text-sm"
                         }, {
@@ -1904,12 +1937,12 @@ const _sfc_main$1 = {
                         })
                       ]),
                       createVNode("div", { class: "flex items-center space-x-2" }, [
-                        createVNode(unref(_sfc_main$c), {
+                        createVNode(unref(_sfc_main$d), {
                           id: "other-reason",
                           "model-value": unref(isReasonSelected)("other"),
                           "onUpdate:modelValue": (checked) => unref(handleRegistrationReasonChange)("other", checked)
                         }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                        createVNode(unref(_sfc_main$b), {
+                        createVNode(unref(_sfc_main$c), {
                           for: "other-reason",
                           class: "text-sm"
                         }, {
@@ -1918,7 +1951,7 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }),
-                        unref(isReasonSelected)("other") ? (openBlock(), createBlock(unref(_sfc_main$a), {
+                        unref(isReasonSelected)("other") ? (openBlock(), createBlock(unref(_sfc_main$b), {
                           key: 0,
                           modelValue: unref(form).registrationReasonsOther,
                           "onUpdate:modelValue": ($event) => unref(form).registrationReasonsOther = $event,
@@ -1966,7 +1999,7 @@ const _sfc_main$1 = {
                     }),
                     _: 1
                   }, _parent3, _scopeId2));
-                  _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$f), {
                     modelValue: unref(form).commitmentLevel,
                     "onUpdate:modelValue": ($event) => unref(form).commitmentLevel = $event,
                     class: "space-y-2"
@@ -1974,11 +2007,11 @@ const _sfc_main$1 = {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
                         _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "fully-committed",
                           value: "fully-committed"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "fully-committed",
                           class: "text-sm"
                         }, {
@@ -1994,11 +2027,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "need-info",
                           value: "need-info"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "need-info",
                           class: "text-sm"
                         }, {
@@ -2014,11 +2047,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "not-sure",
                           value: "not-sure"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "not-sure",
                           class: "text-sm"
                         }, {
@@ -2034,11 +2067,11 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                        _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$e), {
                           id: "other-commitment",
                           value: "other-commitment"
                         }, null, _parent4, _scopeId3));
-                        _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                        _push4(ssrRenderComponent(unref(_sfc_main$c), {
                           for: "other-commitment",
                           class: "text-sm"
                         }, {
@@ -2054,7 +2087,7 @@ const _sfc_main$1 = {
                           _: 1
                         }, _parent4, _scopeId3));
                         if (unref(form).commitmentLevel === "other-commitment") {
-                          _push4(ssrRenderComponent(unref(_sfc_main$a), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
                             modelValue: unref(form).commitmentLevelOther,
                             "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
                             placeholder: "Sila nyatakan...",
@@ -2072,11 +2105,11 @@ const _sfc_main$1 = {
                       } else {
                         return [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "fully-committed",
                               value: "fully-committed"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "fully-committed",
                               class: "text-sm"
                             }, {
@@ -2087,11 +2120,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "need-info",
                               value: "need-info"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "need-info",
                               class: "text-sm"
                             }, {
@@ -2102,11 +2135,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "not-sure",
                               value: "not-sure"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "not-sure",
                               class: "text-sm"
                             }, {
@@ -2117,11 +2150,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "other-commitment",
                               value: "other-commitment"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "other-commitment",
                               class: "text-sm"
                             }, {
@@ -2130,7 +2163,7 @@ const _sfc_main$1 = {
                               ]),
                               _: 1
                             }),
-                            unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$a), {
+                            unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$b), {
                               key: 0,
                               modelValue: unref(form).commitmentLevelOther,
                               "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
@@ -2165,18 +2198,18 @@ const _sfc_main$1 = {
                         ]),
                         _: 1
                       }),
-                      createVNode(unref(_sfc_main$e), {
+                      createVNode(unref(_sfc_main$f), {
                         modelValue: unref(form).commitmentLevel,
                         "onUpdate:modelValue": ($event) => unref(form).commitmentLevel = $event,
                         class: "space-y-2"
                       }, {
                         default: withCtx(() => [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "fully-committed",
                               value: "fully-committed"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "fully-committed",
                               class: "text-sm"
                             }, {
@@ -2187,11 +2220,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "need-info",
                               value: "need-info"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "need-info",
                               class: "text-sm"
                             }, {
@@ -2202,11 +2235,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "not-sure",
                               value: "not-sure"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "not-sure",
                               class: "text-sm"
                             }, {
@@ -2217,11 +2250,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "other-commitment",
                               value: "other-commitment"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "other-commitment",
                               class: "text-sm"
                             }, {
@@ -2230,7 +2263,7 @@ const _sfc_main$1 = {
                               ]),
                               _: 1
                             }),
-                            unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$a), {
+                            unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$b), {
                               key: 0,
                               modelValue: unref(form).commitmentLevelOther,
                               "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
@@ -2269,18 +2302,18 @@ const _sfc_main$1 = {
                       ]),
                       _: 1
                     }),
-                    createVNode(unref(_sfc_main$e), {
+                    createVNode(unref(_sfc_main$f), {
                       modelValue: unref(form).commitmentLevel,
                       "onUpdate:modelValue": ($event) => unref(form).commitmentLevel = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx(() => [
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "fully-committed",
                             value: "fully-committed"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "fully-committed",
                             class: "text-sm"
                           }, {
@@ -2291,11 +2324,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "need-info",
                             value: "need-info"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "need-info",
                             class: "text-sm"
                           }, {
@@ -2306,11 +2339,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "not-sure",
                             value: "not-sure"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "not-sure",
                             class: "text-sm"
                           }, {
@@ -2321,11 +2354,11 @@ const _sfc_main$1 = {
                           })
                         ]),
                         createVNode("div", { class: "flex items-center space-x-2" }, [
-                          createVNode(unref(_sfc_main$d), {
+                          createVNode(unref(_sfc_main$e), {
                             id: "other-commitment",
                             value: "other-commitment"
                           }),
-                          createVNode(unref(_sfc_main$b), {
+                          createVNode(unref(_sfc_main$c), {
                             for: "other-commitment",
                             class: "text-sm"
                           }, {
@@ -2334,7 +2367,7 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$a), {
+                          unref(form).commitmentLevel === "other-commitment" ? (openBlock(), createBlock(unref(_sfc_main$b), {
                             key: 0,
                             modelValue: unref(form).commitmentLevelOther,
                             "onUpdate:modelValue": ($event) => unref(form).commitmentLevelOther = $event,
@@ -2386,7 +2419,7 @@ const _sfc_main$1 = {
                   }, _parent3, _scopeId2));
                   if (unref(form).programInterest !== "more-than-one") {
                     _push3(`<div${_scopeId2}>`);
-                    _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$f), {
                       modelValue: unref(form).programInterest,
                       "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
                       class: "space-y-2"
@@ -2394,11 +2427,11 @@ const _sfc_main$1 = {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "python-basic",
                             value: "python-basic"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "python-basic",
                             class: "text-sm flex items-center space-x-2"
                           }, {
@@ -2419,11 +2452,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "genai-masterclass",
                             value: "genai-masterclass"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "genai-masterclass",
                             class: "text-sm flex items-center space-x-2"
                           }, {
@@ -2444,11 +2477,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "aws-foundational",
                             value: "aws-foundational"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "aws-foundational",
                             class: "text-sm flex items-center space-x-2"
                           }, {
@@ -2469,11 +2502,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "more-than-one",
                             value: "more-than-one"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "more-than-one",
                             class: "text-sm"
                           }, {
@@ -2492,11 +2525,11 @@ const _sfc_main$1 = {
                         } else {
                           return [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "python-basic",
                                 value: "python-basic"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "python-basic",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2512,11 +2545,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "genai-masterclass",
                                 value: "genai-masterclass"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "genai-masterclass",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2532,11 +2565,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "aws-foundational",
                                 value: "aws-foundational"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "aws-foundational",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2552,11 +2585,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "more-than-one",
                                 value: "more-than-one"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "more-than-one",
                                 class: "text-sm"
                               }, {
@@ -2574,7 +2607,7 @@ const _sfc_main$1 = {
                     _push3(`</div>`);
                   } else {
                     _push3(`<div class="space-y-4"${_scopeId2}>`);
-                    _push3(ssrRenderComponent(unref(_sfc_main$l), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$m), {
                       type: "button",
                       variant: "outline",
                       size: "sm",
@@ -2593,12 +2626,12 @@ const _sfc_main$1 = {
                       _: 1
                     }, _parent3, _scopeId2));
                     _push3(`<div class="border-t pt-4 space-y-3"${_scopeId2}><p class="text-sm font-medium text-card-foreground"${_scopeId2}> Pilih program yang anda minati: <span class="text-destructive"${_scopeId2}>*</span></p><div class="space-y-3"${_scopeId2}><div class="flex items-center space-x-2"${_scopeId2}>`);
-                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$d), {
                       id: "multi-python",
                       "model-value": unref(isProgramSelected)("python-basic"),
                       "onUpdate:modelValue": (checked) => unref(handleProgramChange)("python-basic", checked)
                     }, null, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
                       for: "multi-python",
                       class: "text-sm flex items-center space-x-2"
                     }, {
@@ -2619,12 +2652,12 @@ const _sfc_main$1 = {
                       _: 1
                     }, _parent3, _scopeId2));
                     _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
-                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$d), {
                       id: "multi-genai",
                       "model-value": unref(isProgramSelected)("genai-masterclass"),
                       "onUpdate:modelValue": (checked) => unref(handleProgramChange)("genai-masterclass", checked)
                     }, null, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
                       for: "multi-genai",
                       class: "text-sm flex items-center space-x-2"
                     }, {
@@ -2645,12 +2678,12 @@ const _sfc_main$1 = {
                       _: 1
                     }, _parent3, _scopeId2));
                     _push3(`</div><div class="flex items-center space-x-2"${_scopeId2}>`);
-                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$d), {
                       id: "multi-aws",
                       "model-value": unref(isProgramSelected)("aws-foundational"),
                       "onUpdate:modelValue": (checked) => unref(handleProgramChange)("aws-foundational", checked)
                     }, null, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$b), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$c), {
                       for: "multi-aws",
                       class: "text-sm flex items-center space-x-2"
                     }, {
@@ -2695,18 +2728,18 @@ const _sfc_main$1 = {
                         _: 1
                       }),
                       unref(form).programInterest !== "more-than-one" ? (openBlock(), createBlock("div", { key: 0 }, [
-                        createVNode(unref(_sfc_main$e), {
+                        createVNode(unref(_sfc_main$f), {
                           modelValue: unref(form).programInterest,
                           "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
                           class: "space-y-2"
                         }, {
                           default: withCtx(() => [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "python-basic",
                                 value: "python-basic"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "python-basic",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2722,11 +2755,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "genai-masterclass",
                                 value: "genai-masterclass"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "genai-masterclass",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2742,11 +2775,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "aws-foundational",
                                 value: "aws-foundational"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "aws-foundational",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2762,11 +2795,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "more-than-one",
                                 value: "more-than-one"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "more-than-one",
                                 class: "text-sm"
                               }, {
@@ -2783,7 +2816,7 @@ const _sfc_main$1 = {
                         key: 1,
                         class: "space-y-4"
                       }, [
-                        createVNode(unref(_sfc_main$l), {
+                        createVNode(unref(_sfc_main$m), {
                           type: "button",
                           variant: "outline",
                           size: "sm",
@@ -2802,12 +2835,12 @@ const _sfc_main$1 = {
                           ]),
                           createVNode("div", { class: "space-y-3" }, [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$c), {
+                              createVNode(unref(_sfc_main$d), {
                                 id: "multi-python",
                                 "model-value": unref(isProgramSelected)("python-basic"),
                                 "onUpdate:modelValue": (checked) => unref(handleProgramChange)("python-basic", checked)
                               }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "multi-python",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2823,12 +2856,12 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$c), {
+                              createVNode(unref(_sfc_main$d), {
                                 id: "multi-genai",
                                 "model-value": unref(isProgramSelected)("genai-masterclass"),
                                 "onUpdate:modelValue": (checked) => unref(handleProgramChange)("genai-masterclass", checked)
                               }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "multi-genai",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2844,12 +2877,12 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$c), {
+                              createVNode(unref(_sfc_main$d), {
                                 id: "multi-aws",
                                 "model-value": unref(isProgramSelected)("aws-foundational"),
                                 "onUpdate:modelValue": (checked) => unref(handleProgramChange)("aws-foundational", checked)
                               }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "multi-aws",
                                 class: "text-sm flex items-center space-x-2"
                               }, {
@@ -2894,18 +2927,18 @@ const _sfc_main$1 = {
                       _: 1
                     }),
                     unref(form).programInterest !== "more-than-one" ? (openBlock(), createBlock("div", { key: 0 }, [
-                      createVNode(unref(_sfc_main$e), {
+                      createVNode(unref(_sfc_main$f), {
                         modelValue: unref(form).programInterest,
                         "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
                         class: "space-y-2"
                       }, {
                         default: withCtx(() => [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "python-basic",
                               value: "python-basic"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "python-basic",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2921,11 +2954,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "genai-masterclass",
                               value: "genai-masterclass"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "genai-masterclass",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2941,11 +2974,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "aws-foundational",
                               value: "aws-foundational"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "aws-foundational",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -2961,11 +2994,11 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$d), {
+                            createVNode(unref(_sfc_main$e), {
                               id: "more-than-one",
                               value: "more-than-one"
                             }),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "more-than-one",
                               class: "text-sm"
                             }, {
@@ -2982,7 +3015,7 @@ const _sfc_main$1 = {
                       key: 1,
                       class: "space-y-4"
                     }, [
-                      createVNode(unref(_sfc_main$l), {
+                      createVNode(unref(_sfc_main$m), {
                         type: "button",
                         variant: "outline",
                         size: "sm",
@@ -3001,12 +3034,12 @@ const _sfc_main$1 = {
                         ]),
                         createVNode("div", { class: "space-y-3" }, [
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$c), {
+                            createVNode(unref(_sfc_main$d), {
                               id: "multi-python",
                               "model-value": unref(isProgramSelected)("python-basic"),
                               "onUpdate:modelValue": (checked) => unref(handleProgramChange)("python-basic", checked)
                             }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "multi-python",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -3022,12 +3055,12 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$c), {
+                            createVNode(unref(_sfc_main$d), {
                               id: "multi-genai",
                               "model-value": unref(isProgramSelected)("genai-masterclass"),
                               "onUpdate:modelValue": (checked) => unref(handleProgramChange)("genai-masterclass", checked)
                             }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "multi-genai",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -3043,12 +3076,12 @@ const _sfc_main$1 = {
                             })
                           ]),
                           createVNode("div", { class: "flex items-center space-x-2" }, [
-                            createVNode(unref(_sfc_main$c), {
+                            createVNode(unref(_sfc_main$d), {
                               id: "multi-aws",
                               "model-value": unref(isProgramSelected)("aws-foundational"),
                               "onUpdate:modelValue": (checked) => unref(handleProgramChange)("aws-foundational", checked)
                             }, null, 8, ["model-value", "onUpdate:modelValue"]),
-                            createVNode(unref(_sfc_main$b), {
+                            createVNode(unref(_sfc_main$c), {
                               for: "multi-aws",
                               class: "text-sm flex items-center space-x-2"
                             }, {
@@ -3453,7 +3486,7 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$f), {
                       modelValue: unref(form).intakeBatch,
                       "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                       class: "space-y-2"
@@ -3461,11 +3494,11 @@ const _sfc_main$1 = {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "batch-1",
                             value: "batch-1"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "batch-1",
                             class: "text-sm"
                           }, {
@@ -3481,11 +3514,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "batch-2",
                             value: "batch-2"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "batch-2",
                             class: "text-sm"
                           }, {
@@ -3501,11 +3534,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "batch-3",
                             value: "batch-3"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "batch-3",
                             class: "text-sm"
                           }, {
@@ -3524,11 +3557,11 @@ const _sfc_main$1 = {
                         } else {
                           return [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "batch-1",
                                 value: "batch-1"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "batch-1",
                                 class: "text-sm"
                               }, {
@@ -3539,11 +3572,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "batch-2",
                                 value: "batch-2"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "batch-2",
                                 class: "text-sm"
                               }, {
@@ -3554,11 +3587,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "batch-3",
                                 value: "batch-3"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "batch-3",
                                 class: "text-sm"
                               }, {
@@ -3700,18 +3733,18 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          createVNode(unref(_sfc_main$e), {
+                          createVNode(unref(_sfc_main$f), {
                             modelValue: unref(form).intakeBatch,
                             "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                             class: "space-y-2"
                           }, {
                             default: withCtx(() => [
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "batch-1",
                                   value: "batch-1"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "batch-1",
                                   class: "text-sm"
                                 }, {
@@ -3722,11 +3755,11 @@ const _sfc_main$1 = {
                                 })
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "batch-2",
                                   value: "batch-2"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "batch-2",
                                   class: "text-sm"
                                 }, {
@@ -3737,11 +3770,11 @@ const _sfc_main$1 = {
                                 })
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "batch-3",
                                   value: "batch-3"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "batch-3",
                                   class: "text-sm"
                                 }, {
@@ -3888,18 +3921,18 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }),
-                        createVNode(unref(_sfc_main$e), {
+                        createVNode(unref(_sfc_main$f), {
                           modelValue: unref(form).intakeBatch,
                           "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                           class: "space-y-2"
                         }, {
                           default: withCtx(() => [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "batch-1",
                                 value: "batch-1"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "batch-1",
                                 class: "text-sm"
                               }, {
@@ -3910,11 +3943,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "batch-2",
                                 value: "batch-2"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "batch-2",
                                 class: "text-sm"
                               }, {
@@ -3925,11 +3958,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "batch-3",
                                 value: "batch-3"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "batch-3",
                                 class: "text-sm"
                               }, {
@@ -4341,7 +4374,7 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$f), {
                       modelValue: unref(form).intakeBatch,
                       "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                       class: "space-y-2"
@@ -4349,11 +4382,11 @@ const _sfc_main$1 = {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "genai-batch-2",
                             value: "batch-2"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "genai-batch-2",
                             class: "text-sm"
                           }, {
@@ -4369,11 +4402,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "genai-batch-3",
                             value: "batch-3"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "genai-batch-3",
                             class: "text-sm"
                           }, {
@@ -4389,11 +4422,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "genai-batch-4",
                             value: "batch-4"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "genai-batch-4",
                             class: "text-sm"
                           }, {
@@ -4412,11 +4445,11 @@ const _sfc_main$1 = {
                         } else {
                           return [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "genai-batch-2",
                                 value: "batch-2"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "genai-batch-2",
                                 class: "text-sm"
                               }, {
@@ -4427,11 +4460,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "genai-batch-3",
                                 value: "batch-3"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "genai-batch-3",
                                 class: "text-sm"
                               }, {
@@ -4442,11 +4475,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "genai-batch-4",
                                 value: "batch-4"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "genai-batch-4",
                                 class: "text-sm"
                               }, {
@@ -4592,18 +4625,18 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          createVNode(unref(_sfc_main$e), {
+                          createVNode(unref(_sfc_main$f), {
                             modelValue: unref(form).intakeBatch,
                             "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                             class: "space-y-2"
                           }, {
                             default: withCtx(() => [
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "genai-batch-2",
                                   value: "batch-2"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "genai-batch-2",
                                   class: "text-sm"
                                 }, {
@@ -4614,11 +4647,11 @@ const _sfc_main$1 = {
                                 })
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "genai-batch-3",
                                   value: "batch-3"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "genai-batch-3",
                                   class: "text-sm"
                                 }, {
@@ -4629,11 +4662,11 @@ const _sfc_main$1 = {
                                 })
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "genai-batch-4",
                                   value: "batch-4"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "genai-batch-4",
                                   class: "text-sm"
                                 }, {
@@ -4784,18 +4817,18 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }),
-                        createVNode(unref(_sfc_main$e), {
+                        createVNode(unref(_sfc_main$f), {
                           modelValue: unref(form).intakeBatch,
                           "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                           class: "space-y-2"
                         }, {
                           default: withCtx(() => [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "genai-batch-2",
                                 value: "batch-2"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "genai-batch-2",
                                 class: "text-sm"
                               }, {
@@ -4806,11 +4839,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "genai-batch-3",
                                 value: "batch-3"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "genai-batch-3",
                                 class: "text-sm"
                               }, {
@@ -4821,11 +4854,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "genai-batch-4",
                                 value: "batch-4"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "genai-batch-4",
                                 class: "text-sm"
                               }, {
@@ -5225,7 +5258,7 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    _push3(ssrRenderComponent(unref(_sfc_main$e), {
+                    _push3(ssrRenderComponent(unref(_sfc_main$f), {
                       modelValue: unref(form).intakeBatch,
                       "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                       class: "space-y-2"
@@ -5233,11 +5266,11 @@ const _sfc_main$1 = {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "aws-batch-1",
                             value: "batch-1"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "aws-batch-1",
                             class: "text-sm"
                           }, {
@@ -5253,11 +5286,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "aws-batch-2",
                             value: "batch-2"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "aws-batch-2",
                             class: "text-sm"
                           }, {
@@ -5273,11 +5306,11 @@ const _sfc_main$1 = {
                             _: 1
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$d), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
                             id: "aws-batch-3",
                             value: "batch-3"
                           }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$b), {
+                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
                             for: "aws-batch-3",
                             class: "text-sm"
                           }, {
@@ -5296,11 +5329,11 @@ const _sfc_main$1 = {
                         } else {
                           return [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "aws-batch-1",
                                 value: "batch-1"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "aws-batch-1",
                                 class: "text-sm"
                               }, {
@@ -5311,11 +5344,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "aws-batch-2",
                                 value: "batch-2"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "aws-batch-2",
                                 class: "text-sm"
                               }, {
@@ -5326,11 +5359,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "aws-batch-3",
                                 value: "batch-3"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "aws-batch-3",
                                 class: "text-sm"
                               }, {
@@ -5472,18 +5505,18 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }),
-                          createVNode(unref(_sfc_main$e), {
+                          createVNode(unref(_sfc_main$f), {
                             modelValue: unref(form).intakeBatch,
                             "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                             class: "space-y-2"
                           }, {
                             default: withCtx(() => [
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "aws-batch-1",
                                   value: "batch-1"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "aws-batch-1",
                                   class: "text-sm"
                                 }, {
@@ -5494,11 +5527,11 @@ const _sfc_main$1 = {
                                 })
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "aws-batch-2",
                                   value: "batch-2"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "aws-batch-2",
                                   class: "text-sm"
                                 }, {
@@ -5509,11 +5542,11 @@ const _sfc_main$1 = {
                                 })
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$d), {
+                                createVNode(unref(_sfc_main$e), {
                                   id: "aws-batch-3",
                                   value: "batch-3"
                                 }),
-                                createVNode(unref(_sfc_main$b), {
+                                createVNode(unref(_sfc_main$c), {
                                   for: "aws-batch-3",
                                   class: "text-sm"
                                 }, {
@@ -5660,18 +5693,18 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }),
-                        createVNode(unref(_sfc_main$e), {
+                        createVNode(unref(_sfc_main$f), {
                           modelValue: unref(form).intakeBatch,
                           "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
                           class: "space-y-2"
                         }, {
                           default: withCtx(() => [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "aws-batch-1",
                                 value: "batch-1"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "aws-batch-1",
                                 class: "text-sm"
                               }, {
@@ -5682,11 +5715,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "aws-batch-2",
                                 value: "batch-2"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "aws-batch-2",
                                 class: "text-sm"
                               }, {
@@ -5697,11 +5730,11 @@ const _sfc_main$1 = {
                               })
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$d), {
+                              createVNode(unref(_sfc_main$e), {
                                 id: "aws-batch-3",
                                 value: "batch-3"
                               }),
-                              createVNode(unref(_sfc_main$b), {
+                              createVNode(unref(_sfc_main$c), {
                                 for: "aws-batch-3",
                                 class: "text-sm"
                               }, {
@@ -5747,9 +5780,8 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(unref(_sfc_main$a), {
         modelValue: unref(form).furtherInquiries,
         "onUpdate:modelValue": ($event) => unref(form).furtherInquiries = $event,
-        type: "text",
         placeholder: "Any questions or additional information you'd like to share (optional)",
-        class: "w-full"
+        class: "w-full min-h-[100px]"
       }, null, _parent));
       if (unref(form).errors.furtherInquiries) {
         _push(`<p class="text-sm text-destructive">${ssrInterpolate(unref(form).errors.furtherInquiries)}</p>`);
@@ -5764,7 +5796,7 @@ const _sfc_main$1 = {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`<div class="flex justify-end"${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(_sfc_main$l), {
+                  _push3(ssrRenderComponent(unref(_sfc_main$m), {
                     type: "submit",
                     disabled: unref(processing),
                     class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
@@ -5784,7 +5816,7 @@ const _sfc_main$1 = {
                 } else {
                   return [
                     createVNode("div", { class: "flex justify-end" }, [
-                      createVNode(unref(_sfc_main$l), {
+                      createVNode(unref(_sfc_main$m), {
                         type: "submit",
                         disabled: unref(processing),
                         class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"
@@ -5805,7 +5837,7 @@ const _sfc_main$1 = {
               createVNode(unref(_sfc_main$8), { class: "p-6" }, {
                 default: withCtx(() => [
                   createVNode("div", { class: "flex justify-end" }, [
-                    createVNode(unref(_sfc_main$l), {
+                    createVNode(unref(_sfc_main$m), {
                       type: "submit",
                       disabled: unref(processing),
                       class: "px-8 py-2 cursor-pointer hover:bg-opacity-90 transition-colors"

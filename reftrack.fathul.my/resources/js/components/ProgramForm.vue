@@ -636,7 +636,11 @@
             <CardTitle class="text-card-foreground">
               Further Inquiries
             </CardTitle>
-            <Input v-model="form.furtherInquiries" type="text" placeholder="Any questions or additional information you'd like to share (optional)" class="w-full" />
+            <Textarea 
+              v-model="form.furtherInquiries" 
+              placeholder="Any questions or additional information you'd like to share (optional)" 
+              class="w-full min-h-[100px]" 
+            />
             <p v-if="form.errors.furtherInquiries" class="text-sm text-destructive">
               {{ form.errors.furtherInquiries }}
             </p>
@@ -669,6 +673,7 @@ import { RadioGroup, RadioGroupItem } from '@/resources/js/components/ui/radio-g
 import { Checkbox } from '@/resources/js/components/ui/checkbox'
 import { Label } from '@/resources/js/components/ui/label'
 import { Input } from '@/resources/js/components/ui/input'
+import { Textarea } from '@/resources/js/components/ui/textarea'
 import { Button } from '@/resources/js/components/ui/button'
 import { Card, CardContent, CardTitle, CardDescription } from '@/resources/js/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/resources/js/components/ui/accordion'
