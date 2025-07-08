@@ -463,7 +463,7 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(_sfc_main$9, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
       _push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
-      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6">${ssrInterpolate(console.log("Form data:", unref(form)))} ${ssrInterpolate(console.log("Errors:", _ctx.errors))} <div class="space-y-3">`);
+      _push(`<div class="bg-card py-16 sm:py-20"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-sm font-bold text-card-foreground mb-4"> Borang Permohonan </h2><p class="text-sm text-muted-foreground max-w-2xl mx-auto"> Sila lengkapkan maklumat berikut untuk memohon program ini </p></div><form class="space-y-6"><div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -586,16 +586,14 @@ const _sfc_main$1 = {
       _push(`<div class="space-y-3"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "upskill",
-        checked: unref(form).registrationReasons.includes("upskill"),
-        "onUpdate:checked": (checked) => {
-          if (checked) {
-            unref(form).registrationReasons = [...unref(form).registrationReasons, "upskill"];
-          } else {
-            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "upskill");
-          }
-        }
+        checked: unref(form).registrationReasons,
+        "onUpdate:checked": ($event) => unref(form).registrationReasons = $event,
+        value: "upskill"
       }, null, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$3), { for: "upskill" }, {
+      _push(ssrRenderComponent(unref(_sfc_main$3), {
+        for: "upskill",
+        class: "text-sm"
+      }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru`);
@@ -610,16 +608,14 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "certificate",
-        checked: unref(form).registrationReasons.includes("certificate"),
-        "onUpdate:checked": (checked) => {
-          if (checked) {
-            unref(form).registrationReasons = [...unref(form).registrationReasons, "certificate"];
-          } else {
-            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "certificate");
-          }
-        }
+        checked: unref(form).registrationReasons,
+        "onUpdate:checked": ($event) => unref(form).registrationReasons = $event,
+        value: "certificate"
       }, null, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$3), { for: "certificate" }, {
+      _push(ssrRenderComponent(unref(_sfc_main$3), {
+        for: "certificate",
+        class: "text-sm"
+      }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Untuk mendapatkan sijil yang diiktiraf`);
@@ -634,16 +630,14 @@ const _sfc_main$1 = {
       _push(`</div><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "job",
-        checked: unref(form).registrationReasons.includes("job"),
-        "onUpdate:checked": (checked) => {
-          if (checked) {
-            unref(form).registrationReasons = [...unref(form).registrationReasons, "job"];
-          } else {
-            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "job");
-          }
-        }
+        checked: unref(form).registrationReasons,
+        "onUpdate:checked": ($event) => unref(form).registrationReasons = $event,
+        value: "job"
       }, null, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$3), { for: "job" }, {
+      _push(ssrRenderComponent(unref(_sfc_main$3), {
+        for: "job",
+        class: "text-sm"
+      }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Untuk meningkatkan peluang mendapat pekerjaan`);
@@ -658,17 +652,18 @@ const _sfc_main$1 = {
       _push(`</div><div class="space-y-2"><div class="flex items-center space-x-2">`);
       _push(ssrRenderComponent(unref(_sfc_main$4), {
         id: "other-reason",
-        checked: unref(form).registrationReasons.includes("other"),
-        "onUpdate:checked": (checked) => {
-          if (checked) {
-            unref(form).registrationReasons = [...unref(form).registrationReasons, "other"];
-          } else {
-            unref(form).registrationReasons = unref(form).registrationReasons.filter((r) => r !== "other");
+        checked: unref(form).registrationReasons,
+        "onUpdate:checked": [($event) => unref(form).registrationReasons = $event, (checked) => {
+          if (!checked) {
             unref(form).registrationReasonsOther = "";
           }
-        }
+        }],
+        value: "other"
       }, null, _parent));
-      _push(ssrRenderComponent(unref(_sfc_main$3), { for: "other-reason" }, {
+      _push(ssrRenderComponent(unref(_sfc_main$3), {
+        for: "other-reason",
+        class: "text-sm"
+      }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Lain-lain:`);
@@ -718,8 +713,8 @@ const _sfc_main$1 = {
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$6), {
-        "default-value": unref(form).commitmentLevel,
-        "onUpdate:modelValue": (value) => unref(form).commitmentLevel = value,
+        modelValue: unref(form).commitmentLevel,
+        "onUpdate:modelValue": ($event) => unref(form).commitmentLevel = $event,
         class: "space-y-2"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -729,7 +724,10 @@ const _sfc_main$1 = {
               id: "fully-committed",
               value: "fully-committed"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "fully-committed" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "fully-committed",
+              class: "text-sm"
+            }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Ya, saya komitmen sepenuhnya`);
@@ -746,7 +744,10 @@ const _sfc_main$1 = {
               id: "need-info",
               value: "need-info"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "need-info" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "need-info",
+              class: "text-sm"
+            }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Saya memerlukan maklumat lanjut sebelum membuat keputusan`);
@@ -763,7 +764,10 @@ const _sfc_main$1 = {
               id: "not-sure",
               value: "not-sure"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "not-sure" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "not-sure",
+              class: "text-sm"
+            }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Tidak pasti`);
@@ -780,7 +784,10 @@ const _sfc_main$1 = {
               id: "other-commitment",
               value: "other-commitment"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "other-commitment" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "other-commitment",
+              class: "text-sm"
+            }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Lain-lain:`);
@@ -815,7 +822,10 @@ const _sfc_main$1 = {
                   id: "fully-committed",
                   value: "fully-committed"
                 }),
-                createVNode(unref(_sfc_main$3), { for: "fully-committed" }, {
+                createVNode(unref(_sfc_main$3), {
+                  for: "fully-committed",
+                  class: "text-sm"
+                }, {
                   default: withCtx(() => [
                     createTextVNode("Ya, saya komitmen sepenuhnya")
                   ]),
@@ -827,7 +837,10 @@ const _sfc_main$1 = {
                   id: "need-info",
                   value: "need-info"
                 }),
-                createVNode(unref(_sfc_main$3), { for: "need-info" }, {
+                createVNode(unref(_sfc_main$3), {
+                  for: "need-info",
+                  class: "text-sm"
+                }, {
                   default: withCtx(() => [
                     createTextVNode("Saya memerlukan maklumat lanjut sebelum membuat keputusan")
                   ]),
@@ -839,7 +852,10 @@ const _sfc_main$1 = {
                   id: "not-sure",
                   value: "not-sure"
                 }),
-                createVNode(unref(_sfc_main$3), { for: "not-sure" }, {
+                createVNode(unref(_sfc_main$3), {
+                  for: "not-sure",
+                  class: "text-sm"
+                }, {
                   default: withCtx(() => [
                     createTextVNode("Tidak pasti")
                   ]),
@@ -851,7 +867,10 @@ const _sfc_main$1 = {
                   id: "other-commitment",
                   value: "other-commitment"
                 }),
-                createVNode(unref(_sfc_main$3), { for: "other-commitment" }, {
+                createVNode(unref(_sfc_main$3), {
+                  for: "other-commitment",
+                  class: "text-sm"
+                }, {
                   default: withCtx(() => [
                     createTextVNode("Lain-lain:")
                   ]),
@@ -896,8 +915,8 @@ const _sfc_main$1 = {
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$6), {
-        "default-value": unref(form).programInterest,
-        "onUpdate:modelValue": (value) => unref(form).programInterest = value,
+        modelValue: unref(form).programInterest,
+        "onUpdate:modelValue": ($event) => unref(form).programInterest = $event,
         class: "space-y-2"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -1070,8 +1089,8 @@ const _sfc_main$1 = {
         _: 1
       }, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$6), {
-        "default-value": unref(form).pahangConnection,
-        "onUpdate:modelValue": (value) => unref(form).pahangConnection = value,
+        modelValue: unref(form).pahangConnection,
+        "onUpdate:modelValue": ($event) => unref(form).pahangConnection = $event,
         class: "space-y-2"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -1081,7 +1100,10 @@ const _sfc_main$1 = {
               id: "born-pahang",
               value: "born-pahang"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "born-pahang" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "born-pahang",
+              class: "text-sm"
+            }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Saya dilahirkan di Pahang`);
@@ -1098,7 +1120,10 @@ const _sfc_main$1 = {
               id: "living-pahang",
               value: "living-pahang"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "living-pahang" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "living-pahang",
+              class: "text-sm"
+            }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Saya sedang menetap di Pahang`);
@@ -1115,7 +1140,10 @@ const _sfc_main$1 = {
               id: "parents-pahang",
               value: "parents-pahang"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "parents-pahang" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "parents-pahang",
+              class: "text-sm"
+            }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Kedua-dua ibu bapa saya berasal dari Pahang`);
@@ -1132,7 +1160,10 @@ const _sfc_main$1 = {
               id: "other-pahang",
               value: "other-pahang"
             }, null, _parent2, _scopeId));
-            _push2(ssrRenderComponent(unref(_sfc_main$3), { for: "other-pahang" }, {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), {
+              for: "other-pahang",
+              class: "text-sm"
+            }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
                   _push3(`Lain-lain:`);
@@ -1167,7 +1198,10 @@ const _sfc_main$1 = {
                   id: "born-pahang",
                   value: "born-pahang"
                 }),
-                createVNode(unref(_sfc_main$3), { for: "born-pahang" }, {
+                createVNode(unref(_sfc_main$3), {
+                  for: "born-pahang",
+                  class: "text-sm"
+                }, {
                   default: withCtx(() => [
                     createTextVNode("Saya dilahirkan di Pahang")
                   ]),
@@ -1179,7 +1213,10 @@ const _sfc_main$1 = {
                   id: "living-pahang",
                   value: "living-pahang"
                 }),
-                createVNode(unref(_sfc_main$3), { for: "living-pahang" }, {
+                createVNode(unref(_sfc_main$3), {
+                  for: "living-pahang",
+                  class: "text-sm"
+                }, {
                   default: withCtx(() => [
                     createTextVNode("Saya sedang menetap di Pahang")
                   ]),
@@ -1191,7 +1228,10 @@ const _sfc_main$1 = {
                   id: "parents-pahang",
                   value: "parents-pahang"
                 }),
-                createVNode(unref(_sfc_main$3), { for: "parents-pahang" }, {
+                createVNode(unref(_sfc_main$3), {
+                  for: "parents-pahang",
+                  class: "text-sm"
+                }, {
                   default: withCtx(() => [
                     createTextVNode("Kedua-dua ibu bapa saya berasal dari Pahang")
                   ]),
@@ -1203,7 +1243,10 @@ const _sfc_main$1 = {
                   id: "other-pahang",
                   value: "other-pahang"
                 }),
-                createVNode(unref(_sfc_main$3), { for: "other-pahang" }, {
+                createVNode(unref(_sfc_main$3), {
+                  for: "other-pahang",
+                  class: "text-sm"
+                }, {
                   default: withCtx(() => [
                     createTextVNode("Lain-lain:")
                   ]),

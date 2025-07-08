@@ -19,8 +19,6 @@
         </div>
 
         <form @submit.prevent="submit" class="space-y-6">
-          {{ console.log('Form data:', form) }}
-          {{ console.log('Errors:', errors) }}
           <div class="space-y-3">
             <Label class="text-sm font-medium text-card-foreground">
               Nama Penuh
@@ -96,60 +94,40 @@
               <div class="flex items-center space-x-2">
                 <Checkbox 
                   id="upskill"
-                  :checked="form.registrationReasons.includes('upskill')"
-                  @update:checked="(checked) => {
-                    if (checked) {
-                      form.registrationReasons = [...form.registrationReasons, 'upskill']
-                    } else {
-                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'upskill')
-                    }
-                  }"
+                  v-model:checked="form.registrationReasons"
+                  value="upskill"
                 />
-                <Label for="upskill">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
+                <Label for="upskill" class="text-sm">Untuk meningkatkan kemahiran dan mempelajari sesuatu yang baru</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <Checkbox 
                   id="certificate"
-                  :checked="form.registrationReasons.includes('certificate')"
-                  @update:checked="(checked) => {
-                    if (checked) {
-                      form.registrationReasons = [...form.registrationReasons, 'certificate']
-                    } else {
-                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'certificate')
-                    }
-                  }"
+                  v-model:checked="form.registrationReasons"
+                  value="certificate"
                 />
-                <Label for="certificate">Untuk mendapatkan sijil yang diiktiraf</Label>
+                <Label for="certificate" class="text-sm">Untuk mendapatkan sijil yang diiktiraf</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <Checkbox 
                   id="job"
-                  :checked="form.registrationReasons.includes('job')"
-                  @update:checked="(checked) => {
-                    if (checked) {
-                      form.registrationReasons = [...form.registrationReasons, 'job']
-                    } else {
-                      form.registrationReasons = form.registrationReasons.filter(r => r !== 'job')
-                    }
-                  }"
+                  v-model:checked="form.registrationReasons"
+                  value="job"
                 />
-                <Label for="job">Untuk meningkatkan peluang mendapat pekerjaan</Label>
+                <Label for="job" class="text-sm">Untuk meningkatkan peluang mendapat pekerjaan</Label>
               </div>
               <div class="space-y-2">
                 <div class="flex items-center space-x-2">
                   <Checkbox 
                     id="other-reason"
-                    :checked="form.registrationReasons.includes('other')"
+                    v-model:checked="form.registrationReasons"
+                    value="other"
                     @update:checked="(checked) => {
-                      if (checked) {
-                        form.registrationReasons = [...form.registrationReasons, 'other']
-                      } else {
-                        form.registrationReasons = form.registrationReasons.filter(r => r !== 'other')
+                      if (!checked) {
                         form.registrationReasonsOther = ''
                       }
                     }"
                   />
-                  <Label for="other-reason">Lain-lain:</Label>
+                  <Label for="other-reason" class="text-sm">Lain-lain:</Label>
                 </div>
                 <Input 
                   v-if="form.registrationReasons.includes('other')"
@@ -176,25 +154,24 @@
               <span class="text-destructive">*</span>
             </Label>
             <RadioGroup 
-              :default-value="form.commitmentLevel" 
-              @update:model-value="(value) => form.commitmentLevel = value"
+              v-model="form.commitmentLevel"
               class="space-y-2"
             >
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="fully-committed" value="fully-committed" />
-                <Label for="fully-committed">Ya, saya komitmen sepenuhnya</Label>
+                <Label for="fully-committed" class="text-sm">Ya, saya komitmen sepenuhnya</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="need-info" value="need-info" />
-                <Label for="need-info">Saya memerlukan maklumat lanjut sebelum membuat keputusan</Label>
+                <Label for="need-info" class="text-sm">Saya memerlukan maklumat lanjut sebelum membuat keputusan</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="not-sure" value="not-sure" />
-                <Label for="not-sure">Tidak pasti</Label>
+                <Label for="not-sure" class="text-sm">Tidak pasti</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="other-commitment" value="other-commitment" />
-                <Label for="other-commitment">Lain-lain:</Label>
+                <Label for="other-commitment" class="text-sm">Lain-lain:</Label>
                 <Input 
                   v-if="form.commitmentLevel === 'other-commitment'"
                   v-model="form.commitmentLevelOther"
@@ -220,8 +197,7 @@
               <span class="text-destructive">*</span>
             </Label>
             <RadioGroup 
-              :default-value="form.programInterest" 
-              @update:model-value="(value) => form.programInterest = value"
+              v-model="form.programInterest"
               class="space-y-2"
             >
               <div class="flex items-center space-x-2">
@@ -253,25 +229,24 @@
               <span class="text-destructive">*</span>
             </Label>
             <RadioGroup 
-              :default-value="form.pahangConnection" 
-              @update:model-value="(value) => form.pahangConnection = value"
+              v-model="form.pahangConnection"
               class="space-y-2"
             >
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="born-pahang" value="born-pahang" />
-                <Label for="born-pahang">Saya dilahirkan di Pahang</Label>
+                <Label for="born-pahang" class="text-sm">Saya dilahirkan di Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="living-pahang" value="living-pahang" />
-                <Label for="living-pahang">Saya sedang menetap di Pahang</Label>
+                <Label for="living-pahang" class="text-sm">Saya sedang menetap di Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="parents-pahang" value="parents-pahang" />
-                <Label for="parents-pahang">Kedua-dua ibu bapa saya berasal dari Pahang</Label>
+                <Label for="parents-pahang" class="text-sm">Kedua-dua ibu bapa saya berasal dari Pahang</Label>
               </div>
               <div class="flex items-center space-x-2">
                 <RadioGroupItem id="other-pahang" value="other-pahang" />
-                <Label for="other-pahang">Lain-lain:</Label>
+                <Label for="other-pahang" class="text-sm">Lain-lain:</Label>
                 <Input 
                   v-if="form.pahangConnection === 'other-pahang'"
                   v-model="form.pahangConnectionOther"
