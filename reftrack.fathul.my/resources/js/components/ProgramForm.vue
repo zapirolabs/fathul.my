@@ -142,13 +142,7 @@
               {{ form.errors.registrationReasons }}
             </p>
             
-            <!-- Debug: Show current array state -->
-            <div class="mt-2 p-2 bg-gray-100 text-xs">
-              <strong>Debug - Current registrationReasons:</strong> 
-              {{ JSON.stringify(registrationReasons) }}
-              <br>
-              <strong>Length:</strong> {{ registrationReasons.length }}
-            </div>
+
           </div>
 
           <div class="space-y-3">
@@ -296,7 +290,7 @@ import { Label } from '@/resources/js/components/ui/label'
 import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'
 import { useProgramForm } from '@/resources/js/composables/useProgramForm'
-const { form, registrationReasons, handleRegistrationReasonChange, isReasonSelected, processing, submit } = useProgramForm()
+const { form, handleRegistrationReasonChange, isReasonSelected, processing, submit } = useProgramForm()
 </script>
 
 <style scoped>

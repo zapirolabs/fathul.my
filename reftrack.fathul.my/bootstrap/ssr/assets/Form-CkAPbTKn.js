@@ -422,51 +422,27 @@ function useProgramForm() {
     pahangConnectionOther: ""
   });
   const updateRegistrationReasons = (value, checked) => {
-    console.log("=== updateRegistrationReasons called ===");
-    console.log("Value:", value);
-    console.log("Checked:", checked);
-    console.log("Current array before:", registrationReasons.value);
     if (checked) {
       if (!registrationReasons.value.includes(value)) {
         registrationReasons.value.push(value);
-        console.log("Added to array");
-      } else {
-        console.log("Already in array, skipping");
       }
     } else {
       const index = registrationReasons.value.indexOf(value);
       if (index > -1) {
         registrationReasons.value.splice(index, 1);
-        console.log("Removed from array");
-      } else {
-        console.log("Not found in array, skipping");
       }
     }
-    console.log("Current array after:", registrationReasons.value);
-    console.log("=== End updateRegistrationReasons ===");
   };
   const handleRegistrationReasonChange = (value, checked) => {
-    console.log("=== handleRegistrationReasonChange called ===");
-    console.log("Value:", value);
-    console.log("Checked:", checked);
     updateRegistrationReasons(value, checked);
     if (value === "Other" && !checked) {
       form.registrationReasonsOther = "";
-      console.log("Cleared other field");
     }
-    console.log("=== End handleRegistrationReasonChange ===");
   };
   const isReasonSelected = (value) => {
-    const selected = registrationReasons.value.includes(value);
-    console.log(`isReasonSelected(${value}):`, selected);
-    return selected;
+    return registrationReasons.value.includes(value);
   };
   const submit = () => {
-    console.log("=== FORM SUBMISSION DEBUG ===");
-    console.log("registrationReasons array:", registrationReasons.value);
-    console.log("registrationReasons length:", registrationReasons.value.length);
-    console.log("Full form data:", form.data());
-    console.log("=== END DEBUG ===");
     form.transform((data) => ({
       ...data,
       registrationReasons: registrationReasons.value
@@ -477,9 +453,6 @@ function useProgramForm() {
       onSuccess: () => {
       },
       onError: (errors) => {
-        console.log("=== VALIDATION ERRORS ===");
-        console.log("Errors received:", errors);
-        console.log("=== END ERRORS ===");
       },
       onFinish: () => {
       }
@@ -499,7 +472,7 @@ const _sfc_main$1 = {
   __name: "ProgramForm",
   __ssrInlineRender: true,
   setup(__props) {
-    const { form, registrationReasons, handleRegistrationReasonChange, isReasonSelected, processing } = useProgramForm();
+    const { form, handleRegistrationReasonChange, isReasonSelected, processing } = useProgramForm();
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-background" }, _attrs))}>`);
       _push(ssrRenderComponent(ProgramHeader, null, null, _parent));
@@ -734,7 +707,7 @@ const _sfc_main$1 = {
       } else {
         _push(`<!---->`);
       }
-      _push(`<div class="mt-2 p-2 bg-gray-100 text-xs"><strong>Debug - Current registrationReasons:</strong> ${ssrInterpolate(JSON.stringify(unref(registrationReasons)))} <br><strong>Length:</strong> ${ssrInterpolate(unref(registrationReasons).length)}</div></div><div class="space-y-3">`);
+      _push(`</div><div class="space-y-3">`);
       _push(ssrRenderComponent(unref(_sfc_main$3), { class: "text-sm font-medium text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
