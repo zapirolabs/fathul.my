@@ -489,6 +489,7 @@ function useProgramForm() {
     phoneNumber: "",
     email: "",
     age: "",
+    interviewWillingness: "",
     registrationReasonsOther: "",
     commitmentLevel: "",
     commitmentLevelOther: "",
@@ -1081,6 +1082,240 @@ const _sfc_main$1 = {
         _push(`<!---->`);
       }
       _push(`</div>`);
+      _push(ssrRenderComponent(unref(_sfc_main$4), null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(ssrRenderComponent(unref(_sfc_main$3), { class: "p-6" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`<div class="space-y-5"${_scopeId2}>`);
+                  _push3(ssrRenderComponent(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                      if (_push4) {
+                        _push4(` Adakah anda bersedia untuk ditemuduga terlebih dahulu sebelum diterima ke dalam program? <span class="text-destructive"${_scopeId3}>*</span>`);
+                      } else {
+                        return [
+                          createTextVNode(" Adakah anda bersedia untuk ditemuduga terlebih dahulu sebelum diterima ke dalam program? "),
+                          createVNode("span", { class: "text-destructive" }, "*")
+                        ];
+                      }
+                    }),
+                    _: 1
+                  }, _parent3, _scopeId2));
+                  _push3(ssrRenderComponent(unref(_sfc_main$9), {
+                    modelValue: unref(form).interviewWillingness,
+                    "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
+                    class: "space-y-2"
+                  }, {
+                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                      if (_push4) {
+                        _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
+                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          id: "interview-yes",
+                          value: "yes"
+                        }, null, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          for: "interview-yes",
+                          class: "text-sm"
+                        }, {
+                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                            if (_push5) {
+                              _push5(`Ya`);
+                            } else {
+                              return [
+                                createTextVNode("Ya")
+                              ];
+                            }
+                          }),
+                          _: 1
+                        }, _parent4, _scopeId3));
+                        _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
+                        _push4(ssrRenderComponent(unref(_sfc_main$8), {
+                          id: "interview-no",
+                          value: "no"
+                        }, null, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(unref(_sfc_main$6), {
+                          for: "interview-no",
+                          class: "text-sm"
+                        }, {
+                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
+                            if (_push5) {
+                              _push5(`Tidak`);
+                            } else {
+                              return [
+                                createTextVNode("Tidak")
+                              ];
+                            }
+                          }),
+                          _: 1
+                        }, _parent4, _scopeId3));
+                        _push4(`</div>`);
+                      } else {
+                        return [
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "interview-yes",
+                              value: "yes"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "interview-yes",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Ya")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "interview-no",
+                              value: "no"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "interview-no",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Tidak")
+                              ]),
+                              _: 1
+                            })
+                          ])
+                        ];
+                      }
+                    }),
+                    _: 1
+                  }, _parent3, _scopeId2));
+                  if (unref(form).errors.interviewWillingness) {
+                    _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.interviewWillingness)}</p>`);
+                  } else {
+                    _push3(`<!---->`);
+                  }
+                  _push3(`</div>`);
+                } else {
+                  return [
+                    createVNode("div", { class: "space-y-5" }, [
+                      createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                        default: withCtx(() => [
+                          createTextVNode(" Adakah anda bersedia untuk ditemuduga terlebih dahulu sebelum diterima ke dalam program? "),
+                          createVNode("span", { class: "text-destructive" }, "*")
+                        ]),
+                        _: 1
+                      }),
+                      createVNode(unref(_sfc_main$9), {
+                        modelValue: unref(form).interviewWillingness,
+                        "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
+                        class: "space-y-2"
+                      }, {
+                        default: withCtx(() => [
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "interview-yes",
+                              value: "yes"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "interview-yes",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Ya")
+                              ]),
+                              _: 1
+                            })
+                          ]),
+                          createVNode("div", { class: "flex items-center space-x-2" }, [
+                            createVNode(unref(_sfc_main$8), {
+                              id: "interview-no",
+                              value: "no"
+                            }),
+                            createVNode(unref(_sfc_main$6), {
+                              for: "interview-no",
+                              class: "text-sm"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Tidak")
+                              ]),
+                              _: 1
+                            })
+                          ])
+                        ]),
+                        _: 1
+                      }, 8, ["modelValue", "onUpdate:modelValue"]),
+                      unref(form).errors.interviewWillingness ? (openBlock(), createBlock("p", {
+                        key: 0,
+                        class: "text-sm text-destructive"
+                      }, toDisplayString(unref(form).errors.interviewWillingness), 1)) : createCommentVNode("", true)
+                    ])
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+          } else {
+            return [
+              createVNode(unref(_sfc_main$3), { class: "p-6" }, {
+                default: withCtx(() => [
+                  createVNode("div", { class: "space-y-5" }, [
+                    createVNode(unref(_sfc_main$2), { class: "text-card-foreground" }, {
+                      default: withCtx(() => [
+                        createTextVNode(" Adakah anda bersedia untuk ditemuduga terlebih dahulu sebelum diterima ke dalam program? "),
+                        createVNode("span", { class: "text-destructive" }, "*")
+                      ]),
+                      _: 1
+                    }),
+                    createVNode(unref(_sfc_main$9), {
+                      modelValue: unref(form).interviewWillingness,
+                      "onUpdate:modelValue": ($event) => unref(form).interviewWillingness = $event,
+                      class: "space-y-2"
+                    }, {
+                      default: withCtx(() => [
+                        createVNode("div", { class: "flex items-center space-x-2" }, [
+                          createVNode(unref(_sfc_main$8), {
+                            id: "interview-yes",
+                            value: "yes"
+                          }),
+                          createVNode(unref(_sfc_main$6), {
+                            for: "interview-yes",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx(() => [
+                              createTextVNode("Ya")
+                            ]),
+                            _: 1
+                          })
+                        ]),
+                        createVNode("div", { class: "flex items-center space-x-2" }, [
+                          createVNode(unref(_sfc_main$8), {
+                            id: "interview-no",
+                            value: "no"
+                          }),
+                          createVNode(unref(_sfc_main$6), {
+                            for: "interview-no",
+                            class: "text-sm"
+                          }, {
+                            default: withCtx(() => [
+                              createTextVNode("Tidak")
+                            ]),
+                            _: 1
+                          })
+                        ])
+                      ]),
+                      _: 1
+                    }, 8, ["modelValue", "onUpdate:modelValue"]),
+                    unref(form).errors.interviewWillingness ? (openBlock(), createBlock("p", {
+                      key: 0,
+                      class: "text-sm text-destructive"
+                    }, toDisplayString(unref(form).errors.interviewWillingness), 1)) : createCommentVNode("", true)
+                  ])
+                ]),
+                _: 1
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
       _push(ssrRenderComponent(unref(_sfc_main$4), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

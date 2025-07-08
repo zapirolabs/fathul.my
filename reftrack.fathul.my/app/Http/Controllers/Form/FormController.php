@@ -22,6 +22,7 @@ class FormController extends Controller
             'phoneNumber' => 'required|string|max:20|regex:/^[\+]?[0-9\s\-\(\)]+$/',
             'email' => 'required|email:rfc,dns|max:255',
             'age' => 'required|integer|min:18|max:35',
+            'interviewWillingness' => 'required|in:yes,no',
             'registrationReasons' => 'required|array|min:1',
             'registrationReasons.*' => 'in:upskill,certificate,job,other',
             'registrationReasonsOther' => 'required_if:registrationReasons.*,other|max:255',
@@ -45,6 +46,8 @@ class FormController extends Controller
             'age.integer' => 'Umur mestilah dalam bentuk nombor.',
             'age.min' => 'Umur minimum adalah 18 tahun.',
             'age.max' => 'Umur maksimum adalah 35 tahun.',
+            'interviewWillingness.required' => 'Sila pilih sama ada anda bersedia untuk ditemuduga atau tidak.',
+            'interviewWillingness.in' => 'Sila pilih pilihan yang sah.',
             'registrationReasons.required' => 'Sila pilih sekurang-kurangnya satu sebab pendaftaran.',
             'registrationReasons.min' => 'Sila pilih sekurang-kurangnya satu sebab pendaftaran.',
             'registrationReasons.*.in' => 'Sila pilih sebab pendaftaran yang sah.',
@@ -66,6 +69,7 @@ class FormController extends Controller
         $phoneNumber = $request->input('phoneNumber');
         $email = $request->input('email');
         $age = $request->input('age');
+        $interviewWillingness = $request->input('interviewWillingness');
         $registrationReasons = $request->input('registrationReasons', []);
         $registrationReasonsOther = $request->input('registrationReasonsOther');
         $commitmentLevel = $request->input('commitmentLevel');
@@ -118,6 +122,14 @@ class FormController extends Controller
 
         $finalPahangValue = $pahangMapping[$pahangConnection] ?? $pahangConnection;
 
+        // Map interview willingness to English
+        $interviewMapping = [
+            'yes' => 'Yes',
+            'no' => 'No'
+        ];
+
+        $finalInterviewValue = $interviewMapping[$interviewWillingness] ?? $interviewWillingness;
+
         // Generate timestamp in Malaysia timezone with exact format: 08/07/2025 09:24:34
         $timestamp = Carbon::now('Asia/Kuala_Lumpur')->format('d/m/Y H:i:s');
 
@@ -130,7 +142,17 @@ class FormController extends Controller
             $finalReasons, // F - Registration Reasons
             $finalCommitmentValue, // G - Commitment Level
             $finalPahangValue, // H - Pahang Connection
-            $finalProgramValue // I - Program Interest
+            $finalProgramValue, // I - Program Interest
+            '', // J - Reserved
+            '', // K - Reserved
+            '', // L - Reserved
+            '', // M - Reserved
+            '', // N - Reserved
+            '', // O - Reserved
+            '', // P - Reserved
+            '', // Q - Reserved
+            '', // R - Reserved
+            $finalInterviewValue, // S - Interview Willingness
         ];
 
         Sheets::spreadsheet(env('GOOGLE_SPREADSHEET_ID'))

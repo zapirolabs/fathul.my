@@ -9,6 +9,7 @@ export function useProgramForm() {
     phoneNumber: '',
     email: '',
     age: '',
+    interviewWillingness: '',
     registrationReasonsOther: '',
     commitmentLevel: '',
     commitmentLevelOther: '',

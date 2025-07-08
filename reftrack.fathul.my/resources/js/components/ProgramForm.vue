@@ -137,6 +137,35 @@
             </p>
           </div>
 
+          <!-- Interview Willingness Card -->
+          <Card>
+            <CardContent class="p-6">
+              <div class="space-y-5">
+                <CardTitle class="text-card-foreground">
+                  Adakah anda bersedia untuk ditemuduga terlebih dahulu sebelum diterima ke dalam program?
+                  <span class="text-destructive">*</span>
+                </CardTitle>
+                <RadioGroup 
+                  v-model="form.interviewWillingness"
+                  class="space-y-2"
+                >
+                  <div class="flex items-center space-x-2">
+                    <RadioGroupItem id="interview-yes" value="yes" />
+                    <Label for="interview-yes" class="text-sm">Ya</Label>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <RadioGroupItem id="interview-no" value="no" />
+                    <Label for="interview-no" class="text-sm">Tidak</Label>
+                  </div>
+                </RadioGroup>
+                
+                <p v-if="form.errors.interviewWillingness" class="text-sm text-destructive">
+                  {{ form.errors.interviewWillingness }}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
           <!-- Registration Reasons Card -->
           <Card>
             <CardContent class="p-6">
