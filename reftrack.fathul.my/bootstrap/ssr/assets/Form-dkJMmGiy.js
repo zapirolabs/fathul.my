@@ -2138,14 +2138,19 @@ const _sfc_main$1 = {
                         }, null, _parent4, _scopeId3));
                         _push4(ssrRenderComponent(unref(_sfc_main$6), {
                           for: "aws-foundational",
-                          class: "text-sm"
+                          class: "text-sm flex items-center space-x-2"
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
-                              _push5(`AWS Foundational Certificate`);
+                              _push5(`<img src="https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg" alt="AWS Logo" class="w-8 h-6"${_scopeId4}><span${_scopeId4}>AWS Foundational Certificate</span>`);
                             } else {
                               return [
-                                createTextVNode("AWS Foundational Certificate")
+                                createVNode("img", {
+                                  src: "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg",
+                                  alt: "AWS Logo",
+                                  class: "w-8 h-6"
+                                }),
+                                createVNode("span", null, "AWS Foundational Certificate")
                               ];
                             }
                           }),
@@ -2211,10 +2216,15 @@ const _sfc_main$1 = {
                             }),
                             createVNode(unref(_sfc_main$6), {
                               for: "aws-foundational",
-                              class: "text-sm"
+                              class: "text-sm flex items-center space-x-2"
                             }, {
                               default: withCtx(() => [
-                                createTextVNode("AWS Foundational Certificate")
+                                createVNode("img", {
+                                  src: "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg",
+                                  alt: "AWS Logo",
+                                  class: "w-8 h-6"
+                                }),
+                                createVNode("span", null, "AWS Foundational Certificate")
                               ]),
                               _: 1
                             })
@@ -2298,10 +2308,15 @@ const _sfc_main$1 = {
                             }),
                             createVNode(unref(_sfc_main$6), {
                               for: "aws-foundational",
-                              class: "text-sm"
+                              class: "text-sm flex items-center space-x-2"
                             }, {
                               default: withCtx(() => [
-                                createTextVNode("AWS Foundational Certificate")
+                                createVNode("img", {
+                                  src: "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg",
+                                  alt: "AWS Logo",
+                                  class: "w-8 h-6"
+                                }),
+                                createVNode("span", null, "AWS Foundational Certificate")
                               ]),
                               _: 1
                             })
@@ -2389,10 +2404,15 @@ const _sfc_main$1 = {
                           }),
                           createVNode(unref(_sfc_main$6), {
                             for: "aws-foundational",
-                            class: "text-sm"
+                            class: "text-sm flex items-center space-x-2"
                           }, {
                             default: withCtx(() => [
-                              createTextVNode("AWS Foundational Certificate")
+                              createVNode("img", {
+                                src: "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg",
+                                alt: "AWS Logo",
+                                class: "w-8 h-6"
+                              }),
+                              createVNode("span", null, "AWS Foundational Certificate")
                             ]),
                             _: 1
                           })
