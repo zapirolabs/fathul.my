@@ -33,6 +33,9 @@ class FormController extends Controller
             'selectedPrograms' => 'required_if:programInterest,more-than-one|array|min:1',
             'selectedPrograms.*' => 'in:python-basic,genai-masterclass,aws-foundational',
             'intakeBatch' => 'required_if:programInterest,python-basic,genai-masterclass,aws-foundational|in:batch-1,batch-2,batch-3,batch-4',
+            'pythonBatch' => 'required_if:programInterest,python-basic|required_if:selectedPrograms.*,python-basic|in:batch-1,batch-2,batch-3',
+            'genaiBatch' => 'required_if:programInterest,genai-masterclass|required_if:selectedPrograms.*,genai-masterclass|in:batch-2,batch-3,batch-4',
+            'awsBatch' => 'required_if:programInterest,aws-foundational|required_if:selectedPrograms.*,aws-foundational|in:batch-1,batch-2,batch-3',
             'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
             'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
             'furtherInquiries' => 'nullable|string|max:1000',
@@ -69,6 +72,12 @@ class FormController extends Controller
             'selectedPrograms.*.in' => 'Sila pilih program yang sah.',
             'intakeBatch.required_if' => 'Sila pilih batch intake untuk program yang dipilih.',
             'intakeBatch.in' => 'Sila pilih batch yang sah.',
+            'pythonBatch.required_if' => 'Sila pilih batch intake untuk program Python.',
+            'pythonBatch.in' => 'Sila pilih batch yang sah untuk program Python.',
+            'genaiBatch.required_if' => 'Sila pilih batch intake untuk program GenAI.',
+            'genaiBatch.in' => 'Sila pilih batch yang sah untuk program GenAI.',
+            'awsBatch.required_if' => 'Sila pilih batch intake untuk program AWS.',
+            'awsBatch.in' => 'Sila pilih batch yang sah untuk program AWS.',
             'pahangConnection.required' => 'Sila pilih kaitan anda dengan negeri Pahang.',
             'pahangConnection.in' => 'Sila pilih salah satu pilihan yang disediakan.',
             'pahangConnectionOther.required_if' => 'Sila nyatakan kaitan anda dengan negeri Pahang.',
@@ -88,6 +97,9 @@ class FormController extends Controller
         $programInterest = $request->input('programInterest');
         $selectedPrograms = $request->input('selectedPrograms', []);
         $intakeBatch = $request->input('intakeBatch');
+        $pythonBatch = $request->input('pythonBatch');
+        $genaiBatch = $request->input('genaiBatch');
+        $awsBatch = $request->input('awsBatch');
         $pahangConnection = $request->input('pahangConnection');
         $pahangConnectionOther = $request->input('pahangConnectionOther');
         $furtherInquiries = $request->input('furtherInquiries');
@@ -172,6 +184,9 @@ class FormController extends Controller
             'program_interest' => $programInterest,
             'selected_programs' => $selectedPrograms,
             'intake_batch' => $intakeBatch,
+            'python_batch' => $pythonBatch,
+            'genai_batch' => $genaiBatch,
+            'aws_batch' => $awsBatch,
             'pahang_connection' => $pahangConnection,
             'pahang_connection_other' => $pahangConnectionOther,
             'further_inquiries' => $furtherInquiries,
@@ -213,29 +228,29 @@ class FormController extends Controller
         ]);
 
         // Determine batch column based on program type
-        $pythonBatch = '';
-        $genaiBatch = '';
-        $awsBatch = '';
+        $pythonBatchValue = '';
+        $genaiBatchValue = '';
+        $awsBatchValue = '';
         
         if ($programInterest === 'more-than-one') {
-            // For multi-program selection, batch applies to selected programs
-            if (in_array('python-basic', $selectedPrograms)) {
-                $pythonBatch = $finalBatchValue;
+            // For multi-program selection, use individual batch values
+            if (in_array('python-basic', $selectedPrograms) && $pythonBatch) {
+                $pythonBatchValue = $batchMapping[$pythonBatch] ?? $pythonBatch;
             }
-            if (in_array('genai-masterclass', $selectedPrograms)) {
-                $genaiBatch = $finalBatchValue;
+            if (in_array('genai-masterclass', $selectedPrograms) && $genaiBatch) {
+                $genaiBatchValue = $batchMapping[$genaiBatch] ?? $genaiBatch;
             }
-            if (in_array('aws-foundational', $selectedPrograms)) {
-                $awsBatch = $finalBatchValue;
+            if (in_array('aws-foundational', $selectedPrograms) && $awsBatch) {
+                $awsBatchValue = $batchMapping[$awsBatch] ?? $awsBatch;
             }
         } else {
-            // For single program selection
-            if ($programInterest === 'python-basic') {
-                $pythonBatch = $finalBatchValue;
-            } elseif ($programInterest === 'genai-masterclass') {
-                $genaiBatch = $finalBatchValue;
-            } elseif ($programInterest === 'aws-foundational') {
-                $awsBatch = $finalBatchValue;
+            // For single program selection, use individual batch values
+            if ($programInterest === 'python-basic' && $pythonBatch) {
+                $pythonBatchValue = $batchMapping[$pythonBatch] ?? $pythonBatch;
+            } elseif ($programInterest === 'genai-masterclass' && $genaiBatch) {
+                $genaiBatchValue = $batchMapping[$genaiBatch] ?? $genaiBatch;
+            } elseif ($programInterest === 'aws-foundational' && $awsBatch) {
+                $awsBatchValue = $batchMapping[$awsBatch] ?? $awsBatch;
             }
         }
 
@@ -249,13 +264,13 @@ class FormController extends Controller
             $finalCommitmentValue, // G - Commitment Level
             $finalPahangValue, // H - Pahang Connection
             $finalProgramValue, // I - Program Interest
-            $pythonBatch, // J - Python Intake Batch
+            $pythonBatchValue, // J - Python Intake Batch
             $pythonReferralCode, // K - Python Referral Code
             '', // L - Reserved
-            $genaiBatch, // M - GenAI Intake Batch
+            $genaiBatchValue, // M - GenAI Intake Batch
             $genaiReferralCode, // N - GenAI Referral Code
             '', // O - Reserved
-            $awsBatch, // P - AWS Intake Batch
+            $awsBatchValue, // P - AWS Intake Batch
             $awsReferralCode, // Q - AWS Referral Code
             $furtherInquiries ?: '', // R - Further Inquiries
             $finalInterviewValue, // S - Interview Willingness

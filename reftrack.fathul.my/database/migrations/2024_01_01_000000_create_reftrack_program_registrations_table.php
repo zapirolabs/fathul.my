@@ -25,6 +25,9 @@ return new class extends Migration
             $table->string('program_interest');
             $table->json('selected_programs')->nullable();
             $table->string('intake_batch')->nullable();
+            $table->string('python_batch')->nullable();
+            $table->string('genai_batch')->nullable();
+            $table->string('aws_batch')->nullable();
             $table->string('pahang_connection');
             $table->string('pahang_connection_other')->nullable();
             $table->text('further_inquiries')->nullable();

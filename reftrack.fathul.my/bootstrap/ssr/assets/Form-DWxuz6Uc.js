@@ -742,6 +742,9 @@ function useProgramForm() {
     commitmentLevelOther: "",
     programInterest: "",
     intakeBatch: "",
+    pythonBatch: "",
+    genaiBatch: "",
+    awsBatch: "",
     referralCode: "",
     pahangConnection: "",
     pahangConnectionOther: "",
@@ -3487,19 +3490,19 @@ const _sfc_main$1 = {
                       _: 1
                     }, _parent3, _scopeId2));
                     _push3(ssrRenderComponent(unref(_sfc_main$f), {
-                      modelValue: unref(form).intakeBatch,
-                      "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                      modelValue: unref(form).pythonBatch,
+                      "onUpdate:modelValue": ($event) => unref(form).pythonBatch = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
                           _push4(`<div class="flex items-center space-x-2"${_scopeId3}>`);
                           _push4(ssrRenderComponent(unref(_sfc_main$e), {
-                            id: "batch-1",
+                            id: "python-batch-1",
                             value: "batch-1"
                           }, null, _parent4, _scopeId3));
                           _push4(ssrRenderComponent(unref(_sfc_main$c), {
-                            for: "batch-1",
+                            for: "python-batch-1",
                             class: "text-sm"
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
@@ -3515,11 +3518,11 @@ const _sfc_main$1 = {
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
                           _push4(ssrRenderComponent(unref(_sfc_main$e), {
-                            id: "batch-2",
+                            id: "python-batch-2",
                             value: "batch-2"
                           }, null, _parent4, _scopeId3));
                           _push4(ssrRenderComponent(unref(_sfc_main$c), {
-                            for: "batch-2",
+                            for: "python-batch-2",
                             class: "text-sm"
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
@@ -3535,11 +3538,11 @@ const _sfc_main$1 = {
                           }, _parent4, _scopeId3));
                           _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
                           _push4(ssrRenderComponent(unref(_sfc_main$e), {
-                            id: "batch-3",
+                            id: "python-batch-3",
                             value: "batch-3"
                           }, null, _parent4, _scopeId3));
                           _push4(ssrRenderComponent(unref(_sfc_main$c), {
-                            for: "batch-3",
+                            for: "python-batch-3",
                             class: "text-sm"
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
@@ -3558,11 +3561,11 @@ const _sfc_main$1 = {
                           return [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
                               createVNode(unref(_sfc_main$e), {
-                                id: "batch-1",
+                                id: "python-batch-1",
                                 value: "batch-1"
                               }),
                               createVNode(unref(_sfc_main$c), {
-                                for: "batch-1",
+                                for: "python-batch-1",
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
@@ -3573,11 +3576,11 @@ const _sfc_main$1 = {
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
                               createVNode(unref(_sfc_main$e), {
-                                id: "batch-2",
+                                id: "python-batch-2",
                                 value: "batch-2"
                               }),
                               createVNode(unref(_sfc_main$c), {
-                                for: "batch-2",
+                                for: "python-batch-2",
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
@@ -3588,11 +3591,11 @@ const _sfc_main$1 = {
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
                               createVNode(unref(_sfc_main$e), {
-                                id: "batch-3",
+                                id: "python-batch-3",
                                 value: "batch-3"
                               }),
                               createVNode(unref(_sfc_main$c), {
-                                for: "batch-3",
+                                for: "python-batch-3",
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
@@ -3606,8 +3609,8 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    if (unref(form).errors.intakeBatch) {
-                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.intakeBatch)}</p>`);
+                    if (unref(form).errors.pythonBatch) {
+                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.pythonBatch)}</p>`);
                     } else {
                       _push3(`<!---->`);
                     }
@@ -3734,18 +3737,18 @@ const _sfc_main$1 = {
                             _: 1
                           }),
                           createVNode(unref(_sfc_main$f), {
-                            modelValue: unref(form).intakeBatch,
-                            "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                            modelValue: unref(form).pythonBatch,
+                            "onUpdate:modelValue": ($event) => unref(form).pythonBatch = $event,
                             class: "space-y-2"
                           }, {
                             default: withCtx(() => [
                               createVNode("div", { class: "flex items-center space-x-2" }, [
                                 createVNode(unref(_sfc_main$e), {
-                                  id: "batch-1",
+                                  id: "python-batch-1",
                                   value: "batch-1"
                                 }),
                                 createVNode(unref(_sfc_main$c), {
-                                  for: "batch-1",
+                                  for: "python-batch-1",
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
@@ -3756,11 +3759,11 @@ const _sfc_main$1 = {
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
                                 createVNode(unref(_sfc_main$e), {
-                                  id: "batch-2",
+                                  id: "python-batch-2",
                                   value: "batch-2"
                                 }),
                                 createVNode(unref(_sfc_main$c), {
-                                  for: "batch-2",
+                                  for: "python-batch-2",
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
@@ -3771,11 +3774,11 @@ const _sfc_main$1 = {
                               ]),
                               createVNode("div", { class: "flex items-center space-x-2" }, [
                                 createVNode(unref(_sfc_main$e), {
-                                  id: "batch-3",
+                                  id: "python-batch-3",
                                   value: "batch-3"
                                 }),
                                 createVNode(unref(_sfc_main$c), {
-                                  for: "batch-3",
+                                  for: "python-batch-3",
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
@@ -3787,10 +3790,10 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }, 8, ["modelValue", "onUpdate:modelValue"]),
-                          unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                          unref(form).errors.pythonBatch ? (openBlock(), createBlock("p", {
                             key: 0,
                             class: "text-sm text-destructive"
-                          }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                          }, toDisplayString(unref(form).errors.pythonBatch), 1)) : createCommentVNode("", true)
                         ])
                       ])
                     ];
@@ -3922,18 +3925,18 @@ const _sfc_main$1 = {
                           _: 1
                         }),
                         createVNode(unref(_sfc_main$f), {
-                          modelValue: unref(form).intakeBatch,
-                          "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                          modelValue: unref(form).pythonBatch,
+                          "onUpdate:modelValue": ($event) => unref(form).pythonBatch = $event,
                           class: "space-y-2"
                         }, {
                           default: withCtx(() => [
                             createVNode("div", { class: "flex items-center space-x-2" }, [
                               createVNode(unref(_sfc_main$e), {
-                                id: "batch-1",
+                                id: "python-batch-1",
                                 value: "batch-1"
                               }),
                               createVNode(unref(_sfc_main$c), {
-                                for: "batch-1",
+                                for: "python-batch-1",
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
@@ -3944,11 +3947,11 @@ const _sfc_main$1 = {
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
                               createVNode(unref(_sfc_main$e), {
-                                id: "batch-2",
+                                id: "python-batch-2",
                                 value: "batch-2"
                               }),
                               createVNode(unref(_sfc_main$c), {
-                                for: "batch-2",
+                                for: "python-batch-2",
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
@@ -3959,11 +3962,11 @@ const _sfc_main$1 = {
                             ]),
                             createVNode("div", { class: "flex items-center space-x-2" }, [
                               createVNode(unref(_sfc_main$e), {
-                                id: "batch-3",
+                                id: "python-batch-3",
                                 value: "batch-3"
                               }),
                               createVNode(unref(_sfc_main$c), {
-                                for: "batch-3",
+                                for: "python-batch-3",
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
@@ -3975,10 +3978,10 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }, 8, ["modelValue", "onUpdate:modelValue"]),
-                        unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                        unref(form).errors.pythonBatch ? (openBlock(), createBlock("p", {
                           key: 0,
                           class: "text-sm text-destructive"
-                        }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                        }, toDisplayString(unref(form).errors.pythonBatch), 1)) : createCommentVNode("", true)
                       ])
                     ])
                   ]),
@@ -4375,8 +4378,8 @@ const _sfc_main$1 = {
                       _: 1
                     }, _parent3, _scopeId2));
                     _push3(ssrRenderComponent(unref(_sfc_main$f), {
-                      modelValue: unref(form).intakeBatch,
-                      "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                      modelValue: unref(form).genaiBatch,
+                      "onUpdate:modelValue": ($event) => unref(form).genaiBatch = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
@@ -4494,8 +4497,8 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    if (unref(form).errors.intakeBatch) {
-                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.intakeBatch)}</p>`);
+                    if (unref(form).errors.genaiBatch) {
+                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.genaiBatch)}</p>`);
                     } else {
                       _push3(`<!---->`);
                     }
@@ -4626,8 +4629,8 @@ const _sfc_main$1 = {
                             _: 1
                           }),
                           createVNode(unref(_sfc_main$f), {
-                            modelValue: unref(form).intakeBatch,
-                            "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                            modelValue: unref(form).genaiBatch,
+                            "onUpdate:modelValue": ($event) => unref(form).genaiBatch = $event,
                             class: "space-y-2"
                           }, {
                             default: withCtx(() => [
@@ -4679,10 +4682,10 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }, 8, ["modelValue", "onUpdate:modelValue"]),
-                          unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                          unref(form).errors.genaiBatch ? (openBlock(), createBlock("p", {
                             key: 0,
                             class: "text-sm text-destructive"
-                          }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                          }, toDisplayString(unref(form).errors.genaiBatch), 1)) : createCommentVNode("", true)
                         ])
                       ])
                     ];
@@ -4818,8 +4821,8 @@ const _sfc_main$1 = {
                           _: 1
                         }),
                         createVNode(unref(_sfc_main$f), {
-                          modelValue: unref(form).intakeBatch,
-                          "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                          modelValue: unref(form).genaiBatch,
+                          "onUpdate:modelValue": ($event) => unref(form).genaiBatch = $event,
                           class: "space-y-2"
                         }, {
                           default: withCtx(() => [
@@ -4871,10 +4874,10 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }, 8, ["modelValue", "onUpdate:modelValue"]),
-                        unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                        unref(form).errors.genaiBatch ? (openBlock(), createBlock("p", {
                           key: 0,
                           class: "text-sm text-destructive"
-                        }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                        }, toDisplayString(unref(form).errors.genaiBatch), 1)) : createCommentVNode("", true)
                       ])
                     ])
                   ]),
@@ -5259,8 +5262,8 @@ const _sfc_main$1 = {
                       _: 1
                     }, _parent3, _scopeId2));
                     _push3(ssrRenderComponent(unref(_sfc_main$f), {
-                      modelValue: unref(form).intakeBatch,
-                      "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                      modelValue: unref(form).awsBatch,
+                      "onUpdate:modelValue": ($event) => unref(form).awsBatch = $event,
                       class: "space-y-2"
                     }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
@@ -5378,8 +5381,8 @@ const _sfc_main$1 = {
                       }),
                       _: 1
                     }, _parent3, _scopeId2));
-                    if (unref(form).errors.intakeBatch) {
-                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.intakeBatch)}</p>`);
+                    if (unref(form).errors.awsBatch) {
+                      _push3(`<p class="text-sm text-destructive"${_scopeId2}>${ssrInterpolate(unref(form).errors.awsBatch)}</p>`);
                     } else {
                       _push3(`<!---->`);
                     }
@@ -5506,8 +5509,8 @@ const _sfc_main$1 = {
                             _: 1
                           }),
                           createVNode(unref(_sfc_main$f), {
-                            modelValue: unref(form).intakeBatch,
-                            "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                            modelValue: unref(form).awsBatch,
+                            "onUpdate:modelValue": ($event) => unref(form).awsBatch = $event,
                             class: "space-y-2"
                           }, {
                             default: withCtx(() => [
@@ -5559,10 +5562,10 @@ const _sfc_main$1 = {
                             ]),
                             _: 1
                           }, 8, ["modelValue", "onUpdate:modelValue"]),
-                          unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                          unref(form).errors.awsBatch ? (openBlock(), createBlock("p", {
                             key: 0,
                             class: "text-sm text-destructive"
-                          }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                          }, toDisplayString(unref(form).errors.awsBatch), 1)) : createCommentVNode("", true)
                         ])
                       ])
                     ];
@@ -5694,8 +5697,8 @@ const _sfc_main$1 = {
                           _: 1
                         }),
                         createVNode(unref(_sfc_main$f), {
-                          modelValue: unref(form).intakeBatch,
-                          "onUpdate:modelValue": ($event) => unref(form).intakeBatch = $event,
+                          modelValue: unref(form).awsBatch,
+                          "onUpdate:modelValue": ($event) => unref(form).awsBatch = $event,
                           class: "space-y-2"
                         }, {
                           default: withCtx(() => [
@@ -5747,10 +5750,10 @@ const _sfc_main$1 = {
                           ]),
                           _: 1
                         }, 8, ["modelValue", "onUpdate:modelValue"]),
-                        unref(form).errors.intakeBatch ? (openBlock(), createBlock("p", {
+                        unref(form).errors.awsBatch ? (openBlock(), createBlock("p", {
                           key: 0,
                           class: "text-sm text-destructive"
-                        }, toDisplayString(unref(form).errors.intakeBatch), 1)) : createCommentVNode("", true)
+                        }, toDisplayString(unref(form).errors.awsBatch), 1)) : createCommentVNode("", true)
                       ])
                     ])
                   ]),

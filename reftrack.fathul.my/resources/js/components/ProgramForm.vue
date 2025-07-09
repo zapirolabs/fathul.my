@@ -406,23 +406,23 @@
                     Intake Batch
                     <span class="text-destructive">*</span>
                   </CardTitle>
-                  <RadioGroup v-model="form.intakeBatch" class="space-y-2">
+                  <RadioGroup v-model="form.pythonBatch" class="space-y-2">
                     <div class="flex items-center space-x-2">
-                      <RadioGroupItem id="batch-1" value="batch-1" />
-                      <Label for="batch-1" class="text-sm">Batch 1</Label>
+                      <RadioGroupItem id="python-batch-1" value="batch-1" />
+                      <Label for="python-batch-1" class="text-sm">Batch 1</Label>
                     </div>
                     <div class="flex items-center space-x-2">
-                      <RadioGroupItem id="batch-2" value="batch-2" />
-                      <Label for="batch-2" class="text-sm">Batch 2</Label>
+                      <RadioGroupItem id="python-batch-2" value="batch-2" />
+                      <Label for="python-batch-2" class="text-sm">Batch 2</Label>
                     </div>
                     <div class="flex items-center space-x-2">
-                      <RadioGroupItem id="batch-3" value="batch-3" />
-                      <Label for="batch-3" class="text-sm">Batch 3</Label>
+                      <RadioGroupItem id="python-batch-3" value="batch-3" />
+                      <Label for="python-batch-3" class="text-sm">Batch 3</Label>
                     </div>
                   </RadioGroup>
 
-                  <p v-if="form.errors.intakeBatch" class="text-sm text-destructive">
-                    {{ form.errors.intakeBatch }}
+                  <p v-if="form.errors.pythonBatch" class="text-sm text-destructive">
+                    {{ form.errors.pythonBatch }}
                   </p>
                 </div>
               </div>
@@ -510,7 +510,7 @@
                     Intake Batch
                     <span class="text-destructive">*</span>
                   </CardTitle>
-                  <RadioGroup v-model="form.intakeBatch" class="space-y-2">
+                  <RadioGroup v-model="form.genaiBatch" class="space-y-2">
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="genai-batch-2" value="batch-2" />
                       <Label for="genai-batch-2" class="text-sm">Batch 2</Label>
@@ -525,8 +525,8 @@
                     </div>
                   </RadioGroup>
 
-                  <p v-if="form.errors.intakeBatch" class="text-sm text-destructive">
-                    {{ form.errors.intakeBatch }}
+                  <p v-if="form.errors.genaiBatch" class="text-sm text-destructive">
+                    {{ form.errors.genaiBatch }}
                   </p>
                 </div>
               </div>
@@ -608,7 +608,7 @@
                     Intake Batch
                     <span class="text-destructive">*</span>
                   </CardTitle>
-                  <RadioGroup v-model="form.intakeBatch" class="space-y-2">
+                  <RadioGroup v-model="form.awsBatch" class="space-y-2">
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="aws-batch-1" value="batch-1" />
                       <Label for="aws-batch-1" class="text-sm">Batch 1</Label>
@@ -623,8 +623,8 @@
                     </div>
                   </RadioGroup>
 
-                  <p v-if="form.errors.intakeBatch" class="text-sm text-destructive">
-                    {{ form.errors.intakeBatch }}
+                  <p v-if="form.errors.awsBatch" class="text-sm text-destructive">
+                    {{ form.errors.awsBatch }}
                   </p>
                 </div>
               </div>
