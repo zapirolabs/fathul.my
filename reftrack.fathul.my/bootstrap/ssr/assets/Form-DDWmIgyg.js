@@ -1,7 +1,7 @@
-import { useSSRContext, mergeProps, unref, withCtx, renderSlot, createVNode, ref, onMounted, computed, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate, ssrRenderClass, ssrRenderAttr } from "vue/server-renderer";
+import { useSSRContext, mergeProps, unref, ref, onMounted, computed, withCtx, renderSlot, createVNode, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate, ssrRenderClass } from "vue/server-renderer";
 import { useForm, Head } from "@inertiajs/vue3";
-import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Code, Brain, Cloud, Info, Clock, Monitor, Package, CheckCircle, AlertTriangle, CircleIcon, Check, ChevronDown } from "lucide-vue-next";
+import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Info, Clock, Package, CheckCircle, ArrowRight, AlertTriangle, CircleIcon, Check, ChevronDown } from "lucide-vue-next";
 import { reactiveOmit, useVModel } from "@vueuse/core";
 import { useForwardPropsEmits, RadioGroupRoot, useForwardProps, RadioGroupItem, RadioGroupIndicator, CheckboxRoot, CheckboxIndicator, Label, AccordionRoot, AccordionContent, AccordionItem, AccordionHeader, AccordionTrigger } from "reka-ui";
 import { c as cn, _ as _sfc_main$m } from "./index-CBusBGn5.js";
@@ -81,38 +81,99 @@ _sfc_main$i.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/components/ApaYangAndaPerolehi.vue");
   return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
+function updateTheme(value) {
+  if (typeof window === "undefined") {
+    return;
+  }
+  if (value === "system") {
+    const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
+    const systemTheme = mediaQueryList.matches ? "dark" : "light";
+    document.documentElement.classList.toggle("dark", systemTheme === "dark");
+  } else {
+    document.documentElement.classList.toggle("dark", value === "dark");
+  }
+}
+const setCookie = (name, value, days = 365) => {
+  if (typeof document === "undefined") {
+    return;
+  }
+  const maxAge = days * 24 * 60 * 60;
+  document.cookie = `${name}=${value};path=/;max-age=${maxAge};SameSite=Lax`;
+};
+function useAppearance() {
+  const appearance = ref("system");
+  onMounted(() => {
+    const savedAppearance = localStorage.getItem("appearance");
+    if (savedAppearance) {
+      appearance.value = savedAppearance;
+    }
+  });
+  function updateAppearance(value) {
+    appearance.value = value;
+    localStorage.setItem("appearance", value);
+    setCookie("appearance", value);
+    updateTheme(value);
+  }
+  const awsLogoUrl = computed(() => {
+    if (typeof window === "undefined") {
+      return "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg";
+    }
+    const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return isDark ? "https://cdn.fathul.my/assets/logo/aws-logo-whiteondark.svg" : "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg";
+  });
+  const chatGptLogoUrl = computed(() => {
+    if (typeof window === "undefined") {
+      return "https://cdn.fathul.my/assets/logo/chatgpt-logo-black.svg";
+    }
+    const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return isDark ? "https://cdn.fathul.my/assets/logo/chatgpt-logo-whiteondark.svg" : "https://cdn.fathul.my/assets/logo/chatgpt-logo-black.svg";
+  });
+  const pythonLogoUrl = computed(() => {
+    if (typeof window === "undefined") {
+      return "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg";
+    }
+    const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return isDark ? "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg" : "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg";
+  });
+  return {
+    appearance,
+    updateAppearance,
+    awsLogoUrl,
+    chatGptLogoUrl,
+    pythonLogoUrl
+  };
+}
 const _sfc_main$h = {
   __name: "ProgramYangDitawarkan",
   __ssrInlineRender: true,
   setup(__props) {
+    const { awsLogoUrl, chatGptLogoUrl, pythonLogoUrl } = useAppearance();
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-white py-16 sm:py-20" }, _attrs))}><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"> Program Yang Ditawarkan &amp; Tempoh Program </h2><p class="text-lg text-gray-600 max-w-2xl mx-auto"> Kami kini menawarkan program-program berikut </p></div><div class="grid gap-8 lg:grid-cols-2"><div class="space-y-8"><div><h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">`);
-      _push(ssrRenderComponent(unref(BookOpen), { class: "w-6 h-6 text-red-800 mr-3" }, null, _parent));
-      _push(` Program Yang Tersedia </h3><div class="space-y-4"><div class="flex items-start p-4 border border-red-200 rounded-lg">`);
-      _push(ssrRenderComponent(unref(Code), { class: "w-5 h-5 text-red-800 mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
-      _push(`<span class="text-gray-700 font-medium">Python Basic Programming</span></div><div class="flex items-start p-4 border border-red-200 rounded-lg">`);
-      _push(ssrRenderComponent(unref(Brain), { class: "w-5 h-5 text-red-800 mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
-      _push(`<span class="text-gray-700 font-medium">GenAI Masterclass</span></div><div class="flex items-start p-4 border border-red-200 rounded-lg">`);
-      _push(ssrRenderComponent(unref(Cloud), { class: "w-5 h-5 text-red-800 mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
-      _push(`<span class="text-gray-700 font-medium">AWS Foundational Certificate</span></div></div><div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-r-lg"><div class="flex items-center">`);
-      _push(ssrRenderComponent(unref(Info), { class: "w-5 h-5 text-yellow-600 mr-2" }, null, _parent));
-      _push(`<p class="text-yellow-800 font-medium"> Kami akan mengumumkan tarikh yang disahkan dalam masa terdekat </p></div></div></div></div><div class="space-y-8"><div><h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">`);
-      _push(ssrRenderComponent(unref(Clock), { class: "w-6 h-6 text-red-800 mr-3" }, null, _parent));
-      _push(` Komitmen Yang Diperlukan </h3><div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg mb-6"><div class="flex items-center mb-2">`);
-      _push(ssrRenderComponent(unref(Calendar), { class: "w-5 h-5 text-red-800 mr-2" }, null, _parent));
-      _push(`<span class="text-red-900 font-semibold text-lg">1 Bulan</span></div></div><div class="space-y-4"><div class="border border-red-200 rounded-lg p-4"><div class="flex items-center mb-2">`);
-      _push(ssrRenderComponent(unref(MapPin), { class: "w-5 h-5 text-red-800 mr-2" }, null, _parent));
-      _push(`<span class="font-semibold text-gray-900">Minggu 1–3: Kelas Fizikal</span></div><p class="text-gray-600 text-sm ml-7">Kehadiran sepenuh masa diperlukan</p></div><div class="border border-red-200 rounded-lg p-4"><div class="flex items-center mb-2">`);
-      _push(ssrRenderComponent(unref(Monitor), { class: "w-5 h-5 text-red-800 mr-2" }, null, _parent));
-      _push(`<span class="font-semibold text-gray-900">Minggu 4: Kelas Dalam Talian</span></div><p class="text-gray-600 text-sm ml-7">Kehadiran sepenuh masa diperlukan</p></div></div></div><div><h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">`);
-      _push(ssrRenderComponent(unref(Package), { class: "w-5 h-5 text-red-800 mr-2" }, null, _parent));
-      _push(` Program Termasuk </h4><ul class="space-y-3"><li class="flex items-start">`);
-      _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
-      _push(`<span class="text-gray-700">Latihan fizikal di YP Advanced Skills, Kuantan</span></li><li class="flex items-start">`);
-      _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
-      _push(`<span class="text-gray-700">Modul pembelajaran dalam talian dan pensijilan</span></li><li class="flex items-start">`);
-      _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
-      _push(`<span class="text-gray-700">Penilaian akhir, bimbingan, dan proses penempatan kerja</span></li></ul></div></div></div></div></div>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-white py-16 sm:py-20" }, _attrs))}><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-16"><h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"> Program Yang Ditawarkan </h2><p class="text-lg text-gray-600 max-w-2xl mx-auto"> Pilih program yang sesuai dengan matlamat kerjaya anda </p></div><div class="grid gap-12 lg:grid-cols-2"><div><div class="mb-8"><h3 class="text-2xl font-semibold text-gray-900 mb-2 flex items-center">`);
+      _push(ssrRenderComponent(unref(BookOpen), { class: "w-6 h-6 text-[#941e20] mr-3" }, null, _parent));
+      _push(` Program Tersedia </h3><p class="text-gray-600 text-sm">Semua program adalah intensif selama 4 minggu</p></div><div class="space-y-6"><div class="group hover:bg-gray-50 transition-colors duration-200 p-6 rounded-lg border border-gray-200"><div class="flex items-start"><div class="flex-shrink-0 mr-4"><img${ssrRenderAttr("src", unref(pythonLogoUrl))} alt="Python Logo" class="w-10 h-8"></div><div class="flex-1"><h4 class="text-lg font-semibold text-gray-900 mb-2">Python Basic Programming</h4><p class="text-gray-600 text-sm mb-3"> Pelajari asas pengaturcaraan Python, automasi, dan pembangunan API </p><div class="flex items-center text-sm text-[#941e20] font-medium">`);
+      _push(ssrRenderComponent(unref(Calendar), { class: "w-4 h-4 mr-1" }, null, _parent));
+      _push(` Batch 1, 2, 3 tersedia </div></div></div></div><div class="group hover:bg-gray-50 transition-colors duration-200 p-6 rounded-lg border border-gray-200"><div class="flex items-start"><div class="flex-shrink-0 mr-4"><img${ssrRenderAttr("src", unref(chatGptLogoUrl))} alt="ChatGPT Logo" class="w-10 h-8"></div><div class="flex-1"><h4 class="text-lg font-semibold text-gray-900 mb-2">GenAI Masterclass</h4><p class="text-gray-600 text-sm mb-3"> Kuasai kemahiran AI automasi, kejuruteraan prompt, dan pengoptimuman aliran kerja </p><div class="flex items-center text-sm text-[#941e20] font-medium">`);
+      _push(ssrRenderComponent(unref(Calendar), { class: "w-4 h-4 mr-1" }, null, _parent));
+      _push(` Batch 2, 3, 4 tersedia </div></div></div></div><div class="group hover:bg-gray-50 transition-colors duration-200 p-6 rounded-lg border border-gray-200"><div class="flex items-start"><div class="flex-shrink-0 mr-4"><img${ssrRenderAttr("src", unref(awsLogoUrl))} alt="AWS Logo" class="w-10 h-8"></div><div class="flex-1"><h4 class="text-lg font-semibold text-gray-900 mb-2">AWS Foundational Certificate</h4><p class="text-gray-600 text-sm mb-3"> Dapatkan kemahiran cloud computing dan pensijilan AWS yang diiktiraf industri </p><div class="flex items-center text-sm text-[#941e20] font-medium">`);
+      _push(ssrRenderComponent(unref(Calendar), { class: "w-4 h-4 mr-1" }, null, _parent));
+      _push(` Batch 1, 2, 3 tersedia </div></div></div></div></div><div class="mt-8 bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg"><div class="flex items-start">`);
+      _push(ssrRenderComponent(unref(Info), { class: "w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
+      _push(`<div><p class="text-amber-800 font-medium text-sm"> Tarikh mula program akan dimaklumkan selepas proses pemilihan selesai </p></div></div></div></div><div class="space-y-8"><div><h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">`);
+      _push(ssrRenderComponent(unref(Clock), { class: "w-6 h-6 text-[#941e20] mr-3" }, null, _parent));
+      _push(` Struktur Program </h3><div class="bg-[#941e20] text-white p-6 rounded-lg mb-6"><div class="text-center"><div class="text-3xl font-bold mb-2">4 Minggu</div><div class="text-red-100">Komitmen Penuh Diperlukan</div></div></div><div class="space-y-4"><div class="flex items-start p-4 border border-gray-200 rounded-lg"><div class="flex-shrink-0 w-8 h-8 bg-[#941e20] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4"> 1-3 </div><div><h4 class="font-semibold text-gray-900 mb-1">Minggu 1–3: Pembelajaran Fizikal</h4><p class="text-gray-600 text-sm"> Kehadiran sepenuh masa di YP Advanced Skills, Kuantan </p></div></div><div class="flex items-start p-4 border border-gray-200 rounded-lg"><div class="flex-shrink-0 w-8 h-8 bg-[#941e20] text-white rounded-full flex items-center justify-center text-sm font-bold mr-4"> 4 </div><div><h4 class="font-semibold text-gray-900 mb-1">Minggu 4: Pembelajaran Dalam Talian</h4><p class="text-gray-600 text-sm"> Projek capstone dan persediaan kerjaya </p></div></div></div></div><div><h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">`);
+      _push(ssrRenderComponent(unref(Package), { class: "w-5 h-5 text-[#941e20] mr-2" }, null, _parent));
+      _push(` Apa Yang Disediakan </h4><ul class="space-y-3"><li class="flex items-start">`);
+      _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
+      _push(`<span class="text-gray-700">Latihan hands-on dengan projek sebenar</span></li><li class="flex items-start">`);
+      _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
+      _push(`<span class="text-gray-700">Modul pembelajaran dan pensijilan yang diiktiraf</span></li><li class="flex items-start">`);
+      _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
+      _push(`<span class="text-gray-700">Bimbingan kerjaya dan bantuan penempatan kerja</span></li><li class="flex items-start">`);
+      _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
+      _push(`<span class="text-gray-700">Akses kepada komuniti alumni dan rangkaian industri</span></li></ul></div><div class="bg-gray-50 p-6 rounded-lg border border-gray-200"><h4 class="font-semibold text-gray-900 mb-2">Bersedia untuk memulakan?</h4><p class="text-gray-600 text-sm mb-4"> Mohon sekarang dan mulakan perjalanan kerjaya baharu anda dalam teknologi </p><div class="flex items-center text-[#941e20] font-medium text-sm">`);
+      _push(ssrRenderComponent(unref(ArrowRight), { class: "w-4 h-4 mr-1" }, null, _parent));
+      _push(` Isi borang permohonan di bawah </div></div></div></div></div></div>`);
     };
   }
 };
@@ -131,7 +192,7 @@ const _sfc_main$g = {
       _push(ssrRenderComponent(unref(GraduationCap), { class: "flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" }, null, _parent));
       _push(`<div><h3 class="text-lg font-semibold text-gray-900 mb-1"> Graduan Baharu </h3><p class="text-gray-700"> Graduan baharu yang mencari pekerjaan dalam bidang teknologi/kejuruteraan atau hanya perlu meningkatkan kemahiran mereka </p></div></li><li class="flex items-start">`);
       _push(ssrRenderComponent(unref(Briefcase), { class: "flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" }, null, _parent));
-      _push(`<div><h3 class="text-lg font-semibold text-gray-900 mb-1"> Graduan Yang Sudah Ada Tawaran Kerja </h3><p class="text-gray-700"> Graduan yang sudah mempunyai tawaran kerja tetapi memerlukan sokongan untuk memulakan dengan kukuh melalui <span class="font-semibold text-red-800">Pensijilan Industri dan Kesediaan Kerja</span></p></div></li></ul><div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg"><div class="flex items-start">`);
+      _push(`<div><h3 class="text-lg font-semibold text-gray-900 mb-1"> Graduan Yang Sudah Mempunyai Tawaran Kerja </h3><p class="text-gray-700"> Graduan yang sudah mempunyai tawaran kerja tetapi memerlukan sokongan untuk bermula dengan <span class="font-semibold text-red-800">pensijilan industri dan kesediaan kerja</span></p></div></li></ul><div class="bg-red-50 border-l-4 border-red-800 p-6 rounded-r-lg"><div class="flex items-start">`);
       _push(ssrRenderComponent(unref(AlertTriangle), { class: "w-6 h-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
       _push(`<div><h4 class="text-lg font-semibold text-red-800 mb-2"> Penyertaan Terhad! </h4><p class="text-red-700"> Jangan lepaskan peluang emas ini untuk menempah tempat anda dan dijemput ke taklimat program serta pemilihan calon kami. </p></div></div></div></div></div>`);
     };
@@ -815,68 +876,6 @@ function useProgramForm() {
     isProgramSelected,
     processing: form.processing,
     submitForm
-  };
-}
-function updateTheme(value) {
-  if (typeof window === "undefined") {
-    return;
-  }
-  if (value === "system") {
-    const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
-    const systemTheme = mediaQueryList.matches ? "dark" : "light";
-    document.documentElement.classList.toggle("dark", systemTheme === "dark");
-  } else {
-    document.documentElement.classList.toggle("dark", value === "dark");
-  }
-}
-const setCookie = (name, value, days = 365) => {
-  if (typeof document === "undefined") {
-    return;
-  }
-  const maxAge = days * 24 * 60 * 60;
-  document.cookie = `${name}=${value};path=/;max-age=${maxAge};SameSite=Lax`;
-};
-function useAppearance() {
-  const appearance = ref("system");
-  onMounted(() => {
-    const savedAppearance = localStorage.getItem("appearance");
-    if (savedAppearance) {
-      appearance.value = savedAppearance;
-    }
-  });
-  function updateAppearance(value) {
-    appearance.value = value;
-    localStorage.setItem("appearance", value);
-    setCookie("appearance", value);
-    updateTheme(value);
-  }
-  const awsLogoUrl = computed(() => {
-    if (typeof window === "undefined") {
-      return "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg";
-    }
-    const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return isDark ? "https://cdn.fathul.my/assets/logo/aws-logo-whiteondark.svg" : "https://cdn.fathul.my/assets/logo/aws-logo-fullcolor.svg";
-  });
-  const chatGptLogoUrl = computed(() => {
-    if (typeof window === "undefined") {
-      return "https://cdn.fathul.my/assets/logo/chatgpt-logo-black.svg";
-    }
-    const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return isDark ? "https://cdn.fathul.my/assets/logo/chatgpt-logo-whiteondark.svg" : "https://cdn.fathul.my/assets/logo/chatgpt-logo-black.svg";
-  });
-  const pythonLogoUrl = computed(() => {
-    if (typeof window === "undefined") {
-      return "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg";
-    }
-    const isDark = appearance.value === "dark" || appearance.value === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return isDark ? "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg" : "https://cdn.fathul.my/assets/logo/python-logo-fullcolor.svg";
-  });
-  return {
-    appearance,
-    updateAppearance,
-    awsLogoUrl,
-    chatGptLogoUrl,
-    pythonLogoUrl
   };
 }
 const _sfc_main$1 = {

@@ -26,11 +26,11 @@
           <Briefcase class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
           <div>
             <h3 class="text-lg font-semibold text-gray-900 mb-1">
-              Graduan Yang Sudah Ada Tawaran Kerja
+              Graduan Yang Sudah Mempunyai Tawaran Kerja
             </h3>
             <p class="text-gray-700">
-              Graduan yang sudah mempunyai tawaran kerja tetapi memerlukan sokongan untuk memulakan dengan kukuh melalui 
-              <span class="font-semibold text-red-800">Pensijilan Industri dan Kesediaan Kerja</span>
+              Graduan yang sudah mempunyai tawaran kerja tetapi memerlukan sokongan untuk bermula dengan
+              <span class="font-semibold text-red-800">pensijilan industri dan kesediaan kerja</span>
             </p>
           </div>
         </li>
