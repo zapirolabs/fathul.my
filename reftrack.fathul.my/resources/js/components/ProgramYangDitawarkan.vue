@@ -158,23 +158,7 @@
                 <CheckCircle class="w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" />
                 <span class="text-gray-700">Bimbingan kerjaya dan bantuan penempatan kerja</span>
               </li>
-              <li class="flex items-start">
-                <CheckCircle class="w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" />
-                <span class="text-gray-700">Akses kepada komuniti alumni dan rangkaian industri</span>
-              </li>
             </ul>
-          </div>
-
-          <!-- CTA Section -->
-          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-            <h4 class="font-semibold text-gray-900 mb-2">Bersedia untuk memulakan?</h4>
-            <p class="text-gray-600 text-sm mb-4">
-              Mohon sekarang dan mulakan perjalanan kerjaya baharu anda dalam teknologi
-            </p>
-            <div class="flex items-center text-[#941e20] font-medium text-sm">
-              <ArrowRight class="w-4 h-4 mr-1" />
-              Isi borang permohonan di bawah
-            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useSSRContext, mergeProps, unref, ref, onMounted, computed, withCtx, renderSlot, createVNode, createTextVNode, createBlock, createCommentVNode, openBlock, toDisplayString } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrRenderSlot, ssrGetDynamicModelProps, ssrInterpolate, ssrRenderClass } from "vue/server-renderer";
 import { useForm, Head } from "@inertiajs/vue3";
-import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Info, Clock, Package, CheckCircle, ArrowRight, AlertTriangle, CircleIcon, Check, ChevronDown } from "lucide-vue-next";
+import { ShieldCheck, MapPin, Calendar, Users, GraduationCap, Briefcase, Home, Banknote, Building2, BookOpen, Info, Clock, Package, CheckCircle, AlertTriangle, CircleIcon, Check, ChevronDown } from "lucide-vue-next";
 import { reactiveOmit, useVModel } from "@vueuse/core";
 import { useForwardPropsEmits, RadioGroupRoot, useForwardProps, RadioGroupItem, RadioGroupIndicator, CheckboxRoot, CheckboxIndicator, Label, AccordionRoot, AccordionContent, AccordionItem, AccordionHeader, AccordionTrigger } from "reka-ui";
 import { c as cn, _ as _sfc_main$m } from "./index-CBusBGn5.js";
@@ -169,11 +169,7 @@ const _sfc_main$h = {
       _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
       _push(`<span class="text-gray-700">Modul pembelajaran dan pensijilan yang diiktiraf</span></li><li class="flex items-start">`);
       _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
-      _push(`<span class="text-gray-700">Bimbingan kerjaya dan bantuan penempatan kerja</span></li><li class="flex items-start">`);
-      _push(ssrRenderComponent(unref(CheckCircle), { class: "w-5 h-5 text-[#941e20] mr-3 mt-0.5 flex-shrink-0" }, null, _parent));
-      _push(`<span class="text-gray-700">Akses kepada komuniti alumni dan rangkaian industri</span></li></ul></div><div class="bg-gray-50 p-6 rounded-lg border border-gray-200"><h4 class="font-semibold text-gray-900 mb-2">Bersedia untuk memulakan?</h4><p class="text-gray-600 text-sm mb-4"> Mohon sekarang dan mulakan perjalanan kerjaya baharu anda dalam teknologi </p><div class="flex items-center text-[#941e20] font-medium text-sm">`);
-      _push(ssrRenderComponent(unref(ArrowRight), { class: "w-4 h-4 mr-1" }, null, _parent));
-      _push(` Isi borang permohonan di bawah </div></div></div></div></div></div>`);
+      _push(`<span class="text-gray-700">Bimbingan kerjaya dan bantuan penempatan kerja</span></li></ul></div></div></div></div></div>`);
     };
   }
 };
