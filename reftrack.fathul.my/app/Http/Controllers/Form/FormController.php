@@ -7,7 +7,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Revolution\Google\Sheets\Facades\Sheets;
-use App\Models\ProgramRegistration;
+use App\Models\ReftrackProgramRegistration;
 
 class FormController extends Controller
 {
@@ -178,7 +178,7 @@ class FormController extends Controller
         ]);
 
         // Generate referral codes based on selected programs
-        $programCodes = ProgramRegistration::getProgramCodes();
+        $programCodes = ReftrackProgramRegistration::getProgramCodes();
         $pythonReferralCode = '';
         $genaiReferralCode = '';
         $awsReferralCode = '';
