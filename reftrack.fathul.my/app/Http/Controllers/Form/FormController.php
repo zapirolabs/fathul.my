@@ -159,7 +159,7 @@ class FormController extends Controller
         $timestamp = Carbon::now('Asia/Kuala_Lumpur')->format('d/m/Y H:i:s');
 
         // Create database record first to get the auto-increment ID
-        $registration = ProgramRegistration::create([
+        $registration = ReftrackProgramRegistration::create([
             'full_name' => $fullName,
             'phone_number' => $phoneNumber,
             'email' => $email,
@@ -186,22 +186,22 @@ class FormController extends Controller
         if ($programInterest === 'more-than-one') {
             // For multi-program selection, generate referral codes for selected programs
             if (in_array('python-basic', $selectedPrograms)) {
-                $pythonReferralCode = ProgramRegistration::generateReferralCode($programCodes['python-basic'], $registration->id);
+                $pythonReferralCode = ReftrackProgramRegistration::generateReferralCode($programCodes['python-basic'], $registration->id);
             }
             if (in_array('genai-masterclass', $selectedPrograms)) {
-                $genaiReferralCode = ProgramRegistration::generateReferralCode($programCodes['genai-masterclass'], $registration->id);
+                $genaiReferralCode = ReftrackProgramRegistration::generateReferralCode($programCodes['genai-masterclass'], $registration->id);
             }
             if (in_array('aws-foundational', $selectedPrograms)) {
-                $awsReferralCode = ProgramRegistration::generateReferralCode($programCodes['aws-foundational'], $registration->id);
+                $awsReferralCode = ReftrackProgramRegistration::generateReferralCode($programCodes['aws-foundational'], $registration->id);
             }
         } else {
             // For single program selection
             if ($programInterest === 'python-basic') {
-                $pythonReferralCode = ProgramRegistration::generateReferralCode($programCodes['python-basic'], $registration->id);
+                $pythonReferralCode = ReftrackProgramRegistration::generateReferralCode($programCodes['python-basic'], $registration->id);
             } elseif ($programInterest === 'genai-masterclass') {
-                $genaiReferralCode = ProgramRegistration::generateReferralCode($programCodes['genai-masterclass'], $registration->id);
+                $genaiReferralCode = ReftrackProgramRegistration::generateReferralCode($programCodes['genai-masterclass'], $registration->id);
             } elseif ($programInterest === 'aws-foundational') {
-                $awsReferralCode = ProgramRegistration::generateReferralCode($programCodes['aws-foundational'], $registration->id);
+                $awsReferralCode = ReftrackProgramRegistration::generateReferralCode($programCodes['aws-foundational'], $registration->id);
             }
         }
 
