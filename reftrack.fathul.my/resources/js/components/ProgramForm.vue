@@ -634,11 +634,11 @@
           <!-- Further Inquiries -->
           <div class="space-y-3">
             <CardTitle class="text-card-foreground">
-              Further Inquiries
+              Pertanyaan Lanjut
             </CardTitle>
             <Textarea 
               v-model="form.furtherInquiries" 
-              placeholder="Any questions or additional information you'd like to share (optional)" 
+              placeholder="Sebarang soalan atau maklumat tambahan yang anda ingin kongsikan (optional)" 
               class="w-full min-h-[100px]" 
             />
             <p v-if="form.errors.furtherInquiries" class="text-sm text-destructive">

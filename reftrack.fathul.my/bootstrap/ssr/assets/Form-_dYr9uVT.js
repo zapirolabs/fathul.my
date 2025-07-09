@@ -5771,10 +5771,10 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(unref(_sfc_main$6), { class: "text-card-foreground" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Further Inquiries `);
+            _push2(` Pertanyaan Lanjut `);
           } else {
             return [
-              createTextVNode(" Further Inquiries ")
+              createTextVNode(" Pertanyaan Lanjut ")
             ];
           }
         }),
@@ -5783,7 +5783,7 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(unref(_sfc_main$a), {
         modelValue: unref(form).furtherInquiries,
         "onUpdate:modelValue": ($event) => unref(form).furtherInquiries = $event,
-        placeholder: "Any questions or additional information you'd like to share (optional)",
+        placeholder: "Sebarang soalan atau maklumat tambahan yang anda ingin kongsikan (optional)",
         class: "w-full min-h-[100px]"
       }, null, _parent));
       if (unref(form).errors.furtherInquiries) {
