@@ -7,6 +7,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Revolution\Google\Sheets\Facades\Sheets;
+use App\Models\ProgramRegistration;
 
 class FormController extends Controller
 {
@@ -157,6 +158,60 @@ class FormController extends Controller
         // Generate timestamp in Malaysia timezone with exact format: 08/07/2025 09:24:34
         $timestamp = Carbon::now('Asia/Kuala_Lumpur')->format('d/m/Y H:i:s');
 
+        // Create database record first to get the auto-increment ID
+        $registration = ProgramRegistration::create([
+            'full_name' => $fullName,
+            'phone_number' => $phoneNumber,
+            'email' => $email,
+            'age' => $age,
+            'interview_willingness' => $interviewWillingness,
+            'registration_reasons' => $registrationReasons,
+            'registration_reasons_other' => $registrationReasonsOther,
+            'commitment_level' => $commitmentLevel,
+            'commitment_level_other' => $commitmentLevelOther,
+            'program_interest' => $programInterest,
+            'selected_programs' => $selectedPrograms,
+            'intake_batch' => $intakeBatch,
+            'pahang_connection' => $pahangConnection,
+            'pahang_connection_other' => $pahangConnectionOther,
+            'further_inquiries' => $furtherInquiries,
+        ]);
+
+        // Generate referral codes based on selected programs
+        $programCodes = ProgramRegistration::getProgramCodes();
+        $pythonReferralCode = '';
+        $genaiReferralCode = '';
+        $awsReferralCode = '';
+        
+        if ($programInterest === 'more-than-one') {
+            // For multi-program selection, generate referral codes for selected programs
+            if (in_array('python-basic', $selectedPrograms)) {
+                $pythonReferralCode = ProgramRegistration::generateReferralCode($programCodes['python-basic'], $registration->id);
+            }
+            if (in_array('genai-masterclass', $selectedPrograms)) {
+                $genaiReferralCode = ProgramRegistration::generateReferralCode($programCodes['genai-masterclass'], $registration->id);
+            }
+            if (in_array('aws-foundational', $selectedPrograms)) {
+                $awsReferralCode = ProgramRegistration::generateReferralCode($programCodes['aws-foundational'], $registration->id);
+            }
+        } else {
+            // For single program selection
+            if ($programInterest === 'python-basic') {
+                $pythonReferralCode = ProgramRegistration::generateReferralCode($programCodes['python-basic'], $registration->id);
+            } elseif ($programInterest === 'genai-masterclass') {
+                $genaiReferralCode = ProgramRegistration::generateReferralCode($programCodes['genai-masterclass'], $registration->id);
+            } elseif ($programInterest === 'aws-foundational') {
+                $awsReferralCode = ProgramRegistration::generateReferralCode($programCodes['aws-foundational'], $registration->id);
+            }
+        }
+
+        // Update the registration with referral codes
+        $registration->update([
+            'python_referral_code' => $pythonReferralCode,
+            'genai_referral_code' => $genaiReferralCode,
+            'aws_referral_code' => $awsReferralCode,
+        ]);
+
         // Determine batch column based on program type
         $pythonBatch = '';
         $genaiBatch = '';
@@ -195,13 +250,13 @@ class FormController extends Controller
             $finalPahangValue, // H - Pahang Connection
             $finalProgramValue, // I - Program Interest
             $pythonBatch, // J - Python Intake Batch
-            '', // K - Reserved
+            $pythonReferralCode, // K - Python Referral Code
             '', // L - Reserved
             $genaiBatch, // M - GenAI Intake Batch
-            '', // N - Reserved
+            $genaiReferralCode, // N - GenAI Referral Code
             '', // O - Reserved
             $awsBatch, // P - AWS Intake Batch
-            '', // Q - Reserved
+            $awsReferralCode, // Q - AWS Referral Code
             $furtherInquiries ?: '', // R - Further Inquiries
             $finalInterviewValue, // S - Interview Willingness
         ];
@@ -210,6 +265,30 @@ class FormController extends Controller
             ->sheet('PJK Registration form')
             ->append([$rowData]);
 
-        return Inertia::render('Success');
+        // Prepare referral codes for display
+        $referralCodes = [];
+        if ($pythonReferralCode) {
+            $referralCodes[] = [
+                'program' => 'Python Basic Programming',
+                'code' => $pythonReferralCode
+            ];
+        }
+        if ($genaiReferralCode) {
+            $referralCodes[] = [
+                'program' => 'GenAI Masterclass',
+                'code' => $genaiReferralCode
+            ];
+        }
+        if ($awsReferralCode) {
+            $referralCodes[] = [
+                'program' => 'AWS Foundational Certificate',
+                'code' => $awsReferralCode
+            ];
+        }
+
+        return Inertia::render('Success', [
+            'referralCodes' => $referralCodes,
+            'userName' => $fullName
+        ]);
     }
 }

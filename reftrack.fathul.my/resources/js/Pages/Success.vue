@@ -14,9 +14,33 @@
           Permohonan Berjaya Dihantar!
         </h1>
         
-        <p class="text-lg text-muted-foreground mb-8">
-          Terima kasih kerana memohon Program Jaminan Kerjaya 2025. Maklumat anda telah berjaya direkodkan dan pasukan kami akan menghubungi anda tidak lama lagi.
+        <p class="text-lg text-muted-foreground mb-4">
+          Terima kasih {{ userName }} kerana memohon Program Jaminan Kerjaya 2025. Maklumat anda telah berjaya direkodkan dan pasukan kami akan menghubungi anda tidak lama lagi.
         </p>
+
+        <!-- Referral Codes Section -->
+        <div v-if="referralCodes.length > 0" class="bg-card border border-border rounded-lg p-6 mb-8">
+          <h2 class="text-xl font-semibold text-card-foreground mb-4">Kod Rujukan Anda</h2>
+          <p class="text-sm text-muted-foreground mb-4">
+            Simpan kod rujukan ini untuk rujukan masa hadapan:
+          </p>
+          <div class="space-y-3">
+            <div v-for="referral in referralCodes" :key="referral.code" 
+                 class="flex items-center justify-between bg-muted p-3 rounded-lg">
+              <div class="text-left">
+                <p class="font-medium text-card-foreground">{{ referral.program }}</p>
+                <p class="text-sm text-muted-foreground">Kod Rujukan</p>
+              </div>
+              <div class="text-right">
+                <p class="font-mono text-lg font-bold text-[#941e20]">{{ referral.code }}</p>
+                <button @click="copyToClipboard(referral.code)" 
+                        class="text-xs text-muted-foreground hover:text-card-foreground">
+                  Salin
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- What's Next Section -->
         <div class="bg-card border border-border rounded-lg p-6 mb-8 text-left">
@@ -61,4 +85,26 @@
 <script setup>
 import { Head } from '@inertiajs/vue3'
 import { Button } from '@/resources/js/components/ui/button'
+
+// Define props
+const props = defineProps({
+  referralCodes: {
+    type: Array,
+    default: () => []
+  },
+  userName: {
+    type: String,
+    default: ''
+  }
+})
+
+// Copy to clipboard function
+const copyToClipboard = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text)
+    // You could add a toast notification here
+  } catch (err) {
+    console.error('Failed to copy text: ', err)
+  }
+}
 </script> 

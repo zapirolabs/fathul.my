@@ -11,7 +11,7 @@ reftrack.fathul.my {
     }
 
     @static {
-        path /build/* /storage/* /favicon.ico /robots.txt
+        path /build/* /storage/* /favicon.ico /robots.txt *.html
     }
     file_server @static
 
