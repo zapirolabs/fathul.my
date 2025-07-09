@@ -18,7 +18,8 @@ class FormController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        // Custom validation logic for batch fields
+        $rules = [
             'fullName' => 'required|string|max:255',
             'phoneNumber' => 'required|string|max:20|regex:/^[\+]?[0-9\s\-\(\)]+$/',
             'email' => 'required|email:rfc,dns|max:255',
@@ -30,16 +31,41 @@ class FormController extends Controller
             'commitmentLevel' => 'required|in:fully-committed,need-info,not-sure,other-commitment',
             'commitmentLevelOther' => 'required_if:commitmentLevel,other-commitment|max:255',
             'programInterest' => 'required|in:python-basic,genai-masterclass,aws-foundational,more-than-one',
-            'selectedPrograms' => 'required_if:programInterest,more-than-one|array|min:1',
-            'selectedPrograms.*' => 'in:python-basic,genai-masterclass,aws-foundational',
-            'intakeBatch' => 'required_if:programInterest,python-basic,genai-masterclass,aws-foundational|in:batch-1,batch-2,batch-3,batch-4',
-            'pythonBatch' => 'required_if:programInterest,python-basic|required_if:selectedPrograms.*,python-basic|in:batch-1,batch-2,batch-3',
-            'genaiBatch' => 'required_if:programInterest,genai-masterclass|required_if:selectedPrograms.*,genai-masterclass|in:batch-2,batch-3,batch-4',
-            'awsBatch' => 'required_if:programInterest,aws-foundational|required_if:selectedPrograms.*,aws-foundational|in:batch-1,batch-2,batch-3',
             'pahangConnection' => 'required|in:born-pahang,living-pahang,parents-pahang,other-pahang',
             'pahangConnectionOther' => 'required_if:pahangConnection,other-pahang|max:255',
             'furtherInquiries' => 'nullable|string|max:1000',
-        ], [
+        ];
+
+        // Add conditional validation based on program selection
+        $programInterest = $request->input('programInterest');
+        $selectedPrograms = $request->input('selectedPrograms', []);
+
+        if ($programInterest === 'more-than-one') {
+            $rules['selectedPrograms'] = 'required|array|min:1';
+            $rules['selectedPrograms.*'] = 'in:python-basic,genai-masterclass,aws-foundational';
+            
+            // Add batch validation for selected programs
+            if (in_array('python-basic', $selectedPrograms)) {
+                $rules['pythonBatch'] = 'required|in:batch-1,batch-2,batch-3';
+            }
+            if (in_array('genai-masterclass', $selectedPrograms)) {
+                $rules['genaiBatch'] = 'required|in:batch-2,batch-3,batch-4';
+            }
+            if (in_array('aws-foundational', $selectedPrograms)) {
+                $rules['awsBatch'] = 'required|in:batch-1,batch-2,batch-3';
+            }
+        } else {
+            // Single program selection
+            if ($programInterest === 'python-basic') {
+                $rules['pythonBatch'] = 'required|in:batch-1,batch-2,batch-3';
+            } elseif ($programInterest === 'genai-masterclass') {
+                $rules['genaiBatch'] = 'required|in:batch-2,batch-3,batch-4';
+            } elseif ($programInterest === 'aws-foundational') {
+                $rules['awsBatch'] = 'required|in:batch-1,batch-2,batch-3';
+            }
+        }
+
+        $request->validate($rules, [
             'fullName.required' => 'Sila masukkan nama penuh anda.',
             'fullName.string' => 'Nama penuh mestilah dalam format teks.',
             'fullName.max' => 'Nama penuh tidak boleh melebihi 255 aksara.',
@@ -67,16 +93,14 @@ class FormController extends Controller
             'commitmentLevelOther.max' => 'Tahap komitmen lain tidak boleh melebihi 255 aksara.',
             'programInterest.required' => 'Sila pilih program yang anda minati.',
             'programInterest.in' => 'Sila pilih program yang sah.',
-            'selectedPrograms.required_if' => 'Sila pilih sekurang-kurangnya satu program.',
+            'selectedPrograms.required' => 'Sila pilih sekurang-kurangnya satu program.',
             'selectedPrograms.min' => 'Sila pilih sekurang-kurangnya satu program.',
             'selectedPrograms.*.in' => 'Sila pilih program yang sah.',
-            'intakeBatch.required_if' => 'Sila pilih batch intake untuk program yang dipilih.',
-            'intakeBatch.in' => 'Sila pilih batch yang sah.',
-            'pythonBatch.required_if' => 'Sila pilih batch intake untuk program Python.',
+            'pythonBatch.required' => 'Sila pilih batch intake untuk program Python.',
             'pythonBatch.in' => 'Sila pilih batch yang sah untuk program Python.',
-            'genaiBatch.required_if' => 'Sila pilih batch intake untuk program GenAI.',
+            'genaiBatch.required' => 'Sila pilih batch intake untuk program GenAI.',
             'genaiBatch.in' => 'Sila pilih batch yang sah untuk program GenAI.',
-            'awsBatch.required_if' => 'Sila pilih batch intake untuk program AWS.',
+            'awsBatch.required' => 'Sila pilih batch intake untuk program AWS.',
             'awsBatch.in' => 'Sila pilih batch yang sah untuk program AWS.',
             'pahangConnection.required' => 'Sila pilih kaitan anda dengan negeri Pahang.',
             'pahangConnection.in' => 'Sila pilih salah satu pilihan yang disediakan.',
@@ -96,7 +120,7 @@ class FormController extends Controller
         $commitmentLevelOther = $request->input('commitmentLevelOther');
         $programInterest = $request->input('programInterest');
         $selectedPrograms = $request->input('selectedPrograms', []);
-        $intakeBatch = $request->input('intakeBatch');
+        $intakeBatch = $request->input('intakeBatch'); // This will be null for single program
         $pythonBatch = $request->input('pythonBatch');
         $genaiBatch = $request->input('genaiBatch');
         $awsBatch = $request->input('awsBatch');
@@ -183,7 +207,7 @@ class FormController extends Controller
             'commitment_level_other' => $commitmentLevelOther,
             'program_interest' => $programInterest,
             'selected_programs' => $selectedPrograms,
-            'intake_batch' => $intakeBatch,
+            'intake_batch' => $intakeBatch, // Store null for single program
             'python_batch' => $pythonBatch,
             'genai_batch' => $genaiBatch,
             'aws_batch' => $awsBatch,
