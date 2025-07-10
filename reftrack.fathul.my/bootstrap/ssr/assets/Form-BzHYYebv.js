@@ -44,7 +44,7 @@ const _sfc_main$j = {
       _push(ssrRenderComponent(unref(MapPin), { class: "flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" }, null, _parent));
       _push(`<span class="text-gray-700">Anak Pahang / pemastautin di Pahang. Pelajar atau ibu bapa dilahirkan atau sedang menetap di Pahang</span></li><li class="flex items-start">`);
       _push(ssrRenderComponent(unref(Calendar), { class: "flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" }, null, _parent));
-      _push(`<span class="text-gray-700">Berumur antara 18 hingga 35 tahun</span></li><li class="flex items-start">`);
+      _push(`<span class="text-gray-700">Berumur antara 20 hingga 35 tahun</span></li><li class="flex items-start">`);
       _push(ssrRenderComponent(unref(Users), { class: "flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" }, null, _parent));
       _push(`<span class="text-gray-700">Terbuka kepada calon lelaki dan perempuan</span></li><li class="flex items-start">`);
       _push(ssrRenderComponent(unref(GraduationCap), { class: "flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" }, null, _parent));
@@ -1402,8 +1402,8 @@ const _sfc_main$1 = {
         modelValue: unref(form).age,
         "onUpdate:modelValue": ($event) => unref(form).age = $event,
         type: "number",
-        placeholder: "Masukkan umur anda (18-35 tahun)",
-        min: "18",
+        placeholder: "Masukkan umur anda (20-35 tahun)",
+        min: "20",
         max: "35",
         class: "w-full"
       }, null, _parent));

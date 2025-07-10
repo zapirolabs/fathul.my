@@ -103,7 +103,7 @@
               Umur
               <span class="text-destructive">*</span>
             </CardTitle>
-            <Input v-model="form.age" type="number" placeholder="Masukkan umur anda (18-35 tahun)" min="18" max="35"
+            <Input v-model="form.age" type="number" placeholder="Masukkan umur anda (20-35 tahun)" min="20" max="35"
               class="w-full" />
             <p v-if="form.errors.age" class="text-sm text-destructive">
               {{ form.errors.age }}

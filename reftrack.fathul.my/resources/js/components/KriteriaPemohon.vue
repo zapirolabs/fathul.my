@@ -21,7 +21,7 @@
         </li>
         <li class="flex items-start">
           <Calendar class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
-          <span class="text-gray-700">Berumur antara 18 hingga 35 tahun</span>
+          <span class="text-gray-700">Berumur antara 20 hingga 35 tahun</span>
         </li>
         <li class="flex items-start">
           <Users class="flex-shrink-0 w-6 h-6 text-amber-500 mr-3 mt-0.5" />
