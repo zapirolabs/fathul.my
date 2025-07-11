@@ -409,15 +409,15 @@
                   <RadioGroup v-model="form.pythonBatch" class="space-y-2">
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="python-batch-1" value="batch-1" />
-                      <Label for="python-batch-1" class="text-sm">Batch 1</Label>
+                      <Label for="python-batch-1" class="text-sm">Batch 1 (TBD)</Label>
                     </div>
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="python-batch-2" value="batch-2" />
-                      <Label for="python-batch-2" class="text-sm">Batch 2</Label>
+                      <Label for="python-batch-2" class="text-sm">Batch 2 (TBD)</Label>
                     </div>
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="python-batch-3" value="batch-3" />
-                      <Label for="python-batch-3" class="text-sm">Batch 3</Label>
+                      <Label for="python-batch-3" class="text-sm">Batch 3 (TBD)</Label>
                     </div>
                   </RadioGroup>
 
@@ -513,15 +513,15 @@
                   <RadioGroup v-model="form.genaiBatch" class="space-y-2">
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="genai-batch-2" value="batch-2" />
-                      <Label for="genai-batch-2" class="text-sm">Batch 2</Label>
+                      <Label for="genai-batch-2" class="text-sm">Batch 2 (Estimated 29/7/2025)</Label>
                     </div>
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="genai-batch-3" value="batch-3" />
-                      <Label for="genai-batch-3" class="text-sm">Batch 3</Label>
+                      <Label for="genai-batch-3" class="text-sm">Batch 3 (TBD)</Label>
                     </div>
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="genai-batch-4" value="batch-4" />
-                      <Label for="genai-batch-4" class="text-sm">Batch 4</Label>
+                      <Label for="genai-batch-4" class="text-sm">Batch 4 (TBD)</Label>
                     </div>
                   </RadioGroup>
 
@@ -611,15 +611,15 @@
                   <RadioGroup v-model="form.awsBatch" class="space-y-2">
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="aws-batch-1" value="batch-1" />
-                      <Label for="aws-batch-1" class="text-sm">Batch 1</Label>
+                      <Label for="aws-batch-1" class="text-sm">Batch 1 (TBD)</Label>
                     </div>
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="aws-batch-2" value="batch-2" />
-                      <Label for="aws-batch-2" class="text-sm">Batch 2</Label>
+                      <Label for="aws-batch-2" class="text-sm">Batch 2 (TBD)</Label>
                     </div>
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="aws-batch-3" value="batch-3" />
-                      <Label for="aws-batch-3" class="text-sm">Batch 3</Label>
+                      <Label for="aws-batch-3" class="text-sm">Batch 3 (TBD)</Label>
                     </div>
                   </RadioGroup>
 

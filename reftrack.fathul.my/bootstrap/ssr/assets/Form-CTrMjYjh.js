@@ -3502,10 +3502,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 1`);
+                                _push5(`Batch 1 (TBD)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 1")
+                                  createTextVNode("Batch 1 (TBD)")
                                 ];
                               }
                             }),
@@ -3522,10 +3522,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 2`);
+                                _push5(`Batch 2 (TBD)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (TBD)")
                                 ];
                               }
                             }),
@@ -3542,10 +3542,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 3`);
+                                _push5(`Batch 3 (TBD)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ];
                               }
                             }),
@@ -3564,7 +3564,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 1")
+                                  createTextVNode("Batch 1 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -3579,7 +3579,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -3594,7 +3594,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -3747,7 +3747,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 1")
+                                    createTextVNode("Batch 1 (TBD)")
                                   ]),
                                   _: 1
                                 })
@@ -3762,7 +3762,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 2")
+                                    createTextVNode("Batch 2 (TBD)")
                                   ]),
                                   _: 1
                                 })
@@ -3777,7 +3777,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 3")
+                                    createTextVNode("Batch 3 (TBD)")
                                   ]),
                                   _: 1
                                 })
@@ -3935,7 +3935,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 1")
+                                  createTextVNode("Batch 1 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -3950,7 +3950,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -3965,7 +3965,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -4390,10 +4390,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 2`);
+                                _push5(`Batch 2 (Estimated 29/7/2025)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (Estimated 29/7/2025)")
                                 ];
                               }
                             }),
@@ -4410,10 +4410,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 3`);
+                                _push5(`Batch 3 (TBD)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ];
                               }
                             }),
@@ -4430,10 +4430,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 4`);
+                                _push5(`Batch 4 (TBD)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 4")
+                                  createTextVNode("Batch 4 (TBD)")
                                 ];
                               }
                             }),
@@ -4452,7 +4452,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (Estimated 29/7/2025)")
                                 ]),
                                 _: 1
                               })
@@ -4467,7 +4467,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -4482,7 +4482,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 4")
+                                  createTextVNode("Batch 4 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -4639,7 +4639,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 2")
+                                    createTextVNode("Batch 2 (Estimated 29/7/2025)")
                                   ]),
                                   _: 1
                                 })
@@ -4654,7 +4654,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 3")
+                                    createTextVNode("Batch 3 (TBD)")
                                   ]),
                                   _: 1
                                 })
@@ -4669,7 +4669,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 4")
+                                    createTextVNode("Batch 4 (TBD)")
                                   ]),
                                   _: 1
                                 })
@@ -4831,7 +4831,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (Estimated 29/7/2025)")
                                 ]),
                                 _: 1
                               })
@@ -4846,7 +4846,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -4861,7 +4861,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 4")
+                                  createTextVNode("Batch 4 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -5274,10 +5274,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 1`);
+                                _push5(`Batch 1 (TBD)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 1")
+                                  createTextVNode("Batch 1 (TBD)")
                                 ];
                               }
                             }),
@@ -5294,10 +5294,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 2`);
+                                _push5(`Batch 2 (TBD)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (TBD)")
                                 ];
                               }
                             }),
@@ -5314,10 +5314,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 3`);
+                                _push5(`Batch 3 (TBD)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ];
                               }
                             }),
@@ -5336,7 +5336,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 1")
+                                  createTextVNode("Batch 1 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -5351,7 +5351,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -5366,7 +5366,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -5519,7 +5519,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 1")
+                                    createTextVNode("Batch 1 (TBD)")
                                   ]),
                                   _: 1
                                 })
@@ -5534,7 +5534,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 2")
+                                    createTextVNode("Batch 2 (TBD)")
                                   ]),
                                   _: 1
                                 })
@@ -5549,7 +5549,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 3")
+                                    createTextVNode("Batch 3 (TBD)")
                                   ]),
                                   _: 1
                                 })
@@ -5707,7 +5707,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 1")
+                                  createTextVNode("Batch 1 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -5722,7 +5722,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 2")
+                                  createTextVNode("Batch 2 (TBD)")
                                 ]),
                                 _: 1
                               })
@@ -5737,7 +5737,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 3")
+                                  createTextVNode("Batch 3 (TBD)")
                                 ]),
                                 _: 1
                               })
