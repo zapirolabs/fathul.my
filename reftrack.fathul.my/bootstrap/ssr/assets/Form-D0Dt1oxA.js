@@ -5274,50 +5274,10 @@ const _sfc_main$1 = {
                           }, {
                             default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                               if (_push5) {
-                                _push5(`Batch 1 (TBD)`);
+                                _push5(`Batch 1 (Estimated Early August 2025)`);
                               } else {
                                 return [
-                                  createTextVNode("Batch 1 (TBD)")
-                                ];
-                              }
-                            }),
-                            _: 1
-                          }, _parent4, _scopeId3));
-                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
-                            id: "aws-batch-2",
-                            value: "batch-2"
-                          }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
-                            for: "aws-batch-2",
-                            class: "text-sm"
-                          }, {
-                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                              if (_push5) {
-                                _push5(`Batch 2 (TBD)`);
-                              } else {
-                                return [
-                                  createTextVNode("Batch 2 (TBD)")
-                                ];
-                              }
-                            }),
-                            _: 1
-                          }, _parent4, _scopeId3));
-                          _push4(`</div><div class="flex items-center space-x-2"${_scopeId3}>`);
-                          _push4(ssrRenderComponent(unref(_sfc_main$e), {
-                            id: "aws-batch-3",
-                            value: "batch-3"
-                          }, null, _parent4, _scopeId3));
-                          _push4(ssrRenderComponent(unref(_sfc_main$c), {
-                            for: "aws-batch-3",
-                            class: "text-sm"
-                          }, {
-                            default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                              if (_push5) {
-                                _push5(`Batch 3 (TBD)`);
-                              } else {
-                                return [
-                                  createTextVNode("Batch 3 (TBD)")
+                                  createTextVNode("Batch 1 (Estimated Early August 2025)")
                                 ];
                               }
                             }),
@@ -5336,37 +5296,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 1 (TBD)")
-                                ]),
-                                _: 1
-                              })
-                            ]),
-                            createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$e), {
-                                id: "aws-batch-2",
-                                value: "batch-2"
-                              }),
-                              createVNode(unref(_sfc_main$c), {
-                                for: "aws-batch-2",
-                                class: "text-sm"
-                              }, {
-                                default: withCtx(() => [
-                                  createTextVNode("Batch 2 (TBD)")
-                                ]),
-                                _: 1
-                              })
-                            ]),
-                            createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$e), {
-                                id: "aws-batch-3",
-                                value: "batch-3"
-                              }),
-                              createVNode(unref(_sfc_main$c), {
-                                for: "aws-batch-3",
-                                class: "text-sm"
-                              }, {
-                                default: withCtx(() => [
-                                  createTextVNode("Batch 3 (TBD)")
+                                  createTextVNode("Batch 1 (Estimated Early August 2025)")
                                 ]),
                                 _: 1
                               })
@@ -5519,37 +5449,7 @@ const _sfc_main$1 = {
                                   class: "text-sm"
                                 }, {
                                   default: withCtx(() => [
-                                    createTextVNode("Batch 1 (TBD)")
-                                  ]),
-                                  _: 1
-                                })
-                              ]),
-                              createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$e), {
-                                  id: "aws-batch-2",
-                                  value: "batch-2"
-                                }),
-                                createVNode(unref(_sfc_main$c), {
-                                  for: "aws-batch-2",
-                                  class: "text-sm"
-                                }, {
-                                  default: withCtx(() => [
-                                    createTextVNode("Batch 2 (TBD)")
-                                  ]),
-                                  _: 1
-                                })
-                              ]),
-                              createVNode("div", { class: "flex items-center space-x-2" }, [
-                                createVNode(unref(_sfc_main$e), {
-                                  id: "aws-batch-3",
-                                  value: "batch-3"
-                                }),
-                                createVNode(unref(_sfc_main$c), {
-                                  for: "aws-batch-3",
-                                  class: "text-sm"
-                                }, {
-                                  default: withCtx(() => [
-                                    createTextVNode("Batch 3 (TBD)")
+                                    createTextVNode("Batch 1 (Estimated Early August 2025)")
                                   ]),
                                   _: 1
                                 })
@@ -5707,37 +5607,7 @@ const _sfc_main$1 = {
                                 class: "text-sm"
                               }, {
                                 default: withCtx(() => [
-                                  createTextVNode("Batch 1 (TBD)")
-                                ]),
-                                _: 1
-                              })
-                            ]),
-                            createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$e), {
-                                id: "aws-batch-2",
-                                value: "batch-2"
-                              }),
-                              createVNode(unref(_sfc_main$c), {
-                                for: "aws-batch-2",
-                                class: "text-sm"
-                              }, {
-                                default: withCtx(() => [
-                                  createTextVNode("Batch 2 (TBD)")
-                                ]),
-                                _: 1
-                              })
-                            ]),
-                            createVNode("div", { class: "flex items-center space-x-2" }, [
-                              createVNode(unref(_sfc_main$e), {
-                                id: "aws-batch-3",
-                                value: "batch-3"
-                              }),
-                              createVNode(unref(_sfc_main$c), {
-                                for: "aws-batch-3",
-                                class: "text-sm"
-                              }, {
-                                default: withCtx(() => [
-                                  createTextVNode("Batch 3 (TBD)")
+                                  createTextVNode("Batch 1 (Estimated Early August 2025)")
                                 ]),
                                 _: 1
                               })

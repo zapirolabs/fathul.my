@@ -611,16 +611,16 @@
                   <RadioGroup v-model="form.awsBatch" class="space-y-2">
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="aws-batch-1" value="batch-1" />
-                      <Label for="aws-batch-1" class="text-sm">Batch 1 (TBD)</Label>
+                      <Label for="aws-batch-1" class="text-sm">Batch 1 (Estimated Early August 2025)</Label>
                     </div>
-                    <div class="flex items-center space-x-2">
+                    <!-- <div class="flex items-center space-x-2">
                       <RadioGroupItem id="aws-batch-2" value="batch-2" />
                       <Label for="aws-batch-2" class="text-sm">Batch 2 (TBD)</Label>
                     </div>
                     <div class="flex items-center space-x-2">
                       <RadioGroupItem id="aws-batch-3" value="batch-3" />
                       <Label for="aws-batch-3" class="text-sm">Batch 3 (TBD)</Label>
-                    </div>
+                    </div> -->
                   </RadioGroup>
 
                   <p v-if="form.errors.awsBatch" class="text-sm text-destructive">
