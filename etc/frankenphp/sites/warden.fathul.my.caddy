@@ -1,5 +1,5 @@
-reftrack.fathul.my {
-    root * /home/server/webapps/fathul.my/reftrack.fathul.my/public
+warden.fathul.my {
+    root * /home/server/webapps/fathul.my/warden.fathul.my/public
 
     encode zstd br gzip
 
@@ -11,7 +11,7 @@ reftrack.fathul.my {
     }
 
     @static {
-        path /build/* /storage/* /favicon.ico /robots.txt *.html
+        path /build/* /storage/* /favicon.ico /robots.txt
     }
     file_server @static
 
