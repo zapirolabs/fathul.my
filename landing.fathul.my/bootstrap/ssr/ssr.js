@@ -3803,5 +3803,6 @@ createServer(
       }
     },
     { cluster: true }
-  )
+  ),
+  process.env.VITE_INERTIA_SSR_PORT || 13714
 );
