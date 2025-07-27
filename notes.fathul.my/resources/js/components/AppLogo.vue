@@ -17,7 +17,5 @@ const logoUrl = computed(() => {
 </script>
 
 <template>
-  <div class="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground">
-    <img :src="logoUrl" alt="App Logo" class="size-7 object-contain" />
-  </div>
+  <img :src="logoUrl" alt="Notes - fathul.my" class="size-7 object-contain" />
 </template>
