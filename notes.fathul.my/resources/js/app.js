@@ -7,8 +7,8 @@ import { initializeTheme } from './composables/useAppearance';
 createInertiaApp({
   title: (title) => title,
   resolve: name => {
-    const eagerPages = import.meta.glob('./Pages/{Form}.vue', { eager: true });
-    const lazyPages = import.meta.glob('./Pages/!({Form}).vue');
+    const eagerPages = import.meta.glob('./Pages/{Dashboard}.vue', { eager: true });
+    const lazyPages = import.meta.glob('./Pages/!({Dashboard}).vue');
     const pagePath = `./Pages/${name}.vue`;
     if (eagerPages[pagePath]) {
       return eagerPages[pagePath];
