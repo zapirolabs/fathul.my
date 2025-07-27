@@ -1,5 +1,5 @@
 import { unref, mergeProps, withCtx, renderSlot, useSSRContext, createVNode, createTextVNode, resolveDynamicComponent, createBlock, openBlock, Fragment, toDisplayString, ref, computed, onMounted, renderList, createCommentVNode } from "vue";
-import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderClass, ssrInterpolate, ssrRenderVNode, ssrRenderAttr, ssrRenderList } from "vue/server-renderer";
+import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderClass, ssrInterpolate, ssrRenderVNode, ssrRenderList, ssrRenderAttr } from "vue/server-renderer";
 import { usePage, Link, router, Head } from "@inertiajs/vue3";
 import { cva } from "class-variance-authority";
 import { clsx } from "clsx";
@@ -1443,7 +1443,11 @@ const _sfc_main$r = {
       return isDark ? "https://cdn.fathul.my/assets/logo/fathuldotmy-notes-logo-dark.svg" : "https://cdn.fathul.my/assets/logo/fathuldotmy-notes-logo-light.svg";
     });
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground" }, _attrs))}><img${ssrRenderAttr("src", logoUrl.value)} alt="App Logo" class="size-7 object-contain"></div>`);
+      _push(`<img${ssrRenderAttrs(mergeProps({
+        src: logoUrl.value,
+        alt: "Notes - fathul.my",
+        class: "size-7 object-contain"
+      }, _attrs))}>`);
     };
   }
 };
