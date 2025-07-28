@@ -3529,25 +3529,14 @@ const _sfc_main$1 = {
     const props = __props;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(Toaster), mergeProps({ class: "toaster group" }, props, {
+        richColors: "",
         toastOptions: {
           ...props.toastOptions
         },
         style: {
           "--normal-bg": "var(--popover)",
           "--normal-text": "var(--popover-foreground)",
-          "--normal-border": "var(--border)",
-          "--success-bg": "#10b981",
-          "--success-text": "#ffffff",
-          "--success-border": "#059669",
-          "--error-bg": "#ef4444",
-          "--error-text": "#ffffff",
-          "--error-border": "#dc2626",
-          "--info-bg": "#3b82f6",
-          "--info-text": "#ffffff",
-          "--info-border": "#2563eb",
-          "--warning-bg": "#f59e0b",
-          "--warning-text": "#000000",
-          "--warning-border": "#d97706"
+          "--normal-border": "var(--border)"
         }
       }, _attrs), null, _parent));
     };
