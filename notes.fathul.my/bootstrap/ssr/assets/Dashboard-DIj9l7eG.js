@@ -3532,11 +3532,12 @@ const _sfc_main$1 = {
       _push(ssrRenderComponent(unref(Toaster), mergeProps({ class: "toaster group" }, props, {
         toastOptions: {
           ...props.toastOptions,
+          unstyled: true,
           classes: {
-            success: "bg-green-500 text-white",
-            error: "bg-red-500 text-white",
-            info: "bg-blue-500 text-white",
-            warning: "bg-yellow-400 text-black",
+            success: "bg-green-500 text-white border border-green-600 rounded-md p-4 shadow-lg",
+            error: "bg-red-500 text-white border border-red-600 rounded-md p-4 shadow-lg",
+            info: "bg-blue-500 text-white border border-blue-600 rounded-md p-4 shadow-lg",
+            warning: "bg-yellow-400 text-black border border-yellow-500 rounded-md p-4 shadow-lg",
             ...((_a = props.toastOptions) == null ? void 0 : _a.classes) || {}
           }
         },
