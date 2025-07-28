@@ -30,18 +30,23 @@ const props = defineProps({
     v-bind="props"
     :toastOptions="{
       ...props.toastOptions,
-      classes: {
-        success: 'bg-green-500 text-white',
-        error: 'bg-red-500 text-white',
-        info: 'bg-blue-500 text-white',
-        warning: 'bg-yellow-400 text-black',
-        ...(props.toastOptions?.classes || {})
-      }
     }"
     :style="{
       '--normal-bg': 'var(--popover)',
       '--normal-text': 'var(--popover-foreground)',
       '--normal-border': 'var(--border)',
+      '--success-bg': '#10b981',
+      '--success-text': '#ffffff',
+      '--success-border': '#059669',
+      '--error-bg': '#ef4444',
+      '--error-text': '#ffffff',
+      '--error-border': '#dc2626',
+      '--info-bg': '#3b82f6',
+      '--info-text': '#ffffff',
+      '--info-border': '#2563eb',
+      '--warning-bg': '#f59e0b',
+      '--warning-text': '#000000',
+      '--warning-border': '#d97706',
     }"
   />
 </template>
