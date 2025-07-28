@@ -32,10 +32,10 @@ const props = defineProps({
       ...props.toastOptions,
       unstyled: true,
       classes: {
-        success: 'bg-green-500 text-white border border-green-600 rounded-md p-4 shadow-lg',
-        error: 'bg-red-500 text-white border border-red-600 rounded-md p-4 shadow-lg',
-        info: 'bg-blue-500 text-white border border-blue-600 rounded-md p-4 shadow-lg',
-        warning: 'bg-yellow-400 text-black border border-yellow-500 rounded-md p-4 shadow-lg',
+        success: 'bg-green-500',
+        error: 'bg-red-500',
+        info: 'bg-blue-500',
+        warning: 'bg-yellow-400',
         ...(props.toastOptions?.classes || {})
       }
     }"
