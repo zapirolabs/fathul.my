@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1fdd8066ce49645e0cd066c90a6d0b2",
+    "content-hash": "cf196a0b6868df2a970996f78b9e9260",
     "packages": [
         {
             "name": "brick/math",
@@ -3292,6 +3292,57 @@
                 }
             ],
             "time": "2025-06-26T16:29:55+00:00"
+        },
+        {
+            "name": "ppz/s3service",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/famintech/ppz-s3service-package.git",
+                "reference": "ba0c20a4f90739e315deab2f12c5cc70ff9f8450"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/famintech/ppz-s3service-package/zipball/ba0c20a4f90739e315deab2f12c5cc70ff9f8450",
+                "reference": "ba0c20a4f90739e315deab2f12c5cc70ff9f8450",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "PPZS3Service": "PPZ\\S3Service\\PPZS3ServiceFacade"
+                    },
+                    "providers": [
+                        "PPZ\\S3Service\\PPZS3ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PPZ\\S3Service\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fathul Amin",
+                    "email": "zapirolabs@gmail.com"
+                }
+            ],
+            "description": "PPZ S3 Upload Service Facade",
+            "support": {
+                "issues": "https://github.com/famintech/ppz-s3service-package/issues",
+                "source": "https://github.com/famintech/ppz-s3service-package/tree/v1.1.0"
+            },
+            "time": "2025-06-05T01:14:10+00:00"
         },
         {
             "name": "psr/cache",
