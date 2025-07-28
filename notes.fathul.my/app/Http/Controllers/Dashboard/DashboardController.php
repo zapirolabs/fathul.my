@@ -28,7 +28,7 @@ class DashboardController extends Controller
                     'directory' => 'notes/uploads',
                     'tag' => 'note-upload',
                     'description' => 'Notes File Upload',
-                    'emp_id' => auth()->user()->id ?? 'guest',
+                    'emp_id' => '196',
                 ]);
 
                 if ($response && isset($response['data'])) {
