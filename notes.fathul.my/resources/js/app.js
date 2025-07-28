@@ -3,6 +3,7 @@ import { createApp, h } from 'vue';
 import { ZiggyVue } from 'ziggy-js';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { initializeTheme } from './composables/useAppearance';
+import 'vue-sonner/style.css';
 
 createInertiaApp({
   title: (title) => title,

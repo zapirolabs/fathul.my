@@ -3,6 +3,7 @@ import createServer from '@inertiajs/vue3/server';
 import { renderToString } from '@vue/server-renderer';
 import { createSSRApp, h } from 'vue';
 import { ZiggyVue, route as ziggyRoute } from 'ziggy-js';
+import 'vue-sonner/style.css';
 
 createServer((page) =>
   createInertiaApp({

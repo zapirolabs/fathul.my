@@ -6,7 +6,6 @@ import { Input } from '@/resources/js/components/ui/input'
 import { Button } from '@/resources/js/components/ui/button'
 import { Toaster } from '@/resources/js/components/ui/sonner'
 import { useToast } from '@/resources/js/composables/useToast'
-import 'vue-sonner/style.css'
 
 const breadcrumbs = useBreadcrumbs('dashboard')
 const { toastSuccess } = useToast()
