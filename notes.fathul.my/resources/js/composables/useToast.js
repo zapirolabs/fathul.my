@@ -16,11 +16,36 @@ export function useToast() {
   function toastGeneric(message, options = {}) {
     toast(message, options)
   }
+
+  function toastUpload(variant = 'success') {
+    switch (variant) {
+      case 'success':
+        toast.success('File uploaded successfully!', {
+          description: 'Your file has been uploaded.'
+        })
+        break
+      case 'error':
+        toast.error('Upload failed!', {
+          description: 'There was an error uploading your file. Please try again.'
+        })
+        break
+      case 'loading':
+        return toast.loading('Uploading file...', {
+          description: 'Please wait while your file is being uploaded.'
+        })
+      default:
+        toast.success('File uploaded successfully!', {
+          description: 'Your file has been uploaded.'
+        })
+    }
+  }
+
   return {
     toastSuccess,
     toastError,
     toastInfo,
     toastWarning,
     toastGeneric,
+    toastUpload,
   }
 } 

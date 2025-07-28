@@ -3564,12 +3564,35 @@ function useToast() {
   function toastGeneric(message, options = {}) {
     toast(message, options);
   }
+  function toastUpload(variant = "success") {
+    switch (variant) {
+      case "success":
+        toast.success("File uploaded successfully!", {
+          description: "Your file has been uploaded."
+        });
+        break;
+      case "error":
+        toast.error("Upload failed!", {
+          description: "There was an error uploading your file. Please try again."
+        });
+        break;
+      case "loading":
+        return toast.loading("Uploading file...", {
+          description: "Please wait while your file is being uploaded."
+        });
+      default:
+        toast.success("File uploaded successfully!", {
+          description: "Your file has been uploaded."
+        });
+    }
+  }
   return {
     toastSuccess,
     toastError,
     toastInfo,
     toastWarning,
-    toastGeneric
+    toastGeneric,
+    toastUpload
   };
 }
 const _sfc_main = {
@@ -3577,7 +3600,42 @@ const _sfc_main = {
   __ssrInlineRender: true,
   setup(__props) {
     const breadcrumbs = useBreadcrumbs("dashboard");
-    const { toastSuccess } = useToast();
+    const { toastUpload } = useToast();
+    const fileInput = ref(null);
+    const isUploading = ref(false);
+    function handleUpload() {
+      const fileElement = document.querySelector('input[type="file"]');
+      const file = fileElement == null ? void 0 : fileElement.files[0];
+      if (!file) {
+        toast.error("Please select a file first", {
+          description: "Choose a file to upload."
+        });
+        return;
+      }
+      isUploading.value = true;
+      const loadingToastId = toastUpload("loading");
+      const formData = new FormData();
+      formData.append("file", file);
+      router.post("/upload", formData, {
+        onSuccess: (response) => {
+          isUploading.value = false;
+          toast.dismiss(loadingToastId);
+          toastUpload("success");
+          if (fileElement) {
+            fileElement.value = "";
+          }
+        },
+        onError: (errors) => {
+          isUploading.value = false;
+          toast.dismiss(loadingToastId);
+          toastUpload("error");
+          console.error("Upload error:", errors);
+        },
+        onFinish: () => {
+          isUploading.value = false;
+        }
+      });
+    }
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[-->`);
       _push(ssrRenderComponent(unref(Head), { title: "Notes - fathul.my" }, null, _parent));
@@ -3586,16 +3644,22 @@ const _sfc_main = {
           if (_push2) {
             _push2(ssrRenderComponent(unref(_sfc_main$1), null, null, _parent2, _scopeId));
             _push2(`<div class="flex items-center gap-2 mt-4"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(_sfc_main$G), { type: "file" }, null, _parent2, _scopeId));
+            _push2(ssrRenderComponent(unref(_sfc_main$G), {
+              ref_key: "fileInput",
+              ref: fileInput,
+              type: "file",
+              disabled: isUploading.value
+            }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(unref(_sfc_main$w), {
-              onClick: () => unref(toastSuccess)("File uploaded successfully!", { description: "Your file has been uploaded." })
+              onClick: handleUpload,
+              disabled: isUploading.value
             }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`Upload`);
+                  _push3(`${ssrInterpolate(isUploading.value ? "Uploading..." : "Upload")}`);
                 } else {
                   return [
-                    createTextVNode("Upload")
+                    createTextVNode(toDisplayString(isUploading.value ? "Uploading..." : "Upload"), 1)
                   ];
                 }
               }),
@@ -3606,15 +3670,21 @@ const _sfc_main = {
             return [
               createVNode(unref(_sfc_main$1)),
               createVNode("div", { class: "flex items-center gap-2 mt-4" }, [
-                createVNode(unref(_sfc_main$G), { type: "file" }),
+                createVNode(unref(_sfc_main$G), {
+                  ref_key: "fileInput",
+                  ref: fileInput,
+                  type: "file",
+                  disabled: isUploading.value
+                }, null, 8, ["disabled"]),
                 createVNode(unref(_sfc_main$w), {
-                  onClick: () => unref(toastSuccess)("File uploaded successfully!", { description: "Your file has been uploaded." })
+                  onClick: handleUpload,
+                  disabled: isUploading.value
                 }, {
                   default: withCtx(() => [
-                    createTextVNode("Upload")
+                    createTextVNode(toDisplayString(isUploading.value ? "Uploading..." : "Upload"), 1)
                   ]),
                   _: 1
-                }, 8, ["onClick"])
+                }, 8, ["disabled"])
               ])
             ];
           }
