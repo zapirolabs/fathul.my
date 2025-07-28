@@ -1,6 +1,5 @@
 <script setup>
 import { Head } from '@inertiajs/vue3'
-import { router } from '@inertiajs/vue3'
 import { ref } from 'vue'
 import AppLayout from '@/resources/js/layouts/AppLayout.vue'
 import { useBreadcrumbs } from '@/resources/js/composables/useBreadcrumbs'
@@ -16,10 +15,10 @@ const { toastUpload } = useToast()
 const fileInput = ref(null)
 const isUploading = ref(false)
 
-function handleUpload() {
+async function handleUpload() {
   const fileElement = document.querySelector('input[type="file"]')
   const file = fileElement?.files[0]
-  
+
   if (!file) {
     toast.error('Please select a file first', {
       description: 'Choose a file to upload.'
@@ -33,27 +32,31 @@ function handleUpload() {
   const formData = new FormData()
   formData.append('file', file)
 
-  router.post('/upload', formData, {
-    onSuccess: (response) => {
-      isUploading.value = false
-      toast.dismiss(loadingToastId)
-      toastUpload('success')
-      
-      // Clear the file input
-      if (fileElement) {
-        fileElement.value = ''
+  try {
+    const response = await fetch('/upload', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+        'Accept': 'application/json'
       }
-    },
-    onError: (errors) => {
-      isUploading.value = false
-      toast.dismiss(loadingToastId)
+    })
+    const data = await response.json()
+    isUploading.value = false
+    toast.dismiss(loadingToastId)
+    if (data.success) {
+      toastUpload('success')
+      fileElement.value = ''
+    } else {
       toastUpload('error')
-      console.error('Upload error:', errors)
-    },
-    onFinish: () => {
-      isUploading.value = false
+      console.error('Upload error:', data)
     }
-  })
+  } catch (error) {
+    isUploading.value = false
+    toast.dismiss(loadingToastId)
+    toastUpload('error')
+    console.error('Upload error:', error)
+  }
 }
 </script>
 
