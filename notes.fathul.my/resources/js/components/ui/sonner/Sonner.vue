@@ -30,12 +30,11 @@ const props = defineProps({
     v-bind="props"
     :toastOptions="{
       ...props.toastOptions,
-      unstyled: true,
       classes: {
-        success: 'bg-green-500',
-        error: 'bg-red-500',
-        info: 'bg-blue-500',
-        warning: 'bg-yellow-400',
+        success: 'bg-green-500 text-white',
+        error: 'bg-red-500 text-white',
+        info: 'bg-blue-500 text-white',
+        warning: 'bg-yellow-400 text-black',
         ...(props.toastOptions?.classes || {})
       }
     }"
