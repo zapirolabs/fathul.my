@@ -5,7 +5,7 @@
     "isEntry": true
   },
   "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-dL5nqKsI.js",
+    "file": "assets/Dashboard-DpQs_nFE.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.vue",
     "isDynamicEntry": true,
@@ -14,7 +14,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-Cl7F4zOS.js",
+    "file": "assets/app-B0TvNsFL.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
