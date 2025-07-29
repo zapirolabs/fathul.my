@@ -2792,93 +2792,15 @@ const _sfc_main$c = {
             _push2(ssrRenderComponent(unref(_sfc_main$H), null, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(ssrRenderComponent(unref(_sfc_main$E), null, {
+                  _push3(ssrRenderComponent(unref(Link), {
+                    href: _ctx.route("dashboard")
+                  }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
-                        _push4(ssrRenderComponent(unref(_sfc_main$y), null, {
-                          default: withCtx((_4, _push5, _parent5, _scopeId4) => {
-                            if (_push5) {
-                              _push5(ssrRenderComponent(unref(_sfc_main$z), {
-                                size: "lg",
-                                "as-child": ""
-                              }, {
-                                default: withCtx((_5, _push6, _parent6, _scopeId5) => {
-                                  if (_push6) {
-                                    _push6(ssrRenderComponent(unref(Link), {
-                                      href: _ctx.route("dashboard")
-                                    }, {
-                                      default: withCtx((_6, _push7, _parent7, _scopeId6) => {
-                                        if (_push7) {
-                                          _push7(ssrRenderComponent(_sfc_main$s, null, null, _parent7, _scopeId6));
-                                        } else {
-                                          return [
-                                            createVNode(_sfc_main$s)
-                                          ];
-                                        }
-                                      }),
-                                      _: 1
-                                    }, _parent6, _scopeId5));
-                                  } else {
-                                    return [
-                                      createVNode(unref(Link), {
-                                        href: _ctx.route("dashboard")
-                                      }, {
-                                        default: withCtx(() => [
-                                          createVNode(_sfc_main$s)
-                                        ]),
-                                        _: 1
-                                      }, 8, ["href"])
-                                    ];
-                                  }
-                                }),
-                                _: 1
-                              }, _parent5, _scopeId4));
-                            } else {
-                              return [
-                                createVNode(unref(_sfc_main$z), {
-                                  size: "lg",
-                                  "as-child": ""
-                                }, {
-                                  default: withCtx(() => [
-                                    createVNode(unref(Link), {
-                                      href: _ctx.route("dashboard")
-                                    }, {
-                                      default: withCtx(() => [
-                                        createVNode(_sfc_main$s)
-                                      ]),
-                                      _: 1
-                                    }, 8, ["href"])
-                                  ]),
-                                  _: 1
-                                })
-                              ];
-                            }
-                          }),
-                          _: 1
-                        }, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(_sfc_main$s, null, null, _parent4, _scopeId3));
                       } else {
                         return [
-                          createVNode(unref(_sfc_main$y), null, {
-                            default: withCtx(() => [
-                              createVNode(unref(_sfc_main$z), {
-                                size: "lg",
-                                "as-child": ""
-                              }, {
-                                default: withCtx(() => [
-                                  createVNode(unref(Link), {
-                                    href: _ctx.route("dashboard")
-                                  }, {
-                                    default: withCtx(() => [
-                                      createVNode(_sfc_main$s)
-                                    ]),
-                                    _: 1
-                                  }, 8, ["href"])
-                                ]),
-                                _: 1
-                              })
-                            ]),
-                            _: 1
-                          })
+                          createVNode(_sfc_main$s)
                         ];
                       }
                     }),
@@ -2886,32 +2808,14 @@ const _sfc_main$c = {
                   }, _parent3, _scopeId2));
                 } else {
                   return [
-                    createVNode(unref(_sfc_main$E), null, {
+                    createVNode(unref(Link), {
+                      href: _ctx.route("dashboard")
+                    }, {
                       default: withCtx(() => [
-                        createVNode(unref(_sfc_main$y), null, {
-                          default: withCtx(() => [
-                            createVNode(unref(_sfc_main$z), {
-                              size: "lg",
-                              "as-child": ""
-                            }, {
-                              default: withCtx(() => [
-                                createVNode(unref(Link), {
-                                  href: _ctx.route("dashboard")
-                                }, {
-                                  default: withCtx(() => [
-                                    createVNode(_sfc_main$s)
-                                  ]),
-                                  _: 1
-                                }, 8, ["href"])
-                              ]),
-                              _: 1
-                            })
-                          ]),
-                          _: 1
-                        })
+                        createVNode(_sfc_main$s)
                       ]),
                       _: 1
-                    })
+                    }, 8, ["href"])
                   ];
                 }
               }),
@@ -2947,32 +2851,14 @@ const _sfc_main$c = {
             return [
               createVNode(unref(_sfc_main$H), null, {
                 default: withCtx(() => [
-                  createVNode(unref(_sfc_main$E), null, {
+                  createVNode(unref(Link), {
+                    href: _ctx.route("dashboard")
+                  }, {
                     default: withCtx(() => [
-                      createVNode(unref(_sfc_main$y), null, {
-                        default: withCtx(() => [
-                          createVNode(unref(_sfc_main$z), {
-                            size: "lg",
-                            "as-child": ""
-                          }, {
-                            default: withCtx(() => [
-                              createVNode(unref(Link), {
-                                href: _ctx.route("dashboard")
-                              }, {
-                                default: withCtx(() => [
-                                  createVNode(_sfc_main$s)
-                                ]),
-                                _: 1
-                              }, 8, ["href"])
-                            ]),
-                            _: 1
-                          })
-                        ]),
-                        _: 1
-                      })
+                      createVNode(_sfc_main$s)
                     ]),
                     _: 1
-                  })
+                  }, 8, ["href"])
                 ]),
                 _: 1
               }),
