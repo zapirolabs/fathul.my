@@ -658,7 +658,7 @@ const _sfc_main$H = {
       _push(`<div${ssrRenderAttrs(mergeProps({
         "data-slot": "sidebar-header",
         "data-sidebar": "header",
-        class: unref(cn)("flex flex-col gap-2 p-2", props.class)
+        class: unref(cn)("flex flex-col gap-2 p-4", props.class)
       }, _attrs))}>`);
       ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
       _push(`</div>`);
