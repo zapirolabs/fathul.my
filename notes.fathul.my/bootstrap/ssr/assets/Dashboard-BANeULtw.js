@@ -1512,10 +1512,10 @@ const _sfc_main$r = {
             _push2(ssrRenderComponent(unref(_sfc_main$I), null, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`Platform`);
+                  _push3(`Menu`);
                 } else {
                   return [
-                    createTextVNode("Platform")
+                    createTextVNode("Menu")
                   ];
                 }
               }),
@@ -1635,7 +1635,7 @@ const _sfc_main$r = {
             return [
               createVNode(unref(_sfc_main$I), null, {
                 default: withCtx(() => [
-                  createTextVNode("Platform")
+                  createTextVNode("Menu")
                 ]),
                 _: 1
               }),
