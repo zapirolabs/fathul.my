@@ -1483,7 +1483,7 @@ const _sfc_main$s = {
       _push(`<img${ssrRenderAttrs(mergeProps({
         src: logoUrl.value,
         alt: "Notes - fathul.my",
-        class: "size-7 object-contain"
+        class: "h-10 object-contain"
       }, _attrs))}>`);
     };
   }

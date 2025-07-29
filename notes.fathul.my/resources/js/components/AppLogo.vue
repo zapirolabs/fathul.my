@@ -17,5 +17,5 @@ const logoUrl = computed(() => {
 </script>
 
 <template>
-  <img :src="logoUrl" alt="Notes - fathul.my" class="size-7 object-contain" />
+  <img :src="logoUrl" alt="Notes - fathul.my" class="h-10 object-contain" />
 </template>
