@@ -24,7 +24,6 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->timestamps();
 
-            // Indexes for better performance
             $table->index('mime_type');
             $table->index('file_size');
             $table->index('created_at');

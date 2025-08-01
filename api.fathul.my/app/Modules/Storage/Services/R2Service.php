@@ -36,22 +36,18 @@ class R2Service
         $instance = new self();
         
         try {
-            // Generate unique file path
             $extension = $file->getClientOriginalExtension();
             $filename = Str::uuid() . '.' . $extension;
             $date_path = now()->format('Y/m/d');
             $file_path = trim($path, '/') . '/' . $date_path . '/' . $filename;
             
-            // Prepare metadata
             $metadata = [
                 'cache_control' => 'max-age=31536000',
                 'custom_metadata' => [
-                    'original_name' => $file->getClientOriginalName(),
                     'uploaded_at' => now()->toIso8601String(),
                 ],
             ];
 
-            // Upload file
             $result = Storage::disk('r2')->put($file_path, $file, [
                 'Metadata' => $metadata['custom_metadata'],
                 'CacheControl' => $metadata['cache_control'],
@@ -62,7 +58,6 @@ class R2Service
                 throw new \Exception('Failed to upload file to R2');
             }
 
-            // Get object info
             $object_info = [];
             try {
                 $result = $instance->S3Client->headObject([
@@ -74,8 +69,7 @@ class R2Service
                 Log::error('R2 Get Object Info Error: ' . $e->getMessage());
             }
 
-            // Store file record in database
-            $storage_record = StorageFile::create([
+            StorageFile::create([
                 'file_name' => $file->getClientOriginalName(),
                 'generated_filename' => $filename,
                 'file_path' => $file_path,
@@ -89,12 +83,7 @@ class R2Service
 
             return [
                 'success' => true,
-                'file_id' => $storage_record->id,
-                'path' => $file_path,
                 'url' => Storage::disk('r2')->url($file_path),
-                'size' => $file->getSize(),
-                'mime_type' => $file->getMimeType(),
-                'etag' => $object_info['ETag'] ?? null,
             ];
 
         } catch (\Exception $e) {
@@ -110,9 +99,6 @@ class R2Service
         }
     }
 
-    /**
-     * Generate a presigned URL for direct uploads
-     */
     public function generatePresignedUrl(string $path, array $options = []): array
     {
         try {
