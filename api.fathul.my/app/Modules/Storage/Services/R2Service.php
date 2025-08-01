@@ -31,29 +31,29 @@ class R2Service
     /**
      * Upload a file to R2
      */
-    public function upload(UploadedFile $file, array $options = []): array
+    public static function upload(UploadedFile $file, string $path = 'uploads'): array
     {
+        $instance = new self();
+        
         try {
             // Generate unique file path
             $extension = $file->getClientOriginalExtension();
             $filename = Str::uuid() . '.' . $extension;
             $date_path = now()->format('Y/m/d');
-            $file_path = trim($options['path'] ?? 'uploads', '/') . '/' . $date_path . '/' . $filename;
+            $file_path = trim($path, '/') . '/' . $date_path . '/' . $filename;
             
             // Prepare metadata
             $metadata = [
-                'visibility' => $options['visibility'] ?? 'private',
-                'cache_control' => $options['cache_control'] ?? 'max-age=31536000',
-                'custom_metadata' => array_merge([
+                'cache_control' => 'max-age=31536000',
+                'custom_metadata' => [
                     'original_name' => $file->getClientOriginalName(),
                     'uploaded_at' => now()->toIso8601String(),
                     'uploaded_by' => auth()->id() ?? 'system',
-                ], $options['metadata'] ?? []),
+                ],
             ];
 
             // Upload file
             $result = Storage::disk('r2')->put($file_path, $file, [
-                'visibility' => $metadata['visibility'],
                 'Metadata' => $metadata['custom_metadata'],
                 'CacheControl' => $metadata['cache_control'],
                 'ContentType' => $file->getMimeType(),
@@ -66,7 +66,7 @@ class R2Service
             // Get object info
             $object_info = [];
             try {
-                $result = $this->S3Client->headObject([
+                $result = $instance->S3Client->headObject([
                     'Bucket' => config('filesystems.disks.r2.bucket'),
                     'Key' => $file_path,
                 ]);
@@ -78,14 +78,15 @@ class R2Service
             // Store file record in database
             $storage_record = StorageFile::create([
                 'file_name' => $file->getClientOriginalName(),
+                'generated_filename' => $filename,
                 'file_path' => $file_path,
                 'file_size' => $file->getSize(),
                 'mime_type' => $file->getMimeType(),
                 'disk' => 'r2',
                 'etag' => $object_info['ETag'] ?? null,
-                'version_id' => $object_info['VersionId'] ?? null,
                 'metadata' => $metadata['custom_metadata'],
                 'uploaded_by' => auth()->id() ?? null,
+                'url' => Storage::disk('r2')->url($file_path),
             ]);
 
             return [
@@ -96,7 +97,6 @@ class R2Service
                 'size' => $file->getSize(),
                 'mime_type' => $file->getMimeType(),
                 'etag' => $object_info['ETag'] ?? null,
-                'version_id' => $object_info['VersionId'] ?? null,
             ];
 
         } catch (\Exception $e) {

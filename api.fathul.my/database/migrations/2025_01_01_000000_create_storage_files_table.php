@@ -14,16 +14,15 @@ return new class extends Migration
         Schema::create('storage_files', function (Blueprint $table) {
             $table->id();
             $table->string('file_name');
+            $table->string('generated_filename');
             $table->string('file_path')->unique();
             $table->bigInteger('file_size');
             $table->string('mime_type');
             $table->string('disk')->default('r2');
             $table->string('etag')->nullable();
-            $table->string('version_id')->nullable();
             $table->json('metadata')->nullable();
+            $table->string('url')->nullable();
             $table->unsignedBigInteger('uploaded_by')->nullable();
-            $table->unsignedInteger('download_count')->default(0);
-            $table->timestamp('last_accessed_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

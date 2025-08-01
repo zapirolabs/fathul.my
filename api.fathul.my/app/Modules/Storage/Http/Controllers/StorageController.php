@@ -15,24 +15,15 @@ class StorageController extends MasterController
         $path = $request->input('path');
         $file = $request->file('file');
 
-        if ($storage_provider === 'r2') {
-            $r2_service = new R2Service();
-            $result = $r2_service->upload($file, ['path' => $path]);
-            
-            return $this->responseWithSystemName([
-                'module' => config('storage.name'),
-                'version' => config('storage.version'),
-                'data' => $result,
-            ], $result['success'] ? 200 : 400);
-        }
+        $result = match ($storage_provider) {
+            'r2' => R2Service::upload($file, $path),
+            's3' => S3Service::upload($file, $path),
+        };
 
         return $this->responseWithSystemName([
             'module' => config('storage.name'),
             'version' => config('storage.version'),
-            'data' => [
-                'success' => false,
-                'error' => 'Storage provider not implemented'
-            ],
-        ], 400);
+            'data' => $result,
+        ], $result['success'] ? 200 : 400);
     }
 }
