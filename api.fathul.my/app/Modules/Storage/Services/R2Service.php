@@ -48,7 +48,6 @@ class R2Service
                 'custom_metadata' => [
                     'original_name' => $file->getClientOriginalName(),
                     'uploaded_at' => now()->toIso8601String(),
-                    'uploaded_by' => auth()->id() ?? 'system',
                 ],
             ];
 
@@ -85,7 +84,6 @@ class R2Service
                 'disk' => 'r2',
                 'etag' => $object_info['ETag'] ?? null,
                 'metadata' => $metadata['custom_metadata'],
-                'uploaded_by' => auth()->id() ?? null,
                 'url' => Storage::disk('r2')->url($file_path),
             ]);
 

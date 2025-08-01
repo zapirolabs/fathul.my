@@ -69,9 +69,6 @@ return [
             'url' => env('R2_URL'),
             'endpoint' => env('R2_ENDPOINT'),
             'use_path_style_endpoint' => env('R2_USE_PATH_STYLE_ENDPOINT', false),
-            'throw' => false,
-            'visibility' => 'private',
-            'cdn_url' => env('R2_CDN_URL'),
         ],
 
     ],

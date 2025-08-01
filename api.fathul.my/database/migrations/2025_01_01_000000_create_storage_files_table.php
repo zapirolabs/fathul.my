@@ -22,19 +22,13 @@ return new class extends Migration
             $table->string('etag')->nullable();
             $table->json('metadata')->nullable();
             $table->string('url')->nullable();
-            $table->unsignedBigInteger('uploaded_by')->nullable();
             $table->timestamps();
-            $table->softDeletes();
 
             // Indexes for better performance
-            $table->index('uploaded_by');
             $table->index('mime_type');
             $table->index('file_size');
             $table->index('created_at');
-            $table->index(['disk', 'deleted_at']);
-            
-            // Foreign key constraint
-            $table->foreign('uploaded_by')->references('id')->on('users')->onDelete('set null');
+            $table->index('disk');
         });
     }
 
