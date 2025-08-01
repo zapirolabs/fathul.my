@@ -26,7 +26,6 @@ class StorageController extends MasterController
             ], $result['success'] ? 200 : 400);
         }
 
-        // Handle S3 if needed
         return $this->responseWithSystemName([
             'module' => config('storage.name'),
             'version' => config('storage.version'),

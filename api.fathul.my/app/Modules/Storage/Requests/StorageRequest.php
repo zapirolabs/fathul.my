@@ -16,7 +16,7 @@ class StorageRequest extends FormRequest
         return [
             'storage_provider' => 'required|string|in:s3,r2',
             'path' => 'required|string',
-            'file' => 'required|file|max:102400', // 100MB max
+            'file' => 'required|file|max:102400',
         ];
     }
 
@@ -28,9 +28,9 @@ class StorageRequest extends FormRequest
             'storage_provider.in' => 'storage_provider must be either s3 or r2',
             'path.required' => 'path is required',
             'path.string' => 'path must be a string',
-            'file.required' => 'file is required',
-            'file.file' => 'file must be a valid file',
-            'file.max' => 'file size must not exceed 100MB',
+            'file.required' => 'File is required',
+            'file.file' => 'File must be a valid file',
+            'file.max' => 'File size must not exceed 100MB',
         ];
     }
 }
