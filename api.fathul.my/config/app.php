@@ -123,5 +123,5 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    'asset_version' => env('APP_ASSET_VERSION', '2'),
+    'api_key' => env('API_KEY'),
 ];
